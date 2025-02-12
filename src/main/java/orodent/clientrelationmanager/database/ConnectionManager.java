@@ -25,29 +25,33 @@ public abstract class ConnectionManager {
         try {
             checkForServer(ip);
             System.out.println("Found running Network Server");
-            controller.log("Found running Network Server");
+            log("Found running Network Server");
 
-            //Load DB2 Driver for JDBC class
-          //  Class.forName("com.ibm.db2.jcc.DB2Driver");
 
             Properties properties = new java.util.Properties();
             // The user and password properties are a must, required by JCC
             properties.setProperty("user",DB_USER);
             properties.setProperty("password",DB_PSW);
 
+
+
+            log("Connecting to Network Server");
             // Get database connection  via DriverManager api
+
+            Class<?> clazz = Class.forName("org.apache.derby.jdbc.ClientDriver");
             String DERBY_CLIENT_URL= "jdbc:derby://"+ ip +":"+ NETWORKSERVER_PORT+"/"+DBNAME;
             conn = DriverManager.getConnection(DERBY_CLIENT_URL,properties);
             System.out.println("Got a client connection via the DriverManager.");
             controller.log("Got a client connection via the DriverManager.");
         } catch (Exception e) {
+            log(e.getMessage());
             System.out.println("Network Server not found, creating one!");
-            controller.log("Network Server not found, creating one!");
+            log("Network Server not found, creating one!");
             try {
                 startNetworkServer();
             } catch (Exception e1) {
                 System.out.println("Failed to start NetworkServer: " + e1);
-                controller.log("Failed to start NetworkServer: " + e1);
+                log("Failed to start NetworkServer: " + e1);
                 System.exit(1);
             }
             try {
@@ -100,6 +104,7 @@ public abstract class ConnectionManager {
         System.out.println("Searching for running Network Server");
         log("Searching for running Network Server");
         server.ping();
+        log("Network Server has ping back");
     }
 
     /**
@@ -113,28 +118,29 @@ public abstract class ConnectionManager {
         waitForStart();
 
 
-        //IOManager.write();
     }
 
     /**
      * Here you can set the proprieties of the server.
-     * derby.drda.keepAlive
-     * derby.drda.logConnections
-     * derby.drda.maxThreads
-     * derby.drda.minThreads
-     * derby.drda.portNumber
-     * derby.drda.startNetworkServer
-     * derby.drda.timeslice
-     * derby.drda.traceAll
-     * derby.drda.traceDirectory
-     * derby.drda.host
+     * derby.drda.keepAlive,
+     * derby.drda.logConnections,
+     * derby.drda.maxThreads,
+     * derby.drda.minThreads,
+     * derby.drda.portNumber,
+     * derby.drda.startNetworkServer,
+     * derby.drda.timeslice,
+     * derby.drda.traceAll,
+     * derby.drda.traceDirectory,
+     * derby.drda.host,
      * @throws Exception Don't know when it could throw
      */
     private static void startWithProperty() throws Exception {
         System.out.println("Starting Network Server");
         log("Starting Network Server");
         System.setProperty("derby.drda.startNetworkServer", "true");
-        System.setProperty("derby.drda.host", InetAddress.getLocalHost().getHostAddress());
+        String ip = InetAddress.getLocalHost().getHostAddress();
+        System.setProperty("derby.drda.host", ip);
+        System.out.println("IP_"+ip);
 
         // Booting Derby
         Class<?> clazz = Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
