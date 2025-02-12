@@ -12,7 +12,6 @@
    <Label fx:id="status" />
 
     <Label fx:id="resultField" />
-   <Button fx:id="pingButton" mnemonicParsing="false" onAction="#onPingButtonClick" text="Ping" />
    <HBox spacing="20.0">
       <children>
           <Button onAction="#onHelloButtonClick" text="Start Server" />

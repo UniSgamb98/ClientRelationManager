@@ -20,6 +20,7 @@ public class HelloController {
      @FXML
      private Label status;
 
+
     @FXML
     protected void onStopServer() {
         try {
@@ -31,19 +32,8 @@ public class HelloController {
     }
 
     @FXML
-    protected void onHelloButtonClick() throws Exception {
-        conn = ConnectionManager.getConnection(searchField.getText(), this);
-
-    }
-
-    @FXML
-    protected void onPingButtonClick() {
-        try {
-            ConnectionManager.pingServer(searchField.getText(), this);
-        } catch (Exception e){
-            System.out.println("Server not pinged");
-            log("Server not pinged");
-        }
+    protected void onHelloButtonClick() {
+        conn = ConnectionManager.getConnection();
     }
 
     @FXML
@@ -75,9 +65,7 @@ public class HelloController {
         }
         catch(SQLException sqle)
         {
-            System.out.println("errore");
             System.out.println("SQLException when querying on the database connection; "+ sqle);
-            log("SQLException when querying on the database connection; "+ sqle);
             throw sqle;
         }
         finally
@@ -89,10 +77,6 @@ public class HelloController {
                 stmt.close();
         }
 
-    }
-
-    public void log(String msg) {
-        status.setText(msg);
     }
 
     public static void printSQLException(SQLException e)

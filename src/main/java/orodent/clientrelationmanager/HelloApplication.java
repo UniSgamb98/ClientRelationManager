@@ -5,7 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.PrintStream;
 
 public class HelloApplication extends Application {
     @Override
@@ -14,8 +16,12 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Hello!");
         stage.setScene(scene);
-        stage.show();
 
+        File file = new File("outStream.txt");
+        PrintStream stream = new PrintStream(file);
+        System.setOut(stream);
+
+        stage.show();
     }
 
     public static void main(String[] args) {
