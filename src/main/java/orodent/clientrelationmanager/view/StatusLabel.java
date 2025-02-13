@@ -17,5 +17,6 @@ public class StatusLabel extends Label implements ConnectionInterface {         
     public void update(String statusChange) {
         this.setText(statusChange);
         logger.info(statusChange);
+        System.out.println(statusChange);
     }
 }

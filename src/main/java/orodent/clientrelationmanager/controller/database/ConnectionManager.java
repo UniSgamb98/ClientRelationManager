@@ -9,16 +9,19 @@ import java.util.Properties;
 
 public abstract class ConnectionManager {
     private static final String DBNAME="NSSimpleDB";
-    private static final int NETWORKSERVER_PORT=1527;
+    protected static final int NETWORKSERVER_PORT=1527;
     private static final String DB_USER="me";
     private static final String DB_PSW="pw";
+   // private static final String[] ips = {"192.168.1.138", "192.168.1.136"};
+  //  private static String validIP = null;
 
     public static Connection getConnection(ConnectionInterface status) {
         Connection conn = null;
         try {
             status.update("Searching for running Network Server");
-            String ip = checkForServer();
+            ConnectionHelperThread helperThread = new ConnectionHelperThread();
             status.update("Found running Network Server");
+            String ip = helperThread.getOperativeServerIP();
 
             // The user and password properties are a must, required by JCC
             Properties properties = new java.util.Properties();
@@ -68,21 +71,25 @@ public abstract class ConnectionManager {
         return DriverManager.getConnection("jdbc:derby:"+ ConnectionManager.DBNAME +";create=true;user="+DB_USER +";password="+DB_PSW);
     }
 
-    /**
+    /*
      * Pings the database server to see if one is running
      * @throws NoServerFoundException if no server database was found
-     */
+     *
     private static String checkForServer() throws NoServerFoundException {
-        String ip;
-        try {
-            ip = (String) IOManager.read("IPAddress");
-            org.apache.derby.drda.NetworkServerControl server = new NetworkServerControl(InetAddress.getByName(ip), NETWORKSERVER_PORT);
-            server.ping();
-        } catch (Exception e) {
+
+        for (String ip : ips) {
+            try {
+               // ip = (String) IOManager.read("IPAddress");
+                org.apache.derby.drda.NetworkServerControl server = new NetworkServerControl(InetAddress.getByName(ip), NETWORKSERVER_PORT);
+                server.ping();
+                ret = ip;
+            } catch (Exception ignored) {}
+        }
+        if (ret.equals("192.168.1.1")) {
             throw new NoServerFoundException();
         }
-        return ip;
-    }
+        return ret;
+    }*/
 
     /**
      * starts a server database
