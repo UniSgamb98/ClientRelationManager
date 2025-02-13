@@ -12,16 +12,30 @@ public abstract class ConnectionManager {
     protected static final int NETWORKSERVER_PORT=1527;
     private static final String DB_USER="me";
     private static final String DB_PSW="pw";
-   // private static final String[] ips = {"192.168.1.138", "192.168.1.136"};
-  //  private static String validIP = null;
+    private static final String[] ips = {"192.168.1.138", "192.168.1.136"};
+    private static String validIP = null;
 
     public static Connection getConnection(ConnectionInterface status) {
         Connection conn = null;
         try {
             status.update("Searching for running Network Server");
-            ConnectionHelperThread helperThread = new ConnectionHelperThread();
+
+            //Questo pezzo di codice lancia una Thread per ogni indirizzo IP e aspetta 2 secondi
+            try {
+                for (String ip : ips) {
+                    ServerFinderThread helperThread = new ServerFinderThread(ip);
+                    helperThread.start();
+                    Thread.sleep(2000);
+                    if (helperThread.isValid()){
+                        validIP = ip;
+                    }
+                }
+            } catch (InterruptedException ignored) {}       //Thread.sleep
+            if (validIP == null) {
+                throw new NoServerFoundException();
+            }
+
             status.update("Found running Network Server");
-            String ip = helperThread.getOperativeServerIP();
 
             // The user and password properties are a must, required by JCC
             Properties properties = new java.util.Properties();
@@ -30,7 +44,7 @@ public abstract class ConnectionManager {
 
             // Load ClientDriver and get database connection via DriverManager api
             Class.forName("org.apache.derby.jdbc.ClientDriver");
-            String DERBY_CLIENT_URL= "jdbc:derby://"+ ip +":"+ NETWORKSERVER_PORT+"/"+DBNAME;
+            String DERBY_CLIENT_URL= "jdbc:derby://"+ validIP +":"+ NETWORKSERVER_PORT+"/"+DBNAME;
             conn = DriverManager.getConnection(DERBY_CLIENT_URL,properties);
             status.update("Got a client connection via the DriverManager.");
         } catch (NoServerFoundException e) {

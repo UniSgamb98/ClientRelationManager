@@ -17,6 +17,7 @@ public class ConnectionHelperThread extends Thread{
     public ConnectionHelperThread() throws NoServerFoundException {
         findOperativeServerIP();
     }
+
     @Override
     public void run() {
         if (operativeServerIP != null) {    //keep checking if server is up
