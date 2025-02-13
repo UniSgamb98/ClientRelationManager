@@ -1,4 +1,4 @@
-package orodent.clientrelationmanager.database;
+package orodent.clientrelationmanager.controller.database;
 
 import org.apache.derby.drda.NetworkServerControl;
 import orodent.clientrelationmanager.utils.IOManager;
@@ -6,21 +6,19 @@ import orodent.clientrelationmanager.utils.IOManager;
 import java.net.InetAddress;
 import java.sql.*;
 import java.util.Properties;
-import java.util.logging.Logger;
 
 public abstract class ConnectionManager {
     private static final String DBNAME="NSSimpleDB";
     private static final int NETWORKSERVER_PORT=1527;
     private static final String DB_USER="me";
     private static final String DB_PSW="pw";
-    private static final Logger logger = Logger.getLogger(ConnectionManager.class.getName());
 
-    public static Connection getConnection() {
+    public static Connection getConnection(ConnectionInterface status) {
         Connection conn = null;
         try {
+            status.update("Searching for running Network Server");
             String ip = checkForServer();
-            System.out.println("Found running Network Server");
-            logger.info("Found running Network Server");
+            status.update("Found running Network Server");
 
             // The user and password properties are a must, required by JCC
             Properties properties = new java.util.Properties();
@@ -31,15 +29,15 @@ public abstract class ConnectionManager {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             String DERBY_CLIENT_URL= "jdbc:derby://"+ ip +":"+ NETWORKSERVER_PORT+"/"+DBNAME;
             conn = DriverManager.getConnection(DERBY_CLIENT_URL,properties);
-            System.out.println("Got a client connection via the DriverManager.");
-            logger.info("Got a client connection via the DriverManager.");
+            status.update("Got a client connection via the DriverManager.");
         } catch (NoServerFoundException e) {
-            System.out.println("Network Server not found, creating one!");
-            logger.info("Network Server not found, creating one!");
+            status.update("Network Server not found, creating one!");
             try {
+                status.update("Starting Network Server");
                 startNetworkServer();
+                status.update("Derby Network Server now running");
             } catch (Exception e1) {
-                System.out.println("Failed to start NetworkServer: " + e1);
+                status.update("Failed to start NetworkServer: " + e1);
                 System.exit(1);
             }
             try {
@@ -47,33 +45,17 @@ public abstract class ConnectionManager {
                 // to the same database that the Network Server is accessing to serve clients from other JVMs.
                 // The embedded connection will be faster than going across the network
                 conn = getEmbeddedConnection();
-                System.out.println("Got an embedded connection.");
-                logger.info("Got an embedded connection.");
+                status.update("Got an embedded connection.");
             } catch (Exception sqle) {
-                System.out.println("Failure making connection: " + sqle);
+                status.update("Failure making connection: " + sqle);
             }
         } catch (ClassNotFoundException e) {
-            System.out.println("ClassNotFoundException: " + e);
+            status.update("ClassNotFoundException: " + e);
         } catch (SQLException e) {
-            System.out.println("SQLException: " + e);
+            status.update("SQLException: " + e);
         }
         return conn;
     }
-
-    /*
-     *
-     * @param ip
-     * @throws NoServerFoundException
-     *
-    private static void pingServer(String ip) throws NoServerFoundException{
-        try {
-            org.apache.derby.drda.NetworkServerControl server = new NetworkServerControl(InetAddress.getByName(ip), NETWORKSERVER_PORT);
-            server.ping();
-        } catch (Exception e) {
-            throw new NoServerFoundException();
-        }
-    }
-*/
 
     /**
      * Database must be running in this JVM
@@ -95,8 +77,6 @@ public abstract class ConnectionManager {
         try {
             ip = (String) IOManager.read("IPAddress");
             org.apache.derby.drda.NetworkServerControl server = new NetworkServerControl(InetAddress.getByName(ip), NETWORKSERVER_PORT);
-            System.out.println("Searching for running Network Server");
-            logger.info("Searching for running Network Server");
             server.ping();
         } catch (Exception e) {
             throw new NoServerFoundException();
@@ -116,21 +96,11 @@ public abstract class ConnectionManager {
 
     /**
      * Here you can set the proprieties of the server.
-     * derby.drda.keepAlive,
-     * derby.drda.logConnections,
-     * derby.drda.maxThreads,
-     * derby.drda.minThreads,
-     * derby.drda.portNumber,
-     * derby.drda.startNetworkServer,
-     * derby.drda.timeslice,
-     * derby.drda.traceAll,
-     * derby.drda.traceDirectory,
-     * derby.drda.host,
+     * derby.drda.keepAlive, logConnections, maxThreads, minThreads, portNumber,
+     * startNetworkServer, timeslice, traceAll, traceDirectory, host,
      * @throws Exception Don't know when it could throw
      */
     private static void startWithProperty() throws Exception {
-        System.out.println("Starting Network Server");
-        logger.info("Starting Network Server");
         System.setProperty("derby.drda.startNetworkServer", "true");
         String ip = InetAddress.getLocalHost().getHostAddress();
         System.setProperty("derby.drda.host", ip);
@@ -151,21 +121,15 @@ public abstract class ConnectionManager {
         org.apache.derby.drda.NetworkServerControl server = new NetworkServerControl();          //TODO identificare chi ha risposto al ping
 
         // Use NetworkServerControl.ping() to wait for the network Server to come up.
-        System.out.println("Testing if Network Server is up and running!");
-        logger.info("Testing if Network Server is up and running!");
         for (int i = 0; i < 6; i++) {
             try {
                 Thread.sleep(1000);
                 server.ping();
             } catch (Exception e) {
-                System.out.println("Try #" + i + " " + e);
                 if (i == 5) {
-                    System.out.println("Giving up trying to connect to Network Server!");
                     throw e;
                 }
             }
         }
-        System.out.println("Derby Network Server now running");
-        logger.info("Derby Network Server now running");
     }
 }

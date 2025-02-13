@@ -8,4 +8,6 @@ module orodent.clientrelationmanager {
 
     opens orodent.clientrelationmanager to javafx.fxml;
     exports orodent.clientrelationmanager;
+    exports orodent.clientrelationmanager.Main;
+    opens orodent.clientrelationmanager.Main to javafx.fxml;
 }

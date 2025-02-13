@@ -3,13 +3,10 @@ package orodent.clientrelationmanager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.apache.derby.drda.NetworkServerControl;
-import orodent.clientrelationmanager.database.ConnectionManager;
+import orodent.clientrelationmanager.controller.database.ConnectionManager;
+import orodent.clientrelationmanager.view.StatusLabel;
 
-import java.io.FileWriter;
-import java.io.IOException;
 import java.sql.*;
-import java.util.Properties;
 
 public class HelloController {
     Connection conn;
@@ -18,7 +15,8 @@ public class HelloController {
      @FXML
      private Label resultField;
      @FXML
-     private Label status;
+     public Label status;
+
 
 
     @FXML
@@ -33,7 +31,7 @@ public class HelloController {
 
     @FXML
     protected void onHelloButtonClick() {
-        conn = ConnectionManager.getConnection();
+        conn = ConnectionManager.getConnection(new StatusLabel());
     }
 
     @FXML
@@ -94,4 +92,10 @@ public class HelloController {
             e = e.getNextException();
         }
     }
+
+    public void updateStatus(String msg) {
+        status.setText(msg);
+    }
+
+
 }
