@@ -1,7 +1,6 @@
 package orodent.clientrelationmanager.controller.database;
 
 import org.apache.derby.drda.NetworkServerControl;
-import orodent.clientrelationmanager.utils.IOManager;
 
 import java.net.InetAddress;
 import java.sql.*;
@@ -12,23 +11,21 @@ public abstract class ConnectionManager {       //TODO da rendere istanziabile
     protected static final int NETWORKSERVER_PORT=1527;
     private static final String DB_USER="me";
     private static final String DB_PSW="pw";
-    //private static final String[] ips = {"192.168.1.138", "192.168.1.136"};
     private static String validIP = null;       //TODO DA ricordasi di far tornare a null quando la connessione viene persa
 
     public static Connection getConnection(ConnectionInterface status) {
         Connection conn = null;
         try {
             status.update("Searching for running Network Server");
-
-            //Questo pezzo di codice lancia una Thread per ogni indirizzo IP e aspetta 2 secondi
             try {
                 IpAddressesBean ipsToScan = new IpAddressesBean();
+                //Begin to Test all available Ips in IpAddressesBean
                 for (int i = 0; i < ipsToScan.getIpListSize(); i++) {
-                    ConnectionHelperThread helperThread = new ConnectionHelperThread(i);
+                    ConnectionTesterThread helperThread = new ConnectionTesterThread(i);
                     helperThread.start();
                 }
-                Thread.sleep(4000);
-                //dopo aver aspettato controlla se qualche ping è andato a buon fine dopo 4 secondi
+                Thread.sleep(4000);     //TODO To run on a new thread
+                //Checking the result of the test from every thread launched
                 for (int i = 0; i < ipsToScan.getIpListSize(); i++) {
                     if (ipsToScan.isIpReachable(i)){
                         validIP = ipsToScan.getIpAddresses(i);
@@ -38,12 +35,6 @@ public abstract class ConnectionManager {       //TODO da rendere istanziabile
             if (validIP == null) {
                 throw new NoServerFoundException();
             }
-
-
-           // checkForServer();
-
-           // validIP = "0.0.0.0";
-
             status.update("Found running Network Server");
 
             // The user and password properties are a must, required by JCC
@@ -94,39 +85,6 @@ public abstract class ConnectionManager {       //TODO da rendere istanziabile
         return DriverManager.getConnection("jdbc:derby:"+ ConnectionManager.DBNAME +";create=true;user="+DB_USER +";password="+DB_PSW);
     }
 
-    /*
-     * Pings the database server to see if one is running
-     * @throws NoServerFoundException if no server database was found
-     *
-    private static void checkForServer() throws NoServerFoundException {
-
-        try {
-            org.apache.derby.drda.NetworkServerControl server = new NetworkServerControl(InetAddress.getByName("255.255.255.255"), NETWORKSERVER_PORT);
-            server.ping();
-           // System.out.println(server.getSysinfo());
-            System.out.println(server.getCurrentProperties().toString());
-
-        } catch (Exception e) {
-            throw new NoServerFoundException();
-        }
-
-
-
-
-        /*
-        for (String ip : ips) {
-            try {
-               // ip = (String) IOManager.read("IPAddress");
-                org.apache.derby.drda.NetworkServerControl server = new NetworkServerControl(InetAddress.getByName(ip), NETWORKSERVER_PORT);
-                server.ping();
-                ret = ip;
-            } catch (Exception ignored) {}
-        }
-        if (ret.equals("192.168.1.1")) {
-            throw new NoServerFoundException();
-        }
-    }*/
-
     /**
      * starts a server database
      * @throws Exception if couldn't start one.
@@ -146,14 +104,11 @@ public abstract class ConnectionManager {       //TODO da rendere istanziabile
     private static void startWithProperty() throws Exception {
         System.setProperty("derby.drda.startNetworkServer", "true");
         String ip = InetAddress.getLocalHost().getHostAddress();
-        //ip = "0.0.0.0";
         System.setProperty("derby.drda.host", ip);
 
         // Booting Derby
         Class<?> clazz = Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
         clazz.getConstructor().newInstance();
-
-        IOManager.write(ip, "IPAddress");
     }
 
     /**
@@ -161,8 +116,8 @@ public abstract class ConnectionManager {       //TODO da rendere istanziabile
      * @throws Exception If no server was found
      */
     private static void waitForStart() throws Exception {
-        // Server instance for testing connection
-        org.apache.derby.drda.NetworkServerControl server = new NetworkServerControl();          //TODO identificare chi ha risposto al ping
+        // Server instance for testing connection on localMachine
+        org.apache.derby.drda.NetworkServerControl server = new NetworkServerControl();
 
         // Use NetworkServerControl.ping() to wait for the network Server to come up.
         for (int i = 0; i < 6; i++) {
