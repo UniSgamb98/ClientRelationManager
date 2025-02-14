@@ -9,17 +9,31 @@ import java.util.Arrays;
 import static orodent.clientrelationmanager.controller.database.ConnectionManager.NETWORKSERVER_PORT;
 
 public class ConnectionHelperThread extends Thread{
+    private final int ipToTest;
     private String operativeServerIP;
     private NetworkServerControl server;
-    ArrayList<String> ips = new ArrayList<>(Arrays.asList("192.168.1.136", "192.168.1.138"));
+   // ArrayList<String> ips = new ArrayList<>(Arrays.asList("192.168.1.136", "192.168.1.138"));
+    private IpAddressesBean ipsBean;
 
 
-    public ConnectionHelperThread() throws NoServerFoundException {
-        findOperativeServerIP();
+    public ConnectionHelperThread(int ipToTest) throws NoServerFoundException {
+        //findOperativeServerIP();
+        this.ipToTest = ipToTest;
+        ipsBean = new IpAddressesBean();
     }
 
     @Override
     public void run() {
+        try {
+            NetworkServerControl s1 = new NetworkServerControl(InetAddress.getByName(ipsBean.getIpAddresses(ipToTest)), NETWORKSERVER_PORT);
+            s1.ping();
+            ipsBean.setIpIsReachable(ipToTest);
+        } catch (Exception ignored) {}
+    }
+
+
+
+         /* questo era dentro run
         if (operativeServerIP != null) {    //keep checking if server is up
             try {
                 server.ping();
@@ -34,9 +48,9 @@ public class ConnectionHelperThread extends Thread{
                 throw new RuntimeException(e);
             }
         }
-    }
+    }*/
 
-    public void findOperativeServerIP() throws NoServerFoundException {
+    /*public void findOperativeServerIP() throws NoServerFoundException {
         int triesPerIP = 1; //change this to cycle more time on every ip
         int tries = 0;
         while(operativeServerIP == null && tries < ips.size() * triesPerIP) {
@@ -52,7 +66,7 @@ public class ConnectionHelperThread extends Thread{
         if (operativeServerIP == null) {
             throw new NoServerFoundException();
         }
-    }
+    }*/
 
     public String getOperativeServerIP() {
         return operativeServerIP;

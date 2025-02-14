@@ -7,13 +7,13 @@ import java.net.InetAddress;
 import java.sql.*;
 import java.util.Properties;
 
-public abstract class ConnectionManager {
+public abstract class ConnectionManager {       //TODO da rendere istanziabile
     private static final String DBNAME="NSSimpleDB";
     protected static final int NETWORKSERVER_PORT=1527;
     private static final String DB_USER="me";
     private static final String DB_PSW="pw";
-    private static final String[] ips = {"192.168.1.138", "192.168.1.136"};
-    private static String validIP = null;
+    //private static final String[] ips = {"192.168.1.138", "192.168.1.136"};
+    private static String validIP = null;       //TODO DA ricordasi di far tornare a null quando la connessione viene persa
 
     public static Connection getConnection(ConnectionInterface status) {
         Connection conn = null;
@@ -22,18 +22,27 @@ public abstract class ConnectionManager {
 
             //Questo pezzo di codice lancia una Thread per ogni indirizzo IP e aspetta 2 secondi
             try {
-                for (String ip : ips) {
-                    ServerFinderThread helperThread = new ServerFinderThread(ip);
+                IpAddressesBean ipsToScan = new IpAddressesBean();
+                for (int i = 0; i < ipsToScan.getIpListSize(); i++) {
+                    ConnectionHelperThread helperThread = new ConnectionHelperThread(i);
                     helperThread.start();
-                    Thread.sleep(2000);
-                    if (helperThread.isValid()){
-                        validIP = ip;
+                }
+                Thread.sleep(4000);
+                //dopo aver aspettato controlla se qualche ping è andato a buon fine dopo 4 secondi
+                for (int i = 0; i < ipsToScan.getIpListSize(); i++) {
+                    if (ipsToScan.isIpReachable(i)){
+                        validIP = ipsToScan.getIpAddresses(i);
                     }
                 }
             } catch (InterruptedException ignored) {}       //Thread.sleep
             if (validIP == null) {
                 throw new NoServerFoundException();
             }
+
+
+           // checkForServer();
+
+           // validIP = "0.0.0.0";
 
             status.update("Found running Network Server");
 
@@ -89,8 +98,22 @@ public abstract class ConnectionManager {
      * Pings the database server to see if one is running
      * @throws NoServerFoundException if no server database was found
      *
-    private static String checkForServer() throws NoServerFoundException {
+    private static void checkForServer() throws NoServerFoundException {
 
+        try {
+            org.apache.derby.drda.NetworkServerControl server = new NetworkServerControl(InetAddress.getByName("255.255.255.255"), NETWORKSERVER_PORT);
+            server.ping();
+           // System.out.println(server.getSysinfo());
+            System.out.println(server.getCurrentProperties().toString());
+
+        } catch (Exception e) {
+            throw new NoServerFoundException();
+        }
+
+
+
+
+        /*
         for (String ip : ips) {
             try {
                // ip = (String) IOManager.read("IPAddress");
@@ -102,7 +125,6 @@ public abstract class ConnectionManager {
         if (ret.equals("192.168.1.1")) {
             throw new NoServerFoundException();
         }
-        return ret;
     }*/
 
     /**
@@ -124,6 +146,7 @@ public abstract class ConnectionManager {
     private static void startWithProperty() throws Exception {
         System.setProperty("derby.drda.startNetworkServer", "true");
         String ip = InetAddress.getLocalHost().getHostAddress();
+        //ip = "0.0.0.0";
         System.setProperty("derby.drda.host", ip);
 
         // Booting Derby
@@ -134,7 +157,7 @@ public abstract class ConnectionManager {
     }
 
     /**
-     * Ping the database server. If no servers ping back in 10 seconds will throw an exception
+     * Ping the database server. If no servers ping back in 5 seconds will throw an exception
      * @throws Exception If no server was found
      */
     private static void waitForStart() throws Exception {
