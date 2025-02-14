@@ -1,8 +1,8 @@
 package orodent.clientrelationmanager.view;
 
 import javafx.scene.control.Label;
-import orodent.clientrelationmanager.controller.database.ConnectionInterface;
-import orodent.clientrelationmanager.controller.database.ConnectionManager;
+import orodent.clientrelationmanager.model.database.ConnectionInterface;
+import orodent.clientrelationmanager.model.database.ConnectionManager;
 
 import java.util.logging.Logger;
 import java.util.logging.StreamHandler;

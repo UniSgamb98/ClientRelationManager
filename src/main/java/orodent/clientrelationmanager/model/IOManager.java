@@ -1,4 +1,4 @@
-package orodent.clientrelationmanager.utils;
+package orodent.clientrelationmanager.model;
 
 import java.io.*;
 

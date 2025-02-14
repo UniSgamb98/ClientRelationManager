@@ -1,4 +1,4 @@
-package orodent.clientrelationmanager.controller.database;
+package orodent.clientrelationmanager.model.database;
 
 import java.sql.*;
 

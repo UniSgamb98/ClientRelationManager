@@ -1,4 +1,4 @@
-package orodent.clientrelationmanager.controller.database;
+package orodent.clientrelationmanager.model.database;
 
 import org.apache.derby.drda.NetworkServerControl;
 
@@ -6,14 +6,14 @@ import java.net.InetAddress;
 import java.sql.*;
 import java.util.Properties;
 
-public abstract class ConnectionManager {       //TODO da rendere istanziabile
-    private static final String DBNAME="NSSimpleDB";
-    protected static final int NETWORKSERVER_PORT=1527;
-    private static final String DB_USER="me";
-    private static final String DB_PSW="pw";
-    private static String validIP = null;       //TODO DA ricordasi di far tornare a null quando la connessione viene persa
+public class ConnectionManager{                     //TODO to be runnable for the future
+    private final String DBNAME="NSSimpleDB";
+    protected final int NETWORKSERVER_PORT = 1527;
+    private final String DB_USER="me";
+    private final String DB_PSW="pw";
+    private String validIP = null;
 
-    public static Connection getConnection(ConnectionInterface status) {
+    public Connection getConnection(ConnectionInterface status) {
         Connection conn = null;
         try {
             status.update("Searching for running Network Server");
@@ -24,14 +24,14 @@ public abstract class ConnectionManager {       //TODO da rendere istanziabile
                     ConnectionTesterThread helperThread = new ConnectionTesterThread(i);
                     helperThread.start();
                 }
-                Thread.sleep(4000);     //TODO To run on a new thread
+                Thread.sleep(4000);
                 //Checking the result of the test from every thread launched
                 for (int i = 0; i < ipsToScan.getIpListSize(); i++) {
-                    if (ipsToScan.isIpReachable(i)){
+                    if (ipsToScan.isIpReachable(i)) {
                         validIP = ipsToScan.getIpAddresses(i);
                     }
                 }
-            } catch (InterruptedException ignored) {}       //Thread.sleep
+            } catch (InterruptedException ignored) {}
             if (validIP == null) {
                 throw new NoServerFoundException();
             }
@@ -80,16 +80,16 @@ public abstract class ConnectionManager {       //TODO da rendere istanziabile
      * @return Embedded Connection to the database.
      * @throws Exception if couldn't do so
      */
-    private static Connection getEmbeddedConnection() throws Exception
+    private Connection getEmbeddedConnection() throws Exception
     {
-        return DriverManager.getConnection("jdbc:derby:"+ ConnectionManager.DBNAME +";create=true;user="+DB_USER +";password="+DB_PSW);
+        return DriverManager.getConnection("jdbc:derby:"+ DBNAME +";create=true;user="+DB_USER +";password="+DB_PSW);
     }
 
     /**
      * starts a server database
      * @throws Exception if couldn't start one.
      */
-    private static void startNetworkServer() throws Exception {
+    private void startNetworkServer() throws Exception {
         // Start the Network Server using the property and then wait for the server to start by testing a connection
         startWithProperty();
         waitForStart();
@@ -101,7 +101,7 @@ public abstract class ConnectionManager {       //TODO da rendere istanziabile
      * startNetworkServer, timeslice, traceAll, traceDirectory, host,
      * @throws Exception Don't know when it could throw
      */
-    private static void startWithProperty() throws Exception {
+    private void startWithProperty() throws Exception {
         System.setProperty("derby.drda.startNetworkServer", "true");
         String ip = InetAddress.getLocalHost().getHostAddress();
         System.setProperty("derby.drda.host", ip);
@@ -115,7 +115,7 @@ public abstract class ConnectionManager {       //TODO da rendere istanziabile
      * Ping the database server. If no servers ping back in 5 seconds will throw an exception
      * @throws Exception If no server was found
      */
-    private static void waitForStart() throws Exception {
+    private void waitForStart() throws Exception {
         // Server instance for testing connection on localMachine
         org.apache.derby.drda.NetworkServerControl server = new NetworkServerControl();
 

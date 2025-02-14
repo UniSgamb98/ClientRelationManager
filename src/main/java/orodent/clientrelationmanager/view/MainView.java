@@ -4,7 +4,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import orodent.clientrelationmanager.controller.database.ConnectionManager;
+import orodent.clientrelationmanager.model.database.ConnectionManager;
 
 import java.sql.*;
 
@@ -24,7 +24,10 @@ public class MainView extends BorderPane {
         Button testButton = new Button("Test");
 
 
-        connectButton.setOnAction(event -> connection = ConnectionManager.getConnection(statusLabel));
+        connectButton.setOnAction(event -> {
+            ConnectionManager connectionManager = new ConnectionManager();
+            connection = connectionManager.getConnection(statusLabel);
+        });
         disconnectButton.setOnAction(event -> {
             try {
                 DriverManager.getConnection("jdbc:derby:;shutdown=true");

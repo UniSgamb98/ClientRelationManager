@@ -3,7 +3,7 @@ package orodent.clientrelationmanager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import orodent.clientrelationmanager.controller.database.ConnectionManager;
+import orodent.clientrelationmanager.model.database.ConnectionManager;
 import orodent.clientrelationmanager.view.StatusLabel;
 
 import java.sql.*;
@@ -31,7 +31,7 @@ public class HelloController {
 
     @FXML
     protected void onHelloButtonClick() {
-        conn = ConnectionManager.getConnection(new StatusLabel());
+        //conn = ConnectionManager.getConnection(new StatusLabel());
     }
 
     @FXML
