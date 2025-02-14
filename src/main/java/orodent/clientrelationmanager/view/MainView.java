@@ -4,19 +4,21 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import orodent.clientrelationmanager.controller.StatusToolTipController;
 import orodent.clientrelationmanager.model.database.ConnectionManager;
 
 import java.sql.*;
 
 public class MainView extends BorderPane {
-    private StatusLabel statusLabel;
+    private final StatusToolTipController statusToolTipController;
     private HBox hBox;
     private Connection connection;
     private TextField searchField;
 
     public MainView() {
-        this.statusLabel = new StatusLabel();
-        this.setBottom(statusLabel);
+
+        this.statusToolTipController = new StatusToolTipController();
+        this.setBottom(statusToolTipController.getView());
 
         searchField = new TextField();
         Button connectButton = new Button("Connect");
@@ -26,7 +28,7 @@ public class MainView extends BorderPane {
 
         connectButton.setOnAction(event -> {
             ConnectionManager connectionManager = new ConnectionManager();
-            connection = connectionManager.getConnection(statusLabel);
+            connection = connectionManager.getConnection(statusToolTipController);
         });
         disconnectButton.setOnAction(event -> {
             try {
@@ -62,7 +64,7 @@ public class MainView extends BorderPane {
             rs = stmt.executeQuery();
             rs.next();
             System.out.println("number of rows in sys.systables = " + rs.getString(2));
-            statusLabel.setText(rs.getString(2));
+            statusToolTipController.update(rs.getString(2));
         }
         catch(SQLException sqle)
         {

@@ -1,6 +1,8 @@
 package orodent.clientrelationmanager.model.database;
 
 import org.apache.derby.drda.NetworkServerControl;
+import orodent.clientrelationmanager.controller.StatusToolTipController;
+import orodent.clientrelationmanager.model.statustooltip.StatusToolTipInterface;
 
 import java.net.InetAddress;
 import java.sql.*;
@@ -13,7 +15,7 @@ public class ConnectionManager{                     //TODO to be runnable for th
     private final String DB_PSW="pw";
     private String validIP = null;
 
-    public Connection getConnection(ConnectionInterface status) {
+    public Connection getConnection(StatusToolTipController status) {
         Connection conn = null;
         try {
             status.update("Searching for running Network Server");
@@ -47,6 +49,7 @@ public class ConnectionManager{                     //TODO to be runnable for th
             String DERBY_CLIENT_URL= "jdbc:derby://"+ validIP +":"+ NETWORKSERVER_PORT+"/"+DBNAME;
             conn = DriverManager.getConnection(DERBY_CLIENT_URL,properties);
             status.update("Got a client connection via the DriverManager.");
+            status.greenLight();
         } catch (NoServerFoundException e) {
             status.update("Network Server not found, creating one!");
             try {
@@ -63,6 +66,7 @@ public class ConnectionManager{                     //TODO to be runnable for th
                 // The embedded connection will be faster than going across the network
                 conn = getEmbeddedConnection();
                 status.update("Got an embedded connection.");
+                status.greenLight();
             } catch (Exception sqle) {
                 status.update("Failure making connection: " + sqle);
             }

@@ -3,8 +3,6 @@ package orodent.clientrelationmanager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import orodent.clientrelationmanager.model.database.ConnectionManager;
-import orodent.clientrelationmanager.view.StatusLabel;
 
 import java.sql.*;
 
