@@ -13,8 +13,7 @@ import java.util.logging.StreamHandler;
 public class LoginController {
     private final LoginView view;
     private final Logger logger;
-    private Button loginButton;
-    private ChoiceBox<Operator> operatorChoiceBox;
+    private final ChoiceBox<Operator> operatorChoiceBox;
 
     public LoginController(App app) {
         logger = Logger.getLogger(ConnectionManager.class.getName());
@@ -23,7 +22,7 @@ public class LoginController {
         operatorChoiceBox = new ChoiceBox<>();
         operatorChoiceBox.getItems().addAll(Operator.values());
 
-        loginButton = new Button();
+        Button loginButton = new Button();
         loginButton.setOnAction(event -> {
             logger.info(operatorChoiceBox.getValue() + " has logged in");
             app.setOperator(operatorChoiceBox.getValue());

@@ -14,14 +14,11 @@ import java.sql.*;
 public class MainView extends BorderPane {
     private final StatusToolTipController statusToolTipController;
     private HBox hBox;
-    private Connection connection;
     private TextField searchField;
-    private Button loginButton;
     private LoginView loginView;
     private LoginController loginController;
 
     public MainView(App app) {
-
         this.statusToolTipController = new StatusToolTipController();
         this.setBottom(statusToolTipController.getView());
 
@@ -34,20 +31,17 @@ public class MainView extends BorderPane {
 
 
         connectButton.setOnAction(event -> {
-            ConnectionManager connectionManager = new ConnectionManager();
-            connection = connectionManager.getConnection();
+            ConnectionManager connectionManager = new ConnectionManager(app);
+            connectionManager.start();
         });
         disconnectButton.setOnAction(event -> {
-            try {
-                DriverManager.getConnection("jdbc:derby:;shutdown=true");
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
+            ConnectionManager connectionManager = new ConnectionManager(app);
+            connectionManager.endConnection();
         });
 
         testButton.setOnAction(event -> {
             try {
-                test(connection);
+                test(app.getConnection());
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
