@@ -3,18 +3,18 @@ package orodent.clientrelationmanager.controller;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
-import orodent.clientrelationmanager.model.database.ConnectionManager;
+import orodent.clientrelationmanager.controller.database.ConnectionManager;
 import orodent.clientrelationmanager.view.StatusToolTipView;
 
 import java.util.logging.Logger;
 import java.util.logging.StreamHandler;
 
 public class StatusToolTipController implements EventHandler<MouseEvent> {
-    private static StatusToolTipView statusToolTipView;
-    private static final Logger logger = Logger.getLogger(ConnectionManager.class.getName());
+    private static final StatusToolTipView statusToolTipView = new StatusToolTipView();
+    private final Logger logger;
 
     public StatusToolTipController() {
-        statusToolTipView = new StatusToolTipView();
+        logger = Logger.getLogger(ConnectionManager.class.getName());
         logger.addHandler(new StreamHandler());
     }
 

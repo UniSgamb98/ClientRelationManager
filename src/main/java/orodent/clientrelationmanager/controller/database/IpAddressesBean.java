@@ -1,4 +1,4 @@
-package orodent.clientrelationmanager.model.database;
+package orodent.clientrelationmanager.controller.database;
 
 import java.util.ArrayList;
 import java.util.Arrays;

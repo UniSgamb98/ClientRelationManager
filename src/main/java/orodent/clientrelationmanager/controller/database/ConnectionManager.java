@@ -1,4 +1,4 @@
-package orodent.clientrelationmanager.model.database;
+package orodent.clientrelationmanager.controller.database;
 
 import org.apache.derby.drda.NetworkServerControl;
 import orodent.clientrelationmanager.controller.StatusToolTipController;
@@ -13,8 +13,13 @@ public class ConnectionManager{                     //TODO to be runnable for th
     private final String DB_USER="me";
     private final String DB_PSW="pw";
     private String validIP = null;
+    private final StatusToolTipController status;
 
-    public Connection getConnection(StatusToolTipController status) {
+    public ConnectionManager(){
+        status = new StatusToolTipController();
+    }
+
+    public Connection getConnection() {
         Connection conn = null;
         try {
             status.update("Searching for running Network Server");
@@ -85,7 +90,7 @@ public class ConnectionManager{                     //TODO to be runnable for th
      */
     private Connection getEmbeddedConnection() throws Exception
     {
-        return DriverManager.getConnection("jdbc:derby:"+ DBNAME +";create=true;user="+DB_USER +";password="+DB_PSW);
+        return DriverManager.getConnection("jdbc:derby:I:\\CliZr\\Tommaso\\"+ DBNAME +";create=true;user="+DB_USER +";password="+DB_PSW);
     }
 
     /**

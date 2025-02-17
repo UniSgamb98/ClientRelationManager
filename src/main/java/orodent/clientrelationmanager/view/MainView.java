@@ -4,8 +4,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import orodent.clientrelationmanager.controller.LoginController;
 import orodent.clientrelationmanager.controller.StatusToolTipController;
-import orodent.clientrelationmanager.model.database.ConnectionManager;
+import orodent.clientrelationmanager.controller.database.ConnectionManager;
+import orodent.clientrelationmanager.model.App;
 
 import java.sql.*;
 
@@ -14,11 +16,16 @@ public class MainView extends BorderPane {
     private HBox hBox;
     private Connection connection;
     private TextField searchField;
+    private Button loginButton;
+    private LoginView loginView;
+    private LoginController loginController;
 
-    public MainView() {
+    public MainView(App app) {
 
         this.statusToolTipController = new StatusToolTipController();
         this.setBottom(statusToolTipController.getView());
+
+        this.setLeft(new HotBarView());
 
         searchField = new TextField();
         Button connectButton = new Button("Connect");
@@ -28,7 +35,7 @@ public class MainView extends BorderPane {
 
         connectButton.setOnAction(event -> {
             ConnectionManager connectionManager = new ConnectionManager();
-            connection = connectionManager.getConnection(statusToolTipController);
+            connection = connectionManager.getConnection();
         });
         disconnectButton.setOnAction(event -> {
             try {
@@ -49,6 +56,10 @@ public class MainView extends BorderPane {
         hBox = new HBox();
         this.setCenter(hBox);
         hBox.getChildren().addAll(connectButton, disconnectButton, searchField, testButton);
+
+        loginController = new LoginController(app);
+        loginView = loginController.getView();
+        this.setRight(loginView);
     }
 
     public void test(Connection conn) throws Exception

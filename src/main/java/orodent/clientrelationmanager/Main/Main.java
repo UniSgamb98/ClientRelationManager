@@ -3,6 +3,7 @@ package orodent.clientrelationmanager.Main;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import orodent.clientrelationmanager.model.App;
 import orodent.clientrelationmanager.view.MainView;
 
 import java.io.File;
@@ -15,9 +16,11 @@ public class Main extends Application {
         PrintStream stream = new PrintStream(file);
         System.setOut(stream);
 
-        MainView mainView = new MainView();
+        App app = new App();
+
+        MainView mainView = new MainView(app);
         primaryStage.setTitle("Orodent");
-        primaryStage.setScene(new Scene(mainView, 680, 200));
+        primaryStage.setScene(new Scene(mainView, 680, 300));
         primaryStage.show();
     }
 
