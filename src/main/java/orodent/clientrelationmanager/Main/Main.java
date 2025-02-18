@@ -18,8 +18,6 @@ public class Main extends Application {
         System.setOut(stream);
 
         App app = new App();
-        ConnectionManager connectionManager = new ConnectionManager(app);
-        connectionManager.start();
 
         MainView mainView = new MainView(app);
         primaryStage.setTitle("Orodent");

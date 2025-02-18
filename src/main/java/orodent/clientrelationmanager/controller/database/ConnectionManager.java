@@ -2,7 +2,6 @@ package orodent.clientrelationmanager.controller.database;
 
 import org.apache.derby.drda.NetworkServerControl;
 import orodent.clientrelationmanager.controller.StatusToolTipController;
-import orodent.clientrelationmanager.model.App;
 
 import java.net.InetAddress;
 import java.sql.*;
@@ -13,26 +12,27 @@ public class ConnectionManager extends Thread{
     protected final int NETWORKSERVER_PORT = 1527;
     private final String DB_USER="me";
     private final String DB_PSW="pw";
-    private String validIP = null;
+    private String validIP;
     private final StatusToolTipController status;
-    private final App app;
+    private Connection connection;
+    private ConnectionType connectionType;
 
-    public ConnectionManager(App app){
-        this.app = app;
+    public ConnectionManager(){
         status = new StatusToolTipController();
+        start();
     }
 
     @Override
     public void run(){
-        app.setConnection(getConnection());
+        open();
     }
 
-    public Connection getConnection() {
-        Connection conn = null;
+    protected void open() {
         try {
             status.update("Searching for running Network Server");
             try {
                 IpAddressesBean ipsToScan = new IpAddressesBean();
+                ipsToScan.initialize();
                 //Begin to Test all available Ips in IpAddressesBean
                 for (int i = 0; i < ipsToScan.getIpListSize(); i++) {
                     ConnectionTesterThread helperThread = new ConnectionTesterThread(i);
@@ -46,9 +46,7 @@ public class ConnectionManager extends Thread{
                     }
                 }
             } catch (InterruptedException ignored) {}
-            if (validIP == null) {
-                throw new NoServerFoundException();
-            }
+            if (validIP == null) throw new NoServerFoundException();
             status.update("Found running Network Server");
 
             // The user and password properties are a must, required by JCC
@@ -59,16 +57,15 @@ public class ConnectionManager extends Thread{
             // Load ClientDriver and get database connection via DriverManager api
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             String DERBY_CLIENT_URL= "jdbc:derby://"+ validIP +":"+ NETWORKSERVER_PORT+"/"+DBNAME;
-            conn = DriverManager.getConnection(DERBY_CLIENT_URL,properties);
+            connection = DriverManager.getConnection(DERBY_CLIENT_URL,properties);
             status.update("Got a client connection via the DriverManager.");
-            app.setConnectionType(ConnectionType.DRIVER);
+            connectionType = ConnectionType.DRIVER;
             status.greenLight();
         } catch (NoServerFoundException e) {
             status.update("Network Server not found, creating one!");
             try {
                 status.update("Starting Network Server");
                 startNetworkServer();
-                status.update("Derby Network Server now running");
             } catch (Exception e1) {
                 status.update("Failed to start NetworkServer: " + e1);
                 System.exit(1);
@@ -77,47 +74,57 @@ public class ConnectionManager extends Thread{
                 // Since the Network Server was started in this JVM, this JVM can get an embedded connection
                 // to the same database that the Network Server is accessing to serve clients from other JVMs.
                 // The embedded connection will be faster than going across the network
-                conn = getEmbeddedConnection();
+                connection = getEmbeddedConnection();
                 status.update("Got an embedded connection.");
-                app.setConnectionType(ConnectionType.EMBEDDED);
+                connectionType = ConnectionType.EMBEDDED;
                 status.greenLight();
-            } catch (Exception sqle) {
-                status.update("Failure making connection: " + sqle);
+            } catch (SQLException sqle) {
+                if (sqle.getSQLState().equals("XJ040")) {   //tried to host database but someone else was already.
+                    status.update("Server already running");
+                    open();
+                } else {
+                    status.update("Failure making connection: " + sqle);
+                }
             }
         } catch (ClassNotFoundException e) {
             status.update("ClassNotFoundException: " + e);
         } catch (SQLException e) {
             status.update("SQLException: " + e);
         }
-        return conn;
     }
     //todo javadoc
-    public void endConnection(){
-        if (app.getConnectionType().equals(ConnectionType.EMBEDDED)){
-            try {
-                DriverManager.getConnection("jdbc:derby:;shutdown=true");
-                status.redLight();
-                status.update("Disconnected");
-            } catch (SQLException e) {
-                if (e.getSQLState().trim().equals("XJ015")){
-                    status.update("Derby has been shut down");
+    protected void close(){
+        switch (connectionType) {
+            case EMBEDDED -> {
+                try {
+                    DriverManager.getConnection("jdbc:derby:;shutdown=true");
+                } catch (SQLException e) {
+                    if (e.getSQLState().trim().equals("XJ015")) {
+                        connection = null;
+                        connectionType = ConnectionType.NONE;
+                        status.redLight();
+                        status.update("Derby has been shut down");
+                    } else {
+                        status.update("Something went wrong during derby connection: " + e);
+                    }
+                }
+            }
+            case DRIVER -> {
+                try {
+                    connection.commit();
+                    connection.close();
+                    connection = null;
                     status.redLight();
-                } else {
+                    status.update("Disconnected from database");
+                    connectionType = ConnectionType.NONE;
+                } catch (SQLException e) {
                     status.update("Something went wrong during derby connection: " + e);
                 }
             }
-        } else if (app.getConnectionType().equals(ConnectionType.DRIVER)) {
-            Connection c = app.getConnection();
-            try {
-                c.commit();
-                c.close();
+            case NONE -> {
                 status.redLight();
-                status.update("Disconnected from database");
-            } catch (SQLException e) {
-                status.update("Something went wrong during derby connection: " + e);
+                status.update("Already disconnected");
             }
-        } else {
-            status.update("Already disconnected");
         }
     }
 
@@ -127,8 +134,7 @@ public class ConnectionManager extends Thread{
      * @return Embedded Connection to the database.
      * @throws Exception if couldn't do so
      */
-    private Connection getEmbeddedConnection() throws Exception
-    {
+    private Connection getEmbeddedConnection() throws SQLException {
         return DriverManager.getConnection("jdbc:derby:I:\\CliZr\\Tommaso\\"+ DBNAME +";create=true;user="+DB_USER +";password="+DB_PSW);
     }
 
@@ -177,5 +183,9 @@ public class ConnectionManager extends Thread{
                 }
             }
         }
+    }
+
+    protected Connection getConnection() {
+        return connection;
     }
 }
