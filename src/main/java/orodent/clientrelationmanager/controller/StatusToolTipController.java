@@ -1,5 +1,6 @@
 package orodent.clientrelationmanager.controller;
 
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
@@ -23,7 +24,7 @@ public class StatusToolTipController implements EventHandler<MouseEvent> {
     }
 
     public void update(String msg){
-        statusToolTipView.updateStatusLabel(msg);
+        Platform.runLater(()-> statusToolTipView.updateStatusLabel(msg));
         logger.info(msg);
     }
 

@@ -1,19 +1,22 @@
 package orodent.clientrelationmanager.controller.database;
 
+import orodent.clientrelationmanager.controller.StatusToolTipController;
+import orodent.clientrelationmanager.model.App;
+
 import java.sql.*;
 
 public class DBManager{
-    private final Connection connection;
+    StatusToolTipController statusToolTipController;
 
 
-    public DBManager(Connection connection){
-        this.connection = connection;
+    public DBManager(){
+        statusToolTipController = new StatusToolTipController();
     }
 
     /**
      * Insert an entry user for the table USER --->FOR DEMO
      * @param userId UId for the entry
-     */
+
     public void insertUser(long userId){
         try {
             PreparedStatement statement = connection.prepareStatement(
@@ -25,7 +28,7 @@ public class DBManager{
         } catch (SQLException e) {
             printSQLException(e);
         }
-    }
+    }*/
 
 
 
@@ -50,4 +53,37 @@ public class DBManager{
             e = e.getNextException();
         }
     }
+/*
+    public void test() {
+        {
+            PreparedStatement stmt = null;
+            ResultSet rs = null;
+            try {
+                String search = searchField.getText();
+                // To test our connection, we will try to do a select from the system catalog tables
+                stmt = conn.prepareStatement(
+                        "SELECT * FROM PRODUCTS WHERE CODE = ?");
+                stmt.setString(1, search);
+                rs = stmt.executeQuery();
+                rs.next();
+                System.out.println("number of rows in sys.systables = " + rs.getString(2));
+                statusToolTipController.update(rs.getString(2));
+            }
+            catch(SQLException sqle)
+            {
+                System.out.println("SQLException when querying on the database connection; "+ sqle);
+                throw sqle;
+            }
+            finally
+            {
+                System.out.println("done");
+                if(rs != null)
+                    rs.close();
+                if(stmt != null)
+                    stmt.close();
+            }
+
+        }
+
+    }*/
 }
