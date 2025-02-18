@@ -92,7 +92,10 @@ public class ConnectionManager extends Thread{
             status.update("SQLException: " + e);
         }
     }
-    //todo javadoc
+
+    /**
+     * Closes the connection with database server and initialize all attributes related
+     */
     protected void close(){
         switch (connectionType) {
             case EMBEDDED -> {
@@ -132,7 +135,7 @@ public class ConnectionManager extends Thread{
      * Database must be running in this JVM
      *
      * @return Embedded Connection to the database.
-     * @throws Exception if couldn't do so
+     * @throws SQLException with SQLSTATE XJ040 if another machine is hosting
      */
     private Connection getEmbeddedConnection() throws SQLException {
         return DriverManager.getConnection("jdbc:derby:I:\\CliZr\\Tommaso\\"+ DBNAME +";create=true;user="+DB_USER +";password="+DB_PSW);

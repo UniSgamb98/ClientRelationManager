@@ -6,7 +6,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import orodent.clientrelationmanager.controller.LoginController;
 import orodent.clientrelationmanager.controller.StatusToolTipController;
-import orodent.clientrelationmanager.controller.database.ConnectionManager;
 import orodent.clientrelationmanager.model.App;
 
 import java.sql.*;

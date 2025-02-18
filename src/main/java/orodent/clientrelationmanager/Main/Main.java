@@ -3,7 +3,6 @@ package orodent.clientrelationmanager.Main;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import orodent.clientrelationmanager.controller.database.ConnectionManager;
 import orodent.clientrelationmanager.model.App;
 import orodent.clientrelationmanager.view.MainView;
 

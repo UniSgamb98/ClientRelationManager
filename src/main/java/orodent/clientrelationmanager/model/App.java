@@ -17,9 +17,6 @@ public class App{
     public Operator getOperator() {
         return operator;
     }
-    public void setDbManager(DBManager dbManager) {
-        this.dbManager = dbManager;
-    }
     public DBManager getDbManager() {
         return dbManager;
     }
