@@ -5,7 +5,7 @@ import orodent.clientrelationmanager.model.enums.Operator;
 
 public class App{
     private Operator operator;
-    private DBManager dbManager;
+    private final DBManager dbManager;
 
     public App(){
         dbManager = new DBManager();

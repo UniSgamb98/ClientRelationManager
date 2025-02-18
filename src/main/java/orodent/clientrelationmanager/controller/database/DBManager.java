@@ -13,29 +13,45 @@ public class DBManager{
         connectionManager = new ConnectionManager();
     }
 
-    /*
-     * Insert an entry user for the table USER --->FOR DEMO
-     * @param userId UId for the entry
-
-    public void insertUser(long userId){
-        try {
-            PreparedStatement statement = connection.prepareStatement(
-                    "INSERT INTO USERSESSIONS (ID) VALUES (?)"
-            );
-            statement.setLong(1, userId);
-            statement.execute();
-            statement.close();
-        } catch (SQLException e) {
-            printSQLException(e);
-        }
-    }*/
-
     public void close(){
         connectionManager.close();
     }
 
     public void open() {
         connectionManager = new ConnectionManager();
+    }
+
+    /**
+     * Executes the query with the server side, managing changes of host.
+     * The bug occurs when a pc has hosted an embedded connection in the past and if changes from Client to Embedded again happens seamlessly
+     *
+     * @param query Query to share with database server
+     * @return the ResultSet of the given PreparedStatement
+     * @throws NoServerFoundException TODO to distinguish when query has failed for a change of host calling for another attempt BUT A BUG MAKES THE TRANSITION SEAMLESS AND LIGHTNING FAST  and the failure for a empty ResultSet
+     */
+    private ResultSet execute(PreparedStatement query) throws NoServerFoundException{
+        ResultSet resultSet = null;
+        try {
+            resultSet = query.executeQuery();
+            resultSet.next();
+        } catch (SQLException sqle) {
+            //host has stopped hosting
+            if (sqle.getSQLState().equals("08006")) {
+                statusToolTipController.redLight();
+                open();
+                throw new NoServerFoundException();
+            }
+            else {  //to be found what causes this
+                System.out.println(sqle.getSQLState());
+                printSQLException(sqle);
+            }
+        }   //Something caused a disconnection. Could be collapsed with catch clause above
+        catch (NullPointerException e) {
+            statusToolTipController.redLight();
+            open();
+            throw new NoServerFoundException();
+        }
+        return resultSet;
     }
 
     //TODO javadoc
