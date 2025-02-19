@@ -4,11 +4,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import orodent.clientrelationmanager.controller.ClientInfoController;
 import orodent.clientrelationmanager.controller.LoginController;
 import orodent.clientrelationmanager.controller.StatusToolTipController;
 import orodent.clientrelationmanager.model.App;
-
-import java.sql.*;
+import orodent.clientrelationmanager.view.clientinfo.ClientInfoView;
 
 public class MainView extends BorderPane {
     private final StatusToolTipController statusToolTipController;
@@ -42,8 +42,12 @@ public class MainView extends BorderPane {
         this.setCenter(hBox);
         hBox.getChildren().addAll(connectButton, disconnectButton, searchField, testButton);
 
-        loginController = new LoginController(app);
+       /* loginController = new LoginController(app);
         loginView = loginController.getView();
-        this.setRight(loginView);
+        this.setRight(loginView); */
+
+        ClientInfoView clientInfoView = new ClientInfoView();
+        clientInfoView.setOnKeyPressed(new ClientInfoController(null, clientInfoView));
+        this.setRight(clientInfoView);
     }
 }

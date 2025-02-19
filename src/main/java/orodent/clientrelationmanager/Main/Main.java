@@ -20,7 +20,7 @@ public class Main extends Application {
 
         MainView mainView = new MainView(app);
         primaryStage.setTitle("Orodent");
-        primaryStage.setScene(new Scene(mainView, 680, 300));
+        primaryStage.setScene(new Scene(mainView, 780, 550));
         primaryStage.show();
     }
 
