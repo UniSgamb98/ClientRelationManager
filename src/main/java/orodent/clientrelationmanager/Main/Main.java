@@ -4,7 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import orodent.clientrelationmanager.model.App;
-import orodent.clientrelationmanager.view.MainView;
+import orodent.clientrelationmanager.view.mainview.MainView;
 
 import java.io.File;
 import java.io.PrintStream;

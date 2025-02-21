@@ -35,33 +35,38 @@ public class ClientInfoView extends VBox {
     private final CheckBox catalog;
     private final CheckBox sample;
     private final TextField uuid;
-    InformationGroup developerInfos;
+    private final InformationGroup developerInfos;
 
-    public ClientInfoView() {
-        ragioneSociale = new TextField();
-        personaRiferimento = new TextField();
-        emailRiferimento = new TextField();
-        cellulareRiferimento = new TextField();
-        telefonoAziendale = new TextField();
-        emailAziendale = new TextField();
-        paese = new TextField();
-        citta = new TextField();
-        nomeTitolare = new TextField();
-        cellulareTitolare = new TextField();
-        emailTitolare = new TextField();
-        volteContattati = new TextField();
-        ultimaChiamata = new DatePicker();
-        prossimaChiamata = new DatePicker();
-        sitoWeb = new TextField();
+    public ClientInfoView(Client client) {
+        ragioneSociale = new TextField(client.getRagioneSociale());
+        personaRiferimento = new TextField(client.getPersonaRiferimento());
+        emailRiferimento = new TextField(client.getEmailRiferimento());
+        cellulareRiferimento = new TextField(client.getCellulareRiferimento());
+        telefonoAziendale = new TextField(client.getTelefonoAziendale());
+        emailAziendale = new TextField(client.getEmailAziendale());
+        paese = new TextField(client.getPaese());
+        citta = new TextField(client.getCitta());
+        nomeTitolare = new TextField(client.getNomeTitolare());
+        cellulareTitolare = new TextField(client.getCellulareTitolare());
+        emailTitolare = new TextField(client.getEmailTitolare());
+        volteContattati = new TextField(client.getVolteContattati()+"");
+        ultimaChiamata = new DatePicker(client.getUltimaChiamata());
+        prossimaChiamata = new DatePicker(client.getProssimaChiamata());
+        sitoWeb = new TextField(client.getSitoWeb());
         tipoCliente = new ChoiceBox<>();
         tipoCliente.getItems().addAll(TipoCliente.values());
+        tipoCliente.setValue(client.getTipoCliente());
         operatoreAssegnato = new ChoiceBox<>();
         operatoreAssegnato.getItems().addAll(Operator.values());
+        operatoreAssegnato.setValue(client.getOperatoreAssegnato());
         information = new CheckBox();
+        information.setSelected(client.getInformation());
         catalog = new CheckBox();
+        catalog.setSelected(client.getCatalog());
         sample = new CheckBox();
-        uuid = new TextField();
-        dataAcquisizione = new DatePicker();
+        sample.setSelected(client.getSample());
+        uuid = new TextField(client.getUuid()+"");
+        dataAcquisizione = new DatePicker(client.getDataAcquisizione());
 
         ragioneSociale.setPromptText("Ragione Sociale");
         personaRiferimento.setPromptText("Persona Riferimento");
@@ -130,92 +135,16 @@ public class ClientInfoView extends VBox {
         developerInfos.add(uuid, 0, 3, 2, 1);
         developerInfos.add(new Label("Data Acquisizione"), 0, 0);
         developerInfos.add(dataAcquisizione, 0, 1);
-        this.getChildren().add(developerInfos);
     }
 
-    public void toggleDeveloperVisibility() {
-        developerInfos.setVisible(!developerInfos.isVisible());
+    public void toggleDeveloperVisibility(boolean hasDeveloperPrivilege) {
+        if (hasDeveloperPrivilege) {
+            this.getChildren().add(developerInfos);
+        } else{
+            this.getChildren().remove(developerInfos);
+        }
     }
 
-    public void displayClientInfo(Client client){
-        ragioneSociale.setText(client.getRagioneSociale());
-        personaRiferimento.setText(client.getPersonaRiferimento());
-        emailRiferimento.setText(client.getEmailRiferimento());
-        cellulareRiferimento.setText(client.getCellulareTitolare());
-        telefonoAziendale.setText(client.getTelefonoAziendale());
-        emailAziendale.setText(client.getEmailAziendale());
-        paese.setText(client.getPaese());
-        citta.setText(client.getCitta());
-        nomeTitolare.setText(client.getNomeTitolare());
-        cellulareTitolare.setText(client.getCellulareTitolare());
-        emailTitolare.setText(client.getEmailTitolare());
-        volteContattati.setText(client.getVolteContattati()+"");
-        ultimaChiamata.setValue(client.getUltimaChiamata());
-        prossimaChiamata.setValue(client.getProssimaChiamata());
-        sitoWeb.setText(client.getSitoWeb());
-        tipoCliente.setValue(client.getTipoCliente());
-        dataAcquisizione.setValue(client.getDataAcquisizione());
-        operatoreAssegnato.setValue(client.getOperatoreAssegnato());
-        uuid.setText(client.getUuid().toString());
-        information.setSelected(client.getInformation());
-        catalog.setSelected(client.getCatalog());
-        sample.setSelected(client.getSample());
-    }
-    /*
-    public void setRagioneSociale(String text) {
-        ragioneSociale.setText(text);
-    }
-    public void setPersonaRiferimento(String text) {
-        personaRiferimento.setText(text);
-    }
-    public void setEmailRiferimento(String text) {
-        emailRiferimento.setText(text);
-    }
-    public void setCellulareRiferimento(String text) {
-        cellulareRiferimento.setText(text);
-    }
-    public void setTelefonoAziendale(String text) {
-        telefonoAziendale.setText(text);
-    }
-    public void setEmailAziendale(String text) {
-        emailAziendale.setText(text);
-    }
-    public void setPaese(String text) {
-        paese.setText(text);
-    }
-    public void setCitta(String text) {
-        citta.setText(text);
-    }
-    public void setNomeTitolare(String text) {
-        nomeTitolare.setText(text);
-    }
-    public void setCellulareTitolare(String text) {
-        cellulareTitolare.setText(text);
-    }
-    public void setEmailTitolare(String text) {
-        emailTitolare.setText(text);
-    }
-    public void setVolteContattati(int number) {
-        volteContattati.setText(number+"");
-    }
-    public void setUltimaChiamata(LocalDate date) {
-        ultimaChiamata.setValue(date);
-    }
-    public void setProssimaChiamata(LocalDate date) {
-        prossimaChiamata.setValue(date);
-    }
-    public void setSitoWeb(String text) {
-        sitoWeb.setText(text);
-    }
-    public void setTipoCliente(TipoCliente tipoCliente) {
-        this.tipoCliente.setValue(tipoCliente);
-    }
-    public void setDataAcquisizione(LocalDate data) {
-        dataAcquisizione.setValue(data);
-    }
-    public void setOperatore(Operator operatore) {
-        operatoreAssegnato.setValue(operatore);
-    }*/
     public UUID getUuid() {
         return UUID.fromString(uuid.getText());
     }
@@ -253,7 +182,13 @@ public class ClientInfoView extends VBox {
         return emailTitolare.getText();
     }
     public int getVolteContattati() {
-        return Integer.parseInt(volteContattati.getText());
+        int ret;
+        try {
+              ret = Integer.parseInt(volteContattati.getText());
+        } catch (NumberFormatException e) {
+            ret = 0;
+        }
+        return ret;
     }
     public LocalDate getUltimaChiamata() {
         return ultimaChiamata.getValue();

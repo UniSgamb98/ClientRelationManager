@@ -32,6 +32,15 @@ public class Client {
     private UUID uuid;
     //TODO note
 
+    public Client() {
+        uuid = UUID.randomUUID();
+    }
+
+    public Client(Operator operatoreAssegnato){
+        uuid = UUID.randomUUID();
+        this.operatoreAssegnato = operatoreAssegnato;
+    }
+
     public void setUuid(UUID uuid) {
         this.uuid = uuid;
     }

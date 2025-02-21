@@ -14,7 +14,7 @@ public class App{
     public void setOperator(Operator operator) {
         this.operator = operator;
     }
-    public Operator getOperator() {
+    public Operator getWorkingOperator() {
         return operator;
     }
     public DBManager getDbManager() {

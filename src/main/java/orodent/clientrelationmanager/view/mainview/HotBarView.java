@@ -1,8 +1,11 @@
-package orodent.clientrelationmanager.view;
+package orodent.clientrelationmanager.view.mainview;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
+import orodent.clientrelationmanager.controller.database.DBManagerInterface;
+import orodent.clientrelationmanager.controller.main.buttons.NewClientController;
+import orodent.clientrelationmanager.controller.main.buttons.SearchClientController;
 
 public class HotBarView extends VBox {
     private final Button addButton;
@@ -10,7 +13,7 @@ public class HotBarView extends VBox {
     private final Button reportButton;
     private final Button callsButton;
 
-    public HotBarView() {
+    public HotBarView(MainView mainView, DBManagerInterface db) {
         addButton = new Button("aggiungi");
         addButton.setOnAction(event -> expand());
         searchButton = new Button("cerca");
@@ -27,9 +30,12 @@ public class HotBarView extends VBox {
         reportButton.setPrefHeight(70);
         callsButton.setPrefHeight(70);
 
+        addButton.setOnAction(new NewClientController(db, mainView));
+        searchButton.setOnAction(new SearchClientController(db, mainView));
+      //  reportButton.setOnAction(new ReportController(app, mainView));
+        //callsButton.setOnAction(new ShowCallsController(app, mainView));
+
         this.setSpacing(10);
-
-
         this.setAlignment(Pos.TOP_CENTER);
     }
 
@@ -40,8 +46,4 @@ public class HotBarView extends VBox {
         callsButton.setMaxHeight(0);
         this.setMaxHeight(0);
     }
-
-
-
-
 }

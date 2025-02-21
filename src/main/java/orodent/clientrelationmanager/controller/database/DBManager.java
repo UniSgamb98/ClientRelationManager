@@ -1,10 +1,11 @@
 package orodent.clientrelationmanager.controller.database;
 
-import orodent.clientrelationmanager.controller.StatusToolTipController;
+import orodent.clientrelationmanager.controller.main.StatusToolTipController;
+import orodent.clientrelationmanager.model.Client;
 
 import java.sql.*;
 
-public class DBManager{
+public class DBManager implements DBManagerInterface{
     StatusToolTipController statusToolTipController;
     ConnectionManager connectionManager;
 
@@ -113,5 +114,9 @@ public class DBManager{
             System.err.println("  Message:    " + e.getMessage());
             e = e.getNextException();
         }
+    }
+
+    public void insertClient(Client selectedClient) {
+
     }
 }

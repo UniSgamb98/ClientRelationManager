@@ -9,24 +9,22 @@ import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.view.clientinfo.ClientInfoView;
 
 public class ClientInfoController implements EventHandler<KeyEvent> {
-    Client selectedClient;
+    Client client;
     ClientInfoView clientInfoView;
     final KeyCombination developerPrivilege = new KeyCodeCombination(KeyCode.H, KeyCombination.CONTROL_DOWN);
+    boolean developerVisibility = false;
 
-    public ClientInfoController(Client selectedClient, ClientInfoView clientInfoView) {
-        this.selectedClient = selectedClient;
+    public ClientInfoController(Client client, ClientInfoView clientInfoView) {
+        this.client = client;
         this.clientInfoView = clientInfoView;
     }
-    public void setSelectedClient(Client selectedClient) {
-        this.selectedClient = selectedClient;
+
+    public Client getClient() {
+        getClientChangesFromView();
+        return client;
     }
 
-    public Client getSelectedClient() {
-        return selectedClient;
-    }
-
-    public Client getClientFromView() {
-        Client client = new Client();
+    public void getClientChangesFromView() {
         client.setUuid(clientInfoView.getUuid());
         client.setRagioneSociale(clientInfoView.getRagioneSociale());
         client.setPersonaRiferimento(clientInfoView.getPersonaRiferimento());
@@ -49,17 +47,13 @@ public class ClientInfoController implements EventHandler<KeyEvent> {
         client.setInformation(clientInfoView.hasInformation());
         client.setCatalog(clientInfoView.hasCatalog());
         client.setSample(clientInfoView.hasSample());
-        return client;
-    }
-
-    public void displayClientInfo() {
-        clientInfoView.displayClientInfo(selectedClient);
     }
 
     @Override
     public void handle(KeyEvent event) {
         if (developerPrivilege.match(event)) {
-            clientInfoView.toggleDeveloperVisibility();
+            developerVisibility = !developerVisibility;
+            clientInfoView.toggleDeveloperVisibility(developerVisibility);
         }
     }
 }

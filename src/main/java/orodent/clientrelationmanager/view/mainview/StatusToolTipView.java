@@ -1,4 +1,4 @@
-package orodent.clientrelationmanager.view;
+package orodent.clientrelationmanager.view.mainview;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;

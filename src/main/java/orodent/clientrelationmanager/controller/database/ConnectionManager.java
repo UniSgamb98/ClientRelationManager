@@ -1,7 +1,7 @@
 package orodent.clientrelationmanager.controller.database;
 
 import org.apache.derby.drda.NetworkServerControl;
-import orodent.clientrelationmanager.controller.StatusToolTipController;
+import orodent.clientrelationmanager.controller.main.StatusToolTipController;
 
 import java.net.InetAddress;
 import java.sql.*;
