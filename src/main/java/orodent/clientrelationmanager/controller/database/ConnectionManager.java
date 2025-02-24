@@ -138,7 +138,8 @@ public class ConnectionManager extends Thread{
      * @throws SQLException with SQLSTATE XJ040 if another machine is hosting
      */
     private Connection getEmbeddedConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:derby:I:\\CliZr\\Tommaso\\"+ DBNAME +";create=true;user="+DB_USER +";password="+DB_PSW);
+        //return DriverManager.getConnection("jdbc:derby:I:\\CliZr\\Tommaso\\"+ DBNAME +";create=true;user="+DB_USER +";password="+DB_PSW);
+        return DriverManager.getConnection("jdbc:derby:"+ DBNAME +";create=true;user="+DB_USER +";password="+DB_PSW);
     }
 
     /**

@@ -1,6 +1,6 @@
 package orodent.clientrelationmanager.model.enums;
 
-public enum TipoCliente {
+public enum Business {
     RIVENDITORE,
     LABORATORIO,
     DISTRIBUTORE

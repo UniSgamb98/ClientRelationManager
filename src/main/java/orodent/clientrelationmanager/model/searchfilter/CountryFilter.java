@@ -1,22 +1,22 @@
 package orodent.clientrelationmanager.model.searchfilter;
 
 import orodent.clientrelationmanager.model.enums.Business;
-import orodent.clientrelationmanager.model.enums.Operator;
+import orodent.clientrelationmanager.model.enums.Country;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class OperatorFilter extends AbstractFilter{
+public class CountryFilter extends AbstractFilter{
 
-    public OperatorFilter() {
+    public CountryFilter() {
         super();
     }
 
     @Override
     public List<String> getFilterItems() {
         List<String> list = new ArrayList<>();
-        for (Operator operator : Operator.values()) {
-            list.add(operator.toString());
+        for (Country country : Country.values()) {
+            list.add(country.toString());
         }
         return list;
     }

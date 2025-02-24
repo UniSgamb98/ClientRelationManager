@@ -4,8 +4,8 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
-import orodent.clientrelationmanager.controller.main.buttons.NewClientController;
-import orodent.clientrelationmanager.controller.main.buttons.SearchClientController;
+import orodent.clientrelationmanager.controller.main.buttons.newclient.NewClientController;
+import orodent.clientrelationmanager.controller.main.buttons.searchclient.SearchClientController;
 
 public class HotBarView extends VBox {
     private final Button addButton;

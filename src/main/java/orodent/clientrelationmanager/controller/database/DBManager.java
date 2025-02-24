@@ -2,8 +2,13 @@ package orodent.clientrelationmanager.controller.database;
 
 import orodent.clientrelationmanager.controller.main.StatusToolTipController;
 import orodent.clientrelationmanager.model.Client;
+import orodent.clientrelationmanager.model.enums.Business;
+import orodent.clientrelationmanager.model.enums.ClientField;
+import orodent.clientrelationmanager.model.enums.Operator;
 
 import java.sql.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class DBManager implements DBManagerInterface{
     StatusToolTipController statusToolTipController;
@@ -30,7 +35,7 @@ public class DBManager implements DBManagerInterface{
      * @return the ResultSet of the given PreparedStatement
      * @throws NoServerFoundException TODO to distinguish when query has failed for a change of host calling for another attempt BUT A BUG MAKES THE TRANSITION SEAMLESS AND LIGHTNING FAST  and the failure for a empty ResultSet
      */
-    private ResultSet execute(PreparedStatement query) throws NoServerFoundException{
+    private ResultSet execute(PreparedStatement query) /*throws NoServerFoundException*/{
         ResultSet resultSet = null;
         try {
             resultSet = query.executeQuery();
@@ -40,17 +45,23 @@ public class DBManager implements DBManagerInterface{
             if (sqle.getSQLState().equals("08006")) {
                 statusToolTipController.redLight();
                 open();
-                throw new NoServerFoundException();
+               // throw new NoServerFoundException();
             }
             else {  //to be found what causes this
-                System.out.println(sqle.getSQLState());
-                printSQLException(sqle);
+                if (sqle.getSQLState().equals("X0Y78")) {
+                    try {
+                        query.execute();        //the preparedStatement was no a query but an insert and to be found
+                    } catch (SQLException e) {
+                        System.out.println(sqle.getSQLState());
+                        printSQLException(sqle);
+                    }
+                }
             }
         }   //Something caused a disconnection. Could be collapsed with catch clause above
         catch (NullPointerException e) {
             statusToolTipController.redLight();
             open();
-            throw new NoServerFoundException();
+            //throw new NoServerFoundException();
         }
         return resultSet;
     }
@@ -58,41 +69,28 @@ public class DBManager implements DBManagerInterface{
     //TODO javadoc
     public void test(String search) {
         {
-            PreparedStatement stmt = null;
-            ResultSet rs = null;
-            try {
-                stmt = connectionManager.getConnection().prepareStatement(
-                        "SELECT * FROM PRODUCTS WHERE CODE = ?");
-                stmt.setString(1, search);
-                rs = stmt.executeQuery();
-                rs.next();
-                statusToolTipController.update(rs.getString(2));
-            }
-            catch(SQLException sqle)
-            {
+            String sql = "SELECT PAESE FROM CUSTOMERS WHERE RAGIONE_SOCIALE = ?";
+
+            try (PreparedStatement statement = connectionManager.getConnection().prepareStatement(sql)) {
+                statement.setString(1, search);
+
+                try (ResultSet rs = statement.executeQuery()) {
+                    if (rs.next()) {
+                        statusToolTipController.update(rs.getString("PAESE"));
+                    }
+                }
+            } catch (SQLException sqle) {
                 //host has stopped hosting
                 if (sqle.getSQLState().equals("08006")) {
                     statusToolTipController.redLight();
                     open();
-                }
-                else {
+                } else {
                     System.out.println(sqle.getSQLState());
                     printSQLException(sqle);
                 }
-            }   //Something caused a disconnection. Could be collapsed with catch clause above
-            catch (NullPointerException e) {
+            } catch (NullPointerException e) {
                 statusToolTipController.redLight();
                 open();
-            }
-            finally
-            {
-                try {
-                    if (rs != null && !rs.isClosed())
-                        rs.close();
-                    if (stmt != null && !stmt.isClosed())
-                        stmt.close();
-                } catch (SQLException ignored) {}
-                System.out.println("done");
             }
         }
     }
@@ -116,7 +114,61 @@ public class DBManager implements DBManagerInterface{
         }
     }
 
-    public void insertClient(Client selectedClient) {
+    public void insertClient(Client client) {
+        String sql = "INSERT INTO CUSTOMERS (ID, RAGIONE_SOCIALE, PERSONA_RIFERIMENTO, EMAIL_RIFERIMENTO, CELLULARE_RIFERIMENTO, TELEFONO_AZIENDALE, EMAIL_AZIENDALE, PAESE, CITTA, NOME_TITOLARE, CELLULARE_TITOLARE, EMAIL_TITOLARE, SITO_WEB, VOLTE_CONTATTATI, ULTIMA_CHIAMATA, PROSSIMA_CHIAMATA, DATA_ACQUISIZIONE, BUSINESS, OPERATORE_ASSEGNATO, INFORMATION, CATALOG, SAMPLE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
+        try (PreparedStatement statement = connectionManager.getConnection().prepareStatement(sql))
+        {
+            statement.setString(1, client.getUuid().toString());
+            statement.setString(2, (String) client.get(ClientField.RAGIONE_SOCIALE));
+            statement.setString(3, (String) client.get(ClientField.PERSONA_RIFERIMENTO));
+            statement.setString(4, (String) client.get(ClientField.EMAIL_RIFERIMENTO));
+            statement.setString(5, (String) client.get(ClientField.CELLULARE_RIFERIMENTO));
+            statement.setString(6, (String) client.get(ClientField.TELEFONO_AZIENDALE));
+            statement.setString(7, (String) client.get(ClientField.EMAIL_AZIENDALE));
+            statement.setString(8, (String) client.get(ClientField.PAESE));
+            statement.setString(9, (String) client.get(ClientField.CITTA));
+            statement.setString(10, (String) client.get(ClientField.NOME_TITOLARE));
+            statement.setString(11, (String) client.get(ClientField.CELLULARE_TITOLARE));
+            statement.setString(12, (String) client.get(ClientField.EMAIL_TITOLARE));
+            statement.setString(13, (String) client.get(ClientField.SITO_WEB));
+            statement.setInt(14, client.getField(ClientField.VOLTE_CONTATTATI, Integer.class));
+
+            //Gestione delle date per evitare NULLPOINTEREXCEPTION
+            setNullableDate(statement, 15, (LocalDate) client.get(ClientField.ULTIMA_CHIAMATA));
+            setNullableDate(statement, 16, (LocalDate) client.get(ClientField.PROSSIMA_CHIAMATA));
+            setNullableDate(statement, 17, (LocalDate) client.get(ClientField.DATA_ACQUISIZIONE));
+
+            statement.setString(18, client.getField(ClientField.BUSINESS, Business.class)+"");
+            statement.setString(19, client.getField(ClientField.OPERATORE_ASSEGNATO, Operator.class)+"");
+            statement.setBoolean(20, client.getField(ClientField.INFORMATION, Boolean.class));
+            statement.setBoolean(21, client.getField(ClientField.CATALOG, Boolean.class));
+            statement.setBoolean(22, client.getField(ClientField.SAMPLE, Boolean.class));
+
+            statement.executeUpdate();
+        } catch (SQLException e){
+            printSQLException(e);
+        }
+    }
+
+    public ArrayList<Client> getClient() throws SQLException {
+            PreparedStatement stmt = connectionManager.getConnection().prepareStatement(
+                    "SELECT * FROM CUSTOMERS"
+            );
+            ResultSet resultSet = execute(stmt);
+        ArrayList<Client> results = new ArrayList<>();
+            for (int i = 0; i < resultSet.getMetaData().getColumnCount(); i++) {
+                Client client = new Client();
+                //client.set(i, resultSet.getMetaData().g);
+            }
+            return results;
+    }
+
+    private void setNullableDate(PreparedStatement preparedStatement, int index, LocalDate date) throws SQLException {
+        if (date != null) {
+            preparedStatement.setDate(index, java.sql.Date.valueOf(date));
+        } else {
+            preparedStatement.setNull(index, java.sql.Types.DATE);
+        }
     }
 }

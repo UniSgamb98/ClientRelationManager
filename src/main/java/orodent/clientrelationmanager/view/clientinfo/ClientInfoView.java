@@ -5,8 +5,9 @@ import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import orodent.clientrelationmanager.model.Client;
+import orodent.clientrelationmanager.model.enums.ClientField;
 import orodent.clientrelationmanager.model.enums.Operator;
-import orodent.clientrelationmanager.model.enums.TipoCliente;
+import orodent.clientrelationmanager.model.enums.Business;
 
 import java.time.LocalDate;
 import java.util.UUID;
@@ -27,7 +28,7 @@ public class ClientInfoView extends VBox {
     private final DatePicker ultimaChiamata;
     private final DatePicker prossimaChiamata;
     private final TextField sitoWeb;
-    private final ChoiceBox<TipoCliente> tipoCliente;
+    private final ChoiceBox<Business> tipoCliente;
 
     private final DatePicker dataAcquisizione;
     private final ChoiceBox<Operator> operatoreAssegnato;
@@ -38,35 +39,35 @@ public class ClientInfoView extends VBox {
     private final InformationGroup developerInfos;
 
     public ClientInfoView(Client client) {
-        ragioneSociale = new TextField(client.getRagioneSociale());
-        personaRiferimento = new TextField(client.getPersonaRiferimento());
-        emailRiferimento = new TextField(client.getEmailRiferimento());
-        cellulareRiferimento = new TextField(client.getCellulareRiferimento());
-        telefonoAziendale = new TextField(client.getTelefonoAziendale());
-        emailAziendale = new TextField(client.getEmailAziendale());
-        paese = new TextField(client.getPaese());
-        citta = new TextField(client.getCitta());
-        nomeTitolare = new TextField(client.getNomeTitolare());
-        cellulareTitolare = new TextField(client.getCellulareTitolare());
-        emailTitolare = new TextField(client.getEmailTitolare());
-        volteContattati = new TextField(client.getVolteContattati()+"");
-        ultimaChiamata = new DatePicker(client.getUltimaChiamata());
-        prossimaChiamata = new DatePicker(client.getProssimaChiamata());
-        sitoWeb = new TextField(client.getSitoWeb());
+        ragioneSociale = new TextField((String) client.get(ClientField.RAGIONE_SOCIALE));
+        personaRiferimento = new TextField((String) client.get(ClientField.PERSONA_RIFERIMENTO));
+        emailRiferimento = new TextField((String) client.get(ClientField.EMAIL_RIFERIMENTO));
+        cellulareRiferimento = new TextField((String) client.get(ClientField.CELLULARE_RIFERIMENTO));
+        telefonoAziendale = new TextField((String) client.get(ClientField.TELEFONO_AZIENDALE));
+        emailAziendale = new TextField((String) client.get(ClientField.EMAIL_AZIENDALE));
+        paese = new TextField((String) client.get(ClientField.PAESE));
+        citta = new TextField((String) client.get(ClientField.CITTA));
+        nomeTitolare = new TextField((String) client.get(ClientField.NOME_TITOLARE));
+        cellulareTitolare = new TextField((String) client.get(ClientField.CELLULARE_TITOLARE));
+        emailTitolare = new TextField((String) client.get(ClientField.EMAIL_TITOLARE));
+        volteContattati = new TextField(client.getField(ClientField.VOLTE_CONTATTATI, Integer.class)+"");
+        ultimaChiamata = new DatePicker(client.getField(ClientField.ULTIMA_CHIAMATA, java.time.LocalDate.class));
+        prossimaChiamata = new DatePicker(client.getField(ClientField.PROSSIMA_CHIAMATA, java.time.LocalDate.class));
+        sitoWeb = new TextField((String) client.get(ClientField.SITO_WEB));
         tipoCliente = new ChoiceBox<>();
-        tipoCliente.getItems().addAll(TipoCliente.values());
-        tipoCliente.setValue(client.getTipoCliente());
+        tipoCliente.getItems().addAll(Business.values());
+        tipoCliente.setValue(client.getField(ClientField.BUSINESS, Business.class));
         operatoreAssegnato = new ChoiceBox<>();
         operatoreAssegnato.getItems().addAll(Operator.values());
-        operatoreAssegnato.setValue(client.getOperatoreAssegnato());
+        operatoreAssegnato.setValue(client.getField(ClientField.OPERATORE_ASSEGNATO, Operator.class));
         information = new CheckBox();
-        information.setSelected(client.getInformation());
+        information.setSelected(client.getField(ClientField.INFORMATION, Boolean.class));
         catalog = new CheckBox();
-        catalog.setSelected(client.getCatalog());
+        catalog.setSelected(client.getField(ClientField.CATALOG, Boolean.class));
         sample = new CheckBox();
-        sample.setSelected(client.getSample());
-        uuid = new TextField(client.getUuid()+"");
-        dataAcquisizione = new DatePicker(client.getDataAcquisizione());
+        sample.setSelected(client.getField(ClientField.SAMPLE, Boolean.class));
+        uuid = new TextField(client.getUuid().toString());
+        dataAcquisizione = new DatePicker(client.getField(ClientField.DATA_ACQUISIZIONE, java.time.LocalDate.class));
 
         ragioneSociale.setPromptText("Ragione Sociale");
         personaRiferimento.setPromptText("Persona Riferimento");
@@ -196,7 +197,7 @@ public class ClientInfoView extends VBox {
     public LocalDate getProssimaChiamata() {
         return prossimaChiamata.getValue();
     }
-    public TipoCliente getTipoCliente() {
+    public Business getTipoCliente() {
         return tipoCliente.getValue();
     }
     public LocalDate getDataAcquisizione() {

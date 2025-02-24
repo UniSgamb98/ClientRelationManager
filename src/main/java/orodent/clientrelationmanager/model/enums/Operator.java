@@ -4,7 +4,6 @@ public enum Operator {
     VICTORIA,
     TERESA,
     GAETANO,
-    TOMMASO,
-    BLANK,
+    TOMMASO
 }
 

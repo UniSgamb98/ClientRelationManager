@@ -1,22 +1,21 @@
 package orodent.clientrelationmanager.model.searchfilter;
 
 import orodent.clientrelationmanager.model.enums.Business;
-import orodent.clientrelationmanager.model.enums.Operator;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class OperatorFilter extends AbstractFilter{
+public class BusinessFilter extends AbstractFilter{
 
-    public OperatorFilter() {
+    public BusinessFilter() {
         super();
     }
 
     @Override
     public List<String> getFilterItems() {
         List<String> list = new ArrayList<>();
-        for (Operator operator : Operator.values()) {
-            list.add(operator.toString());
+        for (Business business : Business.values()) {
+            list.add(business.toString());
         }
         return list;
     }

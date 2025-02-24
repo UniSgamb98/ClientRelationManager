@@ -4,6 +4,7 @@ module orodent.clientrelationmanager {
     requires java.sql;
     requires org.apache.derby.server;
     requires org.apache.derby.tools;
+    requires java.rmi;
 
 
     opens orodent.clientrelationmanager to javafx.fxml;

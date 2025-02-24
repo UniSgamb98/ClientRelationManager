@@ -1,4 +1,4 @@
-package orodent.clientrelationmanager.controller.main.buttons;
+package orodent.clientrelationmanager.controller.main.buttons.searchclient;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
