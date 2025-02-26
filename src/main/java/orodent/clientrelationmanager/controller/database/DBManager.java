@@ -9,6 +9,8 @@ import orodent.clientrelationmanager.model.enums.Operator;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 public class DBManager implements DBManagerInterface{
     StatusToolTipController statusToolTipController;
@@ -33,7 +35,7 @@ public class DBManager implements DBManagerInterface{
      *
      * @param query Query to share with database server
      * @return the ResultSet of the given PreparedStatement
-     * @throws NoServerFoundException TODO to distinguish when query has failed for a change of host calling for another attempt BUT A BUG MAKES THE TRANSITION SEAMLESS AND LIGHTNING FAST  and the failure for a empty ResultSet
+     * TODO to distinguish when query has failed for a change of host calling for another attempt BUT A BUG MAKES THE TRANSITION SEAMLESS AND LIGHTNING FAST  and the failure for a empty ResultSet
      */
     private ResultSet execute(PreparedStatement query) /*throws NoServerFoundException*/{
         ResultSet resultSet = null;
@@ -151,17 +153,55 @@ public class DBManager implements DBManagerInterface{
         }
     }
 
-    public ArrayList<Client> getClient() throws SQLException {
-            PreparedStatement stmt = connectionManager.getConnection().prepareStatement(
-                    "SELECT * FROM CUSTOMERS"
-            );
-            ResultSet resultSet = execute(stmt);
-        ArrayList<Client> results = new ArrayList<>();
-            for (int i = 0; i < resultSet.getMetaData().getColumnCount(); i++) {
-                Client client = new Client();
-                //client.set(i, resultSet.getMetaData().g);
+    public List<Client> getAllClient(){
+        List<Client> clients = new ArrayList<>();
+        String sql = "SELECT * FROM CUSTOMERS";
+        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                clients.add(getClientFromResultSet(rs));
             }
-            return results;
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+            return clients;
+    }
+
+    /**
+     * ID, RAGIONE_SOCIALE, PERSONA_RIFERIMENTO, EMAIL_RIFERIMENTO, CELLULARE_RIFERIMENTO,
+     * TELEFONO_AZIENDALE, EMAIL_AZIENDALE, PAESE, CITTA, NOME_TITOLARE, CELLULARE_TITOLARE,
+     * EMAIL_TITOLARE, SITO_WEB, VOLTE_CONTATTATI, ULTIMA_CHIAMATA, PROSSIMA_CHIAMATA,
+     * DATA_ACQUISIZIONE, BUSINESS, OPERATORE_ASSEGNATO, INFORMATION, CATALOG, SAMPLE
+     */
+    @Override
+    public <T> List<Client> queryCustomerWithSingleParameter(String field, T value) {
+        ArrayList<Client> result = new ArrayList<>();
+        String sql = "SELECT * FROM CUSTOMERS WHERE " + field + " = ?";
+        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
+
+            //Controllo di Tipo
+            switch (value) {
+                case null -> stmt.setNull(1, Types.NULL); // Gestione del valore null
+                case String s -> stmt.setString(1, s);
+                case Integer i -> stmt.setInt(1, i);
+                case Long l -> stmt.setLong(1, l);
+                case LocalDate localDate -> stmt.setDate(1, Date.valueOf(localDate));
+                case Boolean b -> stmt.setBoolean(1, b);
+                case Enum<?> anEnum -> stmt.setString(1, anEnum.name());
+                default -> throw new IllegalArgumentException("Tipo di parametro non supportato: " + value.getClass());
+            }
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    result.add(getClientFromResultSet(rs));
+                }
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+        return result;
     }
 
     private void setNullableDate(PreparedStatement preparedStatement, int index, LocalDate date) throws SQLException {
@@ -170,5 +210,38 @@ public class DBManager implements DBManagerInterface{
         } else {
             preparedStatement.setNull(index, java.sql.Types.DATE);
         }
+    }
+
+    private Client getClientFromResultSet(ResultSet rs) throws SQLException {
+        Client client = new Client();
+        client.setUuid(UUID.fromString(rs.getString("ID")));
+        client.set(ClientField.RAGIONE_SOCIALE, rs.getString("RAGIONE_SOCIALE"));
+        client.set(ClientField.PERSONA_RIFERIMENTO, rs.getString("PERSONA_RIFERIMENTO"));
+        client.set(ClientField.EMAIL_RIFERIMENTO, rs.getString("EMAIL_RIFERIMENTO"));
+        client.set(ClientField.CELLULARE_RIFERIMENTO, rs.getString("CELLULARE_RIFERIMENTO"));
+        client.set(ClientField.TELEFONO_AZIENDALE, rs.getString("TELEFONO_AZIENDALE"));
+        client.set(ClientField.EMAIL_AZIENDALE, rs.getString("EMAIL_AZIENDALE"));
+        client.set(ClientField.PAESE, rs.getString("PAESE"));
+        client.set(ClientField.CITTA, rs.getString("CITTA"));
+        client.set(ClientField.NOME_TITOLARE, rs.getString("NOME_TITOLARE"));
+        client.set(ClientField.CELLULARE_TITOLARE, rs.getString("CELLULARE_TITOLARE"));
+        client.set(ClientField.EMAIL_TITOLARE, rs.getString("EMAIL_TITOLARE"));
+        client.set(ClientField.SITO_WEB, rs.getString("SITO_WEB"));
+        client.set(ClientField.VOLTE_CONTATTATI, rs.getInt("VOLTE_CONTATTATI"));
+
+        // Gestione delle date (evita NullPointerException)
+        client.set(ClientField.ULTIMA_CHIAMATA, rs.getDate("ULTIMA_CHIAMATA") != null ? rs.getDate("ULTIMA_CHIAMATA").toLocalDate() : null);
+        client.set(ClientField.PROSSIMA_CHIAMATA, rs.getDate("PROSSIMA_CHIAMATA") != null ? rs.getDate("PROSSIMA_CHIAMATA").toLocalDate() : null);
+        client.set(ClientField.DATA_ACQUISIZIONE, rs.getDate("DATA_ACQUISIZIONE") != null ? rs.getDate("DATA_ACQUISIZIONE").toLocalDate() : null);
+
+        // Business e Operatore possono essere null, quindi gestiamo il caso
+        client.set(ClientField.BUSINESS, rs.getString("BUSINESS") != null ? Business.valueOf(rs.getString("BUSINESS")) : null);
+        client.set(ClientField.OPERATORE_ASSEGNATO, rs.getString("OPERATORE_ASSEGNATO") != null ? Operator.valueOf(rs.getString("OPERATORE_ASSEGNATO")) : null);
+
+        client.set(ClientField.INFORMATION, rs.getBoolean("INFORMATION"));
+        client.set(ClientField.CATALOG, rs.getBoolean("CATALOG"));
+        client.set(ClientField.SAMPLE, rs.getBoolean("SAMPLE"));
+
+        return client;
     }
 }

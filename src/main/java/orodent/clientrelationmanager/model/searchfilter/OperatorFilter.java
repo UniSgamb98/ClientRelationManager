@@ -1,23 +1,14 @@
 package orodent.clientrelationmanager.model.searchfilter;
 
-import orodent.clientrelationmanager.model.enums.Business;
 import orodent.clientrelationmanager.model.enums.Operator;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class OperatorFilter extends AbstractFilter{
+public class OperatorFilter extends AbstractFilter<Operator>{
 
-    public OperatorFilter() {
-        super();
+    public OperatorFilter(List<Operator> enumList) {
+        super(enumList);
     }
 
-    @Override
-    public List<String> getFilterItems() {
-        List<String> list = new ArrayList<>();
-        for (Operator operator : Operator.values()) {
-            list.add(operator.toString());
-        }
-        return list;
-    }
 }

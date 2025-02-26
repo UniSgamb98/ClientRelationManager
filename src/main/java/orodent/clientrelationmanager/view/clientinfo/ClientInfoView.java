@@ -1,11 +1,15 @@
 package orodent.clientrelationmanager.view.clientinfo;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import orodent.clientrelationmanager.controller.popup.AutoCompletePopup;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.ClientField;
+import orodent.clientrelationmanager.model.enums.Country;
 import orodent.clientrelationmanager.model.enums.Operator;
 import orodent.clientrelationmanager.model.enums.Business;
 
@@ -93,7 +97,6 @@ public class ClientInfoView extends VBox {
         ultimaChiamata.setMinWidth(20);
         prossimaChiamata.setMinWidth(20);
 
-
         InformationGroup aziendaInfos = new InformationGroup("Azienda");
         aziendaInfos.add(ragioneSociale, 0, 0, 2, 1);
         aziendaInfos.add(paese, 0, 1);
@@ -136,6 +139,13 @@ public class ClientInfoView extends VBox {
         developerInfos.add(uuid, 0, 3, 2, 1);
         developerInfos.add(new Label("Data Acquisizione"), 0, 0);
         developerInfos.add(dataAcquisizione, 0, 1);
+
+        //Popups
+        ObservableList<String> countryNames = FXCollections.observableArrayList();
+        for (Country country : Country.values()) {
+            countryNames.add(country.getDisplayName());
+        }
+        new AutoCompletePopup(paese, countryNames);
     }
 
     public void toggleDeveloperVisibility(boolean hasDeveloperPrivilege) {

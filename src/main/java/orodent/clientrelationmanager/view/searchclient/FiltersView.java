@@ -9,8 +9,10 @@ import javafx.scene.shape.Polyline;
 import javafx.scene.shape.Rectangle;
 import orodent.clientrelationmanager.controller.main.buttons.searchclient.filter.FilterController;
 
+import java.util.List;
+
 public class FiltersView extends HBox {
-    ChoiceBox<String> options;
+    ChoiceBox<Enum<?>> options;
     Polyline checkMark;
     Polyline cross;
     Circle background;
@@ -42,7 +44,7 @@ public class FiltersView extends HBox {
         activeOrInactivePanel.setMaxHeight(10);
 
         StackPane sp = new StackPane();
-        rectangle = new Rectangle(10,20, Color.DARKRED);
+        rectangle = new Rectangle(10,25, Color.DARKRED);
         rectangle.setArcHeight(5);
         rectangle.setArcWidth(5);
         Polyline x = new Polyline(
@@ -60,7 +62,9 @@ public class FiltersView extends HBox {
         sp.setOnMouseClicked(event -> filterController.removeMe());
 
         options = new ChoiceBox<>();
-        options.getItems().addAll(filterController.getFilterItems());
+        List<? extends Enum<?>> enumList = filterController.getAbstractFilter().getEnumList();
+        options.getItems().addAll(enumList);
+        options.setOnAction(event -> filterController.updateList(options.getValue()));
         this.getChildren().addAll(activeOrInactivePanel, options, sp);
     }
 
@@ -72,9 +76,5 @@ public class FiltersView extends HBox {
             activeOrInactivePanel.getChildren().clear();
             activeOrInactivePanel.getChildren().addAll(background, cross);
         }
-    }
-
-    public String getSelectedOption() {
-        return options.getValue();
     }
 }

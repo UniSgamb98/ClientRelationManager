@@ -18,7 +18,7 @@ public class SearchClientController implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {
-        searchClientView = new SearchClientView();
+        searchClientView = new SearchClientView(db);
         mainView.setCenter(searchClientView);
     }
 }
