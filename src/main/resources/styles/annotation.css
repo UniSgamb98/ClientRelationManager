@@ -1,0 +1,21 @@
+.annotation-pane {
+    -fx-background-color: #f4f4f4;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+    -fx-background-radius: 5;
+}
+
+.operator-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.content-text {
+    -fx-fill: #555;
+}
+
+.next-call-label {
+    -fx-font-style: italic;
+    -fx-text-fill: #0077cc;
+}

@@ -7,6 +7,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import orodent.clientrelationmanager.model.App;
 
 public class StatusToolTipView extends HBox {
     private final Circle light;
@@ -20,11 +21,20 @@ public class StatusToolTipView extends HBox {
         Circle border = new Circle(6, Color.BLACK);
         light = new Circle(5, Color.RED);
         StackPane trafficLight = new StackPane(border, light);
+        trafficLight.setOnMouseClicked(e -> commuteDatabaseConnection());
 
         this.getChildren().addAll(label, trafficLight);
         this.setSpacing(3);
         this.setAlignment(Pos.BASELINE_RIGHT);
         this.setPadding(new Insets(0, 6, 0, 0));
+    }
+
+    private void commuteDatabaseConnection() {
+        if(App.getDBManager().isAlive()){
+            App.getDBManager().close();
+        } else {
+            App.getDBManager().open();
+        }
     }
 
     public void switchColor(Color color){

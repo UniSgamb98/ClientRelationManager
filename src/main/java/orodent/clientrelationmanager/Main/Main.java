@@ -8,6 +8,7 @@ import orodent.clientrelationmanager.view.mainview.MainView;
 
 import java.io.File;
 import java.io.PrintStream;
+import java.util.Objects;
 
 public class Main extends Application {
     @Override
@@ -17,10 +18,18 @@ public class Main extends Application {
         System.setOut(stream);
 
         App app = new App();
+        App.setPrimaryStage(primaryStage);
 
         MainView mainView = new MainView(app);
+        Scene scene = new Scene(mainView, 1200, 750);
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/clientdetailview.css")).toExternalForm());
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/hotbar.css")).toExternalForm());
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/annotation.css")).toExternalForm());
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/clientinfoview.css")).toExternalForm());
+
+
         primaryStage.setTitle("Orodent");
-        primaryStage.setScene(new Scene(mainView, 780, 550));
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 

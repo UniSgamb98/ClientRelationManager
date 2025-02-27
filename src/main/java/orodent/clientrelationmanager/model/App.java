@@ -1,11 +1,13 @@
 package orodent.clientrelationmanager.model;
 
+import javafx.stage.Stage;
 import orodent.clientrelationmanager.controller.database.DBManager;
 import orodent.clientrelationmanager.model.enums.Operator;
 
 public class App{
     private Operator operator;
-    private final DBManager dbManager;
+    private static DBManager dbManager;
+    private static Stage primaryStage;
 
     public App(){
         dbManager = new DBManager();
@@ -18,6 +20,15 @@ public class App{
         return operator;
     }
     public DBManager getDbManager() {
+        return dbManager;
+    }
+    public static Stage getPrimaryStage() {
+        return primaryStage;
+    }
+    public static void setPrimaryStage(Stage primaryStage) {
+        App.primaryStage = primaryStage;
+    }
+    public static DBManager getDBManager() {
         return dbManager;
     }
 }

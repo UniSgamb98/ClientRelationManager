@@ -38,7 +38,7 @@ public class ConnectionManager extends Thread{
                     ConnectionTesterThread helperThread = new ConnectionTesterThread(i);
                     helperThread.start();
                 }
-                sleep(4000);
+                sleep(2000);
                 //Checking the result of the test from every thread launched
                 for (int i = 0; i < ipsToScan.getIpListSize(); i++) {
                     if (ipsToScan.isIpReachable(i)) {

@@ -109,8 +109,8 @@ public class ClientInfoView extends VBox {
         InformationGroup personaInfos = new InformationGroup("Referente");
 
         personaInfos.add(personaRiferimento, 0, 0, 2, 1);
-        personaInfos.add(emailRiferimento, 0,1);
-        personaInfos.add(cellulareRiferimento, 1, 1);
+        personaInfos.add(cellulareRiferimento, 0, 1);
+        personaInfos.add(emailRiferimento, 1,1);
         this.getChildren().add(personaInfos);
 
         InformationGroup titolareInfos = new InformationGroup("Titolare");
@@ -146,6 +146,14 @@ public class ClientInfoView extends VBox {
             countryNames.add(country.getDisplayName());
         }
         new AutoCompletePopup(paese, countryNames);
+
+
+        this.getStyleClass().add("client-info-view");
+        aziendaInfos.getStyleClass().add("information-group");
+        personaInfos.getStyleClass().add("information-group");
+        titolareInfos.getStyleClass().add("information-group");
+        contattatiInfos.getStyleClass().add("information-group");
+        developerInfos.getStyleClass().add("information-group");
     }
 
     public void toggleDeveloperVisibility(boolean hasDeveloperPrivilege) {

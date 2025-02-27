@@ -1,8 +1,10 @@
 package orodent.clientrelationmanager.controller.database;
 
+import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface DBManagerInterface {
 
@@ -18,4 +20,12 @@ public interface DBManagerInterface {
      *  DATA_ACQUISIZIONE, BUSINESS, OPERATORE_ASSEGNATO, INFORMATION, CATALOG, SAMPLE
      */
     <T> List<Client> queryCustomerWithSingleParameter(String field, T value);
+    void saveClientChanges(Client client);
+    List<Annotation> getAnnotationsForClient(Client client);
+    void saveAnnotation(Annotation annotation, String clientID);
+    void saveClientAfterAnnotationChange(Annotation annotation, String clientID);
+
+    boolean isAlive();
+
+    Client getClient(UUID uuid);
 }

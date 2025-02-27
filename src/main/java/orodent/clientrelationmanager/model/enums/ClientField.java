@@ -23,7 +23,8 @@ public enum ClientField {
     OPERATORE_ASSEGNATO(Operator.class),
     INFORMATION(Boolean.class),
     CATALOG(Boolean.class),
-    SAMPLE(Boolean.class);
+    SAMPLE(Boolean.class),
+    PVU(String.class);
 
     private final Class<?> type;
 

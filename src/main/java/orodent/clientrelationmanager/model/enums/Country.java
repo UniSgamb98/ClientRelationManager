@@ -49,7 +49,8 @@ public enum Country {
     TURCHIA("Turchia"),
     UCRAINA("Ucraina"),
     UNGHERIA("Ungheria"),
-    VATICANO("Vaticano");
+    VATICANO("Vaticano"),
+    VIETNAM("Vietnam");
 
     private final String displayName;
 

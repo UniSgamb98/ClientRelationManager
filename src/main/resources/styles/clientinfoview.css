@@ -1,0 +1,79 @@
+/* Stile generale per ClientInfoView */
+.client-info-view {
+    -fx-padding: 10px;
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #d1d1d1;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+/* Stile per i gruppi di informazioni */
+.client-info-view .information-group {
+    -fx-padding: 8px;
+    -fx-border-color: #c5c5c5;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.07), 3, 0, 0, 2);
+}
+
+/* Titoli delle sezioni */
+.client-info-view .information-group > Label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-padding: 3px 0;
+}
+
+/* Stile per i campi di input specifici di ClientInfoView */
+.client-info-view .text-field,
+.client-info-view .choice-box,
+.client-info-view .date-picker {
+    -fx-font-size: 12px;
+    -fx-border-color: #bbb;
+    -fx-border-radius: 4px;
+    -fx-padding: 5px;
+    -fx-background-radius: 4px;
+    -fx-background-color: white;
+    -fx-pref-height: 26px;
+}
+
+.client-info-view .choice-box {
+    -fx-pref-height: 24px; /* Ridotto rispetto ai 26px precedenti */
+    -fx-font-size: 11px; /* Font più piccolo */
+    -fx-padding: 3px 5px; /* Meno spazio interno */
+}
+
+.client-info-view .text-field:focused,
+.client-info-view .choice-box:focused,
+.client-info-view .date-picker:focused {
+    -fx-border-color: #4CAF50;
+    -fx-background-color: #fafffa;
+}
+
+/* Stile per i checkbox */
+.client-info-view .check-box {
+    -fx-font-size: 12px;
+    -fx-text-fill: #444;
+}
+
+/* Stile per i pulsanti solo in ClientInfoView */
+.client-info-view .button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 6px 10px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.client-info-view .button:hover {
+    -fx-background-color: #45a049;
+}
+
+.client-info-view .button:pressed {
+    -fx-background-color: #388E3C;
+}

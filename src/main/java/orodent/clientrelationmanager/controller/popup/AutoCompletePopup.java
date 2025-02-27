@@ -8,6 +8,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Popup;
 import javafx.stage.Window;
+import orodent.clientrelationmanager.model.App;
 
 public class AutoCompletePopup {
     private final TextField textField;
@@ -64,7 +65,7 @@ public class AutoCompletePopup {
         });
 
         // Chiude il popup quando si clicca fuori
-        textField.getScene().addEventFilter(MouseEvent.MOUSE_CLICKED, event -> {
+        App.getPrimaryStage().getScene().addEventFilter(MouseEvent.MOUSE_CLICKED, event -> {
             if (!textField.getBoundsInParent().contains(event.getX(), event.getY()) &&
                     !listView.getBoundsInParent().contains(event.getX(), event.getY())) {
                 popup.hide();

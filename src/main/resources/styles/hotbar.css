@@ -1,0 +1,27 @@
+.hotbar {
+    -fx-background-color: #2C3E50;
+    -fx-padding: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.hotbar-button {
+    -fx-pref-width: 120px;
+    -fx-pref-height: 50px;
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 5, 0, 0, 3);
+}
+
+.hotbar-button:hover {
+    -fx-background-color: #2980B9;
+}
+
+.hotbar-button:pressed {
+    -fx-background-color: #1C5985;
+}

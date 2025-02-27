@@ -1,6 +1,7 @@
 package orodent.clientrelationmanager.controller.database;
 
 import orodent.clientrelationmanager.controller.main.StatusToolTipController;
+import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.Business;
 import orodent.clientrelationmanager.model.enums.ClientField;
@@ -66,35 +67,6 @@ public class DBManager implements DBManagerInterface{
             //throw new NoServerFoundException();
         }
         return resultSet;
-    }
-
-    //TODO javadoc
-    public void test(String search) {
-        {
-            String sql = "SELECT PAESE FROM CUSTOMERS WHERE RAGIONE_SOCIALE = ?";
-
-            try (PreparedStatement statement = connectionManager.getConnection().prepareStatement(sql)) {
-                statement.setString(1, search);
-
-                try (ResultSet rs = statement.executeQuery()) {
-                    if (rs.next()) {
-                        statusToolTipController.update(rs.getString("PAESE"));
-                    }
-                }
-            } catch (SQLException sqle) {
-                //host has stopped hosting
-                if (sqle.getSQLState().equals("08006")) {
-                    statusToolTipController.redLight();
-                    open();
-                } else {
-                    System.out.println(sqle.getSQLState());
-                    printSQLException(sqle);
-                }
-            } catch (NullPointerException e) {
-                statusToolTipController.redLight();
-                open();
-            }
-        }
     }
 
     /**
@@ -204,6 +176,172 @@ public class DBManager implements DBManagerInterface{
         return result;
     }
 
+    @Override
+    public void saveClientChanges(Client client) {
+        String sql = "UPDATE CUSTOMERS SET " +
+                "RAGIONE_SOCIALE = ?, PERSONA_RIFERIMENTO = ?, EMAIL_RIFERIMENTO = ?, " +
+                "CELLULARE_RIFERIMENTO = ?, TELEFONO_AZIENDALE = ?, EMAIL_AZIENDALE = ?, " +
+                "PAESE = ?, CITTA = ?, NOME_TITOLARE = ?, CELLULARE_TITOLARE = ?, " +
+                "EMAIL_TITOLARE = ?, SITO_WEB = ?, VOLTE_CONTATTATI = ?, " +
+                "ULTIMA_CHIAMATA = ?, PROSSIMA_CHIAMATA = ?, DATA_ACQUISIZIONE = ?, " +
+                "BUSINESS = ?, OPERATORE_ASSEGNATO = ?, INFORMATION = ?, " +
+                "CATALOG = ?, SAMPLE = ?, PVU = ? " +
+                "WHERE ID = ?";
+
+        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
+            stmt.setString(1, (String) client.get(ClientField.RAGIONE_SOCIALE));
+            stmt.setString(2, (String) client.get(ClientField.PERSONA_RIFERIMENTO));
+            stmt.setString(3, (String) client.get(ClientField.EMAIL_RIFERIMENTO));
+            stmt.setString(4, (String) client.get(ClientField.CELLULARE_RIFERIMENTO));
+            stmt.setString(5, (String) client.get(ClientField.TELEFONO_AZIENDALE));
+            stmt.setString(6, (String) client.get(ClientField.EMAIL_AZIENDALE));
+            stmt.setString(7, (String) client.get(ClientField.PAESE));
+            stmt.setString(8, (String) client.get(ClientField.CITTA));
+            stmt.setString(9, (String) client.get(ClientField.NOME_TITOLARE));
+            stmt.setString(10, (String) client.get(ClientField.CELLULARE_TITOLARE));
+            stmt.setString(11, (String) client.get(ClientField.EMAIL_TITOLARE));
+            stmt.setString(12, (String) client.get(ClientField.SITO_WEB));
+            stmt.setInt(13, client.getField(ClientField.VOLTE_CONTATTATI, Integer.class));
+
+            LocalDate ultimaChiamata = client.getField(ClientField.ULTIMA_CHIAMATA, LocalDate.class);
+            stmt.setDate(14, ultimaChiamata != null ? Date.valueOf(ultimaChiamata) : null);
+
+            LocalDate prossimaChiamata = client.getField(ClientField.PROSSIMA_CHIAMATA, LocalDate.class);
+            stmt.setDate(15, prossimaChiamata != null ? Date.valueOf(prossimaChiamata) : null);
+
+            LocalDate dataAcquisizione = client.getField(ClientField.DATA_ACQUISIZIONE, LocalDate.class);
+            stmt.setDate(16, dataAcquisizione != null ? Date.valueOf(dataAcquisizione) : null);
+
+            stmt.setString(17, client.getField(ClientField.BUSINESS, Business.class).toString());
+            stmt.setString(18, client.getField(ClientField.OPERATORE_ASSEGNATO, Operator.class).toString());
+            stmt.setBoolean(19, client.getField(ClientField.INFORMATION, Boolean.class));
+            stmt.setBoolean(20, client.getField(ClientField.CATALOG, Boolean.class));
+            stmt.setBoolean(21, client.getField(ClientField.SAMPLE, Boolean.class));
+
+            // Se PVU è un testo
+            String pvu = (String) client.get(ClientField.PVU);
+            stmt.setString(22, pvu != null ? pvu : "");
+
+            stmt.setString(23, client.getUuid().toString()); // ID nella WHERE
+
+            stmt.executeUpdate();
+            statusToolTipController.update("Cambiamenti salvati!");
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+    }
+
+
+        @Override
+    public List<Annotation> getAnnotationsForClient(Client client) {
+        String sql = "SELECT DATA_CHIAMATA, OPERATORE, CONTENUTO, PROSSIMA_CHIAMATA FROM ANNOTATIONS WHERE CUSTOMER_ID = ?";
+        List<Annotation> annotations = new ArrayList<>();
+
+        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
+            stmt.setString(1, client.getUuid().toString());
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    LocalDate callDate = rs.getDate("DATA_CHIAMATA").toLocalDate();
+                    String operatorStr = rs.getString("OPERATORE");
+                    Operator madeBy = Operator.valueOf(operatorStr); // Enum Operator
+                    String content = rs.getString("CONTENUTO");
+                    LocalDate nextCallDate = rs.getDate("PROSSIMA_CHIAMATA") != null
+                            ? rs.getDate("PROSSIMA_CHIAMATA").toLocalDate()
+                            : null;
+
+                    annotations.add(new Annotation(callDate, madeBy, content, nextCallDate));
+                }
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+
+        return annotations;
+    }
+
+    @Override
+    public void saveAnnotation(Annotation annotation, String clientID) {
+        String sql = "INSERT INTO ANNOTATIONS (ID, CUSTOMER_ID, DATA_CHIAMATA, PROSSIMA_CHIAMATA, OPERATORE, CONTENUTO) " +
+                "VALUES (?, ?, ?, ?, ?, ?)";
+
+        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
+            stmt.setString(1, annotation.getUuid().toString());
+            stmt.setString(2, clientID);
+            stmt.setDate(3, java.sql.Date.valueOf(annotation.getCallDate()));
+
+            if (annotation.getNextCallDate() != null) {
+                stmt.setDate(4, java.sql.Date.valueOf(annotation.getNextCallDate()));
+            } else {
+                stmt.setNull(4, java.sql.Types.DATE);
+            }
+
+            stmt.setString(5, annotation.getMadeBy().name());
+            stmt.setString(6, annotation.getContent());
+            stmt.executeUpdate();
+            statusToolTipController.update("Annotazione salvata con successo.");
+        } catch (SQLException e) {
+            printSQLException(e);
+            statusToolTipController.update("Errore nel salvataggio dell'annotazione");
+        }
+    }
+
+    @Override
+    public void saveClientAfterAnnotationChange(Annotation annotation, String clientID) {
+        String sql = "UPDATE CUSTOMERS SET ULTIMA_CHIAMATA = ?, PROSSIMA_CHIAMATA = ?, VOLTE_CONTATTATI = VOLTE_CONTATTATI + 1 " +
+                "WHERE ID = ?";
+
+        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
+            stmt.setDate(1, java.sql.Date.valueOf(annotation.getCallDate()));
+
+            if (annotation.getNextCallDate() != null) {
+                stmt.setDate(2, java.sql.Date.valueOf(annotation.getNextCallDate()));
+            } else {
+                stmt.setNull(2, java.sql.Types.DATE);
+            }
+
+            stmt.setString(3, clientID);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            printSQLException(e);
+            statusToolTipController.update("Errore nell'aggiornamento del client: " + e.getMessage());
+        }
+    }
+
+    @Override
+    public boolean isAlive() {
+        boolean isAlive = false;
+        String sql = "SELECT * FROM TEST";
+        try (Statement stmt = connectionManager.getConnection().createStatement()) {
+
+            try (ResultSet rs = stmt.executeQuery(sql)) {
+                while (rs.next()) {
+                    isAlive = true;
+                }
+            }
+        } catch (SQLException | NullPointerException ignored) {}
+        return isAlive;
+    }
+
+    @Override
+    public Client getClient(UUID uuid) {
+        Client client = null;
+        String sql = "SELECT * FROM CUSTOMERS WHERE ID = ?";
+
+        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
+            stmt.setString(1, uuid.toString());
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                rs.next();
+                client = getClientFromResultSet(rs);
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+
+        return client;
+    }
+
     private void setNullableDate(PreparedStatement preparedStatement, int index, LocalDate date) throws SQLException {
         if (date != null) {
             preparedStatement.setDate(index, java.sql.Date.valueOf(date));
@@ -213,35 +351,36 @@ public class DBManager implements DBManagerInterface{
     }
 
     private Client getClientFromResultSet(ResultSet rs) throws SQLException {
-        Client client = new Client();
-        client.setUuid(UUID.fromString(rs.getString("ID")));
-        client.set(ClientField.RAGIONE_SOCIALE, rs.getString("RAGIONE_SOCIALE"));
-        client.set(ClientField.PERSONA_RIFERIMENTO, rs.getString("PERSONA_RIFERIMENTO"));
-        client.set(ClientField.EMAIL_RIFERIMENTO, rs.getString("EMAIL_RIFERIMENTO"));
-        client.set(ClientField.CELLULARE_RIFERIMENTO, rs.getString("CELLULARE_RIFERIMENTO"));
-        client.set(ClientField.TELEFONO_AZIENDALE, rs.getString("TELEFONO_AZIENDALE"));
-        client.set(ClientField.EMAIL_AZIENDALE, rs.getString("EMAIL_AZIENDALE"));
-        client.set(ClientField.PAESE, rs.getString("PAESE"));
-        client.set(ClientField.CITTA, rs.getString("CITTA"));
-        client.set(ClientField.NOME_TITOLARE, rs.getString("NOME_TITOLARE"));
-        client.set(ClientField.CELLULARE_TITOLARE, rs.getString("CELLULARE_TITOLARE"));
-        client.set(ClientField.EMAIL_TITOLARE, rs.getString("EMAIL_TITOLARE"));
-        client.set(ClientField.SITO_WEB, rs.getString("SITO_WEB"));
-        client.set(ClientField.VOLTE_CONTATTATI, rs.getInt("VOLTE_CONTATTATI"));
+        Client ret = new Client();
+        ret.setUuid(UUID.fromString(rs.getString("ID")));
+        ret.set(ClientField.RAGIONE_SOCIALE, rs.getString("RAGIONE_SOCIALE"));
+        ret.set(ClientField.PERSONA_RIFERIMENTO, rs.getString("PERSONA_RIFERIMENTO"));
+        ret.set(ClientField.EMAIL_RIFERIMENTO, rs.getString("EMAIL_RIFERIMENTO"));
+        ret.set(ClientField.CELLULARE_RIFERIMENTO, rs.getString("CELLULARE_RIFERIMENTO"));
+        ret.set(ClientField.TELEFONO_AZIENDALE, rs.getString("TELEFONO_AZIENDALE"));
+        ret.set(ClientField.EMAIL_AZIENDALE, rs.getString("EMAIL_AZIENDALE"));
+        ret.set(ClientField.PAESE, rs.getString("PAESE"));
+        ret.set(ClientField.CITTA, rs.getString("CITTA"));
+        ret.set(ClientField.NOME_TITOLARE, rs.getString("NOME_TITOLARE"));
+        ret.set(ClientField.CELLULARE_TITOLARE, rs.getString("CELLULARE_TITOLARE"));
+        ret.set(ClientField.EMAIL_TITOLARE, rs.getString("EMAIL_TITOLARE"));
+        ret.set(ClientField.SITO_WEB, rs.getString("SITO_WEB"));
+        ret.set(ClientField.VOLTE_CONTATTATI, rs.getInt("VOLTE_CONTATTATI"));
+        ret.set(ClientField.PVU, rs.getString("PVU"));
 
         // Gestione delle date (evita NullPointerException)
-        client.set(ClientField.ULTIMA_CHIAMATA, rs.getDate("ULTIMA_CHIAMATA") != null ? rs.getDate("ULTIMA_CHIAMATA").toLocalDate() : null);
-        client.set(ClientField.PROSSIMA_CHIAMATA, rs.getDate("PROSSIMA_CHIAMATA") != null ? rs.getDate("PROSSIMA_CHIAMATA").toLocalDate() : null);
-        client.set(ClientField.DATA_ACQUISIZIONE, rs.getDate("DATA_ACQUISIZIONE") != null ? rs.getDate("DATA_ACQUISIZIONE").toLocalDate() : null);
+        ret.set(ClientField.ULTIMA_CHIAMATA, rs.getDate("ULTIMA_CHIAMATA") != null ? rs.getDate("ULTIMA_CHIAMATA").toLocalDate() : null);
+        ret.set(ClientField.PROSSIMA_CHIAMATA, rs.getDate("PROSSIMA_CHIAMATA") != null ? rs.getDate("PROSSIMA_CHIAMATA").toLocalDate() : null);
+        ret.set(ClientField.DATA_ACQUISIZIONE, rs.getDate("DATA_ACQUISIZIONE") != null ? rs.getDate("DATA_ACQUISIZIONE").toLocalDate() : null);
 
         // Business e Operatore possono essere null, quindi gestiamo il caso
-        client.set(ClientField.BUSINESS, rs.getString("BUSINESS") != null ? Business.valueOf(rs.getString("BUSINESS")) : null);
-        client.set(ClientField.OPERATORE_ASSEGNATO, rs.getString("OPERATORE_ASSEGNATO") != null ? Operator.valueOf(rs.getString("OPERATORE_ASSEGNATO")) : null);
+        ret.set(ClientField.BUSINESS, rs.getString("BUSINESS") != null ? Business.fromString(rs.getString("BUSINESS")) : null);
+        ret.set(ClientField.OPERATORE_ASSEGNATO, rs.getString("OPERATORE_ASSEGNATO") != null ? Operator.valueOf(rs.getString("OPERATORE_ASSEGNATO")) : null);
 
-        client.set(ClientField.INFORMATION, rs.getBoolean("INFORMATION"));
-        client.set(ClientField.CATALOG, rs.getBoolean("CATALOG"));
-        client.set(ClientField.SAMPLE, rs.getBoolean("SAMPLE"));
+        ret.set(ClientField.INFORMATION, rs.getBoolean("INFORMATION"));
+        ret.set(ClientField.CATALOG, rs.getBoolean("CATALOG"));
+        ret.set(ClientField.SAMPLE, rs.getBoolean("SAMPLE"));
 
-        return client;
+        return ret;
     }
 }

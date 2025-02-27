@@ -1,6 +1,8 @@
 package orodent.clientrelationmanager.model;
 
+import orodent.clientrelationmanager.model.enums.Business;
 import orodent.clientrelationmanager.model.enums.ClientField;
+import orodent.clientrelationmanager.model.enums.Operator;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -19,6 +21,9 @@ public class Client {
         set(ClientField.INFORMATION, false);
         set(ClientField.SAMPLE, false);
         set(ClientField.VOLTE_CONTATTATI,0);
+        set(ClientField.BUSINESS, Business.DATO_IGNOTO);
+        set(ClientField.OPERATORE_ASSEGNATO, Operator.TOMMASO);
+        set(ClientField.RAGIONE_SOCIALE, "");
     }
 
     public void setUuid(UUID uuid) {
@@ -58,9 +63,6 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" +
-                "uuid=" + uuid +
-                ", fields=" + fields +
-                '}';
+        return (String) fields.get(ClientField.RAGIONE_SOCIALE);
     }
 }
