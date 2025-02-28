@@ -4,20 +4,17 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
+import orodent.clientrelationmanager.controller.main.buttons.ReportController;
+import orodent.clientrelationmanager.controller.main.buttons.ShowCallsController;
 import orodent.clientrelationmanager.controller.main.buttons.newclient.NewClientController;
 import orodent.clientrelationmanager.controller.main.buttons.searchclient.SearchClientController;
 
 public class HotBarView extends VBox {
-    private final Button addButton;
-    private final Button searchButton;
-    private final Button reportButton;
-    private final Button callsButton;
-
     public HotBarView(MainView mainView, DBManagerInterface db) {
-        addButton = new Button("➕ Aggiungi");
-        searchButton = new Button("🔍 Cerca");
-        reportButton = new Button("📊 Report");
-        callsButton = new Button("📞 Chiamate");
+        Button addButton = new Button("➕ Aggiungi");
+        Button searchButton = new Button("🔍 Cerca");
+        Button reportButton = new Button("📊 Report");
+        Button callsButton = new Button("📞 Chiamate");
 
         // Aggiunta dei bottoni alla barra
         getChildren().addAll(addButton, searchButton, reportButton, callsButton);
@@ -30,8 +27,8 @@ public class HotBarView extends VBox {
         // Eventi
         addButton.setOnAction(new NewClientController(db, mainView));
         searchButton.setOnAction(new SearchClientController(db, mainView));
-        // reportButton.setOnAction(new ReportController(app, mainView));
-        // callsButton.setOnAction(new ShowCallsController(app, mainView));
+        reportButton.setOnAction(new ReportController());
+        callsButton.setOnAction(new ShowCallsController(db));
 
         // Stile della HotBar
         this.getStyleClass().add("hotbar");

@@ -1,0 +1,49 @@
+/* Stile per la finestra generale */
+.root {
+    -fx-background-color: #f9f9f9;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+}
+
+/* Stile per il DatePicker */
+.date-picker {
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+}
+
+/* Stile per la ListView */
+.list-view {
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-background-color: white;
+}
+
+/* Stile per gli elementi della ListView */
+.list-cell {
+    -fx-padding: 8px;
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+    -fx-background-color: white;
+}
+
+.list-cell:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Stile per il pulsante */
+.button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 12px;
+    -fx-background-radius: 5px;
+    -fx-border: none;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3;
+}

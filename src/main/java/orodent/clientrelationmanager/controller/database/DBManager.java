@@ -31,45 +31,6 @@ public class DBManager implements DBManagerInterface{
     }
 
     /**
-     * Executes the query with the server side, managing changes of host.
-     * The bug occurs when a pc has hosted an embedded connection in the past and if changes from Client to Embedded again happens seamlessly
-     *
-     * @param query Query to share with database server
-     * @return the ResultSet of the given PreparedStatement
-     * TODO to distinguish when query has failed for a change of host calling for another attempt BUT A BUG MAKES THE TRANSITION SEAMLESS AND LIGHTNING FAST  and the failure for a empty ResultSet
-     */
-    private ResultSet execute(PreparedStatement query) /*throws NoServerFoundException*/{
-        ResultSet resultSet = null;
-        try {
-            resultSet = query.executeQuery();
-            resultSet.next();
-        } catch (SQLException sqle) {
-            //host has stopped hosting
-            if (sqle.getSQLState().equals("08006")) {
-                statusToolTipController.redLight();
-                open();
-               // throw new NoServerFoundException();
-            }
-            else {  //to be found what causes this
-                if (sqle.getSQLState().equals("X0Y78")) {
-                    try {
-                        query.execute();        //the preparedStatement was no a query but an insert and to be found
-                    } catch (SQLException e) {
-                        System.out.println(sqle.getSQLState());
-                        printSQLException(sqle);
-                    }
-                }
-            }
-        }   //Something caused a disconnection. Could be collapsed with catch clause above
-        catch (NullPointerException e) {
-            statusToolTipController.redLight();
-            open();
-            //throw new NoServerFoundException();
-        }
-        return resultSet;
-    }
-
-    /**
      * Prints details of an SQLException chain to <code>System.err</code>.
      * Details included are SQL State, Error code, Exception message.
      *
@@ -131,7 +92,7 @@ public class DBManager implements DBManagerInterface{
         try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql);
             ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
-                clients.add(getClientFromResultSet(rs));
+                clients.add(mapResultSetToClient(rs));
             }
         } catch (SQLException e) {
             printSQLException(e);
@@ -165,7 +126,7 @@ public class DBManager implements DBManagerInterface{
 
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {
-                    result.add(getClientFromResultSet(rs));
+                    result.add(mapResultSetToClient(rs));
                 }
             }
         } catch (SQLException e) {
@@ -358,7 +319,7 @@ public class DBManager implements DBManagerInterface{
 
             try (ResultSet rs = stmt.executeQuery()) {
                 rs.next();
-                client = getClientFromResultSet(rs);
+                client = mapResultSetToClient(rs);
             }
         } catch (SQLException e) {
             printSQLException(e);
@@ -366,6 +327,28 @@ public class DBManager implements DBManagerInterface{
 
         return client;
     }
+
+    @Override
+    public List<Client> getClientsByNextCall(LocalDate date) {
+        List<Client> clients = new ArrayList<>();
+        String query = "SELECT * FROM CUSTOMERS WHERE PROSSIMA_CHIAMATA = ?";
+
+        try (Connection connection = connectionManager.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+
+            statement.setDate(1, Date.valueOf(date));
+
+            try (ResultSet resultSet = statement.executeQuery()) {
+                while (resultSet.next()) {
+                    clients.add(mapResultSetToClient(resultSet));
+                }
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return clients;
+    }
+
 
     private void setNullableDate(PreparedStatement preparedStatement, int index, LocalDate date) throws SQLException {
         if (date != null) {
@@ -375,7 +358,7 @@ public class DBManager implements DBManagerInterface{
         }
     }
 
-    private Client getClientFromResultSet(ResultSet rs) throws SQLException {
+    private Client mapResultSetToClient(ResultSet rs) throws SQLException {
         Client ret = new Client();
         ret.setUuid(UUID.fromString(rs.getString("ID")));
         ret.set(ClientField.RAGIONE_SOCIALE, rs.getString("RAGIONE_SOCIALE"));
@@ -400,7 +383,7 @@ public class DBManager implements DBManagerInterface{
 
         // Business e Operatore possono essere null, quindi gestiamo il caso
         ret.set(ClientField.BUSINESS, rs.getString("BUSINESS") != null ? Business.fromString(rs.getString("BUSINESS")) : null);
-        ret.set(ClientField.OPERATORE_ASSEGNATO, rs.getString("OPERATORE_ASSEGNATO") != null ? Operator.valueOf(rs.getString("OPERATORE_ASSEGNATO")) : null);
+        ret.set(ClientField.OPERATORE_ASSEGNATO, rs.getString("OPERATORE_ASSEGNATO") != null ? Operator.fromString(rs.getString("OPERATORE_ASSEGNATO")) : null);
 
         ret.set(ClientField.INFORMATION, rs.getBoolean("INFORMATION"));
         ret.set(ClientField.CATALOG, rs.getBoolean("CATALOG"));

@@ -19,7 +19,6 @@ public class FiltersView extends HBox {
     private final Polyline cross;
     private final Circle background;
     private final StackPane activeOrInactivePanel;
-    private final Rectangle rectangle;
 
     public FiltersView(FilterController filterController) {
         getStyleClass().add("filters-view"); // Usa il CSS per lo stile
@@ -46,7 +45,7 @@ public class FiltersView extends HBox {
 
         // Remove Button (Red Cross)
         StackPane removeButton = new StackPane();
-        rectangle = new Rectangle(15, 15);
+        Rectangle rectangle = new Rectangle(15, 15);
         rectangle.getStyleClass().add("remove-button");
 
         Polyline x = new Polyline(4.5, 4.5, 0.0, 0.0, 9.0, 9.0, 4.5, 4.5, 9.0, 0.0, 0.0, 9.0, 4.5, 4.5);
@@ -70,7 +69,7 @@ public class FiltersView extends HBox {
         activeOrInactivePanel.getChildren().clear();
         activeOrInactivePanel.getChildren().addAll(background, active ? checkMark : cross);
 
-        // Effetto di transizione per migliorare l'UX
+        // Effetto di transizione per migliorare la UX
         FadeTransition fade = new FadeTransition(Duration.millis(200), activeOrInactivePanel);
         fade.setFromValue(0.5);
         fade.setToValue(1.0);

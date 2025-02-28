@@ -3,7 +3,7 @@ package orodent.clientrelationmanager.controller.database;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class IpAddressesBean {
+public class  IpAddressesBean {
     private final ArrayList<String> ipAddresses = new ArrayList<>(Arrays.asList("192.168.1.138", "192.168.1.136"));
     private static ArrayList<Boolean> ipIsReachable = new ArrayList<>(Arrays.asList(false, false));
 

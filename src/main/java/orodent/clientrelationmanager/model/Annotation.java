@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 public class Annotation {
-    private UUID uuid;
+    private final UUID uuid;
     private LocalDate callDate;
     private Operator madeBy;
     private String content;
@@ -54,9 +54,6 @@ public class Annotation {
     }
     public UUID getUuid() {
         return uuid;
-    }
-    public void setUuid(UUID uuid) {
-        this.uuid = uuid;
     }
 
     @Override

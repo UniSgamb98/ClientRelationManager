@@ -3,6 +3,7 @@ package orodent.clientrelationmanager.controller.database;
 import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
@@ -27,4 +28,6 @@ public interface DBManagerInterface {
     void updateAnnotation(Annotation annotation, String clientID);
     boolean isAlive();
     Client getClient(UUID uuid);
+
+    List<Client> getClientsByNextCall(LocalDate value);
 }
