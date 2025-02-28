@@ -232,9 +232,9 @@ public class DBManager implements DBManagerInterface{
     }
 
 
-        @Override
+    @Override
     public List<Annotation> getAnnotationsForClient(Client client) {
-        String sql = "SELECT DATA_CHIAMATA, OPERATORE, CONTENUTO, PROSSIMA_CHIAMATA FROM ANNOTATIONS WHERE CUSTOMER_ID = ?";
+        String sql = "SELECT DATA_CHIAMATA, OPERATORE, CONTENUTO, PROSSIMA_CHIAMATA, ID FROM ANNOTATIONS WHERE CUSTOMER_ID = ?";
         List<Annotation> annotations = new ArrayList<>();
 
         try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
@@ -242,6 +242,7 @@ public class DBManager implements DBManagerInterface{
 
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {
+                    UUID uuid = UUID.fromString(rs.getString("ID"));
                     LocalDate callDate = rs.getDate("DATA_CHIAMATA").toLocalDate();
                     String operatorStr = rs.getString("OPERATORE");
                     Operator madeBy = Operator.valueOf(operatorStr); // Enum Operator
@@ -250,7 +251,7 @@ public class DBManager implements DBManagerInterface{
                             ? rs.getDate("PROSSIMA_CHIAMATA").toLocalDate()
                             : null;
 
-                    annotations.add(new Annotation(callDate, madeBy, content, nextCallDate));
+                    annotations.add(new Annotation(uuid, callDate, madeBy, content, nextCallDate));
                 }
             }
         } catch (SQLException e) {
@@ -258,6 +259,32 @@ public class DBManager implements DBManagerInterface{
         }
 
         return annotations;
+    }
+
+    @Override
+    public void updateAnnotation(Annotation annotation, String clientID) {
+        String sql = "UPDATE ANNOTATIONS SET CUSTOMER_ID = ?, DATA_CHIAMATA = ?, PROSSIMA_CHIAMATA = ?, OPERATORE = ?, CONTENUTO = ?" +
+                "WHERE ID = ?";
+
+        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
+            stmt.setString(6, annotation.getUuid().toString());
+            stmt.setString(1, clientID);
+            stmt.setDate(2, java.sql.Date.valueOf(annotation.getCallDate()));
+
+            if (annotation.getNextCallDate() != null) {
+                stmt.setDate(3, java.sql.Date.valueOf(annotation.getNextCallDate()));
+            } else {
+                stmt.setNull(3, java.sql.Types.DATE);
+            }
+
+            stmt.setString(4, annotation.getMadeBy().name());
+            stmt.setString(5, annotation.getContent());
+            stmt.executeUpdate();
+            statusToolTipController.update("Annotazione modificata.");
+        } catch (SQLException e) {
+            printSQLException(e);
+            statusToolTipController.update("Errore nella modifica dell'annotazione");
+        }
     }
 
     @Override
@@ -296,8 +323,6 @@ public class DBManager implements DBManagerInterface{
 
             if (annotation.getNextCallDate() != null) {
                 stmt.setDate(2, java.sql.Date.valueOf(annotation.getNextCallDate()));
-            } else {
-                stmt.setNull(2, java.sql.Types.DATE);
             }
 
             stmt.setString(3, clientID);

@@ -1,0 +1,69 @@
+/* Stile generale della FiltersView */
+.filters-view {
+    -fx-padding: 5px;
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+}
+
+/* Stile per il ChoiceBox (compatto ma con spazio sufficiente per il testo) */
+.filter-options {
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 3px 8px 3px 1px; /* top: 3px, right: 8px, bottom: 3px, left: 4px */
+    -fx-font-size: 13px;     /* Dimensione del testo */
+    -fx-min-height: 30px;    /* Altezza minima */
+    -fx-pref-height: 30px;   /* Altezza preferita */
+    -fx-max-height: 30px;    /* Altezza massima */
+    -fx-pref-width: 140px;   /* Larghezza fissa per il controllo */
+    -fx-max-width: 140px;
+}
+
+/* Stile per il cerchio di attivazione */
+.background-circle {
+    -fx-fill: lightgray;
+    -fx-stroke: gray;
+    -fx-stroke-width: 1;
+}
+
+/* Stile per il pannello di attivazione/disattivazione */
+.toggle-panel {
+    -fx-cursor: hand;
+}
+
+/* Stile per il segno di spunta (✔) */
+.check-mark {
+    -fx-stroke: darkgreen;
+    -fx-stroke-width: 2;
+    -fx-fill: transparent;
+}
+
+/* Stile per la croce (❌) */
+.cross {
+    -fx-stroke: darkred;
+    -fx-stroke-width: 2;
+    -fx-fill: transparent;
+}
+
+/* Stile per il bottone di rimozione */
+.remove-button-container {
+    -fx-cursor: hand;
+}
+
+/* Effetto hover per il bottone di rimozione */
+.remove-button {
+    -fx-fill: transparent;
+    -fx-arc-height: 5px;
+    -fx-arc-width: 5px;
+}
+
+.remove-button-container:hover .remove-button {
+    -fx-fill: lightcoral;
+}
+
+/* Stile per l'icona di rimozione */
+.remove-icon {
+    -fx-stroke: red;
+    -fx-stroke-width: 2;
+    -fx-fill: transparent;
+}

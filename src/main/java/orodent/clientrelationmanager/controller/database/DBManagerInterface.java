@@ -24,8 +24,7 @@ public interface DBManagerInterface {
     List<Annotation> getAnnotationsForClient(Client client);
     void saveAnnotation(Annotation annotation, String clientID);
     void saveClientAfterAnnotationChange(Annotation annotation, String clientID);
-
+    void updateAnnotation(Annotation annotation, String clientID);
     boolean isAlive();
-
     Client getClient(UUID uuid);
 }

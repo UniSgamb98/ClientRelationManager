@@ -53,6 +53,7 @@ public class SearchClientView extends BorderPane {
     // Metodo per ripristinare la view originale per il pulsante indietro
     public void restoreSearchView() {
         this.setLeft(filters);
+        searchResultView.updateItems();
         this.setCenter(searchResultView);
     }
 }

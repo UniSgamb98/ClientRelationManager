@@ -1,0 +1,39 @@
+/* Stile di base per l'editor di annotazioni */
+.annotation-editor-layout {
+    -fx-background-color: #f2f2f2;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Etichette */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-padding: 2px 0;
+}
+
+/* DatePicker, ComboBox e TextArea */
+.date-picker, .combo-box, .text-area {
+    -fx-font-size: 13px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 4px;
+}
+
+/* Pulsanti */
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-padding: 6px 10px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.button:hover {
+    -fx-background-color: #45a049;
+}
+
+.annotation-editor-buttons {
+    -fx-alignment: center;
+}

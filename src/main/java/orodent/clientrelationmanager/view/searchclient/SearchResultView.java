@@ -9,21 +9,27 @@ import orodent.clientrelationmanager.model.Client;
 import java.util.List;
 
 public class SearchResultView extends ListView<DisplayableClient> {
-    private final ObservableList<DisplayableClient> displayableClients;
+    private ObservableList<DisplayableClient> displayableClients;
+    private final DBManagerInterface dbManagerInterface;
 
     public SearchResultView(DBManagerInterface dbManagerInterface) {
-        displayableClients = FXCollections.observableArrayList();
-        this.setItems(displayableClients);
-        for(Client i : dbManagerInterface.getAllClient()) {
-            DisplayableClient displayableClient = new DisplayableClient(i);
-            displayableClients.add(displayableClient);
-        }
+        this.dbManagerInterface = dbManagerInterface;
+        updateItems();
     }
 
     public void setClients(List<Client> Clients) {
         this.displayableClients.clear();
         for(Client i : Clients) {
             this.displayableClients.add(new DisplayableClient(i));
+        }
+    }
+
+    public void updateItems() {
+        displayableClients = FXCollections.observableArrayList();
+        this.setItems(displayableClients);
+        for(Client i : dbManagerInterface.getAllClient()) {
+            DisplayableClient displayableClient = new DisplayableClient(i);
+            displayableClients.add(displayableClient);
         }
     }
 }

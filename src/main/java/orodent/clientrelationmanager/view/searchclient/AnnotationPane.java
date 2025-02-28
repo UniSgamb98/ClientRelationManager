@@ -8,8 +8,10 @@ import javafx.scene.text.TextFlow;
 import orodent.clientrelationmanager.model.Annotation;
 
 public class AnnotationPane extends VBox {
+    Annotation annotation;
 
     public AnnotationPane(Annotation annotation) {
+        this.annotation = annotation;
         this.setSpacing(10);
         this.setPadding(new Insets(10));
         this.getStyleClass().add("annotation-pane");
@@ -34,4 +36,9 @@ public class AnnotationPane extends VBox {
         this.getChildren().addAll(operatorLabel, contentFlow, nextCallLabel);
         this.setSpacing(5);
     }
+
+    public Annotation getAnnotation() {
+        return annotation;
+    }
+
 }

@@ -6,11 +6,19 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 public class Annotation {
-    private final UUID uuid;
+    private UUID uuid;
     private LocalDate callDate;
     private Operator madeBy;
     private String content;
     private LocalDate nextCallDate;
+
+    public Annotation(UUID uuid ,LocalDate callDate, Operator madeBy, String content, LocalDate nextCallDate) {
+        this.uuid = uuid;
+        this.callDate = callDate;
+        this.madeBy = madeBy;
+        this.content = content;
+        this.nextCallDate = nextCallDate;
+    }
 
     public Annotation(LocalDate callDate, Operator madeBy, String content, LocalDate nextCallDate) {
         this.uuid = UUID.randomUUID();
@@ -46,6 +54,9 @@ public class Annotation {
     }
     public UUID getUuid() {
         return uuid;
+    }
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
     }
 
     @Override

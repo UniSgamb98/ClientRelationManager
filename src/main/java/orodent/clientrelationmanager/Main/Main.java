@@ -26,7 +26,7 @@ public class Main extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/hotbar.css")).toExternalForm());
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/annotation.css")).toExternalForm());
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/clientinfoview.css")).toExternalForm());
-
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/filterview.css")).toExternalForm());
 
         primaryStage.setTitle("Orodent");
         primaryStage.setScene(scene);

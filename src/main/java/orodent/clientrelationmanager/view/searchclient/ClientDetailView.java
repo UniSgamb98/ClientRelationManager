@@ -1,20 +1,16 @@
 package orodent.clientrelationmanager.view.searchclient;
 
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
 import orodent.clientrelationmanager.controller.main.buttons.ClientInfoController;
 import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.ClientField;
-import orodent.clientrelationmanager.model.enums.Operator;
 import orodent.clientrelationmanager.view.clientinfo.ClientInfoView;
+import orodent.clientrelationmanager.view.mainview.AnnotationEditorStage;
 
 import java.time.LocalDate;
 
@@ -40,6 +36,7 @@ public class ClientDetailView extends BorderPane {
 
         // Right: ClientAnnotationView con le informazioni sulle chiamate
         clientAnnotationView = new ClientAnnotationView(client, dbManagerInterface);
+        clientAnnotationView.setOnUpdate(this::update);
 
         // Center: ClientInfoView con le informazioni del cliente
         clientInfoView = new ClientInfoView(client);
@@ -75,79 +72,34 @@ public class ClientDetailView extends BorderPane {
     }
 
     private void showNewAnnotationStage() {
-        Stage stage = new Stage();
-        stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("Registra Nuova Chiamata");
+        // Supponiamo di avere un oggetto 'annotation' da modificare.
+        AnnotationEditorStage editor = new AnnotationEditorStage(new Annotation(LocalDate.now(), null, null, null), "Registra Nuova Chiamata"); //TODO Default working operator
+        editor.showAndWait();
 
-        // Campi input per la nuova annotazione
-        DatePicker callDatePicker = new DatePicker(LocalDate.now());
-        ComboBox<Operator> operatorComboBox = new ComboBox<>();
-        operatorComboBox.getItems().addAll(Operator.values());
-        operatorComboBox.setPromptText("Seleziona operatore");  //TODO da mettere in default il workingOperator di App
-
-        TextArea contentArea = new TextArea();
-        contentArea.setPromptText("Inserisci il contenuto della chiamata...");
-
-        DatePicker nextCallDatePicker = new DatePicker();
-        nextCallDatePicker.setPromptText("(Opzionale)");
-
-        // Pulsanti di conferma e annullamento
-        Button saveButton = new Button("Salva");
-        Button cancelButton = new Button("Annulla");
-
-        saveButton.setOnAction(event -> {
-            if (operatorComboBox.getValue() == null || contentArea.getText().trim().isEmpty()) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Errore");
-                alert.setHeaderText(null);
-                alert.setContentText("Devi selezionare un operatore e scrivere un contenuto.");
-                alert.show();
-                return;
-            }
-
-            // Creazione nuova annotazione
-            Annotation newAnnotation = new Annotation(
-                    callDatePicker.getValue(),
-                    operatorComboBox.getValue(),
-                    contentArea.getText(),
-                    nextCallDatePicker.getValue()
-            );
-
-            // Salvataggio dell'annotazione.
-            dbManagerInterface.saveAnnotation(newAnnotation, client.getUuid().toString());
-            dbManagerInterface.saveClientAfterAnnotationChange(newAnnotation, client.getUuid().toString());
+        if (editor.isSaved()) {
+            Annotation updatedAnnotation = editor.getAnnotation();
+            // Procedi con l'aggiornamento sul database o altre operazioni.
+            dbManagerInterface.saveAnnotation(updatedAnnotation, client.getUuid().toString());
+            dbManagerInterface.saveClientAfterAnnotationChange(updatedAnnotation, client.getUuid().toString());
             client = dbManagerInterface.getClient(client.getUuid());
-            // ⚠️ Chiamata al metodo che aggiorna la ClientInfoView
-            updateClientInfoView();
-            stage.close();
-        });
+            update();
+        }
+    }
 
-        cancelButton.setOnAction(event -> stage.close());
-
-        // Layout
-        VBox layout = new VBox(10,
-                new Label("Data Chiamata:"), callDatePicker,
-                new Label("Operatore:"), operatorComboBox,
-                new Label("Contenuto:"), contentArea,
-                new Label("Prossima Chiamata:"), nextCallDatePicker,
-                new HBox(10, saveButton, cancelButton)
-        );
-
-        layout.setPadding(new Insets(15));
-
-        // Creazione della scena e apertura della finestra
-        Scene scene = new Scene(layout, 400, 350);
-        stage.setScene(scene);
-        stage.showAndWait();
-
+    private void update(){
+        client = dbManagerInterface.getClient(client.getUuid());
+        updateClientInfoView();
+        updateClientAnnotationView();
     }
 
     private void updateClientInfoView() {
-        this.setCenter(null);  // Rimuove la vecchia ClientInfoView
-        this.setRight(null);
-        clientInfoView = new ClientInfoView(client); // Crea una nuova ClientInfoView aggiornata
+        clientInfoView = new ClientInfoView(client);
+        this.setCenter(new VBox(clientInfoView, makeCallButton));
+    }
+
+    private void updateClientAnnotationView(){
         clientAnnotationView = new ClientAnnotationView(client, dbManagerInterface);
-        this.setCenter(new VBox(clientInfoView, makeCallButton)); // Aggiunge la nuova ClientInfoView
+        clientAnnotationView.setOnUpdate(this::update);
         this.setRight(clientAnnotationView);
     }
 }
