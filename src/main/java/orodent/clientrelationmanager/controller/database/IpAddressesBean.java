@@ -23,6 +23,10 @@ public class  IpAddressesBean {
         return ipAddresses.get(ipPosition);
     }
 
+    public int getIpPosition(String ipAddress) {
+        return ipAddresses.indexOf(ipAddress);
+    }
+
     public int getIpListSize(){
         return ipAddresses.size();
     }

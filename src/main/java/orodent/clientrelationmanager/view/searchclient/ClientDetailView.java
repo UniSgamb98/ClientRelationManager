@@ -7,6 +7,7 @@ import javafx.scene.layout.VBox;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
 import orodent.clientrelationmanager.controller.main.buttons.ClientInfoController;
 import orodent.clientrelationmanager.model.Annotation;
+import orodent.clientrelationmanager.model.App;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.ClientField;
 import orodent.clientrelationmanager.view.clientinfo.ClientInfoView;
@@ -65,7 +66,6 @@ public class ClientDetailView extends BorderPane {
     }
 
     private void onSave(){
-        clientInfoController.getClientChangesFromView();
         client = clientInfoController.getClient();
         client.set(ClientField.PVU, clientAnnotationView.getPvuText());
         dbManagerInterface.saveClientChanges(client);
@@ -73,7 +73,8 @@ public class ClientDetailView extends BorderPane {
 
     private void showNewAnnotationStage() {
         // Supponiamo di avere un oggetto 'annotation' da modificare.
-        AnnotationEditorStage editor = new AnnotationEditorStage(new Annotation(LocalDate.now(), null, null, null), "Registra Nuova Chiamata"); //TODO Default working operator
+        AnnotationEditorStage editor = new AnnotationEditorStage(new Annotation(LocalDate.now(), null, null, null), "Registra Nuova Chiamata");
+        editor.setDefaultOperator(App.getWorkingOperator());
         editor.showAndWait();
 
         if (editor.isSaved()) {

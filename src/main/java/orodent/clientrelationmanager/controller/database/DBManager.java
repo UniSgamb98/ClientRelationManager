@@ -173,8 +173,12 @@ public class DBManager implements DBManagerInterface{
             LocalDate dataAcquisizione = client.getField(ClientField.DATA_ACQUISIZIONE, LocalDate.class);
             stmt.setDate(16, dataAcquisizione != null ? Date.valueOf(dataAcquisizione) : null);
 
-            stmt.setString(17, client.getField(ClientField.BUSINESS, Business.class).toString());
-            stmt.setString(18, client.getField(ClientField.OPERATORE_ASSEGNATO, Operator.class).toString());
+            Business business = client.getField(ClientField.BUSINESS, Business.class);
+            stmt.setString(17, business != null ? business.toString() : null);
+
+            Operator operator = client.getField(ClientField.OPERATORE_ASSEGNATO, Operator.class);
+            stmt.setString(18, operator != null ? operator.toString() : null);
+
             stmt.setBoolean(19, client.getField(ClientField.INFORMATION, Boolean.class));
             stmt.setBoolean(20, client.getField(ClientField.CATALOG, Boolean.class));
             stmt.setBoolean(21, client.getField(ClientField.SAMPLE, Boolean.class));
@@ -195,7 +199,7 @@ public class DBManager implements DBManagerInterface{
 
     @Override
     public List<Annotation> getAnnotationsForClient(Client client) {
-        String sql = "SELECT DATA_CHIAMATA, OPERATORE, CONTENUTO, PROSSIMA_CHIAMATA, ID FROM ANNOTATIONS WHERE CUSTOMER_ID = ?";
+        String sql = "SELECT DATA_CHIAMATA, OPERATORE, CONTENUTO, PROSSIMA_CHIAMATA, ID, INFORMATION, CATALOG, SAMPLE FROM ANNOTATIONS WHERE CUSTOMER_ID = ?";
         List<Annotation> annotations = new ArrayList<>();
 
         try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
@@ -211,8 +215,11 @@ public class DBManager implements DBManagerInterface{
                     LocalDate nextCallDate = rs.getDate("PROSSIMA_CHIAMATA") != null
                             ? rs.getDate("PROSSIMA_CHIAMATA").toLocalDate()
                             : null;
-
-                    annotations.add(new Annotation(uuid, callDate, madeBy, content, nextCallDate));
+                    Annotation annotation = new Annotation(uuid, callDate, madeBy, content, nextCallDate);
+                    annotation.setSample(rs.getBoolean("SAMPLE"));
+                    annotation.setCatalog(rs.getBoolean("CATALOG"));
+                    annotation.setInformation(rs.getBoolean("INFORMATION"));
+                    annotations.add(annotation);
                 }
             }
         } catch (SQLException e) {
@@ -224,11 +231,11 @@ public class DBManager implements DBManagerInterface{
 
     @Override
     public void updateAnnotation(Annotation annotation, String clientID) {
-        String sql = "UPDATE ANNOTATIONS SET CUSTOMER_ID = ?, DATA_CHIAMATA = ?, PROSSIMA_CHIAMATA = ?, OPERATORE = ?, CONTENUTO = ?" +
+        String sql = "UPDATE ANNOTATIONS SET CUSTOMER_ID = ?, DATA_CHIAMATA = ?, PROSSIMA_CHIAMATA = ?, OPERATORE = ?, CONTENUTO = ?, INFORMATION = ?, CATALOG = ?, SAMPLE = ?" +
                 "WHERE ID = ?";
 
         try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
-            stmt.setString(6, annotation.getUuid().toString());
+            stmt.setString(9, annotation.getUuid().toString());
             stmt.setString(1, clientID);
             stmt.setDate(2, java.sql.Date.valueOf(annotation.getCallDate()));
 
@@ -240,6 +247,9 @@ public class DBManager implements DBManagerInterface{
 
             stmt.setString(4, annotation.getMadeBy().name());
             stmt.setString(5, annotation.getContent());
+            stmt.setBoolean(6, annotation.getInformation());
+            stmt.setBoolean(7, annotation.getCatalog());
+            stmt.setBoolean(8, annotation.getSample());
             stmt.executeUpdate();
             statusToolTipController.update("Annotazione modificata.");
         } catch (SQLException e) {
@@ -286,6 +296,10 @@ public class DBManager implements DBManagerInterface{
                 stmt.setDate(2, java.sql.Date.valueOf(annotation.getNextCallDate()));
             }
 
+            if (annotation.getInformation())    setInformation(clientID);
+            if (annotation.getCatalog()) setCatalog(clientID);
+            if (annotation.getSample()) setSample(clientID);
+
             stmt.setString(3, clientID);
             stmt.executeUpdate();
         } catch (SQLException e) {
@@ -294,19 +308,34 @@ public class DBManager implements DBManagerInterface{
         }
     }
 
+    private void setInformation(String clientID) throws SQLException {
+        String sql = "UPDATE CUSTOMERS SET INFORMATION = TRUE WHERE ID = ?";
+
+        PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql);
+        stmt.setString(1, clientID);
+
+        stmt.executeUpdate();
+    }
+    private void setCatalog(String clientID) throws SQLException {
+        String sql = "UPDATE CUSTOMERS SET CATALOG = TRUE WHERE ID = ?";
+
+        PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql);
+        stmt.setString(1, clientID);
+
+        stmt.executeUpdate();
+    }
+    private void setSample(String clientID) throws SQLException {
+        String sql = "UPDATE CUSTOMERS SET SAMPLE = TRUE WHERE ID = ?";
+
+        PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql);
+        stmt.setString(1, clientID);
+
+        stmt.executeUpdate();
+    }
+
     @Override
     public boolean isAlive() {
-        boolean isAlive = false;
-        String sql = "SELECT * FROM TEST";
-        try (Statement stmt = connectionManager.getConnection().createStatement()) {
-
-            try (ResultSet rs = stmt.executeQuery(sql)) {
-                while (rs.next()) {
-                    isAlive = true;
-                }
-            }
-        } catch (SQLException | NullPointerException ignored) {}
-        return isAlive;
+        return connectionManager.findHostIp() != null;
     }
 
     @Override
@@ -333,8 +362,7 @@ public class DBManager implements DBManagerInterface{
         List<Client> clients = new ArrayList<>();
         String query = "SELECT * FROM CUSTOMERS WHERE PROSSIMA_CHIAMATA = ?";
 
-        try (Connection connection = connectionManager.getConnection();
-             PreparedStatement statement = connection.prepareStatement(query)) {
+        try (PreparedStatement statement = connectionManager.getConnection().prepareStatement(query)) {
 
             statement.setDate(1, Date.valueOf(date));
 

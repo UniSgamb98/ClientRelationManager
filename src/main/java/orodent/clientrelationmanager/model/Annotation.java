@@ -11,6 +11,9 @@ public class Annotation {
     private Operator madeBy;
     private String content;
     private LocalDate nextCallDate;
+    private boolean information;
+    private boolean catalog;
+    private boolean sample;
 
     public Annotation(UUID uuid ,LocalDate callDate, Operator madeBy, String content, LocalDate nextCallDate) {
         this.uuid = uuid;
@@ -55,6 +58,25 @@ public class Annotation {
     public UUID getUuid() {
         return uuid;
     }
+    public boolean getInformation() {
+        return information;
+    }
+    public void setInformation(boolean information) {
+        this.information = information;
+    }
+    public boolean getCatalog() {
+        return catalog;
+    }
+    public void setCatalog(boolean catalog) {
+        this.catalog = catalog;
+    }
+    public boolean getSample() {
+        return sample;
+    }
+    public void setSample(boolean sample) {
+        this.sample = sample;
+    }
+
 
     @Override
     public String toString() {

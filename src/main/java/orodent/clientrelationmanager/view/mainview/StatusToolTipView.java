@@ -1,5 +1,8 @@
 package orodent.clientrelationmanager.view.mainview;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.concurrent.Task;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -7,11 +10,13 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.util.Duration;
 import orodent.clientrelationmanager.model.App;
 
 public class StatusToolTipView extends HBox {
     private final Circle light;
     private final Label label;
+    private boolean isGreen = false;
 
     public StatusToolTipView() {
         //Status Label
@@ -30,15 +35,38 @@ public class StatusToolTipView extends HBox {
     }
 
     private void commuteDatabaseConnection() {
-        if(App.getDBManager().isAlive()){
-            App.getDBManager().close();
-        } else {
-            App.getDBManager().open();
-        }
+        if (isGreen)
+            updateStatusLabel("Disconnessione in corso...");
+        else
+            updateStatusLabel("Connessione in corso...");
+        // Esegui le operazioni pesanti in background
+        Task<Void> task = new Task<>() {
+            @Override
+            protected Void call() {
+                if (App.getDBManager().isAlive()) {
+                    App.getDBManager().close();
+                } else {
+                    App.getDBManager().open();
+                }
+                return null;
+            }
+        };
+
+        new Thread(task).start();
+    }
+
+    public void startFlashingEffect() {
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.seconds(0.2), e -> label.setTextFill(Color.RED)),
+                new KeyFrame(Duration.seconds(0.4), e -> label.setTextFill(Color.BLACK))
+        );
+        timeline.setCycleCount(2);
+        timeline.play();
     }
 
     public void switchColor(Color color){
         light.setFill(color);
+        isGreen = color.equals(Color.GREEN);
     }
 
     public void updateStatusLabel(String text){

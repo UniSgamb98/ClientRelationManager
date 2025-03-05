@@ -10,7 +10,7 @@ public class ConnectionManager extends Thread {
     protected final int NETWORKSERVER_PORT = 1527;
     private final String DB_USER = "me";
     private final String DB_PSW = "pw";
-    private String validIP;
+
     private final StatusToolTipController status;
     private Connection connection;
     private ConnectionType connectionType;
@@ -27,32 +27,46 @@ public class ConnectionManager extends Thread {
     }
 
     /**
+     *  Cerca l'indirizzo ip del pc che sta facendo da host per il server
+     *  @return null se non è stato trovato un pc host
+     */
+    public String findHostIp() {
+        String ret = null;
+        try {
+        IpAddressesBean ipsToScan = new IpAddressesBean();
+        ipsToScan.initialize();
+
+        // Avvia thread per testare ogni IP
+        for (int i = 0; i < ipsToScan.getIpListSize(); i++) {
+            new ConnectionTesterThread(i).start();
+        }
+
+        // Attendi che tutti i thread abbiano terminato (tempo fisso di 1,5 secondi)
+
+            Thread.sleep(1500);
+
+
+        // Verifica se almeno un IP è raggiungibile
+        for (int i = 0; i < ipsToScan.getIpListSize(); i++) {
+            if (ipsToScan.isIpReachable(i)) {
+                ret = ipsToScan.getIpAddresses(i);
+                break;
+            }
+        }
+        } catch (InterruptedException e) {
+            status.update("Interrupted: " + e.getMessage());
+        }
+        return ret;
+    }
+    /**
      * Tenta di aprire una connessione. Se viene trovato un server in esecuzione su uno degli IP specificati,
      * utilizza la modalità DRIVER (client) altrimenti avvia un server embedded.
      */
     protected void open() {
         try {
             status.update("Searching for running Network Server");
-            // Inizializza il bean con gli IP da testare
-            IpAddressesBean ipsToScan = new IpAddressesBean();
-            ipsToScan.initialize();
 
-            // Avvia thread per testare ogni IP
-            for (int i = 0; i < ipsToScan.getIpListSize(); i++) {
-                new ConnectionTesterThread(i).start();
-            }
-
-            // Attendi che tutti i thread abbiano terminato (tempo fisso di 2 secondi)
-            Thread.sleep(2000);
-
-            // Verifica se almeno un IP è raggiungibile
-            for (int i = 0; i < ipsToScan.getIpListSize(); i++) {
-                if (ipsToScan.isIpReachable(i)) {
-                    validIP = ipsToScan.getIpAddresses(i);
-                    break;
-                }
-            }
-
+            String validIP = findHostIp();
             if (validIP == null) {
                 throw new NoServerFoundException();
             }
@@ -95,8 +109,6 @@ public class ConnectionManager extends Thread {
             status.update("Driver class not found: " + e.getMessage());
         } catch (SQLException e) {
             status.update("SQL error: " + e.getMessage());
-        } catch (InterruptedException e) {
-            status.update("Interrupted: " + e.getMessage());
         }
     }
 
@@ -114,7 +126,7 @@ public class ConnectionManager extends Thread {
                     if ("XJ015".equals(e.getSQLState().trim())) {
                         connection = null;
                         connectionType = ConnectionType.NONE;
-                        status.update("Derby shut down.");
+                        status.update("Disconnesso.");
                         status.redLight();
                     } else {
                         status.update("Error shutting down Derby: " + e.getMessage());
@@ -146,7 +158,7 @@ public class ConnectionManager extends Thread {
      * @throws SQLException se si verifica un errore
      */
     private Connection getEmbeddedConnection() throws SQLException {
-        String url = "jdbc:derby:" + DBNAME + ";create=true;user=" + DB_USER + ";password=" + DB_PSW;
+        String url = "jdbc:derby:" + DBNAME + ";create=true;user=" + DB_USER + ";password=" + DB_PSW;// I:\CliZr\Tommaso\
         return DriverManager.getConnection(url);
     }
 
@@ -200,6 +212,8 @@ public class ConnectionManager extends Thread {
     protected Connection getConnection() {
         try {
             if (connection == null || connection.isClosed()) {
+                status.update("Riconnesione in corso...");
+                status.redLight();
                 open();
             }
         } catch (SQLException e) {

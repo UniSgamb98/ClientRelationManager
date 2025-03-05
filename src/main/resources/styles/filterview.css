@@ -10,13 +10,17 @@
     -fx-background-color: white;
     -fx-border-color: #ccc;
     -fx-border-radius: 5px;
-    -fx-padding: 3px 8px 3px 1px; /* top: 3px, right: 8px, bottom: 3px, left: 4px */
+    -fx-padding: 0px 8px 0px 1px; /* top: 3px, right: 8px, bottom: 3px, left: 4px */
     -fx-font-size: 13px;     /* Dimensione del testo */
     -fx-min-height: 30px;    /* Altezza minima */
-    -fx-pref-height: 30px;   /* Altezza preferita */
-    -fx-max-height: 30px;    /* Altezza massima */
+    -fx-pref-height: 33px;   /* Altezza preferita */
+    -fx-max-height: 35px;    /* Altezza massima */
     -fx-pref-width: 140px;   /* Larghezza fissa per il controllo */
     -fx-max-width: 140px;
+}
+
+.filter-options .context-menu {
+    -fx-max-height: 350px;
 }
 
 /* Stile per il cerchio di attivazione */

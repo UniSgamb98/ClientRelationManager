@@ -18,7 +18,7 @@ public class Main extends Application {
         System.setOut(stream);
 
         App app = new App();
-        App.setPrimaryStage(primaryStage);
+        app.setPrimaryStage(primaryStage);
 
         MainView mainView = new MainView(app);
         Scene scene = new Scene(mainView, 1200, 750);

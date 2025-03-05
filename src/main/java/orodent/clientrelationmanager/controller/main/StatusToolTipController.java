@@ -1,8 +1,6 @@
 package orodent.clientrelationmanager.controller.main;
 
 import javafx.application.Platform;
-import javafx.event.EventHandler;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import orodent.clientrelationmanager.controller.database.ConnectionManager;
 import orodent.clientrelationmanager.view.mainview.StatusToolTipView;
@@ -10,7 +8,7 @@ import orodent.clientrelationmanager.view.mainview.StatusToolTipView;
 import java.util.logging.Logger;
 import java.util.logging.StreamHandler;
 
-public class StatusToolTipController implements EventHandler<MouseEvent> {
+public class StatusToolTipController {
     public static final StatusToolTipView statusToolTipView = new StatusToolTipView();
     private final Logger logger;
 
@@ -24,20 +22,19 @@ public class StatusToolTipController implements EventHandler<MouseEvent> {
     }
 
     public void update(String msg){
-        Platform.runLater(()-> statusToolTipView.updateStatusLabel(msg));
+        Platform.runLater(() -> {
+            statusToolTipView.updateStatusLabel(msg);
+            statusToolTipView.startFlashingEffect();
+        });
         logger.info(msg);
     }
 
     public void greenLight(){
-        statusToolTipView.switchColor(Color.GREEN);
+        Platform.runLater(() -> statusToolTipView.switchColor(Color.GREEN));
     }
 
     public void redLight(){
-        statusToolTipView.switchColor(Color.RED);
-    }
-
-    @Override
-    public void handle(MouseEvent event) {
+        Platform.runLater(() -> statusToolTipView.switchColor(Color.RED));
 
     }
 }

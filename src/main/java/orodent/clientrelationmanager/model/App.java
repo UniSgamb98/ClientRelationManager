@@ -5,7 +5,7 @@ import orodent.clientrelationmanager.controller.database.DBManager;
 import orodent.clientrelationmanager.model.enums.Operator;
 
 public class App{
-    private Operator operator;
+    private static Operator operator;
     private static DBManager dbManager;
     private static Stage primaryStage;
 
@@ -14,9 +14,9 @@ public class App{
     }
 
     public void setOperator(Operator operator) {
-        this.operator = operator;
+        App.operator = operator;
     }
-    public Operator getWorkingOperator() {
+    public static Operator getWorkingOperator() {
         return operator;
     }
     public DBManager getDbManager() {
@@ -25,7 +25,7 @@ public class App{
     public static Stage getPrimaryStage() {
         return primaryStage;
     }
-    public static void setPrimaryStage(Stage primaryStage) {
+    public void setPrimaryStage(Stage primaryStage) {
         App.primaryStage = primaryStage;
     }
     public static DBManager getDBManager() {

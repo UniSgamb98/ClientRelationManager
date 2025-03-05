@@ -119,26 +119,25 @@ public class ClientInfoView extends VBox {
         titolareInfos.add(emailTitolare, 1, 1);
         this.getChildren().add(titolareInfos);
 
-        InformationGroup contattatiInfos = new InformationGroup("");
+        InformationGroup contattatiInfos = new InformationGroup("Interazioni");
         contattatiInfos.add(ultimaChiamata, 0, 0);
         contattatiInfos.add(new Label(" Ultima Chiamata"), 1, 0);
         contattatiInfos.add(prossimaChiamata, 0, 1);
         contattatiInfos.add(new Label(" Prossima Chiamata"), 1, 1);
+        contattatiInfos.add(information, 2, 0);
+        contattatiInfos.add(catalog, 2, 1);
+        contattatiInfos.add(sample, 2, 2);
         HBox littleBox = new HBox(tipoCliente, new Label("   Contattati "), volteContattati, new Label(" volte."));
         littleBox.setAlignment(Pos.CENTER_LEFT);
         contattatiInfos.add(littleBox, 0,2, 2,1);
         this.getChildren().add(contattatiInfos);
 
         developerInfos = new InformationGroup("Developer");
-        developerInfos.add(information, 1, 0);
-        developerInfos.add(catalog, 1, 1);
-        developerInfos.add(sample, 1, 2);
-        HBox tinyBox = new HBox(operatoreAssegnato, new Label("Operatore"));
-        tinyBox.setAlignment(Pos.CENTER_LEFT);
-        developerInfos.add(tinyBox, 0, 2);
-        developerInfos.add(uuid, 0, 3, 2, 1);
-        developerInfos.add(new Label("Data Acquisizione"), 0, 0);
-        developerInfos.add(dataAcquisizione, 0, 1);
+        developerInfos.add(new Label("Data Acquisizione"), 1, 0);
+        developerInfos.add(dataAcquisizione, 0, 0);
+        developerInfos.add( new Label(" Operatore Assegnato"), 1, 1);
+        developerInfos.add(operatoreAssegnato, 0,1);
+        developerInfos.add(uuid, 0, 2, 2, 1);
 
         //Popups
         ObservableList<String> countryNames = FXCollections.observableArrayList();

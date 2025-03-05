@@ -22,6 +22,11 @@ public class AnnotationEditorStage extends Stage {
     private final TextArea contentArea;
     private final DatePicker nextCallDatePicker;
 
+    // Nuovi campi per i booleani
+    private final CheckBox informationCheckBox;
+    private final CheckBox catalogCheckBox;
+    private final CheckBox sampleCheckBox;
+
     public AnnotationEditorStage(Annotation annotation, String stageTitle) {
         this.annotation = annotation;
         initModality(Modality.APPLICATION_MODAL);
@@ -44,22 +49,36 @@ public class AnnotationEditorStage extends Stage {
             nextCallDatePicker.setValue(annotation.getNextCallDate());
         }
 
+        // Inizializza le checkbox per INFORMATION, CATALOG e SAMPLE
+        informationCheckBox = new CheckBox("Information");
+        catalogCheckBox = new CheckBox("Catalog");
+        sampleCheckBox = new CheckBox("Sample");
+        // Imposta i valori iniziali se disponibili (assumiamo che i getter esistano)
+        informationCheckBox.setSelected(annotation.getInformation());
+        catalogCheckBox.setSelected(annotation.getCatalog());
+        sampleCheckBox.setSelected(annotation.getSample());
+
+        // Gruppo di checkbox in orizzontale
+        HBox booleansBox = new HBox(10, informationCheckBox, catalogCheckBox, sampleCheckBox);
+        booleansBox.setPadding(new Insets(5, 0, 5, 0));
+
         // Pulsanti
         HBox buttonBox = getButtonBox();
         buttonBox.getStyleClass().add("annotation-editor-buttons");
 
-        // Layout del form
+        // Layout del form: aggiungiamo anche i checkbox prima dei pulsanti
         VBox layout = new VBox(10,
                 new Label("Data Chiamata:"), callDatePicker,
                 new Label("Operatore:"), operatorComboBox,
                 new Label("Contenuto:"), contentArea,
                 new Label("Prossima Chiamata:"), nextCallDatePicker,
+                booleansBox,
                 buttonBox
         );
         layout.setPadding(new Insets(15));
         layout.getStyleClass().add("annotation-editor-layout");
 
-        Scene scene = new Scene(layout, 400, 400);
+        Scene scene = new Scene(layout, 400, 450);
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/annotation-editor.css")).toExternalForm());
         setScene(scene);
     }
@@ -83,6 +102,12 @@ public class AnnotationEditorStage extends Stage {
             annotation.setMadeBy(operatorComboBox.getValue());
             annotation.setContent(contentArea.getText());
             annotation.setNextCallDate(nextCallDatePicker.getValue());
+
+            // Aggiorna anche i campi booleani
+            annotation.setInformation(informationCheckBox.isSelected());
+            annotation.setCatalog(catalogCheckBox.isSelected());
+            annotation.setSample(sampleCheckBox.isSelected());
+
             saved = true;
             close();
         });
@@ -104,5 +129,9 @@ public class AnnotationEditorStage extends Stage {
      */
     public Annotation getAnnotation() {
         return annotation;
+    }
+
+    public void setDefaultOperator(Operator workingOperator) {
+        operatorComboBox.setValue(workingOperator);
     }
 }
