@@ -3,22 +3,16 @@
     -fx-padding: 10px;
     -fx-border-radius: 10px;
     -fx-background-radius: 10px;
-
-    /* Impostazione iniziale fuori dallo schermo e invisibile */
-    -fx-translate-x: 300px;
-    -fx-opacity: 0;
-
-    /* Transizione fluida */
-    -fx-transition: translate-x 0.5s ease-out, opacity 0.5s ease-in;
+    /* Se vuoi gestire tutto via codice, puoi commentare queste righe: */
+    /* -fx-translate-x: 300px; */
+    /* -fx-opacity: 0; */
 }
 
-/* Stato visibile della hotbar */
 .hotbar-visible {
     -fx-translate-x: 0px;
     -fx-opacity: 1;
 }
 
-/* Stile bottoni */
 .hotbar-button {
     -fx-pref-width: 120px;
     -fx-pref-height: 50px;

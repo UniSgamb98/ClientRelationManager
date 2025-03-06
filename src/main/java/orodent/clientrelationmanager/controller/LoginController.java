@@ -36,12 +36,18 @@ public class LoginController {
                 logger.info(selectedOperator + " has logged in");
                 app.setOperator(selectedOperator);
 
-                //L'utente ora vede la Hotbar ed esce dalla login view
+                // Rimuove la LoginView dal centro
                 mainView.setCenter(null);
+
+                // Crea la HotBarView e la posiziona a sinistra
                 HotBarView hotBarView = new HotBarView(mainView, app.getDbManager());
                 mainView.setLeft(hotBarView);
+
+                // Esegue l'animazione per far scorrere la hotbar
+                hotBarView.animateEntrance();
             }
         });
+
 
         // Inizializza la view passando i controlli già creati
         this.view = new LoginView(operatorLabel, operatorChoiceBox, loginButton);

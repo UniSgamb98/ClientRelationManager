@@ -1,6 +1,5 @@
 package orodent.clientrelationmanager.view.mainview;
 
-import javafx.animation.PauseTransition;
 import javafx.animation.TranslateTransition;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -14,6 +13,7 @@ import orodent.clientrelationmanager.controller.main.buttons.searchclient.Search
 
 public class HotBarView extends VBox {
     public HotBarView(MainView mainView, DBManagerInterface db) {
+        // Creazione bottoni
         Button addButton = new Button("➕ Aggiungi");
         Button searchButton = new Button("🔍 Cerca");
         Button reportButton = new Button("📊 Report");
@@ -33,22 +33,27 @@ public class HotBarView extends VBox {
         reportButton.setOnAction(new ReportController());
         callsButton.setOnAction(new ShowCallsController(db));
 
-        // Stile della HotBar
+        // Applica lo stile CSS e impostazioni iniziali
         this.getStyleClass().add("hotbar");
         this.setSpacing(15);
         this.setAlignment(Pos.CENTER);
-
-        PauseTransition delay = new PauseTransition(Duration.millis(50));
-        delay.setOnFinished(e -> this.getStyleClass().add("hotbar-visible"));
-        delay.play();
+        // La HotBar parte fuori schermo (inizialmente) grazie al CSS, oppure, se non usi la transizione CSS, puoi impostarlo qui:
+        this.setTranslateX(300);
+        this.setOpacity(0);
     }
 
-    public void animateEntrance() {     //TODO Questa io non so da chi farla chiamare
+    /**
+     * Anima l'entrata della HotBar, facendola scorrere da destra a sinistra.
+     */
+    public void animateEntrance() {
         TranslateTransition slideIn = new TranslateTransition(Duration.millis(500), this);
-        slideIn.setFromX(300); // Inizia fuori schermo
-        slideIn.setToX(0);     // Scorre a sinistra
+        slideIn.setFromX(-300); // parte da fuori schermo
+        slideIn.setToX(0);     // arriva a posizione 0
         slideIn.setInterpolator(javafx.animation.Interpolator.EASE_OUT);
         slideIn.play();
+        // Allo stesso tempo, puoi animare l'opacità se vuoi:
+        this.setOpacity(1);
+        // Infine, aggiungi la classe "hotbar-visible" se vuoi che il CSS possa eventualmente gestire altre modifiche in seguito:
         slideIn.setOnFinished(e -> this.getStyleClass().add("hotbar-visible"));
     }
 }

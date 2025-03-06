@@ -1,5 +1,6 @@
 package orodent.clientrelationmanager.view.mainview;
 
+import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.concurrent.Task;
@@ -17,6 +18,7 @@ public class StatusToolTipView extends HBox {
     private final Circle light;
     private final Label label;
     private boolean isGreen = false;
+    private final FadeTransition fadeOut;
 
     public StatusToolTipView() {
         //Status Label
@@ -32,6 +34,11 @@ public class StatusToolTipView extends HBox {
         this.setSpacing(3);
         this.setAlignment(Pos.BASELINE_RIGHT);
         this.setPadding(new Insets(0, 6, 0, 0));
+
+        // Inizializza la transizione di dissolvenza
+        fadeOut = new FadeTransition(Duration.seconds(2), label);
+        fadeOut.setFromValue(1.0);
+        fadeOut.setToValue(0.0);
     }
 
     private void commuteDatabaseConnection() {
@@ -51,17 +58,25 @@ public class StatusToolTipView extends HBox {
                 return null;
             }
         };
-
         new Thread(task).start();
     }
 
     public void startFlashingEffect() {
+        //Ferma le eventuali transizioni in corso
+        fadeOut.stop();
+        label.setOpacity(1.0);
+
+        //Effetto Lampeggio rosso-nero
         Timeline timeline = new Timeline(
                 new KeyFrame(Duration.seconds(0.2), e -> label.setTextFill(Color.RED)),
                 new KeyFrame(Duration.seconds(0.4), e -> label.setTextFill(Color.BLACK))
         );
         timeline.setCycleCount(2);
         timeline.play();
+
+        // Dopo il lampeggio, programma la dissolvenza dopo 5 secondi
+        fadeOut.setDelay(Duration.seconds(5)); // Aspetta 5 secondi prima di partire
+        fadeOut.play();
     }
 
     public void switchColor(Color color){
