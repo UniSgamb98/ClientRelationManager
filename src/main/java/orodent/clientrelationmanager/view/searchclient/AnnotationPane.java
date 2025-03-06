@@ -7,6 +7,8 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import orodent.clientrelationmanager.model.Annotation;
 
+import java.time.format.DateTimeFormatter;
+
 public class AnnotationPane extends VBox {
     Annotation annotation;
 
@@ -27,8 +29,9 @@ public class AnnotationPane extends VBox {
         contentFlow.setMaxWidth(300); // Per evitare che il testo sia troppo largo
 
         // Etichetta per la prossima chiamata (se esiste)
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         Label nextCallLabel = new Label(annotation.getNextCallDate() != null
-                ? "Prossima chiamata: " + annotation.getNextCallDate()
+                ? "Prossima chiamata: " + annotation.getNextCallDate().format(formatter)
                 : "Nessuna prossima chiamata");
         nextCallLabel.getStyleClass().add("next-call-label");
 

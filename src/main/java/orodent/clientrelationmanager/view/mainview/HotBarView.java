@@ -43,7 +43,7 @@ public class HotBarView extends VBox {
         delay.play();
     }
 
-    public void animateEntrance() {
+    public void animateEntrance() {     //TODO Questa io non so da chi farla chiamare
         TranslateTransition slideIn = new TranslateTransition(Duration.millis(500), this);
         slideIn.setFromX(300); // Inizia fuori schermo
         slideIn.setToX(0);     // Scorre a sinistra

@@ -15,6 +15,7 @@ public class Annotation {
     private boolean catalog;
     private boolean sample;
 
+
     public Annotation(UUID uuid ,LocalDate callDate, Operator madeBy, String content, LocalDate nextCallDate) {
         this.uuid = uuid;
         this.callDate = callDate;

@@ -210,7 +210,7 @@ public class DBManager implements DBManagerInterface{
                     UUID uuid = UUID.fromString(rs.getString("ID"));
                     LocalDate callDate = rs.getDate("DATA_CHIAMATA").toLocalDate();
                     String operatorStr = rs.getString("OPERATORE");
-                    Operator madeBy = Operator.valueOf(operatorStr); // Enum Operator
+                    Operator madeBy = Operator.fromString(operatorStr); // Enum Operator
                     String content = rs.getString("CONTENUTO");
                     LocalDate nextCallDate = rs.getDate("PROSSIMA_CHIAMATA") != null
                             ? rs.getDate("PROSSIMA_CHIAMATA").toLocalDate()

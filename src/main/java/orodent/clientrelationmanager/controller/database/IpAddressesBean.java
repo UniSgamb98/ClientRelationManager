@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class  IpAddressesBean {
-    private final ArrayList<String> ipAddresses = new ArrayList<>(Arrays.asList("192.168.1.138", "192.168.1.136"));
+    private final ArrayList<String> ipAddresses = new ArrayList<>(Arrays.asList("192.168.1.138", "192.168.1.136", "192.168.1.19", "192.168.1.139"));
     private static ArrayList<Boolean> ipIsReachable = new ArrayList<>(Arrays.asList(false, false));
 
     public void initialize(){
-        ipIsReachable = new ArrayList<>(Arrays.asList(false, false));
+        ipIsReachable = new ArrayList<>(Arrays.asList(false, false, false, false));
     }
 
     public void setIpIsReachable(int ipPosition) {
@@ -21,10 +21,6 @@ public class  IpAddressesBean {
 
     public String getIpAddresses(int ipPosition) {
         return ipAddresses.get(ipPosition);
-    }
-
-    public int getIpPosition(String ipAddress) {
-        return ipAddresses.indexOf(ipAddress);
     }
 
     public int getIpListSize(){
