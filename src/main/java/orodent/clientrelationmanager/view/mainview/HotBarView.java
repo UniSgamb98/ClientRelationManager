@@ -6,13 +6,14 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.controller.main.buttons.ReportController;
 import orodent.clientrelationmanager.controller.main.buttons.ShowCallsController;
 import orodent.clientrelationmanager.controller.main.buttons.newclient.NewClientController;
 import orodent.clientrelationmanager.controller.main.buttons.searchclient.SearchClientController;
 
 public class HotBarView extends VBox {
-    public HotBarView(MainView mainView, DBManagerInterface db) {
+    public HotBarView(MainController mainController, DBManagerInterface db) {
         // Creazione bottoni
         Button addButton = new Button("➕ Aggiungi");
         Button searchButton = new Button("🔍 Cerca");
@@ -28,10 +29,10 @@ public class HotBarView extends VBox {
         }
 
         // Eventi
-        addButton.setOnAction(new NewClientController(db, mainView));
-        searchButton.setOnAction(new SearchClientController(db, mainView));
-        reportButton.setOnAction(new ReportController());
-        callsButton.setOnAction(new ShowCallsController(db));
+        addButton.setOnAction(new NewClientController(db, mainController));
+        searchButton.setOnAction(new SearchClientController(db, mainController));
+        reportButton.setOnAction(new ReportController(db, mainController));
+        callsButton.setOnAction(new ShowCallsController(db, mainController));
 
         // Applica lo stile CSS e impostazioni iniziali
         this.getStyleClass().add("hotbar");

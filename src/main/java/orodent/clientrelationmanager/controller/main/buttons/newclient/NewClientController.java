@@ -4,16 +4,17 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.view.NewClientView;
 import orodent.clientrelationmanager.view.mainview.MainView;
 
 public class NewClientController implements EventHandler<ActionEvent> {
-    private final MainView mainView;
+    private final MainController mainController;
     private final DBManagerInterface db;
 
-    public NewClientController(DBManagerInterface db, MainView mainView) {
-        this.mainView = mainView;
+    public NewClientController(DBManagerInterface db, MainController mainController) {
+        this.mainController = mainController;
         this.db = db;
     }
     @Override
@@ -21,6 +22,6 @@ public class NewClientController implements EventHandler<ActionEvent> {
         NewClientView newClientView = new NewClientView(db, new Client());
         newClientView.setMaxWidth(300);
         newClientView.setAlignment(Pos.CENTER_RIGHT);
-        mainView.setCenter(newClientView);
+        mainController.setCenterView(newClientView);
     }
 }

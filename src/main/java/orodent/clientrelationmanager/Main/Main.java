@@ -21,7 +21,7 @@ public class Main extends Application {
         app.setPrimaryStage(primaryStage);
 
         MainView mainView = new MainView(app);
-        Scene scene = new Scene(mainView, 1200, 750);
+        Scene scene = new Scene(mainView, 350, 250);
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/clientdetailview.css")).toExternalForm());
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/hotbar.css")).toExternalForm());
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/annotation.css")).toExternalForm());

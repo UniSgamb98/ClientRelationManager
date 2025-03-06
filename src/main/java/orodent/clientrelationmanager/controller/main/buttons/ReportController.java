@@ -7,6 +7,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+import orodent.clientrelationmanager.controller.database.DBManagerInterface;
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.model.enums.Operator;
 import orodent.clientrelationmanager.todelete.Contatto;
 import orodent.clientrelationmanager.todelete.Operatori;
@@ -27,7 +29,7 @@ import java.time.format.DateTimeFormatter;
 public class ReportController implements EventHandler<ActionEvent> {
     private final DocumentBuilder docBuilder;
 
-    public ReportController() {
+    public ReportController(DBManagerInterface dbManagerInterface, MainController mainController) {
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         try {
             docBuilder = docFactory.newDocumentBuilder();

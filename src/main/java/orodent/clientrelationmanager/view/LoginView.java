@@ -16,6 +16,7 @@ public class LoginView extends GridPane {
         this.setHgap(10);
         this.setVgap(10);
         this.setAlignment(Pos.CENTER);
+        this.setTranslateX(-20);
     }
 }
 

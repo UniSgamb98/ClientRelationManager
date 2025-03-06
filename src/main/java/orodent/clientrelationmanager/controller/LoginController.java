@@ -4,11 +4,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import orodent.clientrelationmanager.controller.database.ConnectionManager;
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.model.App;
 import orodent.clientrelationmanager.model.enums.Operator;
 import orodent.clientrelationmanager.view.LoginView;
-import orodent.clientrelationmanager.view.mainview.HotBarView;
-import orodent.clientrelationmanager.view.mainview.MainView;
+import orodent.clientrelationmanager.view.TemporaryView;
 
 import java.util.logging.Logger;
 import java.util.logging.StreamHandler;
@@ -18,7 +18,7 @@ public class LoginController {
     private final Logger logger;
     private final ChoiceBox<Operator> operatorChoiceBox;
 
-    public LoginController(App app, MainView mainView) {
+    public LoginController(App app, MainController mainController) {
         this.logger = Logger.getLogger(ConnectionManager.class.getName());
         logger.addHandler(new StreamHandler());
 
@@ -36,15 +36,11 @@ public class LoginController {
                 logger.info(selectedOperator + " has logged in");
                 app.setOperator(selectedOperator);
 
-                // Rimuove la LoginView dal centro
-                mainView.setCenter(null);
+                // Dopo il login, mostra la HotBar sul lato sinistro
+                mainController.showHotBar();
 
-                // Crea la HotBarView e la posiziona a sinistra
-                HotBarView hotBarView = new HotBarView(mainView, app.getDbManager());
-                mainView.setLeft(hotBarView);
-
-                // Esegue l'animazione per far scorrere la hotbar
-                hotBarView.animateEntrance();
+                // Esempio: Sostituisci la LoginView con una TemporaryView nel centro attualmente null
+                mainController.showView(new TemporaryView(selectedOperator));
             }
         });
 

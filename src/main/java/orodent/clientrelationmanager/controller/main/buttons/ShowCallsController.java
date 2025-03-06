@@ -13,6 +13,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.view.searchclient.DisplayableClient;
 
@@ -24,7 +25,7 @@ public class ShowCallsController implements EventHandler<ActionEvent> {
     private final DBManagerInterface dbManager;
     private Stage stage;
 
-    public ShowCallsController(DBManagerInterface dbManagerInterface) {
+    public ShowCallsController(DBManagerInterface dbManagerInterface, MainController mainController) {
         this.dbManager = dbManagerInterface;
     }
 
