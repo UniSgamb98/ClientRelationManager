@@ -8,15 +8,32 @@ import javafx.scene.Node;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import orodent.clientrelationmanager.controller.LoginController;
+import orodent.clientrelationmanager.controller.main.buttons.ReportController;
+import orodent.clientrelationmanager.controller.main.buttons.ShowCallsController;
+import orodent.clientrelationmanager.controller.main.buttons.newclient.NewClientController;
+import orodent.clientrelationmanager.controller.main.buttons.searchclient.SearchClientController;
 import orodent.clientrelationmanager.model.App;
+import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.view.mainview.HotBarView;
 import orodent.clientrelationmanager.view.mainview.MainView;
+import orodent.clientrelationmanager.view.searchclient.SearchClientView;
 
 public class MainController {
     private final MainView mainView;
     private final App app;
 
+    private final NewClientController newClientController;
+    private final SearchClientController searchClientController;
+    private final ReportController reportController;
+    private final ShowCallsController showCallsController;
+
+
+
     public MainController(App app, MainView mainView) {
+        newClientController = new NewClientController(app.getDbManager(), this);
+        searchClientController = new SearchClientController(app.getDbManager(), this);
+        reportController = new ReportController(app.getDbManager(), this);
+        showCallsController = new ShowCallsController(app.getDbManager(), this);
         this.app = app;
         this.mainView = mainView;
     }
@@ -25,9 +42,19 @@ public class MainController {
      * Imposta la vista centrale della MainView.
      * @param view La nuova vista da mostrare al centro.
      */
-    public void setCenterView(Node view) {
+    private void setCenterView(Node view) {
         mainView.setCenter(view);
         resizeWindow(1200,800);
+    }
+
+    /**
+     * Imposta la vista Centrale della MainView per mostrare i dettagli di un client
+     * @param client Il cliente da mostrare all'utente
+     */
+    public void showClientPage(Client client) {
+        SearchClientView searchClientView = new SearchClientView(this, app.getDbManager());
+        searchClientView.showClientDetail(client);
+        showView(searchClientView);
     }
 
     /**
@@ -79,7 +106,11 @@ public class MainController {
      * Mostra la HotBar sul lato sinistro e ne avvia l'animazione.
      */
     public void showHotBar() {
-        HotBarView hotBarView = new HotBarView(this, app.getDbManager());
+        HotBarView hotBarView = new HotBarView();
+        hotBarView.setAddClientEvent(newClientController);
+        hotBarView.setSearchClientEvent(searchClientController);
+        hotBarView.setReportEvent(reportController);
+        hotBarView.setCallsEvent(showCallsController);
         mainView.setLeft(hotBarView);
         hotBarView.animateEntrance();
     }

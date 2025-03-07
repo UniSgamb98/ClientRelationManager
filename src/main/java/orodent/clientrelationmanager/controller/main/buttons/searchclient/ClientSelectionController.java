@@ -1,15 +1,15 @@
 package orodent.clientrelationmanager.controller.main.buttons.searchclient;
 
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.view.searchclient.DisplayableClient;
-import orodent.clientrelationmanager.view.searchclient.SearchClientView;
 import orodent.clientrelationmanager.view.searchclient.SearchResultView;
 
 public class ClientSelectionController {
-    private final SearchClientView searchClientView;
+    private final MainController mainController;
     private final SearchResultView searchResultView;
 
-    public ClientSelectionController(SearchClientView searchClientView, SearchResultView searchResultView) {
-        this.searchClientView = searchClientView;
+    public ClientSelectionController(MainController mainController, SearchResultView searchResultView) {
+        this.mainController = mainController;
         this.searchResultView = searchResultView;
         initialize();
     }
@@ -21,7 +21,7 @@ public class ClientSelectionController {
                 DisplayableClient selected = searchResultView.getSelectionModel().getSelectedItem();
                 if (selected != null) {
                     // Mostra la view di dettaglio tramite il metodo della SearchClientView
-                    searchClientView.showClientDetail(selected.getClient());
+                    mainController.showClientPage(selected.getClient());
                 }
             }
         });

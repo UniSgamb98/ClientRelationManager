@@ -1,35 +1,41 @@
 package orodent.clientrelationmanager.view.searchclient;
 
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
-import orodent.clientrelationmanager.controller.database.DBManagerInterface;
 import orodent.clientrelationmanager.model.Client;
 
 import java.util.List;
 
 public class SearchResultView extends ListView<DisplayableClient> {
-    private ObservableList<DisplayableClient> displayableClients;
-    private final DBManagerInterface dbManagerInterface;
+    private final ObservableList<DisplayableClient> displayableClients;
+    private final ObservableList<Client> clients;
 
-    public SearchResultView(DBManagerInterface dbManagerInterface) {
-        this.dbManagerInterface = dbManagerInterface;
-        updateItems();
-    }
+    public SearchResultView() {
+        clients = FXCollections.observableArrayList();
+        this.displayableClients = FXCollections.observableArrayList();
 
-    public void setClients(List<Client> Clients) {
-        this.displayableClients.clear();
-        for(Client i : Clients) {
-            this.displayableClients.add(new DisplayableClient(i));
-        }
-    }
-
-    public void updateItems() {
-        displayableClients = FXCollections.observableArrayList();
+        // Aggiungi il listener per aggiornare automaticamente la lista visualizzata
+        this.clients.addListener((ListChangeListener<Client>) change -> {
+            while (change.next()) {
+                if (change.wasAdded()) {
+                    for (Client c : change.getAddedSubList()) {
+                        displayableClients.add(new DisplayableClient(c));
+                    }
+                }
+                if (change.wasRemoved()) {
+                    for (Client c : change.getRemoved()) {
+                        displayableClients.removeIf(d -> d.getClient().equals(c));
+                    }
+                }
+            }
+        });
         this.setItems(displayableClients);
-        for(Client i : dbManagerInterface.getAllClient()) {
-            DisplayableClient displayableClient = new DisplayableClient(i);
-            displayableClients.add(displayableClient);
-        }
+    }
+
+    public void setClients(List<Client> clients) {
+        this.clients.clear();
+        this.clients.addAll(clients); // Questo scatenerà il listener automaticamente
     }
 }

@@ -29,5 +29,12 @@ public interface DBManagerInterface {
     boolean isAlive();
     Client getClient(UUID uuid);
 
+    /**
+     * Restituisce una List di client i quali la string s è un sotto stringa di Ragione sociale oppure Persona di riferimento
+     * @param s sotto stringa
+     * @return list
+     */
+    List<Client> searchClient(String s);
+
     List<Client> getClientsByNextCall(LocalDate value);
 }

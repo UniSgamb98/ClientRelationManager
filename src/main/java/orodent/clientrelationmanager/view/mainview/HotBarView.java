@@ -13,12 +13,16 @@ import orodent.clientrelationmanager.controller.main.buttons.newclient.NewClient
 import orodent.clientrelationmanager.controller.main.buttons.searchclient.SearchClientController;
 
 public class HotBarView extends VBox {
-    public HotBarView(MainController mainController, DBManagerInterface db) {
+    private final Button addButton;
+    private final Button searchButton;
+    private final Button reportButton;
+    private final Button callsButton;
+    public HotBarView() {
         // Creazione bottoni
-        Button addButton = new Button("➕ Aggiungi");
-        Button searchButton = new Button("🔍 Cerca");
-        Button reportButton = new Button("📊 Report");
-        Button callsButton = new Button("📞 Chiamate");
+        addButton = new Button("➕ Aggiungi");
+        searchButton = new Button("🔍 Cerca");
+        reportButton = new Button("📊 Report");
+        callsButton = new Button("📞 Chiamate");
 
         // Aggiunta dei bottoni alla barra
         getChildren().addAll(addButton, searchButton, reportButton, callsButton);
@@ -27,12 +31,6 @@ public class HotBarView extends VBox {
         for (Button button : new Button[]{addButton, searchButton, reportButton, callsButton}) {
             button.getStyleClass().add("hotbar-button");
         }
-
-        // Eventi
-        addButton.setOnAction(new NewClientController(db, mainController));
-        searchButton.setOnAction(new SearchClientController(db, mainController));
-        reportButton.setOnAction(new ReportController(db, mainController));
-        callsButton.setOnAction(new ShowCallsController(db, mainController));
 
         // Applica lo stile CSS e impostazioni iniziali
         this.getStyleClass().add("hotbar");
@@ -56,5 +54,21 @@ public class HotBarView extends VBox {
         this.setOpacity(1);
         // Infine, aggiungi la classe "hotbar-visible" se vuoi che il CSS possa eventualmente gestire altre modifiche in seguito:
         slideIn.setOnFinished(e -> this.getStyleClass().add("hotbar-visible"));
+    }
+
+    public void setAddClientEvent(NewClientController newClientController) {
+        addButton.setOnAction(newClientController);
+    }
+
+    public void setSearchClientEvent(SearchClientController searchClientController) {
+        searchButton.setOnAction(searchClientController);
+    }
+
+    public void setReportEvent(ReportController reportController) {
+        reportButton.setOnAction(reportController);
+    }
+
+    public void setCallsEvent(ShowCallsController callsController) {
+        callsButton.setOnAction(callsController);
     }
 }

@@ -3,7 +3,10 @@ package orodent.clientrelationmanager.Main;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import orodent.clientrelationmanager.controller.main.buttons.searchclient.SearchClientController;
 import orodent.clientrelationmanager.model.App;
+import orodent.clientrelationmanager.model.Client;
+import orodent.clientrelationmanager.view.clientinfo.ClientInfoView;
 import orodent.clientrelationmanager.view.mainview.MainView;
 
 import java.io.File;

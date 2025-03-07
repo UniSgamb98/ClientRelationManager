@@ -9,13 +9,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
 import orodent.clientrelationmanager.controller.main.MainController;
+import orodent.clientrelationmanager.controller.main.buttons.searchclient.ClientSelectionController;
 import orodent.clientrelationmanager.model.Client;
-import orodent.clientrelationmanager.view.searchclient.DisplayableClient;
+import orodent.clientrelationmanager.view.searchclient.SearchResultView;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -24,9 +24,11 @@ import java.util.Objects;
 public class ShowCallsController implements EventHandler<ActionEvent> {
     private final DBManagerInterface dbManager;
     private Stage stage;
+    private final MainController mainController;
 
     public ShowCallsController(DBManagerInterface dbManagerInterface, MainController mainController) {
         this.dbManager = dbManagerInterface;
+        this.mainController = mainController;
     }
 
     @Override
@@ -46,22 +48,18 @@ public class ShowCallsController implements EventHandler<ActionEvent> {
         Label emptyLabel = new Label("Nessuna chiamata programmata per questa data.");
         emptyLabel.setVisible(false);
 
-        // ListView con DisplayableClient
-        ListView<DisplayableClient> clientListView = new ListView<>();
-        ObservableList<DisplayableClient> clientItems = FXCollections.observableArrayList();
-        clientListView.setItems(clientItems);
+        // ListView con DisplayableClient e controller per la selezione di un cliente
+        SearchResultView clientListView = new SearchResultView();
+        new ClientSelectionController(mainController, clientListView);
 
         // Metodo per aggiornare la ListView
         Runnable updateList = () -> {
-            clientItems.clear();
             List<Client> clients = dbManager.getClientsByNextCall(datePicker.getValue());
             if (clients.isEmpty()) {
                 emptyLabel.setVisible(true);
             } else {
                 emptyLabel.setVisible(false);
-                for (Client client : clients) {
-                    clientItems.add(new DisplayableClient(client));
-                }
+                clientListView.setClients(clients);
             }
         };
 
@@ -86,7 +84,6 @@ public class ShowCallsController implements EventHandler<ActionEvent> {
 
         // Quando la finestra viene chiusa, resettiamo il riferimento allo stage
         stage.setOnHidden(e -> stage = null);
-
         stage.show();
     }
 }

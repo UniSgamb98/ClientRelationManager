@@ -107,9 +107,9 @@ public class DBManager implements DBManagerInterface{
      * DATA_ACQUISIZIONE, BUSINESS, OPERATORE_ASSEGNATO, INFORMATION, CATALOG, SAMPLE
      */
     @Override
-    public <T> List<Client> queryCustomerWithSingleParameter(String field, T value) {
+    public <T> List<Client> queryCustomerWithSingleParameter(String databaseField, T value) {
         ArrayList<Client> result = new ArrayList<>();
-        String sql = "SELECT * FROM CUSTOMERS WHERE " + field + " = ?";
+        String sql = "SELECT * FROM CUSTOMERS WHERE " + databaseField + " = ?";
         try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
 
             //Controllo di Tipo
@@ -135,6 +135,31 @@ public class DBManager implements DBManagerInterface{
             System.out.println(e.getMessage());
         }
         return result;
+    }
+
+
+    /**
+     * Restituisce una List di client i quali la string s è un sotto stringa di Ragione sociale oppure Persona di riferimento
+     * @param s sotto stringa
+     * @return list
+     */
+    @Override
+    public List<Client> searchClient(String s) {
+        List<Client> ret = new ArrayList<>();
+        String sql = "SELECT * FROM CUSTOMERS WHERE RAGIONE_SOCIALE LIKE ? OR PERSONA_RIFERIMENTO LIKE ?";
+        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
+            String pattern = "%" + s + "%";
+            stmt.setString(1, pattern);
+            stmt.setString(2, pattern);
+
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()){
+                ret.add(mapResultSetToClient(rs));
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return ret;
     }
 
     @Override
@@ -386,6 +411,9 @@ public class DBManager implements DBManagerInterface{
         }
     }
 
+    /**
+     * Restituisce un client che corrisponde alla posizione del cursore sul ResultSet
+     */
     private Client mapResultSetToClient(ResultSet rs) throws SQLException {
         Client ret = new Client();
         ret.setUuid(UUID.fromString(rs.getString("ID")));

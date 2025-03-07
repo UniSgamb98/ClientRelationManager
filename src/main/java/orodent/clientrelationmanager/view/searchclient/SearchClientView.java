@@ -1,8 +1,10 @@
 package orodent.clientrelationmanager.view.searchclient;
 
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.controller.main.buttons.searchclient.ClientSelectionController;
 import orodent.clientrelationmanager.controller.main.buttons.searchclient.filter.FilterGroupController;
 import orodent.clientrelationmanager.controller.main.buttons.searchclient.filter.FilterSectionController;
@@ -13,10 +15,18 @@ public class SearchClientView extends BorderPane {
     private final VBox filters;
     private final SearchResultView searchResultView;
     private final DBManagerInterface dbManager;
+    private final TextField searchBar;
 
-    public SearchClientView(DBManagerInterface dbManagerInterface) {
+    public SearchClientView(MainController mainController, DBManagerInterface dbManagerInterface) {
         dbManager = dbManagerInterface;
-        searchResultView = new SearchResultView(dbManagerInterface);
+
+        //ListView con il clienti della ricerca
+        searchResultView = new SearchResultView();
+        searchResultView.setClients(dbManagerInterface.getAllClient());
+        new ClientSelectionController(mainController, searchResultView);
+        this.setCenter(searchResultView);
+
+        //Filtri con i loro Controllers
         FilterSectionController filterSectionController = new FilterSectionController(searchResultView);
 
         FilterGroupController operatorGroupController = new FilterGroupController(Filter.OPERATOR, dbManagerInterface, filterSectionController);
@@ -38,9 +48,12 @@ public class SearchClientView extends BorderPane {
         filters = new VBox(operator, country, business);
         filters.setMaxWidth(150);
         this.setLeft(filters);
-        this.setCenter(searchResultView);
 
-        new ClientSelectionController(this, searchResultView);
+        //SearchBar
+        searchBar = new TextField();
+        searchBar.setPromptText("Search");
+        searchBar.setOnAction(e -> searchResultView.setClients(dbManagerInterface.searchClient(searchBar.getText())));
+        this.setTop(searchBar);
     }
 
     public void showClientDetail(Client client) {
@@ -53,7 +66,6 @@ public class SearchClientView extends BorderPane {
     // Metodo per ripristinare la view originale per il pulsante indietro
     public void restoreSearchView() {
         this.setLeft(filters);
-        searchResultView.updateItems();
         this.setCenter(searchResultView);
     }
 }
