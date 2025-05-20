@@ -7,6 +7,7 @@ import java.util.List;
 
 public abstract class AbstractFilter<E extends Enum<E>> {
     boolean active;
+    boolean producedNoResult;
     List<Client> resultList;
     protected List<E> enumList;
 
@@ -14,6 +15,7 @@ public abstract class AbstractFilter<E extends Enum<E>> {
     public AbstractFilter(List<E> enumList) {
         this.enumList = enumList;
         active = true;
+        producedNoResult = false;
         resultList = new ArrayList<>();
     }
 
@@ -35,5 +37,13 @@ public abstract class AbstractFilter<E extends Enum<E>> {
 
     public List<Client> getResultList(){
         return resultList;
+    }
+
+    public void setNoResult(boolean b) {
+        producedNoResult = b;
+    }
+
+    public boolean hasNoResult(){
+        return producedNoResult;
     }
 }

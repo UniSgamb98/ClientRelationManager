@@ -2,6 +2,9 @@ package orodent.clientrelationmanager.controller.database;
 
 import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
+import orodent.clientrelationmanager.model.enums.Business;
+import orodent.clientrelationmanager.model.enums.Country;
+import orodent.clientrelationmanager.model.enums.Operator;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -37,4 +40,10 @@ public interface DBManagerInterface {
     List<Client> searchClient(String s);
 
     List<Client> getClientsByNextCall(LocalDate value);
+
+    List<Country> getAllCountries();
+
+    List<Business> getAllBusiness();
+
+    List<Operator> getAllOperators();
 }

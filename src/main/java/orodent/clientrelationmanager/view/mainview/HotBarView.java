@@ -5,8 +5,6 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
-import orodent.clientrelationmanager.controller.database.DBManagerInterface;
-import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.controller.main.buttons.ReportController;
 import orodent.clientrelationmanager.controller.main.buttons.ShowCallsController;
 import orodent.clientrelationmanager.controller.main.buttons.newclient.NewClientController;

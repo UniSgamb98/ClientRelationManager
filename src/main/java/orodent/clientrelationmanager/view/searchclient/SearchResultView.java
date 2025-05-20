@@ -5,6 +5,7 @@ import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
 import orodent.clientrelationmanager.model.Client;
+import orodent.clientrelationmanager.model.EmptyClient;
 
 import java.util.List;
 
@@ -37,5 +38,10 @@ public class SearchResultView extends ListView<DisplayableClient> {
     public void setClients(List<Client> clients) {
         this.clients.clear();
         this.clients.addAll(clients); // Questo scatenerà il listener automaticamente
+    }
+
+    public void showEmptyList() {
+        this.clients.clear();
+        clients.add(new EmptyClient());
     }
 }

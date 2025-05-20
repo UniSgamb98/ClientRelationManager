@@ -27,7 +27,7 @@ public class SearchClientView extends BorderPane {
         this.setCenter(searchResultView);
 
         //Filtri con i loro Controllers
-        FilterSectionController filterSectionController = new FilterSectionController(searchResultView);
+        FilterSectionController filterSectionController = new FilterSectionController(searchResultView, dbManagerInterface);
 
         FilterGroupController operatorGroupController = new FilterGroupController(Filter.OPERATOR, dbManagerInterface, filterSectionController);
         FilterGroupController countryGroupController = new FilterGroupController(Filter.COUNTRY, dbManagerInterface, filterSectionController);
@@ -52,7 +52,13 @@ public class SearchClientView extends BorderPane {
         //SearchBar
         searchBar = new TextField();
         searchBar.setPromptText("Search");
-        searchBar.setOnAction(e -> searchResultView.setClients(dbManagerInterface.searchClient(searchBar.getText())));
+        searchBar.setOnAction(e -> {
+            if (filterSectionController.isVoidOfFilters()){
+                searchResultView.setClients(dbManagerInterface.searchClient(searchBar.getText()));
+            } else {
+                //TODO filtra ulteriormente la lista;
+            }
+        });
         this.setTop(searchBar);
     }
 

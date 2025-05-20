@@ -33,11 +33,13 @@ public class FilterController implements EventHandler<MouseEvent> {
         return abstractFilter;
     }
 
+    //Click sul cerchio per attivare o disattivare il filtro
     @Override
     public void handle(MouseEvent event) {
         boolean isActive = !abstractFilter.isActive();
         abstractFilter.setActive(isActive);
         filtersView.setActive(isActive);
+        filterGroupController.updateList();
     }
 
     public void removeMe() {

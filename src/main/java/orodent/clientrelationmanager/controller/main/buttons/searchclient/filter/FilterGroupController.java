@@ -2,10 +2,7 @@ package orodent.clientrelationmanager.controller.main.buttons.searchclient.filte
 
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
 import orodent.clientrelationmanager.model.Client;
-import orodent.clientrelationmanager.model.enums.Business;
-import orodent.clientrelationmanager.model.enums.Country;
 import orodent.clientrelationmanager.model.enums.Filter;
-import orodent.clientrelationmanager.model.enums.Operator;
 import orodent.clientrelationmanager.model.searchfilter.BusinessFilter;
 import orodent.clientrelationmanager.model.searchfilter.CountryFilter;
 import orodent.clientrelationmanager.model.searchfilter.OperatorFilter;
@@ -13,7 +10,6 @@ import orodent.clientrelationmanager.view.searchclient.FilterGroupView;
 import orodent.clientrelationmanager.view.searchclient.FiltersView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -38,9 +34,9 @@ public class FilterGroupController {
     public void add() {
         FilterController filterController = null;
         switch (type) {
-            case BUSINESS -> filterController = new FilterController(new BusinessFilter(Arrays.asList(Business.values())), this, dbManagerInterface);
-            case COUNTRY ->  filterController = new FilterController(new CountryFilter(Arrays.asList(Country.values())), this, dbManagerInterface);
-            case OPERATOR -> filterController = new FilterController(new OperatorFilter(Arrays.asList(Operator.values())), this, dbManagerInterface);
+            case BUSINESS -> filterController = new FilterController(new BusinessFilter(dbManagerInterface.getAllBusiness()), this, dbManagerInterface);
+            case COUNTRY ->  filterController = new FilterController(new CountryFilter(dbManagerInterface.getAllCountries()), this, dbManagerInterface);
+            case OPERATOR -> filterController = new FilterController(new OperatorFilter(dbManagerInterface.getAllOperators()), this, dbManagerInterface);
         }
         FiltersView filterView = new FiltersView(filterController);
         filterController.setFiltersView(filterView);
@@ -51,12 +47,18 @@ public class FilterGroupController {
     public void remove(FiltersView filtersView, FilterController filterController) {
         filterGroupView.remove(filtersView);
         filterControllerList.remove(filterController);
+        updateList();
     }
 
     public void setGroupView(FilterGroupView filterGroupView) {
         this.filterGroupView = filterGroupView;
     }
 
+    /**
+     * Restituisce aggiorna 2 liste e chiama il suo superController per aggiornarsi di conseguenza.
+     * Lista add, l'unisce tutti i client dei singoli filtri
+     * Lista remove, tutti i client da escludere a fine operazione
+     */
     public void updateList() {
         ArrayList<Client> toAdd = new ArrayList<>();
         ArrayList<Client> toRemove = new ArrayList<>();
@@ -67,17 +69,35 @@ public class FilterGroupController {
                 toRemove.addAll(filterController.getList());
             }
         }
+
+        //istanzio nuovamente le due liste add e remove popolandole con oggetti client senza duplicati
         list = toAdd.stream().distinct().collect(Collectors.toList());
         excludedClientList = toRemove.stream().distinct().collect(Collectors.toList());
 
+        //chiama il suo super controller per far aggiornare la lista
         filterSectionController.updateList();
     }
 
+    /**
+     * Ottieni la lista di client da escludere alla fine
+     */
     public List<Client> getExcludedClientList() {
         return excludedClientList;
     }
 
+    /**
+     * Ottieni la lista dei client da aggiungere
+     */
     public List<Client> getList() {
         return list;
+    }
+
+    public boolean isSomeFilterActive() {
+        for (FilterController i : filterControllerList){
+            if (i.isActive()) {
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -5,13 +5,14 @@ import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.Business;
 import orodent.clientrelationmanager.model.enums.ClientField;
+import orodent.clientrelationmanager.model.enums.Country;
 import orodent.clientrelationmanager.model.enums.Operator;
 
 import java.sql.*;
+import java.sql.Date;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class DBManager implements DBManagerInterface{
     StatusToolTipController statusToolTipController;
@@ -120,7 +121,7 @@ public class DBManager implements DBManagerInterface{
                 case Long l -> stmt.setLong(1, l);
                 case LocalDate localDate -> stmt.setDate(1, Date.valueOf(localDate));
                 case Boolean b -> stmt.setBoolean(1, b);
-                case Enum<?> anEnum -> stmt.setString(1, anEnum.name());
+                case Enum<?> anEnum -> stmt.setString(1, anEnum.toString());
                 default -> throw new IllegalArgumentException("Tipo di parametro non supportato: " + value.getClass());
             }
 
@@ -135,6 +136,73 @@ public class DBManager implements DBManagerInterface{
             System.out.println(e.getMessage());
         }
         return result;
+    }
+
+    public List<Country> getAllCountries() {
+        List<Country> ret = new ArrayList<>();
+        List<Country> temp = new ArrayList<>();
+        String sql = "SELECT DISTINCT PAESE FROM CUSTOMERS";
+        try (Statement stmt = connectionManager.getConnection().createStatement()) {
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()){
+                try {
+                    String countryString = rs.getString(1);
+                    if (countryString != null) {
+                        Country country = Country.fromString(countryString);
+                        temp.add(country);
+                    }
+                } catch (Exception ignored) {}
+            }
+            ret = temp.stream().distinct().collect(Collectors.toList());
+            ret.sort(Comparator.comparing(Country::getDisplayName, String.CASE_INSENSITIVE_ORDER));
+        } catch (SQLException e){
+            printSQLException(e);
+        }
+        return ret;
+    }
+
+    public List<Operator> getAllOperators() {
+        List<Operator> ret = new ArrayList<>();
+        List<Operator> temp = new ArrayList<>();
+        String sql = "SELECT DISTINCT OPERATORE_ASSEGNATO FROM CUSTOMERS";
+        try (Statement stmt = connectionManager.getConnection().createStatement()) {
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()){
+                String operatorString = rs.getString(1);
+                if (operatorString != null) {
+                    Operator operator = Operator.fromString(operatorString);
+                    temp.add(operator);
+                }
+            }
+            ret = temp.stream().distinct().collect(Collectors.toList());
+            ret.sort(Comparator.comparing(Operator::getDisplayName, String.CASE_INSENSITIVE_ORDER));
+        } catch (SQLException e){
+            printSQLException(e);
+        }
+        return ret;
+    }
+
+    public List<Business> getAllBusiness() {
+        List<Business> ret = new ArrayList<>();
+        List<Business> temp = new ArrayList<>();
+        String sql = "SELECT DISTINCT BUSINESS FROM CUSTOMERS";
+        try (Statement stmt = connectionManager.getConnection().createStatement()) {
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()){
+                String businessString = rs.getString(1);
+                if (businessString != null) {
+                    Business business = Business.fromString(businessString);
+                    temp.add(business);
+                }
+            }
+            //rimuovo duplicati e riordino alfabeticamente
+            ret = temp.stream().distinct().collect(Collectors.toList());
+            ret.sort(Comparator.comparing(Business::getDisplayName, String.CASE_INSENSITIVE_ORDER));
+
+        } catch (SQLException e){
+            printSQLException(e);
+        }
+        return ret;
     }
 
 
