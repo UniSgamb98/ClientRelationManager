@@ -5,10 +5,7 @@ import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.view.searchclient.SearchResultView;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 public class FilterSectionController {
     ArrayList<FilterGroupController> filterGroups;
@@ -16,7 +13,6 @@ public class FilterSectionController {
     List<Client> excludedList;
     SearchResultView searchResultView;
     DBManagerInterface dbManagerInterface;
-    int N_GRUPPI_DI_FILTRI = 3;
 
     public FilterSectionController(SearchResultView searchResultView, DBManagerInterface dbManagerInterface) {
         filterGroups = new ArrayList<>();
@@ -27,32 +23,16 @@ public class FilterSectionController {
     }
 
     public void updateList() {
-        Set<Client> common = new HashSet<>();
-        int i = 0;
-        while (common.isEmpty() && i < N_GRUPPI_DI_FILTRI) {
-            common.addAll(filterGroups.get(i).getList());
-            i++;
-        }
-        ArrayList<Client> excluded = new ArrayList<>();
-
-        //Ottengo l'intersezione tra le liste dei gruppi di filtri
-        for (i = 1; i < filterGroups.size(); i++) {
-            if (!filterGroups.get(i).getList().isEmpty()){
-                common.retainAll(filterGroups.get(i).getList());
+        StringBuilder sql = new StringBuilder();
+        boolean notFirstTimeLooping = false;
+        for (FilterGroupController i : filterGroups){
+            if (i.isSomeFilterActive()) {
+                if (notFirstTimeLooping) sql.append(" AND ");
+                sql.append(i.getSql());
+                notFirstTimeLooping = true;
             }
         }
-
-        //recupera tutti i clienti da escludere
-        for (FilterGroupController filterGroup : filterGroups) {
-            excluded.addAll(filterGroup.getExcludedClientList());
-        }
-
-        //rimuovo i duplicati
-        excludedList = excluded.stream().distinct().collect(Collectors.toList());
-
-        //rimuovo dalla list i clienti presenti nella lista dei clienti da escludere
-        list = new ArrayList<>(common);
-        list.removeAll(excludedList);
+        list = dbManagerInterface.queryDatabaseWithWhere(sql.toString());
 
         //aggiorno la view
         if (list.isEmpty() && someFilterIsActive()){

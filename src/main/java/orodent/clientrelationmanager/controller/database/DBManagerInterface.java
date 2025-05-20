@@ -23,7 +23,7 @@ public interface DBManagerInterface {
      *  EMAIL_TITOLARE, SITO_WEB, VOLTE_CONTATTATI, ULTIMA_CHIAMATA, PROSSIMA_CHIAMATA,
      *  DATA_ACQUISIZIONE, BUSINESS, OPERATORE_ASSEGNATO, INFORMATION, CATALOG, SAMPLE
      */
-    <T> List<Client> queryCustomerWithSingleParameter(String field, T value);
+    // <T> List<Client> queryCustomerWithSingleParameter(String field, T value);
     void saveClientChanges(Client client);
     List<Annotation> getAnnotationsForClient(Client client);
     void saveAnnotation(Annotation annotation, String clientID);
@@ -31,6 +31,7 @@ public interface DBManagerInterface {
     void updateAnnotation(Annotation annotation, String clientID);
     boolean isAlive();
     Client getClient(UUID uuid);
+    List<Client> queryDatabaseWithWhere(String whereSQL);
 
     /**
      * Restituisce una List di client i quali la string s è un sotto stringa di Ragione sociale oppure Persona di riferimento

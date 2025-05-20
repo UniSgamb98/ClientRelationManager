@@ -1,7 +1,6 @@
 package orodent.clientrelationmanager.controller.main.buttons.searchclient.filter;
 
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
-import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.Filter;
 import orodent.clientrelationmanager.model.searchfilter.BusinessFilter;
 import orodent.clientrelationmanager.model.searchfilter.CountryFilter;
@@ -10,33 +9,29 @@ import orodent.clientrelationmanager.view.searchclient.FilterGroupView;
 import orodent.clientrelationmanager.view.searchclient.FiltersView;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class FilterGroupController {
     private FilterGroupView filterGroupView;
     private final ArrayList<FilterController> filterControllerList;
-    private List<Client> list;
-    private List<Client> excludedClientList;
     private final FilterSectionController filterSectionController;
     private final Filter type;
     private final DBManagerInterface dbManagerInterface;
+    private String sql;
 
     public FilterGroupController(Filter type, DBManagerInterface dbManagerInterface, FilterSectionController filterSectionController) {
         this.filterSectionController = filterSectionController;
         this.type = type;
+        sql = "";
         this.dbManagerInterface = dbManagerInterface;
         this.filterControllerList = new ArrayList<>();
-        this.excludedClientList = new ArrayList<>();
-        list = new ArrayList<>();
     }
 
     public void add() {
         FilterController filterController = null;
         switch (type) {
-            case BUSINESS -> filterController = new FilterController(new BusinessFilter(dbManagerInterface.getAllBusiness()), this, dbManagerInterface);
-            case COUNTRY ->  filterController = new FilterController(new CountryFilter(dbManagerInterface.getAllCountries()), this, dbManagerInterface);
-            case OPERATOR -> filterController = new FilterController(new OperatorFilter(dbManagerInterface.getAllOperators()), this, dbManagerInterface);
+            case BUSINESS -> filterController = new FilterController(new BusinessFilter(dbManagerInterface.getAllBusiness()), this);
+            case COUNTRY ->  filterController = new FilterController(new CountryFilter(dbManagerInterface.getAllCountries()), this);
+            case OPERATOR -> filterController = new FilterController(new OperatorFilter(dbManagerInterface.getAllOperators()), this);
         }
         FiltersView filterView = new FiltersView(filterController);
         filterController.setFiltersView(filterView);
@@ -60,36 +55,32 @@ public class FilterGroupController {
      * Lista remove, tutti i client da escludere a fine operazione
      */
     public void updateList() {
-        ArrayList<Client> toAdd = new ArrayList<>();
-        ArrayList<Client> toRemove = new ArrayList<>();
+        StringBuilder sql = new StringBuilder("(");
+        boolean notFirstTimeLooping = false;
         for (FilterController filterController : filterControllerList) {
-            if (filterController.isActive()) {  //Client da includere
-                toAdd.addAll(filterController.getList());
-            } else {                            //Client da escludere alla fine
-                toRemove.addAll(filterController.getList());
+            if (filterController.isActive()) {
+                if (notFirstTimeLooping) sql.append("OR ");
+                if (filterController.isInclusive()) {  //Client da includere
+                    sql.append(filterController.getSql()).append(" ");
+                } else {                            //Client da escludere alla fine
+                    sql.append("NOT ").append(filterController.getSql()).append(" ");
+                }
             }
+            notFirstTimeLooping = true;
         }
-
-        //istanzio nuovamente le due liste add e remove popolandole con oggetti client senza duplicati
-        list = toAdd.stream().distinct().collect(Collectors.toList());
-        excludedClientList = toRemove.stream().distinct().collect(Collectors.toList());
+        sql.append(") ");
+        setSql(sql.toString());
 
         //chiama il suo super controller per far aggiornare la lista
         filterSectionController.updateList();
     }
 
-    /**
-     * Ottieni la lista di client da escludere alla fine
-     */
-    public List<Client> getExcludedClientList() {
-        return excludedClientList;
+    public String getSql() {
+        return sql;
     }
 
-    /**
-     * Ottieni la lista dei client da aggiungere
-     */
-    public List<Client> getList() {
-        return list;
+    public void setSql(String sql) {
+        this.sql = sql;
     }
 
     public boolean isSomeFilterActive() {

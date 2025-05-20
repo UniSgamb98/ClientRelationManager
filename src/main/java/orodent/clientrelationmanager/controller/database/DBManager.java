@@ -107,7 +107,7 @@ public class DBManager implements DBManagerInterface{
      * EMAIL_TITOLARE, SITO_WEB, VOLTE_CONTATTATI, ULTIMA_CHIAMATA, PROSSIMA_CHIAMATA,
      * DATA_ACQUISIZIONE, BUSINESS, OPERATORE_ASSEGNATO, INFORMATION, CATALOG, SAMPLE
      */
-    @Override
+    //@Override
     public <T> List<Client> queryCustomerWithSingleParameter(String databaseField, T value) {
         ArrayList<Client> result = new ArrayList<>();
         String sql = "SELECT * FROM CUSTOMERS WHERE " + databaseField + " = ?";
@@ -134,6 +134,26 @@ public class DBManager implements DBManagerInterface{
             printSQLException(e);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
+        }
+        return result;
+    }
+
+    /**
+     * Interroga il database, la tabella CUSTOMERS in base al where passato come parametro
+     * @param whereSQL la logica di selezione dei dati
+     * @return a list of Client
+     */
+    @Override
+    public List<Client> queryDatabaseWithWhere(String whereSQL){
+        ArrayList<Client> result = new ArrayList<>();
+        String sql = "SELECT * FROM CUSTOMERS WHERE " + whereSQL;
+        try (Statement stmt = connectionManager.getConnection().createStatement()) {
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                result.add(mapResultSetToClient(rs));
+            }
+        } catch (SQLException e){
+            printSQLException(e);
         }
         return result;
     }
@@ -197,6 +217,7 @@ public class DBManager implements DBManagerInterface{
             }
             //rimuovo duplicati e riordino alfabeticamente
             ret = temp.stream().distinct().collect(Collectors.toList());
+            ret.remove(null);
             ret.sort(Comparator.comparing(Business::getDisplayName, String.CASE_INSENSITIVE_ORDER));
 
         } catch (SQLException e){

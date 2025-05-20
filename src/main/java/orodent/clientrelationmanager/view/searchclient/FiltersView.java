@@ -57,15 +57,18 @@ public class FiltersView extends HBox {
 
         // ChoiceBox
         options = new ChoiceBox<>();
-        List<? extends Enum<?>> enumList = filterController.getAbstractFilter().getEnumList();
+        List<? extends Enum<?>> enumList = filterController.getFilterModel().getEnumList();
         options.getItems().addAll(enumList);
-        options.setOnAction(event -> filterController.updateList(options.getValue()));
+        options.setOnAction(event -> {
+            filterController.setActive(true);
+            filterController.updateList(options.getValue());
+        });
         options.getStyleClass().add("filter-options");
 
         this.getChildren().addAll(activeOrInactivePanel, options, removeButton);
     }
 
-    public void setActive(boolean active) {
+    public void setInclusive(boolean active) {
         activeOrInactivePanel.getChildren().clear();
         activeOrInactivePanel.getChildren().addAll(background, active ? checkMark : cross);
 
