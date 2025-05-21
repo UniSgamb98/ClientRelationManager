@@ -5,8 +5,6 @@ import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.Business;
 import orodent.clientrelationmanager.model.enums.ClientField;
-import orodent.clientrelationmanager.model.enums.Country;
-import orodent.clientrelationmanager.model.enums.Operator;
 
 import java.sql.*;
 import java.sql.Date;
@@ -76,7 +74,7 @@ public class DBManager implements DBManagerInterface{
             setNullableDate(statement, 17, (LocalDate) client.get(ClientField.DATA_ACQUISIZIONE));
 
             statement.setString(18, client.getField(ClientField.BUSINESS, Business.class)+"");
-            statement.setString(19, client.getField(ClientField.OPERATORE_ASSEGNATO, Operator.class)+"");
+            statement.setString(19, client.getField(ClientField.OPERATORE_ASSEGNATO, String.class));
             statement.setBoolean(20, client.getField(ClientField.INFORMATION, Boolean.class));
             statement.setBoolean(21, client.getField(ClientField.CATALOG, Boolean.class));
             statement.setBoolean(22, client.getField(ClientField.SAMPLE, Boolean.class));
@@ -111,44 +109,40 @@ public class DBManager implements DBManagerInterface{
         return result;
     }
 
-    public List<Country> getAllCountries() {
-        List<Country> ret = new ArrayList<>();
-        List<Country> temp = new ArrayList<>();
+    public List<String> getAllCountries() {
+        List<String> ret = new ArrayList<>();
+        List<String> temp = new ArrayList<>();
         String sql = "SELECT DISTINCT PAESE FROM CUSTOMERS";
         try (Statement stmt = connectionManager.getConnection().createStatement()) {
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()){
                 try {
-                    String countryString = rs.getString(1);
-                    if (countryString != null) {
-                        Country country = Country.fromString(countryString);
+                    String country = rs.getString(1);
+                    if (country != null) {
                         temp.add(country);
                     }
                 } catch (Exception ignored) {}
             }
             ret = temp.stream().distinct().collect(Collectors.toList());
-            ret.sort(Comparator.comparing(Country::getDisplayName, String.CASE_INSENSITIVE_ORDER));
+            ret.sort(Comparator.naturalOrder());
         } catch (SQLException e){
             printSQLException(e);
         }
         return ret;
     }
 
-    public List<Operator> getAllOperators() {
-        List<Operator> ret = new ArrayList<>();
-        List<Operator> temp = new ArrayList<>();
+    public List<String> getAllOperators() {
+        List<String> ret = new ArrayList<>();
         String sql = "SELECT DISTINCT OPERATORE_ASSEGNATO FROM CUSTOMERS";
         try (Statement stmt = connectionManager.getConnection().createStatement()) {
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()){
-                String operatorString = rs.getString(1);
-                if (operatorString != null) {
-                    Operator operator = Operator.fromString(operatorString);
-                    temp.add(operator);
+                String operator = rs.getString(1);
+                if (operator != null) {
+                    ret.add(operator);
                 }
             }
-            ret = temp.stream().distinct().collect(Collectors.toList());
-            ret.sort(Comparator.comparing(Operator::getDisplayName, String.CASE_INSENSITIVE_ORDER));
+            ret.sort(Comparator.naturalOrder());
         } catch (SQLException e){
             printSQLException(e);
         }
@@ -172,6 +166,24 @@ public class DBManager implements DBManagerInterface{
             ret = temp.stream().distinct().collect(Collectors.toList());
             ret.remove(null);
             ret.sort(Comparator.comparing(Business::getDisplayName, String.CASE_INSENSITIVE_ORDER));
+
+        } catch (SQLException e){
+            printSQLException(e);
+        }
+        return ret;
+    }
+
+    @Override
+    public List<String> getAllRagioniSociali(){
+        List<String> ret = new ArrayList<>();
+        String sql = "SELECT DISTINCT RAGIONE_SOCIALE FROM CUSTOMERS";
+        try (Statement stmt = connectionManager.getConnection().createStatement()) {
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()){
+                String ragioneSociale = rs.getString(1);
+                if (ragioneSociale != null)     ret.add(ragioneSociale);
+            }
+            ret.sort(Comparator.naturalOrder());
 
         } catch (SQLException e){
             printSQLException(e);
@@ -244,8 +256,8 @@ public class DBManager implements DBManagerInterface{
             Business business = client.getField(ClientField.BUSINESS, Business.class);
             stmt.setString(17, business != null ? business.toString() : null);
 
-            Operator operator = client.getField(ClientField.OPERATORE_ASSEGNATO, Operator.class);
-            stmt.setString(18, operator != null ? operator.toString() : null);
+            String operator = client.getField(ClientField.OPERATORE_ASSEGNATO, String.class);
+            stmt.setString(18, operator);
 
             stmt.setBoolean(19, client.getField(ClientField.INFORMATION, Boolean.class));
             stmt.setBoolean(20, client.getField(ClientField.CATALOG, Boolean.class));
@@ -277,8 +289,7 @@ public class DBManager implements DBManagerInterface{
                 while (rs.next()) {
                     UUID uuid = UUID.fromString(rs.getString("ID"));
                     LocalDate callDate = rs.getDate("DATA_CHIAMATA").toLocalDate();
-                    String operatorStr = rs.getString("OPERATORE");
-                    Operator madeBy = Operator.fromString(operatorStr); // Enum Operator
+                    String madeBy =rs.getString("OPERATORE"); // Enum Operator
                     String content = rs.getString("CONTENUTO");
                     LocalDate nextCallDate = rs.getDate("PROSSIMA_CHIAMATA") != null
                             ? rs.getDate("PROSSIMA_CHIAMATA").toLocalDate()
@@ -313,7 +324,7 @@ public class DBManager implements DBManagerInterface{
                 stmt.setNull(3, java.sql.Types.DATE);
             }
 
-            stmt.setString(4, annotation.getMadeBy().name());
+            stmt.setString(4, annotation.getMadeBy());
             stmt.setString(5, annotation.getContent());
             stmt.setBoolean(6, annotation.getInformation());
             stmt.setBoolean(7, annotation.getCatalog());
@@ -342,7 +353,7 @@ public class DBManager implements DBManagerInterface{
                 stmt.setNull(4, java.sql.Types.DATE);
             }
 
-            stmt.setString(5, annotation.getMadeBy().name());
+            stmt.setString(5, annotation.getMadeBy());
             stmt.setString(6, annotation.getContent());
             stmt.executeUpdate();
             statusToolTipController.update("Annotazione salvata con successo.");
@@ -442,7 +453,7 @@ public class DBManager implements DBManagerInterface{
 
         // Business e Operatore possono essere null, quindi gestiamo il caso
         ret.set(ClientField.BUSINESS, rs.getString("BUSINESS") != null ? Business.fromString(rs.getString("BUSINESS")) : null);
-        ret.set(ClientField.OPERATORE_ASSEGNATO, rs.getString("OPERATORE_ASSEGNATO") != null ? Operator.fromString(rs.getString("OPERATORE_ASSEGNATO")) : null);
+        ret.set(ClientField.OPERATORE_ASSEGNATO, rs.getString("OPERATORE_ASSEGNATO") != null ? rs.getString("OPERATORE_ASSEGNATO") : null);
 
         ret.set(ClientField.INFORMATION, rs.getBoolean("INFORMATION"));
         ret.set(ClientField.CATALOG, rs.getBoolean("CATALOG"));

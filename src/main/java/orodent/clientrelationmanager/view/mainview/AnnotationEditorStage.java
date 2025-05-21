@@ -7,7 +7,7 @@ import javafx.scene.layout.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import orodent.clientrelationmanager.model.Annotation;
-import orodent.clientrelationmanager.model.enums.Operator;
+import orodent.clientrelationmanager.model.App;
 
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public class AnnotationEditorStage extends Stage {
 
     // Campi di input
     private final DatePicker callDatePicker;
-    private final ComboBox<Operator> operatorComboBox;
+    private final ComboBox<String> operatorComboBox;
     private final TextArea contentArea;
     private final DatePicker nextCallDatePicker;
 
@@ -36,7 +36,7 @@ public class AnnotationEditorStage extends Stage {
         callDatePicker = new DatePicker(annotation.getCallDate());
 
         operatorComboBox = new ComboBox<>();
-        operatorComboBox.getItems().addAll(Operator.values());
+        operatorComboBox.getItems().addAll(App.configs.get("operatori"));
         operatorComboBox.setValue(annotation.getMadeBy());
 
         contentArea = new TextArea(annotation.getContent());
@@ -131,7 +131,7 @@ public class AnnotationEditorStage extends Stage {
         return annotation;
     }
 
-    public void setDefaultOperator(Operator workingOperator) {
+    public void setDefaultOperator(String workingOperator) {
         operatorComboBox.setValue(workingOperator);
     }
 }

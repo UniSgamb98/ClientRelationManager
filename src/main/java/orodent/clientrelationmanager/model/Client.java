@@ -2,7 +2,6 @@ package orodent.clientrelationmanager.model;
 
 import orodent.clientrelationmanager.model.enums.Business;
 import orodent.clientrelationmanager.model.enums.ClientField;
-import orodent.clientrelationmanager.model.enums.Operator;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -22,7 +21,7 @@ public class Client {
         set(ClientField.SAMPLE, false);
         set(ClientField.VOLTE_CONTATTATI,0);
         set(ClientField.BUSINESS, Business.DATO_IGNOTO);
-        set(ClientField.OPERATORE_ASSEGNATO, Operator.TOMMASO);
+        set(ClientField.OPERATORE_ASSEGNATO, App.getWorkingOperator());
         set(ClientField.RAGIONE_SOCIALE, "");
     }
 

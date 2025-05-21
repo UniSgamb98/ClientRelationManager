@@ -2,13 +2,12 @@ package orodent.clientrelationmanager.model;
 
 import javafx.stage.Stage;
 import orodent.clientrelationmanager.controller.database.DBManager;
-import orodent.clientrelationmanager.model.enums.Operator;
 
 import java.util.List;
 import java.util.Map;
 
 public class App{
-    private static Operator operator;
+    private static String operator;
     private static DBManager dbManager;
     private static Stage primaryStage;
     public static Map<String, List<String>> configs;
@@ -17,10 +16,10 @@ public class App{
     public App(){
         dbManager = new DBManager();
     }
-    public void setOperator(Operator operator) {
+    public void setOperator(String operator) {
         App.operator = operator;
     }
-    public static Operator getWorkingOperator() {
+    public static String getWorkingOperator() {
         return operator;
     }
     public DBManager getDbManager() {

@@ -8,8 +8,11 @@ import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.controller.main.buttons.searchclient.ClientSelectionController;
 import orodent.clientrelationmanager.controller.main.buttons.searchclient.filter.FilterGroupController;
 import orodent.clientrelationmanager.controller.main.buttons.searchclient.filter.FilterSectionController;
+import orodent.clientrelationmanager.model.App;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.Filter;
+
+import java.util.List;
 
 public class SearchClientView extends BorderPane {
     private final VBox filters;
@@ -19,6 +22,9 @@ public class SearchClientView extends BorderPane {
 
     public SearchClientView(MainController mainController, DBManagerInterface dbManagerInterface) {
         dbManager = dbManagerInterface;
+        filters = new VBox();
+        filters.setMaxWidth(150);
+        this.setLeft(filters);
 
         //ListView con il clienti della ricerca
         searchResultView = new SearchResultView();
@@ -29,25 +35,14 @@ public class SearchClientView extends BorderPane {
         //Filtri con i loro Controllers
         FilterSectionController filterSectionController = new FilterSectionController(searchResultView, dbManagerInterface);
 
-        FilterGroupController operatorGroupController = new FilterGroupController(Filter.OPERATOR, dbManagerInterface, filterSectionController);
-        FilterGroupController countryGroupController = new FilterGroupController(Filter.COUNTRY, dbManagerInterface, filterSectionController);
-        FilterGroupController businessGroupController = new FilterGroupController(Filter.BUSINESS, dbManagerInterface, filterSectionController);
-
-        filterSectionController.add(operatorGroupController);
-        filterSectionController.add(countryGroupController);
-        filterSectionController.add(businessGroupController);
-
-        FilterGroupView operator = new FilterGroupView("Operatori", operatorGroupController);
-        FilterGroupView country = new FilterGroupView("Paesi", countryGroupController);
-        FilterGroupView business = new FilterGroupView("Tipo Cliente", businessGroupController);
-
-        operatorGroupController.setGroupView(operator);
-        countryGroupController.setGroupView(country);
-        businessGroupController.setGroupView(business);
-
-        filters = new VBox(operator, country, business);
-        filters.setMaxWidth(150);
-        this.setLeft(filters);
+        // Aggiungo tutti i filtri dal file config
+        for (String i : App.configs.get("filtri")){
+            FilterGroupController filterGroupController = new FilterGroupController(i, dbManagerInterface, filterSectionController);
+            filterSectionController.add(filterGroupController);
+            FilterGroupView filterGroupView = new FilterGroupView(i, filterGroupController);
+            filterGroupController.setGroupView(filterGroupView);
+            filters.getChildren().add(filterGroupView);
+        }
 
         //SearchBar
         searchBar = new TextField();

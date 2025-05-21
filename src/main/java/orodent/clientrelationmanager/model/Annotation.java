@@ -1,14 +1,12 @@
 package orodent.clientrelationmanager.model;
 
-import orodent.clientrelationmanager.model.enums.Operator;
-
 import java.time.LocalDate;
 import java.util.UUID;
 
 public class Annotation {
     private final UUID uuid;
     private LocalDate callDate;
-    private Operator madeBy;
+    private String madeBy;
     private String content;
     private LocalDate nextCallDate;
     private boolean information;
@@ -16,7 +14,7 @@ public class Annotation {
     private boolean sample;
 
 
-    public Annotation(UUID uuid ,LocalDate callDate, Operator madeBy, String content, LocalDate nextCallDate) {
+    public Annotation(UUID uuid ,LocalDate callDate, String madeBy, String content, LocalDate nextCallDate) {
         this.uuid = uuid;
         this.callDate = callDate;
         this.madeBy = madeBy;
@@ -24,7 +22,7 @@ public class Annotation {
         this.nextCallDate = nextCallDate;
     }
 
-    public Annotation(LocalDate callDate, Operator madeBy, String content, LocalDate nextCallDate) {
+    public Annotation(LocalDate callDate, String madeBy, String content, LocalDate nextCallDate) {
         this.uuid = UUID.randomUUID();
         this.callDate = callDate;
         this.madeBy = madeBy;
@@ -38,10 +36,10 @@ public class Annotation {
     public void setCallDate(LocalDate callDate) {
         this.callDate = callDate;
     }
-    public Operator getMadeBy() {
+    public String getMadeBy() {
         return madeBy;
     }
-    public void setMadeBy(Operator madeBy) {
+    public void setMadeBy(String madeBy) {
         this.madeBy = madeBy;
     }
     public String getContent() {

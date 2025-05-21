@@ -19,7 +19,7 @@ public class AnnotationPane extends VBox {
         this.getStyleClass().add("annotation-pane");
 
         // Etichetta per l'operatore e la data della chiamata
-        Label operatorLabel = new Label(annotation.getMadeBy().name() + " - " + annotation.getCallDate());
+        Label operatorLabel = new Label(annotation.getMadeBy() + " - " + annotation.getCallDate());
         operatorLabel.getStyleClass().add("operator-label");
 
         // Testo per il contenuto dell'annotazione (con un limite di lunghezza)

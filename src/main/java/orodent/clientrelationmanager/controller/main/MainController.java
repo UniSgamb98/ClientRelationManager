@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import orodent.clientrelationmanager.controller.LoginController;
+import orodent.clientrelationmanager.controller.main.buttons.PrintConfigController;
 import orodent.clientrelationmanager.controller.main.buttons.ReportController;
 import orodent.clientrelationmanager.controller.main.buttons.ShowCallsController;
 import orodent.clientrelationmanager.controller.main.buttons.newclient.NewClientController;
@@ -26,6 +27,7 @@ public class MainController {
     private final SearchClientController searchClientController;
     private final ReportController reportController;
     private final ShowCallsController showCallsController;
+    private final PrintConfigController printConfigController;
 
 
 
@@ -34,6 +36,7 @@ public class MainController {
         searchClientController = new SearchClientController(app.getDbManager(), this);
         reportController = new ReportController(app.getDbManager(), this);
         showCallsController = new ShowCallsController(app.getDbManager(), this);
+        printConfigController = new PrintConfigController();
         this.app = app;
         this.mainView = mainView;
     }
@@ -91,7 +94,7 @@ public class MainController {
 
         // Crea una Timeline che anima le quattro proprietà
         Timeline timeline = new Timeline(
-                new KeyFrame(Duration.millis(1000),
+                new KeyFrame(Duration.millis(1),
                         new KeyValue(widthProp, targetWidth),
                         new KeyValue(heightProp, targetHeight),
                         new KeyValue(xProp, targetX),
@@ -111,6 +114,7 @@ public class MainController {
         hotBarView.setSearchClientEvent(searchClientController);
         hotBarView.setReportEvent(reportController);
         hotBarView.setCallsEvent(showCallsController);
+        hotBarView.setPrintConfigEvent(printConfigController);
         mainView.setLeft(hotBarView);
         hotBarView.animateEntrance();
     }

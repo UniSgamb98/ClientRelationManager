@@ -1,12 +1,12 @@
 package orodent.clientrelationmanager.model.searchfilter;
 
-import orodent.clientrelationmanager.model.enums.Country;
+import orodent.clientrelationmanager.model.enums.Business;
 
 import java.util.List;
 
-public class CountryFilter extends AbstractFilter<Country>{
+public class CountryFilter extends AbstractFilter<Business>{
 
-    public CountryFilter(List<Country> enumList) {
+    public CountryFilter(List<Business> enumList) {
         super(enumList);
     }
 }

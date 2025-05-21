@@ -9,7 +9,6 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
 import orodent.clientrelationmanager.controller.main.MainController;
-import orodent.clientrelationmanager.model.enums.Operator;
 import orodent.clientrelationmanager.todelete.Contatto;
 import orodent.clientrelationmanager.todelete.Operatori;
 import orodent.clientrelationmanager.todelete.TipoCliente;
@@ -96,7 +95,7 @@ public class ReportController implements EventHandler<ActionEvent> {
                     Element e = (Element) node;
                     if (!Boolean.parseBoolean(e.getAttribute("cancelled"))) {
                         LocalDate date = LocalDate.parse(e.getAttribute("data"));
-                        Operator operator = Operator.fromString(e.getAttribute("operatore"));
+                        String operator = e.getAttribute("operatore");
                         LocalDate nextCall = LocalDate.parse("1953-12-11");
                         String sql = "INSERT INTO ANNOTATIONS(ID, CUSTOMER_ID, DATA_CHIAMATA, PROSSIMA_CHIAMATA, OPERATORE, CONTENUTO, INFORMATION, CATALOG, SAMPLE) VALUES (";
                         sql += "'" + UUID.randomUUID() + "', ";

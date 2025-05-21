@@ -21,12 +21,12 @@ public class Main extends Application {
         app.setPrimaryStage(primaryStage);
 
         //Lettura file configurazione
-        String percorsoFile = "percorso/del/tuo/file.txt"; // Cambia percorso
+        String percorsoFile = "configs/config.txt"; // Cambia percorso
         App.configs = new HashMap<>();
         String sezioneCorrente = null;
 
         // Set delle sezioni richieste
-        Set<String> sezioniRichieste = Set.of("operatori", "filtri"); // Aggiungi altre sezioni se vuoi
+        Set<String> sezioniRichieste = Set.of("operatori", "operatori femmine", "paesi", "filtri"); // Aggiungi altre sezioni se vuoi
 
         try (BufferedReader reader = new BufferedReader(new FileReader(percorsoFile))) {
             String linea;
@@ -56,8 +56,6 @@ public class Main extends Application {
 
         if (!mancanti.isEmpty()) {
             System.err.println("Sezioni mancanti nel file di configurazione: " + mancanti);
-            // Puoi lanciare un'eccezione o uscire se preferisci:
-            // throw new IllegalStateException("Configurazione incompleta!");
         }
 
         // Stampa solo le configurazioni richieste (le altre vengono ignorate)
@@ -78,6 +76,8 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
+
 
     public static void main(String[] args) {
         launch();

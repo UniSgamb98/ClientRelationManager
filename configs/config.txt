@@ -1,0 +1,73 @@
+// Elenco degli operatori abilitati nel sistema.
+#operatori
+- Victoria
+- Teresa
+- Gaetano
+- Tommaso
+- Hugo
+- Santolo
+- Max
+
+// Paesi disponibili
+#paesi
+- Albania
+- Andorra
+- Armenia
+- Austria
+- Azerbaigian
+- Belgio
+- Bielorussia
+- Bosnia ed Erzegovina
+- Bulgaria
+- Cipro
+- Croazia
+- Danimarca
+- Estonia
+- Finlandia
+- Francia
+- Georgia
+- Germania
+- Grecia
+- Irlanda
+- Islanda
+- Italia
+- Kosovo
+- Lettonia
+- Liechtenstein
+- Lituania
+- Lussemburgo
+- Malta
+- Moldavia
+- Monaco
+- Montenegro
+- Norvegia
+- Paesi Bassi
+- Polonia
+- Portogallo
+- Regno Unito
+- Repubblica Ceca
+- Romania
+- Russia
+- San Marino
+- Serbia
+- Slovacchia
+- Slovenia
+- Spagna
+- Svezia
+- Svizzera
+- Turchia
+- Ucraina
+- Ungheria
+- Vaticano
+- Vietnam
+
+// filtri disponibili per la ricerca dei clienti nel database.
+#filtri
+- operatore
+- paese
+- business
+
+// Serve per dare il benvenuto correttamente
+#operatori femmine
+- Victoria
+

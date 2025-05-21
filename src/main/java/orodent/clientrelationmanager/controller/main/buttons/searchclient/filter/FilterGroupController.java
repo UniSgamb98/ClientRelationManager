@@ -3,8 +3,6 @@ package orodent.clientrelationmanager.controller.main.buttons.searchclient.filte
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
 import orodent.clientrelationmanager.model.enums.Filter;
 import orodent.clientrelationmanager.model.searchfilter.BusinessFilter;
-import orodent.clientrelationmanager.model.searchfilter.CountryFilter;
-import orodent.clientrelationmanager.model.searchfilter.OperatorFilter;
 import orodent.clientrelationmanager.view.searchclient.FilterGroupView;
 import orodent.clientrelationmanager.view.searchclient.FiltersView;
 
@@ -14,11 +12,11 @@ public class FilterGroupController {
     private FilterGroupView filterGroupView;
     private final ArrayList<FilterController> filterControllerList;
     private final FilterSectionController filterSectionController;
-    private final Filter type;
+    private final String type;
     private final DBManagerInterface dbManagerInterface;
     private String sql;
 
-    public FilterGroupController(Filter type, DBManagerInterface dbManagerInterface, FilterSectionController filterSectionController) {
+    public FilterGroupController(String type, DBManagerInterface dbManagerInterface, FilterSectionController filterSectionController) {
         this.filterSectionController = filterSectionController;
         this.type = type;
         sql = "";
@@ -30,8 +28,8 @@ public class FilterGroupController {
         FilterController filterController = null;
         switch (type) {
             case BUSINESS -> filterController = new FilterController(new BusinessFilter(dbManagerInterface.getAllBusiness()), this);
-            case COUNTRY ->  filterController = new FilterController(new CountryFilter(dbManagerInterface.getAllCountries()), this);
-            case OPERATOR -> filterController = new FilterController(new OperatorFilter(dbManagerInterface.getAllOperators()), this);
+            //case COUNTRY ->  filterController = new FilterController(new CountryFilter(dbManagerInterface.getAllCountries()), this);
+            //case OPERATOR -> filterController = new FilterController(new OperatorFilter(dbManagerInterface.getAllOperators()), this);
         }
         FiltersView filterView = new FiltersView(filterController);
         filterController.setFiltersView(filterView);

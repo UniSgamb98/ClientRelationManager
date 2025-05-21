@@ -3,8 +3,6 @@ package orodent.clientrelationmanager.controller.main.buttons.searchclient.filte
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 import orodent.clientrelationmanager.model.enums.Business;
-import orodent.clientrelationmanager.model.enums.Country;
-import orodent.clientrelationmanager.model.enums.Operator;
 import orodent.clientrelationmanager.model.searchfilter.AbstractFilter;
 import orodent.clientrelationmanager.view.searchclient.FiltersView;
 
@@ -41,7 +39,7 @@ public class FilterController implements EventHandler<MouseEvent> {
 
     public void updateList(Enum<?> value) {
         switch (value) {
-            case Operator ignored -> {
+         /*   case Operator ignored -> {
                 filterModel.setSql("OPERATORE_ASSEGNATO = '" + value + "'");
                 filterGroupController.updateList();
             }
@@ -49,7 +47,7 @@ public class FilterController implements EventHandler<MouseEvent> {
             case Country ignored -> {
                 filterModel.setSql("PAESE = '" + value + "'");
                 filterGroupController.updateList();
-            }
+            }*/
 
             case Business ignored -> {
                 filterModel.setSql("BUSINESS = '" + value + "'");

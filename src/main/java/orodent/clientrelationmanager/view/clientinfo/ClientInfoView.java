@@ -7,10 +7,9 @@ import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import orodent.clientrelationmanager.controller.popup.AutoCompletePopup;
+import orodent.clientrelationmanager.model.App;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.ClientField;
-import orodent.clientrelationmanager.model.enums.Country;
-import orodent.clientrelationmanager.model.enums.Operator;
 import orodent.clientrelationmanager.model.enums.Business;
 
 import java.time.LocalDate;
@@ -35,7 +34,7 @@ public class ClientInfoView extends VBox {
     private final ChoiceBox<Business> tipoCliente;
 
     private final DatePicker dataAcquisizione;
-    private final ChoiceBox<Operator> operatoreAssegnato;
+    private final ChoiceBox<String> operatoreAssegnato;
     private final CheckBox information;
     private final CheckBox catalog;
     private final CheckBox sample;
@@ -62,8 +61,8 @@ public class ClientInfoView extends VBox {
         tipoCliente.getItems().addAll(Business.values());
         tipoCliente.setValue(client.getField(ClientField.BUSINESS, Business.class));
         operatoreAssegnato = new ChoiceBox<>();
-        operatoreAssegnato.getItems().addAll(Operator.values());
-        operatoreAssegnato.setValue(client.getField(ClientField.OPERATORE_ASSEGNATO, Operator.class));
+        operatoreAssegnato.getItems().addAll(App.configs.get("operatori"));
+        operatoreAssegnato.setValue(client.getField(ClientField.OPERATORE_ASSEGNATO, String.class));
         information = new CheckBox();
         information.setSelected(client.getField(ClientField.INFORMATION, Boolean.class));
         catalog = new CheckBox();
@@ -141,9 +140,7 @@ public class ClientInfoView extends VBox {
 
         //Popups
         ObservableList<String> countryNames = FXCollections.observableArrayList();
-        for (Country country : Country.values()) {
-            countryNames.add(country.getDisplayName());
-        }
+        countryNames.addAll(App.configs.get("paesi"));
         new AutoCompletePopup(paese, countryNames);
 
 
@@ -220,7 +217,7 @@ public class ClientInfoView extends VBox {
     public LocalDate getDataAcquisizione() {
         return dataAcquisizione.getValue();
     }
-    public Operator getOperatore() {
+    public String getOperatore() {
         return operatoreAssegnato.getValue();
     }
     public String getSitoWeb(){
