@@ -217,7 +217,7 @@ public class ConnectionManager extends Thread {
     protected Connection getConnection() {
         try {
             if (connection == null || connection.isClosed()) {
-                status.update("Riconnesione in corso...");
+                status.update("Riconnessione in corso...");
                 status.redLight();
                 open();
             }

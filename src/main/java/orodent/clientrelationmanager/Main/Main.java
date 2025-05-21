@@ -6,19 +6,65 @@ import javafx.stage.Stage;
 import orodent.clientrelationmanager.model.App;
 import orodent.clientrelationmanager.view.mainview.MainView;
 
-import java.io.File;
-import java.io.PrintStream;
-import java.util.Objects;
+import java.io.*;
+import java.util.*;
 
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
+        //Debugging
         File file = new File("outStream.txt");
         PrintStream stream = new PrintStream(file);
         System.setOut(stream);
 
         App app = new App();
         app.setPrimaryStage(primaryStage);
+
+        //Lettura file configurazione
+        String percorsoFile = "percorso/del/tuo/file.txt"; // Cambia percorso
+        App.configs = new HashMap<>();
+        String sezioneCorrente = null;
+
+        // Set delle sezioni richieste
+        Set<String> sezioniRichieste = Set.of("operatori", "filtri"); // Aggiungi altre sezioni se vuoi
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(percorsoFile))) {
+            String linea;
+            while ((linea = reader.readLine()) != null) {
+                linea = linea.strip();
+
+                if (linea.startsWith("#")) {
+                    sezioneCorrente = linea.substring(1).toLowerCase();
+                    App.configs.putIfAbsent(sezioneCorrente, new ArrayList<>());
+                } else if (linea.startsWith("-") && sezioneCorrente != null) {
+                    String valore = linea.substring(1).strip();
+                    App.configs.get(sezioneCorrente).add(valore);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Errore nella lettura del file: " + e.getMessage());
+            return;
+        }
+
+        // Controllo che tutte le sezioni richieste siano presenti
+        List<String> mancanti = new ArrayList<>();
+        for (String richiesta : sezioniRichieste) {
+            if (!App.configs.containsKey(richiesta)) {
+                mancanti.add(richiesta);
+            }
+        }
+
+        if (!mancanti.isEmpty()) {
+            System.err.println("Sezioni mancanti nel file di configurazione: " + mancanti);
+            // Puoi lanciare un'eccezione o uscire se preferisci:
+            // throw new IllegalStateException("Configurazione incompleta!");
+        }
+
+        // Stampa solo le configurazioni richieste (le altre vengono ignorate)
+        for (String sezione : sezioniRichieste) {
+            List<String> valori = App.configs.getOrDefault(sezione, Collections.emptyList());
+            System.out.println("[" + sezione + "] -> " + valori);
+        }
 
         MainView mainView = new MainView(app);
         Scene scene = new Scene(mainView, 350, 250);

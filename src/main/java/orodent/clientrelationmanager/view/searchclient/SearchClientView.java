@@ -22,7 +22,7 @@ public class SearchClientView extends BorderPane {
 
         //ListView con il clienti della ricerca
         searchResultView = new SearchResultView();
-        searchResultView.setClients(dbManagerInterface.getAllClient());
+        searchResultView.setClients(dbManagerInterface.getClientWhere(""));
         new ClientSelectionController(mainController, searchResultView);
         this.setCenter(searchResultView);
 

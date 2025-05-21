@@ -32,13 +32,13 @@ public class FilterSectionController {
                 notFirstTimeLooping = true;
             }
         }
-        list = dbManagerInterface.queryDatabaseWithWhere(sql.toString());
+        list = dbManagerInterface.getClientWhere(sql.toString());
 
         //aggiorno la view
         if (list.isEmpty() && someFilterIsActive()){
             searchResultView.showEmptyList();
         } else if (list.isEmpty() && !someFilterIsActive()) {
-            searchResultView.setClients(dbManagerInterface.getAllClient());
+            searchResultView.setClients(dbManagerInterface.getClientWhere(""));
         } else {
             searchResultView.setClients(list);
         }

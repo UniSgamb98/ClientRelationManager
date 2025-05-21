@@ -1,8 +1,5 @@
 package orodent.clientrelationmanager.model.searchfilter;
 
-import orodent.clientrelationmanager.model.Client;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public abstract class AbstractFilter<E extends Enum<E>> {

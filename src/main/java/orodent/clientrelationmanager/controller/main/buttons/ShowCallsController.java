@@ -15,6 +15,7 @@ import orodent.clientrelationmanager.controller.main.buttons.searchclient.Client
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.view.searchclient.SearchResultView;
 
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
@@ -52,7 +53,7 @@ public class ShowCallsController implements EventHandler<ActionEvent> {
 
         // Metodo per aggiornare la ListView
         Runnable updateList = () -> {
-            List<Client> clients = dbManager.getClientsByNextCall(datePicker.getValue());
+            List<Client> clients = dbManager.getClientWhere("PROSSIMA_CHIAMATA = " + Date.valueOf(datePicker.getValue()));
             if (clients.isEmpty()) {
                 emptyLabel.setVisible(true);
             } else {

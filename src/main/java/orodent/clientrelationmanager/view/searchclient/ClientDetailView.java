@@ -82,13 +82,13 @@ public class ClientDetailView extends BorderPane {
             // Procedi con l'aggiornamento sul database o altre operazioni.
             dbManagerInterface.saveAnnotation(updatedAnnotation, client.getUuid().toString());
             dbManagerInterface.saveClientAfterAnnotationChange(updatedAnnotation, client.getUuid().toString());
-            client = dbManagerInterface.getClient(client.getUuid());
+            client = dbManagerInterface.getClientWhere(client.getUuid().toString()).getFirst();
             update();
         }
     }
 
     private void update(){
-        client = dbManagerInterface.getClient(client.getUuid());
+        client = dbManagerInterface.getClientWhere(client.getUuid().toString()).getFirst();
         updateClientInfoView();
         updateClientAnnotationView();
     }

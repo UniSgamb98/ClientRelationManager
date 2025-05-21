@@ -87,66 +87,19 @@ public class DBManager implements DBManagerInterface{
         }
     }
 
-    public List<Client> getAllClient(){
-        List<Client> clients = new ArrayList<>();
-        String sql = "SELECT * FROM CUSTOMERS";
-        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql);
-            ResultSet rs = stmt.executeQuery()) {
-            while (rs.next()) {
-                clients.add(mapResultSetToClient(rs));
-            }
-        } catch (SQLException e) {
-            printSQLException(e);
-        }
-            return clients;
-    }
-
-    /**
-     * ID, RAGIONE_SOCIALE, PERSONA_RIFERIMENTO, EMAIL_RIFERIMENTO, CELLULARE_RIFERIMENTO,
-     * TELEFONO_AZIENDALE, EMAIL_AZIENDALE, PAESE, CITTA, NOME_TITOLARE, CELLULARE_TITOLARE,
-     * EMAIL_TITOLARE, SITO_WEB, VOLTE_CONTATTATI, ULTIMA_CHIAMATA, PROSSIMA_CHIAMATA,
-     * DATA_ACQUISIZIONE, BUSINESS, OPERATORE_ASSEGNATO, INFORMATION, CATALOG, SAMPLE
-     */
-    //@Override
-    public <T> List<Client> queryCustomerWithSingleParameter(String databaseField, T value) {
-        ArrayList<Client> result = new ArrayList<>();
-        String sql = "SELECT * FROM CUSTOMERS WHERE " + databaseField + " = ?";
-        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
-
-            //Controllo di Tipo
-            switch (value) {
-                case null -> stmt.setNull(1, Types.NULL); // Gestione del valore null
-                case String s -> stmt.setString(1, s);
-                case Integer i -> stmt.setInt(1, i);
-                case Long l -> stmt.setLong(1, l);
-                case LocalDate localDate -> stmt.setDate(1, Date.valueOf(localDate));
-                case Boolean b -> stmt.setBoolean(1, b);
-                case Enum<?> anEnum -> stmt.setString(1, anEnum.toString());
-                default -> throw new IllegalArgumentException("Tipo di parametro non supportato: " + value.getClass());
-            }
-
-            try (ResultSet rs = stmt.executeQuery()) {
-                while (rs.next()) {
-                    result.add(mapResultSetToClient(rs));
-                }
-            }
-        } catch (SQLException e) {
-            printSQLException(e);
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-        }
-        return result;
-    }
-
     /**
      * Interroga il database, la tabella CUSTOMERS in base al where passato come parametro
+     * Se il parametro è una stringa vuota allora restituisce tutti i Customers
      * @param whereSQL la logica di selezione dei dati
      * @return a list of Client
      */
     @Override
-    public List<Client> queryDatabaseWithWhere(String whereSQL){
+    public List<Client> getClientWhere (String whereSQL){
         ArrayList<Client> result = new ArrayList<>();
-        String sql = "SELECT * FROM CUSTOMERS WHERE " + whereSQL;
+        String sql;
+        if (whereSQL.isEmpty()) sql = "SELECT * FROM CUSTOMERS";
+        else sql = "SELECT * FROM CUSTOMERS WHERE " + whereSQL;
+
         try (Statement stmt = connectionManager.getConnection().createStatement()) {
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
@@ -229,6 +182,7 @@ public class DBManager implements DBManagerInterface{
 
     /**
      * Restituisce una List di client i quali la string s è un sotto stringa di Ragione sociale oppure Persona di riferimento
+     * TODO Estendere a tutti i parametri questa possibilità di ricerca
      * @param s sotto stringa
      * @return list
      */
@@ -452,46 +406,6 @@ public class DBManager implements DBManagerInterface{
         return connectionManager.findHostIp() != null;
     }
 
-    @Override
-    public Client getClient(UUID uuid) {
-        Client client = null;
-        String sql = "SELECT * FROM CUSTOMERS WHERE ID = ?";
-
-        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
-            stmt.setString(1, uuid.toString());
-
-            try (ResultSet rs = stmt.executeQuery()) {
-                rs.next();
-                client = mapResultSetToClient(rs);
-            }
-        } catch (SQLException e) {
-            printSQLException(e);
-        }
-
-        return client;
-    }
-
-    @Override
-    public List<Client> getClientsByNextCall(LocalDate date) {
-        List<Client> clients = new ArrayList<>();
-        String query = "SELECT * FROM CUSTOMERS WHERE PROSSIMA_CHIAMATA = ?";
-
-        try (PreparedStatement statement = connectionManager.getConnection().prepareStatement(query)) {
-
-            statement.setDate(1, Date.valueOf(date));
-
-            try (ResultSet resultSet = statement.executeQuery()) {
-                while (resultSet.next()) {
-                    clients.add(mapResultSetToClient(resultSet));
-                }
-            }
-        } catch (SQLException e) {
-            printSQLException(e);
-        }
-        return clients;
-    }
-
-
     private void setNullableDate(PreparedStatement preparedStatement, int index, LocalDate date) throws SQLException {
         if (date != null) {
             preparedStatement.setDate(index, java.sql.Date.valueOf(date));
@@ -501,7 +415,7 @@ public class DBManager implements DBManagerInterface{
     }
 
     /**
-     * Restituisce un client che corrisponde alla posizione del cursore sul ResultSet
+     * Restituisce il client che corrisponde alla posizione del cursore sul ResultSet
      */
     private Client mapResultSetToClient(ResultSet rs) throws SQLException {
         Client ret = new Client();
