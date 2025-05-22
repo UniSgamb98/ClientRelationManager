@@ -1,15 +1,22 @@
 // Elenco degli operatori abilitati nel sistema.
-#operatori
+#OPERATORE_ASSEGNATO
 - Victoria
 - Teresa
 - Gaetano
 - Tommaso
 - Hugo
 - Santolo
-- Max
+
+// Filtri disponibili per la ricerca dei clienti nel database.
+#filtri
+- OPERATORE_ASSEGNATO
+- PAESE
+
+#CITTA
+- ASS
 
 // Paesi disponibili
-#paesi
+#PAESE
 - Albania
 - Andorra
 - Armenia
@@ -61,11 +68,12 @@
 - Vaticano
 - Vietnam
 
-// filtri disponibili per la ricerca dei clienti nel database.
-#filtri
-- operatore
-- paese
-- business
+// Lista della tipologia dei clienti. ATTENZIONE: aggiungere un valore con nome "Sconosciuto"
+#BUSINESS
+ - Rivenditore
+ - Laboratorio
+ - Centro Fresaggio
+ - Sconosciuto
 
 // Serve per dare il benvenuto correttamente
 #operatori femmine

@@ -7,18 +7,18 @@ import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.view.searchclient.SearchClientView;
 
 public class SearchClientController implements EventHandler<ActionEvent> {
-    DBManagerInterface db;
+    DBManagerInterface dbInterface;
     MainController mainController;
     SearchClientView searchClientView;
 
-    public  SearchClientController(DBManagerInterface db, MainController mainController) {
-        this.db = db;
-        this.mainController = mainController;
+    public  SearchClientController() {
+        mainController = new MainController();
+        dbInterface = mainController.getApp().getDbManager();
     }
 
     @Override
     public void handle(ActionEvent event) {
-        searchClientView = new SearchClientView(mainController, db);
+        searchClientView = new SearchClientView(mainController, dbInterface);
         mainController.showView(searchClientView);
     }
 }

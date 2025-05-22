@@ -1,36 +1,40 @@
-package orodent.clientrelationmanager.controller.main.buttons.searchclient.filter;
+package orodent.clientrelationmanager.controller.filter;
 
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
-import orodent.clientrelationmanager.model.enums.Filter;
-import orodent.clientrelationmanager.model.searchfilter.BusinessFilter;
+import orodent.clientrelationmanager.model.App;
+import orodent.clientrelationmanager.model.searchfilter.Filter;
 import orodent.clientrelationmanager.view.searchclient.FilterGroupView;
 import orodent.clientrelationmanager.view.searchclient.FiltersView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class FilterGroupController {
     private FilterGroupView filterGroupView;
     private final ArrayList<FilterController> filterControllerList;
     private final FilterSectionController filterSectionController;
-    private final String type;
     private final DBManagerInterface dbManagerInterface;
+    private final String filterName;
     private String sql;
 
-    public FilterGroupController(String type, DBManagerInterface dbManagerInterface, FilterSectionController filterSectionController) {
+    public FilterGroupController(String type, FilterSectionController filterSectionController, DBManagerInterface dbManagerInterface) {
         this.filterSectionController = filterSectionController;
-        this.type = type;
+        filterName = type;
         sql = "";
         this.dbManagerInterface = dbManagerInterface;
         this.filterControllerList = new ArrayList<>();
     }
 
     public void add() {
-        FilterController filterController = null;
-        switch (type) {
-            case BUSINESS -> filterController = new FilterController(new BusinessFilter(dbManagerInterface.getAllBusiness()), this);
-            //case COUNTRY ->  filterController = new FilterController(new CountryFilter(dbManagerInterface.getAllCountries()), this);
-            //case OPERATOR -> filterController = new FilterController(new OperatorFilter(dbManagerInterface.getAllOperators()), this);
+        //preparo la lista dei valori dei filtri con i valori in config.txt e i valori già presenti in database
+        List<String> filterValues = new ArrayList<>(App.getConfigs().get(filterName));
+        List<String> valuesInDatabase = dbManagerInterface.getAllValuesFromCustomerColumn(filterName);
+        for (String i : valuesInDatabase){
+            if (!filterValues.contains(i)) filterValues.add(i);
         }
+        filterValues.remove(null);
+
+        FilterController filterController = new FilterController(new Filter(filterName, filterValues), this);
         FiltersView filterView = new FiltersView(filterController);
         filterController.setFiltersView(filterView);
         filterGroupView.add(filterView);

@@ -36,7 +36,7 @@ public class AnnotationEditorStage extends Stage {
         callDatePicker = new DatePicker(annotation.getCallDate());
 
         operatorComboBox = new ComboBox<>();
-        operatorComboBox.getItems().addAll(App.configs.get("operatori"));
+        operatorComboBox.getItems().addAll(App.getConfigs().get("OPERATORE_ASSEGNATO"));
         operatorComboBox.setValue(annotation.getMadeBy());
 
         contentArea = new TextArea(annotation.getContent());

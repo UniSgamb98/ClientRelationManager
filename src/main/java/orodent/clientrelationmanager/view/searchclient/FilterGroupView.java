@@ -8,7 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.StackPane;
-import orodent.clientrelationmanager.controller.main.buttons.searchclient.filter.FilterGroupController;
+import orodent.clientrelationmanager.controller.filter.FilterGroupController;
 
 public class FilterGroupView extends StackPane {
     FlowPane flowPane;

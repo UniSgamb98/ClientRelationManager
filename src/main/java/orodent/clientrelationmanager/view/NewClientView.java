@@ -2,12 +2,11 @@ package orodent.clientrelationmanager.view;
 
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
+import orodent.clientrelationmanager.controller.ClientFormatter;
 import orodent.clientrelationmanager.controller.main.StatusToolTipController;
 import orodent.clientrelationmanager.controller.main.buttons.ClientInfoController;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
-import orodent.clientrelationmanager.model.App;
 import orodent.clientrelationmanager.model.Client;
-import orodent.clientrelationmanager.model.enums.ClientField;
 import orodent.clientrelationmanager.view.clientinfo.ClientInfoView;
 
 public class NewClientView extends VBox {
@@ -23,13 +22,9 @@ public class NewClientView extends VBox {
 
             //Qua faccio tutti i check di correttezza di inserimento del cliente
             StatusToolTipController toolTipController = new StatusToolTipController();
-            if (!App.configs.get("paesi").contains(newClient.get(ClientField.PAESE))) {
-                toolTipController.update("Paese inserito non corretto");
-            } else if (newClient.get(ClientField.RAGIONE_SOCIALE).equals("")) {
-                toolTipController.update("Ragione sociale non inserita");
-            } else if (db.getAllRagioniSociali().contains(newClient.get(ClientField.RAGIONE_SOCIALE))) {
-                toolTipController.update(newClient.get(ClientField.RAGIONE_SOCIALE) + "è già presente nel database");
-            } else {
+
+            ClientFormatter clientFormatter = new ClientFormatter(newClient);
+            if (clientFormatter.isCorrectlyFormatted(true)) {
                 db.insertClient(newClient);
                 toolTipController.update("Aggiunto cliente " + newClient);
             }

@@ -2,22 +2,24 @@ package orodent.clientrelationmanager.model.searchfilter;
 
 import java.util.List;
 
-public abstract class AbstractFilter<E extends Enum<E>> {
+public class Filter {
     private boolean inclusive;
     private boolean active;
     private String sql;
-    protected List<E> enumList;
+    protected List<String> filterValues;
+    private final String filterName;
 
 
-    public AbstractFilter(List<E> enumList) {
-        this.enumList = enumList;
+    public Filter(String filterName, List<String> filterValues) {
+        this.filterName = filterName;
+        this.filterValues = filterValues;
         sql = "";
         inclusive = true;
         active = false;
     }
 
-    public List<E> getEnumList() {
-        return enumList;
+    public List<String> getFilterValues() {
+        return filterValues;
     }
 
     public boolean isInclusive() {
@@ -42,5 +44,9 @@ public abstract class AbstractFilter<E extends Enum<E>> {
 
     public void setSql(String sql) {
         this.sql = sql;
+    }
+
+    public String getFilterName() {
+        return filterName;
     }
 }

@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 import java.util.logging.StreamHandler;
 
 public class StatusToolTipController {
-    public static final StatusToolTipView statusToolTipView = new StatusToolTipView();
+    private static final StatusToolTipView statusToolTipView = new StatusToolTipView();
     private final Logger logger;
 
     public StatusToolTipController() {
@@ -17,7 +17,7 @@ public class StatusToolTipController {
         logger.addHandler(new StreamHandler());
     }
 
-    public StatusToolTipView getView() {
+    public static StatusToolTipView getStatusToolTipView() {
         return statusToolTipView;
     }
 
@@ -35,6 +35,5 @@ public class StatusToolTipController {
 
     public void redLight(){
         Platform.runLater(() -> statusToolTipView.switchColor(Color.RED));
-
     }
 }

@@ -9,12 +9,12 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Polyline;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
-import orodent.clientrelationmanager.controller.main.buttons.searchclient.filter.FilterController;
+import orodent.clientrelationmanager.controller.filter.FilterController;
 
 import java.util.List;
 
 public class FiltersView extends HBox {
-    private final ChoiceBox<Enum<?>> options;
+    private final ChoiceBox<String> options;
     private final Polyline checkMark;
     private final Polyline cross;
     private final Circle background;
@@ -57,11 +57,12 @@ public class FiltersView extends HBox {
 
         // ChoiceBox
         options = new ChoiceBox<>();
-        List<? extends Enum<?>> enumList = filterController.getFilterModel().getEnumList();
-        options.getItems().addAll(enumList);
+        List<String> filterValues = filterController.getFilterModel().getFilterValues();
+        String filterName = filterController.getFilterModel().getFilterName();
+        options.getItems().addAll(filterValues);
         options.setOnAction(event -> {
             filterController.setActive(true);
-            filterController.updateList(options.getValue());
+            filterController.updateList(filterName, options.getValue());
         });
         options.getStyleClass().add("filter-options");
 

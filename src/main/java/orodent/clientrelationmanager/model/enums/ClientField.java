@@ -19,7 +19,7 @@ public enum ClientField {
     ULTIMA_CHIAMATA(LocalDate.class),
     PROSSIMA_CHIAMATA(LocalDate.class),
     DATA_ACQUISIZIONE(LocalDate.class),
-    BUSINESS(Business.class),
+    BUSINESS(String.class),
     OPERATORE_ASSEGNATO(String.class),
     INFORMATION(Boolean.class),
     CATALOG(Boolean.class),

@@ -18,8 +18,15 @@ public class AnnotationPane extends VBox {
         this.setPadding(new Insets(10));
         this.getStyleClass().add("annotation-pane");
 
+        // Etichetta per la prossima chiamata (se esiste)
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        Label nextCallLabel = new Label(annotation.getNextCallDate() != null
+                ? "Prossima chiamata: " + annotation.getNextCallDate().format(formatter)
+                : "Nessuna prossima chiamata");
+        nextCallLabel.getStyleClass().add("next-call-label");
+
         // Etichetta per l'operatore e la data della chiamata
-        Label operatorLabel = new Label(annotation.getMadeBy() + " - " + annotation.getCallDate());
+        Label operatorLabel = new Label(annotation.getMadeBy() + " il " + annotation.getCallDate().format(formatter));
         operatorLabel.getStyleClass().add("operator-label");
 
         // Testo per il contenuto dell'annotazione (con un limite di lunghezza)
@@ -27,13 +34,6 @@ public class AnnotationPane extends VBox {
         contentText.getStyleClass().add("content-text");
         TextFlow contentFlow = new TextFlow(contentText);
         contentFlow.setMaxWidth(300); // Per evitare che il testo sia troppo largo
-
-        // Etichetta per la prossima chiamata (se esiste)
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        Label nextCallLabel = new Label(annotation.getNextCallDate() != null
-                ? "Prossima chiamata: " + annotation.getNextCallDate().format(formatter)
-                : "Nessuna prossima chiamata");
-        nextCallLabel.getStyleClass().add("next-call-label");
 
         // Layout principale
         this.getChildren().addAll(operatorLabel, contentFlow, nextCallLabel);

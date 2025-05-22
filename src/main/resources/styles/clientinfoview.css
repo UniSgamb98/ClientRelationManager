@@ -24,7 +24,6 @@
     -fx-font-size: 14px;
     -fx-font-weight: bold;
     -fx-text-fill: #333;
-    -fx-padding: 3px 0;
 }
 
 /* Stile per i campi di input specifici di ClientInfoView */

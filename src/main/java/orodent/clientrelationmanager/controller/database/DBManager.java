@@ -3,14 +3,12 @@ package orodent.clientrelationmanager.controller.database;
 import orodent.clientrelationmanager.controller.main.StatusToolTipController;
 import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
-import orodent.clientrelationmanager.model.enums.Business;
 import orodent.clientrelationmanager.model.enums.ClientField;
 
 import java.sql.*;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class DBManager implements DBManagerInterface{
     StatusToolTipController statusToolTipController;
@@ -73,7 +71,7 @@ public class DBManager implements DBManagerInterface{
             setNullableDate(statement, 16, (LocalDate) client.get(ClientField.PROSSIMA_CHIAMATA));
             setNullableDate(statement, 17, (LocalDate) client.get(ClientField.DATA_ACQUISIZIONE));
 
-            statement.setString(18, client.getField(ClientField.BUSINESS, Business.class)+"");
+            statement.setString(18, client.getField(ClientField.BUSINESS, String.class));
             statement.setString(19, client.getField(ClientField.OPERATORE_ASSEGNATO, String.class));
             statement.setBoolean(20, client.getField(ClientField.INFORMATION, Boolean.class));
             statement.setBoolean(21, client.getField(ClientField.CATALOG, Boolean.class));
@@ -109,74 +107,10 @@ public class DBManager implements DBManagerInterface{
         return result;
     }
 
-    public List<String> getAllCountries() {
-        List<String> ret = new ArrayList<>();
-        List<String> temp = new ArrayList<>();
-        String sql = "SELECT DISTINCT PAESE FROM CUSTOMERS";
-        try (Statement stmt = connectionManager.getConnection().createStatement()) {
-            ResultSet rs = stmt.executeQuery(sql);
-            while (rs.next()){
-                try {
-                    String country = rs.getString(1);
-                    if (country != null) {
-                        temp.add(country);
-                    }
-                } catch (Exception ignored) {}
-            }
-            ret = temp.stream().distinct().collect(Collectors.toList());
-            ret.sort(Comparator.naturalOrder());
-        } catch (SQLException e){
-            printSQLException(e);
-        }
-        return ret;
-    }
-
-    public List<String> getAllOperators() {
-        List<String> ret = new ArrayList<>();
-        String sql = "SELECT DISTINCT OPERATORE_ASSEGNATO FROM CUSTOMERS";
-        try (Statement stmt = connectionManager.getConnection().createStatement()) {
-            ResultSet rs = stmt.executeQuery(sql);
-            while (rs.next()){
-                String operator = rs.getString(1);
-                if (operator != null) {
-                    ret.add(operator);
-                }
-            }
-            ret.sort(Comparator.naturalOrder());
-        } catch (SQLException e){
-            printSQLException(e);
-        }
-        return ret;
-    }
-
-    public List<Business> getAllBusiness() {
-        List<Business> ret = new ArrayList<>();
-        List<Business> temp = new ArrayList<>();
-        String sql = "SELECT DISTINCT BUSINESS FROM CUSTOMERS";
-        try (Statement stmt = connectionManager.getConnection().createStatement()) {
-            ResultSet rs = stmt.executeQuery(sql);
-            while (rs.next()){
-                String businessString = rs.getString(1);
-                if (businessString != null) {
-                    Business business = Business.fromString(businessString);
-                    temp.add(business);
-                }
-            }
-            //rimuovo duplicati e riordino alfabeticamente
-            ret = temp.stream().distinct().collect(Collectors.toList());
-            ret.remove(null);
-            ret.sort(Comparator.comparing(Business::getDisplayName, String.CASE_INSENSITIVE_ORDER));
-
-        } catch (SQLException e){
-            printSQLException(e);
-        }
-        return ret;
-    }
-
     @Override
-    public List<String> getAllRagioniSociali(){
+    public List<String> getAllValuesFromCustomerColumn(String tableColumn){
         List<String> ret = new ArrayList<>();
-        String sql = "SELECT DISTINCT RAGIONE_SOCIALE FROM CUSTOMERS";
+        String sql = "SELECT DISTINCT " + tableColumn + " FROM CUSTOMERS";
         try (Statement stmt = connectionManager.getConnection().createStatement()) {
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()){
@@ -194,7 +128,7 @@ public class DBManager implements DBManagerInterface{
 
     /**
      * Restituisce una List di client i quali la string s è un sotto stringa di Ragione sociale oppure Persona di riferimento
-     * TODO Estendere a tutti i parametri questa possibilità di ricerca
+     * TODO Estendere a tutti i parametri IN CONFIG questa possibilità di ricerca
      * @param s sotto stringa
      * @return list
      */
@@ -253,8 +187,8 @@ public class DBManager implements DBManagerInterface{
             LocalDate dataAcquisizione = client.getField(ClientField.DATA_ACQUISIZIONE, LocalDate.class);
             stmt.setDate(16, dataAcquisizione != null ? Date.valueOf(dataAcquisizione) : null);
 
-            Business business = client.getField(ClientField.BUSINESS, Business.class);
-            stmt.setString(17, business != null ? business.toString() : null);
+            String business = client.getField(ClientField.BUSINESS, String.class);
+            stmt.setString(17, business);
 
             String operator = client.getField(ClientField.OPERATORE_ASSEGNATO, String.class);
             stmt.setString(18, operator);
@@ -452,7 +386,7 @@ public class DBManager implements DBManagerInterface{
         ret.set(ClientField.DATA_ACQUISIZIONE, rs.getDate("DATA_ACQUISIZIONE") != null ? rs.getDate("DATA_ACQUISIZIONE").toLocalDate() : null);
 
         // Business e Operatore possono essere null, quindi gestiamo il caso
-        ret.set(ClientField.BUSINESS, rs.getString("BUSINESS") != null ? Business.fromString(rs.getString("BUSINESS")) : null);
+        ret.set(ClientField.BUSINESS, rs.getString("BUSINESS") != null ? rs.getString("BUSINESS") : null);
         ret.set(ClientField.OPERATORE_ASSEGNATO, rs.getString("OPERATORE_ASSEGNATO") != null ? rs.getString("OPERATORE_ASSEGNATO") : null);
 
         ret.set(ClientField.INFORMATION, rs.getBoolean("INFORMATION"));

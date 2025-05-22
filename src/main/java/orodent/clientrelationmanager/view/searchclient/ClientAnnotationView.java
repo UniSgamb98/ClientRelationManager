@@ -2,7 +2,9 @@ package orodent.clientrelationmanager.view.searchclient;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.Orientation;
 import javafx.scene.control.*;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
 import orodent.clientrelationmanager.model.Annotation;
@@ -19,23 +21,17 @@ public class ClientAnnotationView extends VBox {
     Runnable onUpdate;
 
     public ClientAnnotationView(Client client, DBManagerInterface dbManager) {
-        Label titleLabel = new Label("ANNOTAZIONI");
-        titleLabel.getStyleClass().add("annotation-title");
-
         Label pvuLabel = new Label("PVU Aziendali");
-        pvuLabel.getStyleClass().add("annotation-label");
-
         textArea = new TextArea(client.getField(ClientField.PVU, String.class));
         textArea.setWrapText(true);
         textArea.setMinHeight(100);
-        textArea.setMaxHeight(150);
-        textArea.getStyleClass().add("annotation-pvu");
+        //textArea.getStyleClass().add("annotation-pvu");
 
         Label callLabel = new Label("Registrazione Chiamate");
-        callLabel.getStyleClass().add("annotation-label");
         ListView<AnnotationPane> annotationArea = new ListView<>();
         annotationArea.getStyleClass().add("annotation-list");
         annotationArea.setMinHeight(200);
+
 
         // Recupero annotazioni dal database
         annotations = dbManager.getAnnotationsForClient(client);
@@ -73,7 +69,19 @@ public class ClientAnnotationView extends VBox {
             }
         });
 
-        this.getChildren().addAll(titleLabel, pvuLabel, textArea, callLabel, annotationArea);
+        VBox pvuBox = new VBox(pvuLabel, textArea);
+        VBox annotationBox = new VBox(callLabel, annotationArea);
+        SplitPane splitPane = new SplitPane(pvuBox, annotationBox);
+        splitPane.setOrientation(Orientation.VERTICAL);
+        splitPane.setDividerPositions(0.4);
+        VBox.setVgrow(splitPane, Priority.ALWAYS);
+        VBox.setVgrow(textArea, Priority.ALWAYS);
+        VBox.setVgrow(annotationArea, Priority.ALWAYS);
+
+        this.getChildren().addAll(splitPane);
+        this.getStyleClass().add("client-info-view");
+        pvuBox.getStyleClass().add("information-group");
+        annotationBox.getStyleClass().add("information-group");
         this.getStyleClass().add("annotation-view");
     }
 

@@ -1,4 +1,4 @@
-package orodent.clientrelationmanager.controller.main.buttons.searchclient.filter;
+package orodent.clientrelationmanager.controller.filter;
 
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
 import orodent.clientrelationmanager.model.Client;

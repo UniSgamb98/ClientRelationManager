@@ -8,38 +8,16 @@ import javafx.scene.Node;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import orodent.clientrelationmanager.controller.LoginController;
-import orodent.clientrelationmanager.controller.main.buttons.PrintConfigController;
-import orodent.clientrelationmanager.controller.main.buttons.ReportController;
-import orodent.clientrelationmanager.controller.main.buttons.ShowCallsController;
-import orodent.clientrelationmanager.controller.main.buttons.newclient.NewClientController;
-import orodent.clientrelationmanager.controller.main.buttons.searchclient.SearchClientController;
 import orodent.clientrelationmanager.model.App;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.view.mainview.HotBarView;
 import orodent.clientrelationmanager.view.mainview.MainView;
+import orodent.clientrelationmanager.view.searchclient.ClientDetailView;
 import orodent.clientrelationmanager.view.searchclient.SearchClientView;
 
 public class MainController {
-    private final MainView mainView;
-    private final App app;
-
-    private final NewClientController newClientController;
-    private final SearchClientController searchClientController;
-    private final ReportController reportController;
-    private final ShowCallsController showCallsController;
-    private final PrintConfigController printConfigController;
-
-
-
-    public MainController(App app, MainView mainView) {
-        newClientController = new NewClientController(app.getDbManager(), this);
-        searchClientController = new SearchClientController(app.getDbManager(), this);
-        reportController = new ReportController(app.getDbManager(), this);
-        showCallsController = new ShowCallsController(app.getDbManager(), this);
-        printConfigController = new PrintConfigController();
-        this.app = app;
-        this.mainView = mainView;
-    }
+    private static final MainView mainView = new MainView();
+    private static final App app = new App();
 
     /**
      * Imposta la vista centrale della MainView.
@@ -47,7 +25,7 @@ public class MainController {
      */
     private void setCenterView(Node view) {
         mainView.setCenter(view);
-        resizeWindow(1200,800);
+        resizeWindow(1135,800);
     }
 
     /**
@@ -56,6 +34,7 @@ public class MainController {
      */
     public void showClientPage(Client client) {
         SearchClientView searchClientView = new SearchClientView(this, app.getDbManager());
+        ClientDetailView clientDetailView = new ClientDetailView(client, null);
         searchClientView.showClientDetail(client);
         showView(searchClientView);
     }
@@ -110,11 +89,6 @@ public class MainController {
      */
     public void showHotBar() {
         HotBarView hotBarView = new HotBarView();
-        hotBarView.setAddClientEvent(newClientController);
-        hotBarView.setSearchClientEvent(searchClientController);
-        hotBarView.setReportEvent(reportController);
-        hotBarView.setCallsEvent(showCallsController);
-        hotBarView.setPrintConfigEvent(printConfigController);
         mainView.setLeft(hotBarView);
         hotBarView.animateEntrance();
     }
@@ -124,8 +98,8 @@ public class MainController {
      */
     public void showLoginView() {
         // Crea il controller della LoginView e ottieni la view
-        LoginController loginController = new LoginController(app, this);
-        setCenterView(loginController.getView());
+        LoginController loginController = new LoginController(app);
+        showView(loginController.getView());
     }
 
     /**
@@ -134,6 +108,18 @@ public class MainController {
      */
     public void showView(Node newView) {
         setCenterView(newView);
+    }
+
+    public MainView getMainView(){
+        return mainView;
+    }
+
+    public void setPrimaryStage(Stage primaryStage) {
+        app.setPrimaryStage(primaryStage);
+    }
+
+    public App getApp(){
+        return app;
     }
 
     // Altri metodi possono essere aggiunti per coordinare operazioni globali,

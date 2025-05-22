@@ -21,13 +21,13 @@ import java.util.List;
 import java.util.Objects;
 
 public class ShowCallsController implements EventHandler<ActionEvent> {
-    private final DBManagerInterface dbManager;
+    private final DBManagerInterface dbInterface;
     private Stage stage;
     private final MainController mainController;
 
-    public ShowCallsController(DBManagerInterface dbManagerInterface, MainController mainController) {
-        this.dbManager = dbManagerInterface;
-        this.mainController = mainController;
+    public ShowCallsController() {
+        mainController = new MainController();
+        dbInterface = mainController.getApp().getDbManager();
     }
 
     @Override
@@ -53,7 +53,7 @@ public class ShowCallsController implements EventHandler<ActionEvent> {
 
         // Metodo per aggiornare la ListView
         Runnable updateList = () -> {
-            List<Client> clients = dbManager.getClientWhere("PROSSIMA_CHIAMATA = " + Date.valueOf(datePicker.getValue()));
+            List<Client> clients = dbInterface.getClientWhere("PROSSIMA_CHIAMATA = " + Date.valueOf(datePicker.getValue()));
             if (clients.isEmpty()) {
                 emptyLabel.setVisible(true);
             } else {

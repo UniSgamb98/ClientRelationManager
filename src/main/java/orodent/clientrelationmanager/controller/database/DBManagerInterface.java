@@ -2,7 +2,6 @@ package orodent.clientrelationmanager.controller.database;
 
 import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
-import orodent.clientrelationmanager.model.enums.Business;
 
 import java.util.List;
 
@@ -36,11 +35,10 @@ public interface DBManagerInterface {
      */
     List<Client> searchClient(String s);
 
-    List<String> getAllCountries();
-
-    List<Business> getAllBusiness();
-
-    List<String> getAllOperators();
-
-    List<String> getAllRagioniSociali();
+    /**
+     * Restituisce una lista di tutti i valori distinti salvati in database
+     * @param tableColumn la colonna del database
+     * @return List
+     */
+    List<String> getAllValuesFromCustomerColumn(String tableColumn);
 }

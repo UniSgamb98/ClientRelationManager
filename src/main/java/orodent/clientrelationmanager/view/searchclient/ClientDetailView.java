@@ -1,10 +1,11 @@
 package orodent.clientrelationmanager.view.searchclient;
 
 import javafx.scene.control.*;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
+import orodent.clientrelationmanager.controller.ClientFormatter;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.controller.main.buttons.ClientInfoController;
 import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.App;
@@ -14,6 +15,7 @@ import orodent.clientrelationmanager.view.clientinfo.ClientInfoView;
 import orodent.clientrelationmanager.view.mainview.AnnotationEditorStage;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class ClientDetailView extends BorderPane {
     DBManagerInterface dbManagerInterface;
@@ -24,8 +26,8 @@ public class ClientDetailView extends BorderPane {
     ClientAnnotationView clientAnnotationView;
 
 
-    public ClientDetailView(Client client, DBManagerInterface dbManagerInterface, Runnable onBack) {
-        this.dbManagerInterface = dbManagerInterface;
+    public ClientDetailView(Client client, Runnable onBack) {
+        dbManagerInterface = new MainController().getApp().getDbManager();
         this.client = client;
 
 
@@ -35,40 +37,59 @@ public class ClientDetailView extends BorderPane {
         HBox header = new HBox(titleLabel);
         header.getStyleClass().add("header");
 
-        // Right: ClientAnnotationView con le informazioni sulle chiamate
+        // Center: ClientAnnotationView con le informazioni sulle chiamate
         clientAnnotationView = new ClientAnnotationView(client, dbManagerInterface);
         clientAnnotationView.setOnUpdate(this::update);
 
-        // Center: ClientInfoView con le informazioni del cliente
+        // Left: ClientInfoView con le informazioni del cliente
         clientInfoView = new ClientInfoView(client);
         clientInfoView.getStyleClass().add("client-info-view");
-        makeCallButton = new Button("Registra Chiamata");
-        makeCallButton.getStyleClass().add("make-call-button");
-        makeCallButton.setOnAction(event -> showNewAnnotationStage());
         clientInfoController = new ClientInfoController(client, clientInfoView);
         clientInfoView.setOnKeyPressed(clientInfoController);   //Ctrl + H to show developer info
-        VBox vBox = new VBox(clientInfoView, makeCallButton);
 
-        // Footer: pulsanti "Indietro" e "Salva modifiche" allineati a destra
+        // Footer: pulsanti "Indietro" e "Salva modifiche" allineati a destra. Make call allineato a sinistra
         Button backButton = new Button("INDIETRO");
         backButton.setOnAction(e -> onBack.run());
         Button saveButton = new Button("SALVA MODIFICHE");
         saveButton.setOnAction(e -> onSave());
+        makeCallButton = new Button("Registra Chiamata");
+        //makeCallButton.getStyleClass().add("make-call-button");
+        makeCallButton.setOnAction(event -> showNewAnnotationStage());
+        BorderPane bottom = new BorderPane();
         HBox footer = new HBox(10, backButton, saveButton);
-        footer.getStyleClass().add("footer");
+        bottom.getStyleClass().add("footer");
+        bottom.setRight(footer);
+        bottom.setLeft(makeCallButton);
 
         // Configurazione del layout BorderPane
         this.setTop(header);
-        this.setCenter(vBox);
-        this.setBottom(footer);
+        this.setLeft(clientInfoView);
+        this.setBottom(bottom);
         this.setRight(clientAnnotationView);
         this.getStyleClass().add("client-detail-view");
+
+        //Easter egg
+        Image image = new Image(Objects.requireNonNull(getClass().getResource("/images/Kilroy.png")).toExternalForm());
+        BackgroundSize backgroundSize = new BackgroundSize(
+                100, 100, true, true, true, false
+        );
+        BackgroundImage backgroundImage = new BackgroundImage(
+                image,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER,
+                backgroundSize
+        );
+        StackPane center = new StackPane();
+        center.setBackground(new Background(backgroundImage));
+        this.setCenter(center);
     }
 
     private void onSave(){
         client = clientInfoController.getClient();
         client.set(ClientField.PVU, clientAnnotationView.getPvuText());
-        dbManagerInterface.saveClientChanges(client);
+        ClientFormatter formatter = new ClientFormatter(client);
+        if (formatter.isCorrectlyFormatted(false))   dbManagerInterface.saveClientChanges(client);
     }
 
     private void showNewAnnotationStage() {

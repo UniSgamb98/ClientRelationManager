@@ -6,37 +6,34 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 import orodent.clientrelationmanager.controller.main.buttons.PrintConfigController;
+import orodent.clientrelationmanager.controller.main.buttons.PrintImportController;
 import orodent.clientrelationmanager.controller.main.buttons.ReportController;
 import orodent.clientrelationmanager.controller.main.buttons.ShowCallsController;
-import orodent.clientrelationmanager.controller.main.buttons.newclient.NewClientController;
+import orodent.clientrelationmanager.controller.main.buttons.NewClientController;
 import orodent.clientrelationmanager.controller.main.buttons.searchclient.SearchClientController;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.List;
-import java.util.Map;
-
 public class HotBarView extends VBox {
-    private final Button addButton;
-    private final Button searchButton;
-    private final Button reportButton;
-    private final Button callsButton;
-    private final Button printConfigButton;
 
     public HotBarView() {
-        // Creazione bottoni
-        addButton = new Button("➕ Aggiungi");
-        searchButton = new Button("🔍 Cerca");
-        reportButton = new Button("📊 Report");
-        callsButton = new Button("📞 Chiamate");
-        printConfigButton = new Button("Stampa Config");
+        Button addButton = new Button("➕ Aggiungi");
+        Button searchButton = new Button("🔍 Cerca");
+        Button reportButton = new Button("📊 Report");
+        Button callsButton = new Button("📞 Chiamate");
+        Button printConfigButton = new Button("Stampa Config");
+        Button printImportForDB = new Button("Stampa import.txt");
+
+        addButton.setOnAction(new NewClientController());
+        searchButton.setOnAction(new SearchClientController());
+        reportButton.setOnAction(new ReportController());
+        callsButton.setOnAction(new ShowCallsController());
+        printConfigButton.setOnAction(new PrintConfigController());
+        printImportForDB.setOnAction(new PrintImportController());
 
         // Aggiunta dei bottoni alla barra
-        getChildren().addAll(addButton, searchButton, reportButton, callsButton, printConfigButton);
+        getChildren().addAll(addButton, searchButton, reportButton, callsButton, printConfigButton, printImportForDB);
 
         // Stile dei bottoni
-        for (Button button : new Button[]{addButton, searchButton, reportButton, callsButton, printConfigButton}) {
+        for (Button button : new Button[]{addButton, searchButton, reportButton, callsButton, printConfigButton, printImportForDB}) {
             button.getStyleClass().add("hotbar-button");
         }
 
@@ -60,28 +57,5 @@ public class HotBarView extends VBox {
         slideIn.play();
         this.setOpacity(1);
         slideIn.setOnFinished(e -> this.getStyleClass().add("hotbar-visible"));
-    }
-
-    public void setAddClientEvent(NewClientController newClientController) {
-        addButton.setOnAction(newClientController);
-    }
-
-    public void setSearchClientEvent(SearchClientController searchClientController) {
-        searchButton.setOnAction(searchClientController);
-    }
-
-    public void setReportEvent(ReportController reportController) {
-        reportButton.setOnAction(reportController);
-    }
-
-    public void setCallsEvent(ShowCallsController callsController) {
-        callsButton.setOnAction(callsController);
-    }
-
-    /**
-     * Scrive un fac-simile del file di configurazione
-     */
-    public void setPrintConfigEvent(PrintConfigController printConfigController) {
-        printConfigButton.setOnAction(printConfigController);
     }
 }

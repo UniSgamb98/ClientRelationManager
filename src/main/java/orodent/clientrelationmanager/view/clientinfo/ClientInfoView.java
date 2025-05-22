@@ -10,7 +10,6 @@ import orodent.clientrelationmanager.controller.popup.AutoCompletePopup;
 import orodent.clientrelationmanager.model.App;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.ClientField;
-import orodent.clientrelationmanager.model.enums.Business;
 
 import java.time.LocalDate;
 import java.util.UUID;
@@ -31,7 +30,7 @@ public class ClientInfoView extends VBox {
     private final DatePicker ultimaChiamata;
     private final DatePicker prossimaChiamata;
     private final TextField sitoWeb;
-    private final ChoiceBox<Business> tipoCliente;
+    private final ChoiceBox<String> tipoCliente;
 
     private final DatePicker dataAcquisizione;
     private final ChoiceBox<String> operatoreAssegnato;
@@ -58,10 +57,10 @@ public class ClientInfoView extends VBox {
         prossimaChiamata = new DatePicker(client.getField(ClientField.PROSSIMA_CHIAMATA, java.time.LocalDate.class));
         sitoWeb = new TextField((String) client.get(ClientField.SITO_WEB));
         tipoCliente = new ChoiceBox<>();
-        tipoCliente.getItems().addAll(Business.values());
-        tipoCliente.setValue(client.getField(ClientField.BUSINESS, Business.class));
+        tipoCliente.getItems().addAll(App.getConfigs().get("BUSINESS"));
+        tipoCliente.setValue(client.getField(ClientField.BUSINESS, String.class));
         operatoreAssegnato = new ChoiceBox<>();
-        operatoreAssegnato.getItems().addAll(App.configs.get("operatori"));
+        operatoreAssegnato.getItems().addAll(App.getConfigs().get("OPERATORE_ASSEGNATO"));
         operatoreAssegnato.setValue(client.getField(ClientField.OPERATORE_ASSEGNATO, String.class));
         information = new CheckBox();
         information.setSelected(client.getField(ClientField.INFORMATION, Boolean.class));
@@ -140,11 +139,12 @@ public class ClientInfoView extends VBox {
 
         //Popups
         ObservableList<String> countryNames = FXCollections.observableArrayList();
-        countryNames.addAll(App.configs.get("paesi"));
+        countryNames.addAll(App.getConfigs().get("PAESE"));
         new AutoCompletePopup(paese, countryNames);
 
 
         this.getStyleClass().add("client-info-view");
+        this.setMinWidth(415);
         aziendaInfos.getStyleClass().add("information-group");
         personaInfos.getStyleClass().add("information-group");
         titolareInfos.getStyleClass().add("information-group");
@@ -211,7 +211,7 @@ public class ClientInfoView extends VBox {
     public LocalDate getProssimaChiamata() {
         return prossimaChiamata.getValue();
     }
-    public Business getTipoCliente() {
+    public String getTipoCliente() {
         return tipoCliente.getValue();
     }
     public LocalDate getDataAcquisizione() {

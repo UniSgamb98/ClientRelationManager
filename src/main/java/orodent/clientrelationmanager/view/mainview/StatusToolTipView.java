@@ -12,7 +12,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
-import orodent.clientrelationmanager.model.App;
+import orodent.clientrelationmanager.controller.database.DBManagerInterface;
+import orodent.clientrelationmanager.controller.main.MainController;
 
 public class StatusToolTipView extends HBox {
     private final Circle light;
@@ -42,18 +43,18 @@ public class StatusToolTipView extends HBox {
     }
 
     private void commuteDatabaseConnection() {
-        if (isGreen)
-            updateStatusLabel("Disconnessione in corso...");
-        else
-            updateStatusLabel("Connessione in corso...");
+        if (isGreen)    updateStatusLabel("Disconnessione in corso...");
+        else    updateStatusLabel("Connessione in corso...");
+
         // Esegui le operazioni pesanti in background
         Task<Void> task = new Task<>() {
             @Override
             protected Void call() {
-                if (App.getDBManager().isAlive()) {
-                    App.getDBManager().close();
+                DBManagerInterface dbInterface = new MainController().getApp().getDbManager();
+                if (dbInterface.isAlive()) {
+                    dbInterface.close();
                 } else {
-                    App.getDBManager().open();
+                    dbInterface.open();
                 }
                 return null;
             }
