@@ -40,7 +40,6 @@ public class ClientDetailView extends BorderPane {
 
         // Right: ClientAnnotationView con le informazioni sulle chiamate
         clientAnnotationView = new ClientAnnotationView(client, dbManagerInterface);
-        clientAnnotationView.setOnUpdate(this::update);
 
         // Left: ClientInfoView con le informazioni del cliente
         clientInfoView = new ClientInfoView(client);
@@ -54,7 +53,7 @@ public class ClientDetailView extends BorderPane {
         Button saveButton = new Button("SALVA MODIFICHE");
         saveButton.setOnAction(e -> onSave());
         makeCallButton = new Button("Registra Chiamata");
-        makeCallButton.setOnAction(event -> showNewAnnotationStage());  //TODO DA SISTEMARE
+        makeCallButton.setOnAction(event -> showNewAnnotationStage());
         BorderPane bottom = new BorderPane();
         HBox footer = new HBox(10, backButton, saveButton);
         bottom.getStyleClass().add("footer");
@@ -108,6 +107,8 @@ public class ClientDetailView extends BorderPane {
     }
 
     private void showNewAnnotationStage() {
+        client = clientInfoController.getClient();
+        client.set(ClientField.PVU, clientAnnotationView.getPvuText());
         // Supponiamo di avere un oggetto 'annotation' da modificare.
         AnnotationEditorStage editor = new AnnotationEditorStage(new Annotation(LocalDate.now(), mainController.getApp().getWorkingOperator(), null, null), "Registra Nuova Chiamata");
         editor.showAndWait();
@@ -116,26 +117,14 @@ public class ClientDetailView extends BorderPane {
             Annotation updatedAnnotation = editor.getAnnotation();
             // Procedi con l'aggiornamento sul database o altre operazioni.
             dbManagerInterface.saveAnnotation(updatedAnnotation, client.getUuid().toString());
-            dbManagerInterface.saveClientAfterAnnotationChange(updatedAnnotation, client.getUuid().toString());
-            client = dbManagerInterface.getClientWhere(client.getUuid().toString()).getFirst();
-            update();
+
+            //Aggiorno il client visualizzato (ancora da salvare in DB) con le nuove info della registrazione chiamata
+            client.set(ClientField.ULTIMA_CHIAMATA, updatedAnnotation.getCallDate());
+            client.set(ClientField.VOLTE_CONTATTATI, (Integer) client.get(ClientField.VOLTE_CONTATTATI) + 1);
+            client.set(ClientField.PROSSIMA_CHIAMATA, updatedAnnotation.getNextCallDate());
+
+            //Refresh della pagina
+            mainController.showClientPage(client);
         }
-    }
-
-    private void update(){
-        client = dbManagerInterface.getClientWhere(client.getUuid().toString()).getFirst();
-        updateClientInfoView();
-        updateClientAnnotationView();
-    }
-
-    private void updateClientInfoView() {
-        clientInfoView = new ClientInfoView(client);
-        this.setCenter(new VBox(clientInfoView, makeCallButton));
-    }
-
-    private void updateClientAnnotationView(){
-        clientAnnotationView = new ClientAnnotationView(client, dbManagerInterface);
-        clientAnnotationView.setOnUpdate(this::update);
-        this.setRight(clientAnnotationView);
     }
 }

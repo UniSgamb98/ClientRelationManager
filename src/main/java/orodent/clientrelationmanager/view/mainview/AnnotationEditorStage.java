@@ -44,7 +44,7 @@ public class AnnotationEditorStage extends Stage {
         contentArea.setWrapText(true);
 
         nextCallDatePicker = new DatePicker();
-        nextCallDatePicker.setPromptText("(Opzionale)");
+        nextCallDatePicker.setPromptText("(Obbligatoria)");
         if (annotation.getNextCallDate() != null) {
             nextCallDatePicker.setValue(annotation.getNextCallDate());
         }
@@ -53,7 +53,6 @@ public class AnnotationEditorStage extends Stage {
         informationCheckBox = new CheckBox("Information");
         catalogCheckBox = new CheckBox("Catalog");
         sampleCheckBox = new CheckBox("Sample");
-        // Imposta i valori iniziali se disponibili (assumiamo che i getter esistano)
         informationCheckBox.setSelected(annotation.getInformation());
         catalogCheckBox.setSelected(annotation.getCatalog());
         sampleCheckBox.setSelected(annotation.getSample());
@@ -81,6 +80,7 @@ public class AnnotationEditorStage extends Stage {
         Scene scene = new Scene(layout, 400, 450);
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/annotation-editor.css")).toExternalForm());
         setScene(scene);
+        contentArea.requestFocus();
     }
 
     private HBox getButtonBox() {
@@ -88,12 +88,12 @@ public class AnnotationEditorStage extends Stage {
         Button cancelButton = new Button("Annulla");
 
         saveButton.setOnAction(e -> {
-            if (operatorComboBox.getValue() == null || contentArea.getText().trim().isEmpty()) {
+            if (contentArea.getText() == null || nextCallDatePicker.getValue() == null) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Errore");
                 alert.setHeaderText(null);
-                alert.setContentText("Devi selezionare un operatore e scrivere un contenuto.");
-                alert.show();
+                alert.setContentText("Devi scrivere un contenuto e scegliere una data di richiamo.");
+                alert.showAndWait();
                 return;
             }
 

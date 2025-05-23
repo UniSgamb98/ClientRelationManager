@@ -7,6 +7,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.ClientField;
@@ -18,7 +19,6 @@ public class ClientAnnotationView extends VBox {
     List<Annotation> annotations;
     TextArea textArea;
     ObservableList<AnnotationPane> annotationItems;
-    Runnable onUpdate;
 
     public ClientAnnotationView(Client client, DBManagerInterface dbManager) {
         Label pvuLabel = new Label("PVU Aziendali");
@@ -54,16 +54,12 @@ public class ClientAnnotationView extends VBox {
                         Annotation updatedAnnotation = editor.getAnnotation();
                         // Procedi con l'aggiornamento sul database o altre operazioni.
                         dbManager.updateAnnotation(updatedAnnotation, client.getUuid().toString());
-                        dbManager.saveClientAfterAnnotationChange(updatedAnnotation, client.getUuid().toString());
-                        annotations = dbManager.getAnnotationsForClient(client);
-                        annotationItems = FXCollections.observableArrayList();
 
-                        for (Annotation annotation : annotations) {
-                            annotationItems.add(new AnnotationPane(annotation));
-                        }
-                        annotationArea.setItems(annotationItems);
+                        if (updatedAnnotation.getInformation()) client.set(ClientField.INFORMATION, true);
+                        if (updatedAnnotation.getCatalog()) client.set(ClientField.CATALOG, true);
+                        if (updatedAnnotation.getSample()) client.set(ClientField.SAMPLE, true);
 
-                        onUpdate.run();
+                        new MainController().showClientPage(client);
                     }
                 }
             }
@@ -83,10 +79,6 @@ public class ClientAnnotationView extends VBox {
         pvuBox.getStyleClass().add("information-group");
         annotationBox.getStyleClass().add("information-group");
         this.getStyleClass().add("annotation-view");
-    }
-
-    public void setOnUpdate(Runnable onUpdate) {
-        this.onUpdate = onUpdate;
     }
 
     public String getPvuText() {

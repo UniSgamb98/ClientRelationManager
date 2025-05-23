@@ -296,8 +296,8 @@ public class DBManager implements DBManagerInterface{
 
     @Override
     public void saveClientAfterAnnotationChange(Annotation annotation, String clientID) {
-        String sql = "UPDATE CUSTOMERS SET ULTIMA_CHIAMATA = ?, PROSSIMA_CHIAMATA = ?, VOLTE_CONTATTATI = VOLTE_CONTATTATI + 1 " +
-                "WHERE ID = ?";
+        String sql = "UPDATE CUSTOMERS SET ULTIMA_CHIAMATA = ?, " + (annotation.getNextCallDate() != null ? "PROSSIMA_CHIAMATA = ?, " : "" ) + "VOLTE_CONTATTATI = VOLTE_CONTATTATI + 1 " +
+                "WHERE ID = '" + clientID + "'";
 
         try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
             stmt.setDate(1, java.sql.Date.valueOf(annotation.getCallDate()));
@@ -310,7 +310,6 @@ public class DBManager implements DBManagerInterface{
             if (annotation.getCatalog()) setCatalog(clientID);
             if (annotation.getSample()) setSample(clientID);
 
-            stmt.setString(3, clientID);
             stmt.executeUpdate();
         } catch (SQLException e) {
             printSQLException(e);
