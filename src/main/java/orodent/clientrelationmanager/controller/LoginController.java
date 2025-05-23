@@ -26,7 +26,7 @@ public class LoginController {
         // Creazione dei controlli UI
         Label operatorLabel = new Label("Operator: ");
         this.operatorChoiceBox = new ChoiceBox<>();
-        operatorChoiceBox.getItems().addAll(App.getConfigs().get("OPERATORE_ASSEGNATO"));
+        operatorChoiceBox.getItems().addAll(mainController.getApp().getConfigs().get("OPERATORE_ASSEGNATO"));
 
         Button loginButton = new Button("LogIn");
 
@@ -35,7 +35,7 @@ public class LoginController {
 
             if (selectedOperator != null) {
                 logger.info(selectedOperator + " has logged in");
-                app.setOperator(selectedOperator);
+                app.setWorkingOperator(selectedOperator);
 
                 // Dopo il login, mostra la HotBar sul lato sinistro
                 mainController.showHotBar();

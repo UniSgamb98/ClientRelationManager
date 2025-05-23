@@ -7,11 +7,13 @@ import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import orodent.clientrelationmanager.controller.popup.AutoCompletePopup;
-import orodent.clientrelationmanager.model.App;
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.ClientField;
 
 import java.time.LocalDate;
+import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 public class ClientInfoView extends VBox {
@@ -41,6 +43,7 @@ public class ClientInfoView extends VBox {
     private final InformationGroup developerInfos;
 
     public ClientInfoView(Client client) {
+        Map<String, List<String>> config = new MainController().getApp().getConfigs();
         ragioneSociale = new TextField((String) client.get(ClientField.RAGIONE_SOCIALE));
         personaRiferimento = new TextField((String) client.get(ClientField.PERSONA_RIFERIMENTO));
         emailRiferimento = new TextField((String) client.get(ClientField.EMAIL_RIFERIMENTO));
@@ -57,10 +60,10 @@ public class ClientInfoView extends VBox {
         prossimaChiamata = new DatePicker(client.getField(ClientField.PROSSIMA_CHIAMATA, java.time.LocalDate.class));
         sitoWeb = new TextField((String) client.get(ClientField.SITO_WEB));
         tipoCliente = new ChoiceBox<>();
-        tipoCliente.getItems().addAll(App.getConfigs().get("BUSINESS"));
+        tipoCliente.getItems().addAll(config.get("BUSINESS"));
         tipoCliente.setValue(client.getField(ClientField.BUSINESS, String.class));
         operatoreAssegnato = new ChoiceBox<>();
-        operatoreAssegnato.getItems().addAll(App.getConfigs().get("OPERATORE_ASSEGNATO"));
+        operatoreAssegnato.getItems().addAll(config.get("OPERATORE_ASSEGNATO"));
         operatoreAssegnato.setValue(client.getField(ClientField.OPERATORE_ASSEGNATO, String.class));
         information = new CheckBox();
         information.setSelected(client.getField(ClientField.INFORMATION, Boolean.class));
@@ -139,7 +142,7 @@ public class ClientInfoView extends VBox {
 
         //Popups
         ObservableList<String> countryNames = FXCollections.observableArrayList();
-        countryNames.addAll(App.getConfigs().get("PAESE"));
+        countryNames.addAll(config.get("PAESE"));
         new AutoCompletePopup(paese, countryNames);
 
 

@@ -11,17 +11,19 @@ public class ClientFormatter {
     private final Client client;
     private final StatusToolTipController toolTipController;
     private final DBManagerInterface dbManager;
+    private final App app;
 
     public ClientFormatter(Client clientToFormat){
         client = clientToFormat;
         toolTipController = new StatusToolTipController();
-        dbManager = new MainController().getApp().getDbManager();
+        app = new MainController().getApp();
+        dbManager = app.getDbManager();
     }
 
     public boolean isCorrectlyFormatted(boolean isNewClient) {
         boolean ret = true;
 
-        if (!App.getConfigs().get("PAESE").contains(client.get(ClientField.PAESE))) {
+        if (!app.getConfigs().get("PAESE").contains(client.get(ClientField.PAESE))) {
             toolTipController.update("Paese inserito non figura come idoneo da configurazione");
             ret = false;
         }

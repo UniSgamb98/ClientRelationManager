@@ -1,7 +1,7 @@
 package orodent.clientrelationmanager.controller.filter;
 
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
-import orodent.clientrelationmanager.model.App;
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.model.searchfilter.Filter;
 import orodent.clientrelationmanager.view.searchclient.FilterGroupView;
 import orodent.clientrelationmanager.view.searchclient.FiltersView;
@@ -27,7 +27,7 @@ public class FilterGroupController {
 
     public void add() {
         //preparo la lista dei valori dei filtri con i valori in config.txt e i valori già presenti in database
-        List<String> filterValues = new ArrayList<>(App.getConfigs().get(filterName));
+        List<String> filterValues = new ArrayList<>(new MainController().getApp().getConfigs().get(filterName));
         List<String> valuesInDatabase = dbManagerInterface.getAllValuesFromCustomerColumn(filterName);
         for (String i : valuesInDatabase){
             if (!filterValues.contains(i)) filterValues.add(i);

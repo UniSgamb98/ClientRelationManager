@@ -1,6 +1,7 @@
 package orodent.clientrelationmanager.controller.filter;
 
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.view.searchclient.SearchResultView;
 
@@ -33,6 +34,7 @@ public class FilterSectionController {
             }
         }
         list = dbManagerInterface.getClientWhere(sql.toString());
+        new MainController().saveListFromFilteredSearch(list);
 
         //aggiorno la view
         if (list.isEmpty() && someFilterIsActive()){

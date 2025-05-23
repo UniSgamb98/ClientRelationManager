@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import orodent.clientrelationmanager.controller.main.MainController;
-import orodent.clientrelationmanager.model.App;
 
 import java.io.*;
 import java.util.*;
@@ -18,6 +17,7 @@ public class Main extends Application {
         System.setOut(stream);
 
         MainController mainController = new MainController();
+        Map<String, List<String>> config = mainController.getApp().getConfigs();
 
         //Lettura file configurazione
         String percorsoFile = "configs/config.txt"; // Cambia percorso
@@ -33,10 +33,10 @@ public class Main extends Application {
 
                 if (linea.startsWith("#")) {
                     sezioneCorrente = linea.substring(1);
-                    App.getConfigs().putIfAbsent(sezioneCorrente, new ArrayList<>());
+                    config.putIfAbsent(sezioneCorrente, new ArrayList<>());
                 } else if (linea.startsWith("-") && sezioneCorrente != null) {
                     String valore = linea.substring(1).strip();
-                    App.getConfigs().get(sezioneCorrente).add(valore);
+                    config.get(sezioneCorrente).add(valore);
                 }
             }
         } catch (IOException e) {
@@ -45,12 +45,12 @@ public class Main extends Application {
         }
 
         // Aggiungo alle sezioni richieste le sezioni elencate nella sezione filtri
-        sezioniRichieste.addAll(App.getConfigs().get("filtri"));
+        sezioniRichieste.addAll(config.get("filtri"));
 
         // Controllo che tutte le sezioni richieste siano presenti
         List<String> mancanti = new ArrayList<>();
         for (String richiesta : sezioniRichieste) {
-            if (!App.getConfigs().containsKey(richiesta)) {
+            if (!config.containsKey(richiesta)) {
                 mancanti.add(richiesta);
             }
         }
@@ -74,8 +74,6 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
-
 
     public static void main(String[] args) {
         launch();

@@ -187,11 +187,8 @@ public class DBManager implements DBManagerInterface{
             LocalDate dataAcquisizione = client.getField(ClientField.DATA_ACQUISIZIONE, LocalDate.class);
             stmt.setDate(16, dataAcquisizione != null ? Date.valueOf(dataAcquisizione) : null);
 
-            String business = client.getField(ClientField.BUSINESS, String.class);
-            stmt.setString(17, business);
-
-            String operator = client.getField(ClientField.OPERATORE_ASSEGNATO, String.class);
-            stmt.setString(18, operator);
+            stmt.setString(17, (String) client.get(ClientField.BUSINESS));
+            stmt.setString(18, (String) client.get(ClientField.OPERATORE_ASSEGNATO));
 
             stmt.setBoolean(19, client.getField(ClientField.INFORMATION, Boolean.class));
             stmt.setBoolean(20, client.getField(ClientField.CATALOG, Boolean.class));

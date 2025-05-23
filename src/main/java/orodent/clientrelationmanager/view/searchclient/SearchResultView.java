@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListView;
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.EmptyClient;
 
@@ -33,13 +34,27 @@ public class SearchResultView extends ListView<DisplayableClient> {
             }
         });
         this.setItems(displayableClients);
+
+        // Gestione del doppio click sulla ListView
+        this.setOnMouseClicked(event -> {
+            if (event.getClickCount() == 2) {
+                DisplayableClient selected = this.getSelectionModel().getSelectedItem();
+                if (selected != null) {
+                    // Mostra la view di dettaglio tramite il metodo della SearchClientView
+                    MainController mainController = new MainController();
+                    mainController.showClientPage(mainController.getApp().getDbManager().getClientWhere("ID = '" + selected.getClient().getUuid() +"'").getFirst());
+                }
+            }
+        });
     }
 
+    // Usata per mostrare i clienti nella lista passata come parametro
     public void setClients(List<Client> clients) {
         this.clients.clear();
         this.clients.addAll(clients); // Questo scatenerà il listener automaticamente
     }
 
+    // Viene chiamata quando i filtri hanno escluso tutti i clienti e non ce ne sono da mostrare
     public void showEmptyList() {
         this.clients.clear();
         clients.add(new EmptyClient());

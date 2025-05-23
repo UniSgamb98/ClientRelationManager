@@ -11,7 +11,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import orodent.clientrelationmanager.controller.database.DBManagerInterface;
 import orodent.clientrelationmanager.controller.main.MainController;
-import orodent.clientrelationmanager.controller.main.buttons.searchclient.ClientSelectionController;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.view.searchclient.SearchResultView;
 
@@ -23,11 +22,9 @@ import java.util.Objects;
 public class ShowCallsController implements EventHandler<ActionEvent> {
     private final DBManagerInterface dbInterface;
     private Stage stage;
-    private final MainController mainController;
 
     public ShowCallsController() {
-        mainController = new MainController();
-        dbInterface = mainController.getApp().getDbManager();
+        dbInterface = new MainController().getApp().getDbManager();
     }
 
     @Override
@@ -49,7 +46,6 @@ public class ShowCallsController implements EventHandler<ActionEvent> {
 
         // ListView con DisplayableClient e controller per la selezione di un cliente
         SearchResultView clientListView = new SearchResultView();
-        new ClientSelectionController(mainController, clientListView);
 
         // Metodo per aggiornare la ListView
         Runnable updateList = () -> {

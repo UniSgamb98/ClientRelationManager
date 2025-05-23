@@ -8,33 +8,39 @@ import java.util.List;
 import java.util.Map;
 
 public class App{
-    private static String operator;
-    private static DBManager dbManager;
-    private static Stage primaryStage;
-    private static Map<String, List<String>> configs;
+    private String operator;
+    private final DBManager dbManager;
+    private Stage primaryStage;
+    private final Map<String, List<String>> configs;
+    private List<Client> list;
 
 
     public App(){
         dbManager = new DBManager();
         configs = new HashMap<>();
     }
-    public void setOperator(String operator) {
-        App.operator = operator;
+    public void setWorkingOperator(String operator) {
+        this.operator = operator;
     }
-
-    public static Map<String, List<String>> getConfigs(){
+    public Map<String, List<String>> getConfigs(){
         return configs;
     }
-    public static String getWorkingOperator() {
+    public String getWorkingOperator() {
         return operator;
     }
     public DBManager getDbManager() {
         return dbManager;
     }
-    public static Stage getPrimaryStage() {
+    public Stage getPrimaryStage() {
         return primaryStage;
     }
     public void setPrimaryStage(Stage primaryStage) {
-        App.primaryStage = primaryStage;
+        this.primaryStage = primaryStage;
+    }
+    public void setListFromFilteredSearch(List<Client> list) {
+        this.list = list;
+    }
+    public List<Client> getListFromFilteredSearch() {
+        return list;
     }
 }

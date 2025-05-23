@@ -7,7 +7,7 @@ import javafx.scene.layout.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import orodent.clientrelationmanager.model.Annotation;
-import orodent.clientrelationmanager.model.App;
+import orodent.clientrelationmanager.controller.main.MainController;
 
 import java.util.Objects;
 
@@ -36,7 +36,7 @@ public class AnnotationEditorStage extends Stage {
         callDatePicker = new DatePicker(annotation.getCallDate());
 
         operatorComboBox = new ComboBox<>();
-        operatorComboBox.getItems().addAll(App.getConfigs().get("OPERATORE_ASSEGNATO"));
+        operatorComboBox.getItems().addAll(new MainController().getApp().getConfigs().get("OPERATORE_ASSEGNATO"));
         operatorComboBox.setValue(annotation.getMadeBy());
 
         contentArea = new TextArea(annotation.getContent());
@@ -129,9 +129,5 @@ public class AnnotationEditorStage extends Stage {
      */
     public Annotation getAnnotation() {
         return annotation;
-    }
-
-    public void setDefaultOperator(String workingOperator) {
-        operatorComboBox.setValue(workingOperator);
     }
 }

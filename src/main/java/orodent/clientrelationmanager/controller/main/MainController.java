@@ -12,8 +12,9 @@ import orodent.clientrelationmanager.model.App;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.view.mainview.HotBarView;
 import orodent.clientrelationmanager.view.mainview.MainView;
-import orodent.clientrelationmanager.view.searchclient.ClientDetailView;
-import orodent.clientrelationmanager.view.searchclient.SearchClientView;
+import orodent.clientrelationmanager.view.clientinfo.ClientDetailView;
+
+import java.util.List;
 
 public class MainController {
     private static final MainView mainView = new MainView();
@@ -33,10 +34,8 @@ public class MainController {
      * @param client Il cliente da mostrare all'utente
      */
     public void showClientPage(Client client) {
-        SearchClientView searchClientView = new SearchClientView(this, app.getDbManager());
-        ClientDetailView clientDetailView = new ClientDetailView(client, null);
-        searchClientView.showClientDetail(client);
-        showView(searchClientView);
+        ClientDetailView clientDetailView = new ClientDetailView(client);
+        showView(clientDetailView);
     }
 
     /**
@@ -45,7 +44,7 @@ public class MainController {
      * @param targetHeight La nuova altezza.
      */
     public void resizeWindow(double targetWidth, double targetHeight) {
-        Stage stage = App.getPrimaryStage();
+        Stage stage = app.getPrimaryStage();
 
         // Raccogli le dimensioni e posizione iniziali
         double initialWidth = stage.getWidth();
@@ -120,6 +119,20 @@ public class MainController {
 
     public App getApp(){
         return app;
+    }
+
+    /**
+     * Questo metodo serve a FilterSectionController per salvare la lista che sta mostrando in SearchResultView
+     */
+    public void saveListFromFilteredSearch(List<Client> list) {
+        app.setListFromFilteredSearch(list);
+    }
+
+    /**
+     * Questo metodo serve alla ClientDetails quando viene premuto il pulsante Indietro per recuperare i clienti che erano visualizzati
+     */
+    public List<Client> getListFromFilteredSearch(){
+        return app.getListFromFilteredSearch();
     }
 
     // Altri metodi possono essere aggiunti per coordinare operazioni globali,

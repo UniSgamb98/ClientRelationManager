@@ -10,7 +10,7 @@ import orodent.clientrelationmanager.controller.main.buttons.PrintImportControll
 import orodent.clientrelationmanager.controller.main.buttons.ReportController;
 import orodent.clientrelationmanager.controller.main.buttons.ShowCallsController;
 import orodent.clientrelationmanager.controller.main.buttons.NewClientController;
-import orodent.clientrelationmanager.controller.main.buttons.searchclient.SearchClientController;
+import orodent.clientrelationmanager.controller.main.buttons.SearchClientController;
 
 public class HotBarView extends VBox {
 

@@ -1,4 +1,4 @@
-package orodent.clientrelationmanager.view.searchclient;
+package orodent.clientrelationmanager.view.clientinfo;
 
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -8,28 +8,29 @@ import orodent.clientrelationmanager.controller.database.DBManagerInterface;
 import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.controller.main.buttons.ClientInfoController;
 import orodent.clientrelationmanager.model.Annotation;
-import orodent.clientrelationmanager.model.App;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.ClientField;
-import orodent.clientrelationmanager.view.clientinfo.ClientInfoView;
 import orodent.clientrelationmanager.view.mainview.AnnotationEditorStage;
+import orodent.clientrelationmanager.view.searchclient.ClientAnnotationView;
+import orodent.clientrelationmanager.view.searchclient.SearchClientView;
 
 import java.time.LocalDate;
 import java.util.Objects;
 
 public class ClientDetailView extends BorderPane {
+    private final MainController mainController;
+    private Client client;
     DBManagerInterface dbManagerInterface;
-    Client client;
     ClientInfoView clientInfoView;
     ClientInfoController clientInfoController;
     Button makeCallButton;
     ClientAnnotationView clientAnnotationView;
 
 
-    public ClientDetailView(Client client, Runnable onBack) {
-        dbManagerInterface = new MainController().getApp().getDbManager();
+    public ClientDetailView(Client client) {
+        mainController = new MainController();
+        dbManagerInterface = mainController.getApp().getDbManager();
         this.client = client;
-
 
         // Header: titolo centrato
         Label titleLabel = new Label("DETTAGLI CLIENTE");
@@ -37,7 +38,7 @@ public class ClientDetailView extends BorderPane {
         HBox header = new HBox(titleLabel);
         header.getStyleClass().add("header");
 
-        // Center: ClientAnnotationView con le informazioni sulle chiamate
+        // Right: ClientAnnotationView con le informazioni sulle chiamate
         clientAnnotationView = new ClientAnnotationView(client, dbManagerInterface);
         clientAnnotationView.setOnUpdate(this::update);
 
@@ -49,12 +50,11 @@ public class ClientDetailView extends BorderPane {
 
         // Footer: pulsanti "Indietro" e "Salva modifiche" allineati a destra. Make call allineato a sinistra
         Button backButton = new Button("INDIETRO");
-        backButton.setOnAction(e -> onBack.run());
+        backButton.setOnAction(e -> onBack());
         Button saveButton = new Button("SALVA MODIFICHE");
         saveButton.setOnAction(e -> onSave());
         makeCallButton = new Button("Registra Chiamata");
-        //makeCallButton.getStyleClass().add("make-call-button");
-        makeCallButton.setOnAction(event -> showNewAnnotationStage());
+        makeCallButton.setOnAction(event -> showNewAnnotationStage());  //TODO DA SISTEMARE
         BorderPane bottom = new BorderPane();
         HBox footer = new HBox(10, backButton, saveButton);
         bottom.getStyleClass().add("footer");
@@ -85,17 +85,31 @@ public class ClientDetailView extends BorderPane {
         this.setCenter(center);
     }
 
+    /**
+     * Salva su database il client che si vede a schermo, dopo aver fatto le verifiche di formattazione
+     */
     private void onSave(){
+        // Raccolgo le informazioni lasciate dall'utente
         client = clientInfoController.getClient();
         client.set(ClientField.PVU, clientAnnotationView.getPvuText());
+
+        // Se è tutto formattato giusto salvo sul database
         ClientFormatter formatter = new ClientFormatter(client);
         if (formatter.isCorrectlyFormatted(false))   dbManagerInterface.saveClientChanges(client);
     }
 
+    /**
+     * Mostra una nuova istanza di SearchClientView ma mostra la lista di clienti visualizzata prima che venisse aperto il dettaglio del cliente
+     */
+    private void onBack(){
+        SearchClientView searchClientView = new SearchClientView();
+        searchClientView.setResultList(mainController.getListFromFilteredSearch());
+        mainController.showView(searchClientView);
+    }
+
     private void showNewAnnotationStage() {
         // Supponiamo di avere un oggetto 'annotation' da modificare.
-        AnnotationEditorStage editor = new AnnotationEditorStage(new Annotation(LocalDate.now(), null, null, null), "Registra Nuova Chiamata");
-        editor.setDefaultOperator(App.getWorkingOperator());
+        AnnotationEditorStage editor = new AnnotationEditorStage(new Annotation(LocalDate.now(), mainController.getApp().getWorkingOperator(), null, null), "Registra Nuova Chiamata");
         editor.showAndWait();
 
         if (editor.isSaved()) {
