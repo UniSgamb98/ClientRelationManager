@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Basiq Dental">
+                        
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-30" durata="2" messaggio="false" newInterest="BLANK" number="1" operatore="VICTORIA" previousInterest="BLANK">hO PARLATO CON LA RECEPTION,  IL RESPONSABILE NON C'è, CONCORDATO DI CHIAMARE IL GIORNO SUCCESSVO. NOME REFERENTE WILM</chiamata>
+                    
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-31" durata="3" messaggio="false" newInterest="BLANK" number="2" operatore="VICTORIA" previousInterest="BLANK">lA RECEPTION MI DICE CHE IL RESPONSABILE SIGNOR WILM è IMPEGNATO IN UNA RIUNIONE DI TORNARE CON LA TELEFONATA NEL POMERIGGIO </chiamata>
+            
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-03" durata="2" messaggio="false" newInterest="INFO" number="3" operatore="VICTORIA" previousInterest="BLANK">La reception, mi dice che non possono passarmi il referente, mi invita di inviare una mail alla posta info</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-10" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="VICTORIA" previousInterest="INFO"/>
+</companyNotes>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="MULTIDENT DENTAL GmbH">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-17" durata="2" messaggio="false" newInterest="BLANK" number="1" operatore="TERESA" previousInterest="BLANK">La responsabile rientra in ufficio domani, riprovo.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-18" durata="2" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="RICHIAMARE">Responsabile (non mi ha fornito il nome) in call, riprovare più tardi. </chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-18" durata="2" messaggio="false" newInterest="LISTINO" number="3" operatore="TERESA" previousInterest="RICHIAMARE">Mandata mail conoscitiva + catalogo</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-25" durata="1" messaggio="false" newInterest="NULLO" number="4" operatore="TERESA" previousInterest="LISTINO">Non comprano direttamente loro da altre aziende perchè sono sotto Dental Union.</chiamata>
+    
+</companyNotes>

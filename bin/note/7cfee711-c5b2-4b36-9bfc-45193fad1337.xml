@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="ARPADENTAL">
+                                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-05" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="INFO">Inviata Mail</chiamata>
+                                                                    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-19" durata="4" messaggio="false" newInterest="INFO" number="2" operatore="HUGO" previousInterest="INFO">il responsabile lab è ammalato , cesar non era in ufficio percio rimando altra pesentazione e apsetto suo feedback</chiamata>
+                                                        
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-15" durata="2" messaggio="false" newInterest="RICHIAMARE" number="3" operatore="HUGO" previousInterest="INFO">chiamare dopo le 11 </chiamata>
+                                            
+
+
+
+
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-15" durata="6" messaggio="false" newInterest="LISTINO" number="4" operatore="HUGO" previousInterest="INFO">molto interessata anche a provare un disco fanno sui 50 dischi mensili invio listino 50%</chiamata>
+                        
+
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="2" data="2024-05-23" durata="6" messaggio="false" newInterest="CAMPIONE" number="5" operatore="HUGO" previousInterest="LISTINO">EOS C3 14 MM IL LABORATORIO VUOLE PROVARE PER METTERE A CONFRONTO CON SYRONA SIAMO ANCHE OK COL PREZZO </chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-27" durata="2" messaggio="false" newInterest="RICHIAMARE" number="6" operatore="HUGO" previousInterest="CAMPIONE">AVVISO TELEFONICAMENTE BELEN PER NUOVO LISTINO STRATEGICO 60% PER NUOVI CLIENTI ESTERI. </chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-10" durata="2" messaggio="false" newInterest="RICHIAMARE" number="7" operatore="HUGO" previousInterest="CAMPIONE">mi fanno sapere appena possibile. </chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-01" durata="3" messaggio="false" newInterest="BLANK" number="8" operatore="HUGO" previousInterest="CAMPIONE">Non hanno ancora fatto la prova perchè stanno terminando dei lavori con lo stock precedente , belen mi avvisa apppena possibile. </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-30" durata="0" messaggio="false" newInterest="NON_TROVATO" number="9" operatore="VICTORIA" previousInterest="CAMPIONE"/>
+</companyNotes>

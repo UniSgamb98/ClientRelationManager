@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DENTALCM">
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-10" durata="2" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="BLANK">CHIEDO INFO SULLA ZIRCONIA E MI DICE CHE POSSO RICHIAMARE LUNEDI' INTANTO INVIO PRESENTAZIONE ORODENT.</chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-15" durata="1" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="HUGO" previousInterest="INFO">FESTIVITà </chiamata>
+                            
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-16" durata="2" messaggio="false" newInterest="RICHIAMARE" number="3" operatore="HUGO" previousInterest="INFO">risentirci lunedì devono ancora darci un occhio. </chiamata>
+                        
+
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-20" durata="3" messaggio="false" newInterest="RICHIAMARE" number="4" operatore="HUGO" previousInterest="INFO">richiamare juan ignacio non ha dato un occhio ancora ma per scrupolo invio nuovamente presentazione. </chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-22" durata="2" messaggio="false" newInterest="RICHIAMARE" number="5" operatore="HUGO" previousInterest="INFO"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-31" durata="3" messaggio="false" newInterest="LISTINO" number="6" operatore="HUGO" previousInterest="INFO">juan ignacio è molto occupato ma la ragazza mi chiede di richiamare lunedi , nel frattempo invio listino 55%</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-03" durata="1" messaggio="false" newInterest="BLANK" number="7" operatore="HUGO" previousInterest="LISTINO">non lo trovo invio wasap </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-07" durata="1" messaggio="false" newInterest="NON_INERENTE" number="8" operatore="HUGO" previousInterest="LISTINO">mi dicono che non sono interessati. </chiamata>
+</companyNotes>

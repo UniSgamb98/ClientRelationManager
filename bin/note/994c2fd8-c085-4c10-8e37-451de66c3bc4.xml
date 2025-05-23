@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dental Technik Kiel GmbH">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-04" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiedono una presentazione via mail per poterci valutare intanto. 
+Inviata.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-15" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="SANTOLO" previousInterest="INFO">Presentazione reinoltrata al dipartimento Cad-cam.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-23" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="INFO">Richiamare verso le 11 e chiedere della Signora Spiecker.</chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-23" durata="0" messaggio="false" newInterest="INFO" number="4" operatore="SANTOLO" previousInterest="INFO">La Signora Spiecker parlerà con il suo capo settimana prossima in merito a noi, richiamare verso giovedì della prossima settimana.</chiamata>
+</companyNotes>

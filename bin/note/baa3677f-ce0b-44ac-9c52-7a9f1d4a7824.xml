@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Kulzer">
+                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-23" durata="3" messaggio="false" newInterest="BLANK" number="1" operatore="TERESA" previousInterest="BLANK">Chiamato indirizzo generico, ma mi ha dato il contatto della centrale (quello riportato nella voce "telefono"). Uffici chiusi, riaprono il 10/10.</chiamata>
+                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-10" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="RICHIAMARE"/>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-11" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="TERESA" previousInterest="RICHIAMARE"/>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-14" durata="5" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="RICHIAMARE">Parlato col centralino, sono un laboratorio. Mi ha dato la mail (generica) + n. telefono ufficio vendite +49 8004372522 che a loro volta mi hanno dato il n. della centrale in IT, ho chiesto quello della Germania, ma non lo trovava</chiamata>
+                                            
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-24" durata="15" messaggio="false" newInterest="BLANK" number="5" operatore="TERESA" previousInterest="RICHIAMARE">parlato con Karolin, molto interesati ad Eigenemarke: 8,500 pezzi all´ anno</chiamata>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="2" data="2024-11-05" durata="0" messaggio="false" newInterest="CAMPIONE" number="6" operatore="TERESA" previousInterest="RICHIAMARE">I campioni sono arrivati a destinazione lunedì scorso. Restiamo in attesa di un loro feedback</chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-18" durata="0" messaggio="false" newInterest="RICHIAMARE" number="7" operatore="TERESA" previousInterest="CAMPIONE">Mandata mail per sapere come procede la fase test e se hanno bisogno di assistenza.</chiamata>
+                            
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-19" durata="0" messaggio="false" newInterest="BLANK" number="8" operatore="TERESA" previousInterest="CAMPIONE">Ieri ci hanno comunciato che hanno scelto un'altra azienda. Ho chiesto info sul perchè. Se non risponde alla mail, la chiamerò per capire se la nostra non scelta è dovuta ad una questione tecnica o commerciale. Magari ci potrà aiutare a capire meglio il mercato.</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-21" durata="0" messaggio="false" newInterest="BLANK" number="9" operatore="TERESA" previousInterest="CAMPIONE">Non hanno risposto nè alla mail nè alla telefonata.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-26" durata="0" messaggio="false" newInterest="NON_TROVATO" number="10" operatore="TERESA" previousInterest="CAMPIONE">Non rispondono alle chiamate</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-13" durata="0" messaggio="false" newInterest="BLANK" number="11" operatore="TERESA" previousInterest="CAMPIONE">non rispondono.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-15" durata="0" messaggio="false" newInterest="NON_TROVATO" number="12" operatore="TERESA" previousInterest="CAMPIONE"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-17" durata="0" messaggio="false" newInterest="NULLO" number="13" operatore="TERESA" previousInterest="CAMPIONE">Non rispondono al telefono, non sono più interessati.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-20" durata="0" messaggio="false" newInterest="NULLO" number="14" operatore="TERESA" previousInterest="NULLO">Ha risposto Frau Roth dicendo che hanno scelto un'altra azienda, ma che possiamo rimanere in contatto.</chiamata>
+</companyNotes>

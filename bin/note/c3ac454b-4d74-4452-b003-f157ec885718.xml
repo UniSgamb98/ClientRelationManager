@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="SATEXDEN">
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-05" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="INFO">CHIAMATO A TUTTI I DUE CONTATTI TELEFONICI NESSUNO RISPONDE , INVIO PRESENTAZIONE ORODENT VIA MAIL.</chiamata>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-05" durata="0" messaggio="true" newInterest="INFO" number="2" operatore="HUGO" previousInterest="INFO">CONTATTATATI 7 MARZO 21 MARZO E OGGI 5 APRILE. CHIEDO PER POTER FARE UNA OFFERTA CON LISTINO. </chiamata>
+                                    
+
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-10" durata="2" messaggio="false" newInterest="INFO" number="3" operatore="HUGO" previousInterest="INFO">Mi danno mail referente diretto per inviare presentazione . </chiamata>
+                            
+
+
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-31" durata="1" messaggio="false" newInterest="LISTINO" number="4" operatore="HUGO" previousInterest="INFO">chiusi x festività invio listino 55%</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-12" durata="3" messaggio="false" newInterest="LISTINO" number="5" operatore="HUGO" previousInterest="LISTINO">Chiamo per avre news sul listino ma mi chiedono gentilmente di inviare nuovamente tutta la documentazione. </chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-18" durata="2" messaggio="false" newInterest="NULLO" number="6" operatore="HUGO" previousInterest="LISTINO">mi hanno richiamato loro per dirmi che non sono interessati al prodotto.</chiamata>
+    
+</companyNotes>

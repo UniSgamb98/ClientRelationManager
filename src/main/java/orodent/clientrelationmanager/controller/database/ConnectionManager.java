@@ -1,4 +1,5 @@
 package orodent.clientrelationmanager.controller.database;
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.controller.main.StatusToolTipController;
 
 import java.net.InetAddress;
@@ -180,11 +181,7 @@ public class ConnectionManager extends Thread {
     private void startWithProperty() throws Exception {
         System.setProperty("derby.drda.startNetworkServer", "true");
         String ip = InetAddress.getLocalHost().getHostAddress();
-        if (ip.equals("192.168.1.138") || ip.equals("192.168.1.136")) {
-            System.setProperty("derby.system.home", "I:/CliZr/Tommaso/");
-        }   else {
-            System.setProperty("derby.system.home", "Odsrvdc1/condivisa/CliZr/Tommaso/");
-        }
+        System.setProperty("derby.system.home", new MainController().getApp().getConfigs().get("database home").getFirst());
         System.setProperty("derby.drda.host", ip);
         // Boot dell'EmbeddedDriver
         Class<?> clazz = Class.forName("org.apache.derby.jdbc.EmbeddedDriver");

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Hamburger Fräs-Manufaktur GmbH">
+                        
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="3" data="2024-05-28" durata="0" messaggio="false" newInterest="CLIENTE" number="1" operatore="SANTOLO" previousInterest="BLANK">Inviato listino 55% (spese escluse) per far aumentare gli ordini.
+Parlato con il signor Leo: possono fare fino a 40 dischi al mese. Già cliente online con 45%</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-05" durata="0" messaggio="false" newInterest="LISTINO" number="2" operatore="SANTOLO" previousInterest="CLIENTE">Parlato con Leo, molto impegnato ma ci sentiamo settimana prossima per il primo ordine.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-13" durata="0" messaggio="false" newInterest="CLIENTE" number="3" operatore="SANTOLO" previousInterest="CLIENTE">Leo ha parlato con il suo capo Thomas Horn, accordato il 50% online.
+Nel caso riescano a fare 40 dischi al mese vale l'offerta inviata del 55%.
+Attualmente ordine di 10 dischi, il prossimo sarà più alto.</chiamata>
+            
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-10" durata="0" messaggio="false" newInterest="CLIENTE" number="4" operatore="SANTOLO" previousInterest="CLIENTE">Ringraziato Leo per l'ordine da 23 dischi, comunicato pausa estiva così si regolano per gli ordini.</chiamata>
+    
+</companyNotes>

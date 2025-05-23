@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="RAUL TORRES LABORATORIO DENTAL ">
+            
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-23" durata="2" messaggio="false" newInterest="LISTINO" number="1" operatore="HUGO" previousInterest="LISTINO"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-23" durata="0" messaggio="true" newInterest="BLANK" number="2" operatore="HUGO" previousInterest="LISTINO">listino 40%</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-24" durata="4" messaggio="false" newInterest="NULLO" number="3" operatore="HUGO" previousInterest="LISTINO">raul usa upcera  e aidite non gli chiedono ordini preprogrammati paga quello usa e ordina. Purtoppo si trova bene con loro e al momento nessun cambio fornitore in caso si farà vivo lui. </chiamata>
+</companyNotes>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dickel Dental">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK"/>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="NON_TROVATO"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-23" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="TERESA" previousInterest="NON_TROVATO">non rispondono, ho mandato mail.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-29" durata="3" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="NON_TROVATO">Hanno risposto dicendo di inoltrare la mail a Lieferanten. ha segnato i miei dati, se saranno interessati mi contatteranno.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-05" durata="0" messaggio="false" newInterest="NULLO" number="5" operatore="TERESA" previousInterest="NON_TROVATO">La segretaria mi ha detto che è difficile parlare con Herr Dickel (è lui a prendere le decisioni) al telefono. Dobbiamo mandare la mail a Lieferanten e se sarà interessato, ci contatterà. Mi ha anche detto che è inutile richiamare settimana prossima al telefono. Ritento con un'altra mail, ma non sono interessati.</chiamata>
+</companyNotes>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="New ancorvis">
+        
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-04" durata="0" messaggio="false" newInterest="LISTINO" number="1" operatore="SANTOLO" previousInterest="BLANK">Ha risposto la segreteria dicendo di mandare un messaggio whatsapp. Messaggio mandato e catalogo inviato.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-04" durata="0" messaggio="false" newInterest="NULLO" number="2" operatore="SANTOLO" previousInterest="LISTINO">Victoria mi informa che erano nostri clienti, manderemo una nuova mail per cercare di riprenderli.</chiamata>
+</companyNotes>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="direct Onlinehandel GmbH">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-23" durata="2" messaggio="false" newInterest="BLANK" number="1" operatore="TERESA" previousInterest="BLANK">vogliono che mandiamo la mail. Indirizzo: info@d-rect.de</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-03" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="BLANK">mi hanno detto che loro non possono dare nè n. di telefono, nè emal. Ho chiesto di controllare se la mia email fosse arrivata e loro l'hanno inoltrata al responsabile. Mi ha comunicato che al momento c'è qualcuno in malattia e sono molto indiffarati. Dunque solleciterò tramite mail tra una settimana.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-13" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="BLANK">sollecitati tramite mail.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-20" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="TERESA" previousInterest="BLANK"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-24" durata="0" messaggio="false" newInterest="NULLO" number="5" operatore="TERESA" previousInterest="NON_TROVATO">ribadisocno che non hanno/danno n. di telefono e mal, solo info. Se non abbiamo ricevuto risposta, è perchè non sono interessati.</chiamata>
+</companyNotes>

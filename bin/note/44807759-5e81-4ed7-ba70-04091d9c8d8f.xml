@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="LAB. FELICIANO PEREZ">
+            
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-31" durata="2" messaggio="false" newInterest="LISTINO" number="1" operatore="HUGO" previousInterest="BLANK">invio come da accordi telefonici listino 50%</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-07" durata="2" messaggio="false" newInterest="BLANK" number="2" operatore="HUGO" previousInterest="LISTINO">parlare con javier  lunes</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-10" durata="2" messaggio="false" newInterest="NULLO" number="3" operatore="HUGO" previousInterest="LISTINO">non vogliono altri marchi di zirconia</chiamata>
+</companyNotes>

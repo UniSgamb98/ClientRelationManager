@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Nesseler Dental">
+        
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-04" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con Frau Jokel, desidera ricevere presentazione aziendale via mail.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-12" durata="0" messaggio="false" newInterest="NULLO" number="2" operatore="SANTOLO" previousInterest="INFO">Non fresano direttamente, parlato con il capo laboratorio. Finalizzano soltanto i lavori.
+Usano Indete come Fraeszentrum</chiamata>
+</companyNotes>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Das Zahnlabor ZTM Carsten Wäldrich e.K">
+                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-08" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Conversazione amichevole, usa attualmente Sirona (per offrire ai suoi clienti una qualità superiore) ma accetta una presentazione breve e concisa (perché si è sempre trovato bene con le cose italiane). Darà un feedback lunedì
+</chiamata>
+                                                        
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-16" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="INFO">Chiamare prossima settimana, attualmente ha problemi familiari.</chiamata>
+                                                
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="2" data="2024-05-21" durata="0" messaggio="false" newInterest="CAMPIONE" number="3" operatore="SANTOLO" previousInterest="INFO">Parlato con il Signor Carsten, invierà feedback per i campioni.
+Consuma circa 20 dischi al mese, solo Sirona.
+Attendiamo </chiamata>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-23" durata="0" messaggio="false" newInterest="CAMPIONE" number="4" operatore="SANTOLO" previousInterest="CAMPIONE">Ha ordinato un EOS 18 mm A3, da inviare prossima settimana al suo laboratorio.
+Partito lunedì 26 Maggio</chiamata>
+                                
+
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-12" durata="0" messaggio="false" newInterest="RICHIAMARE" number="5" operatore="SANTOLO" previousInterest="CAMPIONE">il Signor Waeldrich è in ferie, riprovare prossima settimana.</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-17" durata="0" messaggio="false" newInterest="RICHIAMARE" number="6" operatore="SANTOLO" previousInterest="CAMPIONE">il Signor Waeldrich molto impegnato, richiamare verso fine settimana.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="7" operatore="SANTOLO" previousInterest="CAMPIONE">Riprovare nel primo pomeriggio. Il signor Waeldrich è fuori in visita ad un cliente.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-25" durata="0" messaggio="false" newInterest="RICHIAMARE" number="8" operatore="SANTOLO" previousInterest="CAMPIONE">Non hanno ancora testato il campione,
+richiamare ad inizio Agosto per un feedback (al momento molto impegnati tra lavoro/ferie).</chiamata>
+            
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-04" durata="0" messaggio="false" newInterest="BLANK" number="9" operatore="SANTOLO" previousInterest="CAMPIONE">Invitato a venire a vedere la nostra produzione, lui spesso è sul lago di Garda.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-20" durata="0" messaggio="false" newInterest="NULLO" number="10" operatore="TERESA" previousInterest="CAMPIONE">Ha comunicato che non essendoci la parte in plastica, fa fatica a non rompere il disco. Spiegato come utilizzarlo correttamente, ma dice che questa è un'info riferitagli dai suoi tecnici.</chiamata>
+</companyNotes>

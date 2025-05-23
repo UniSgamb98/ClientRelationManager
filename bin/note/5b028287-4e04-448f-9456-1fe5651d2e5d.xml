@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Plandent">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-23" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK">mandata mail</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-04" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="NON_TROVATO">mi hanno buttato giù, mandata mail.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-11" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="NON_TROVATO">Plandent (Norvegia) e Planmeca (Finlandia): Planmeca è l'azienda madre di Plandent e è Planmeca a fare gli acquisti.</chiamata>
+</companyNotes>

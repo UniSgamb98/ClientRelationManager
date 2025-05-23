@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Schick dental">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-29" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-02" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="NON_TROVATO">Sono in pausa, richiamare dopo.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-02" durata="0" messaggio="false" newInterest="NON_INERENTE" number="3" operatore="TERESA" previousInterest="NON_TROVATO">Avevano in programma di inserire zirocnia, ma adesso hanno cambiato idea e non la trattano.</chiamata>
+</companyNotes>

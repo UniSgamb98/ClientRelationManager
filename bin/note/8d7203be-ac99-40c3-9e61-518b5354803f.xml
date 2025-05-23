@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Komet Dental">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-08" durata="10" messaggio="false" newInterest="BLANK" number="1" operatore="TERESA" previousInterest="BLANK">Farsi passare la centrale&gt;Ufficio acquisti, altrimenti mi rimbalzano nuovamente in diversi reparti. Sono riusciata ad avere il numero diretto della responsabile acquisti, al momento lei non è in ufficio. Riprovare più tardi o domani. Ho lasciato il mio recapito</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-10-08" durata="2" messaggio="false" newInterest="LISTINO" number="2" operatore="TERESA" previousInterest="BLANK">Mi hanno contatta dicendomi di mandare la mail agli acquisti, c.a. Frau Johanna. Mi hanno speigato che Komet è la marca, mentre Brasseler il nome dell'azienda.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-15" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="TERESA" previousInterest="LISTINO"/>
+</companyNotes>

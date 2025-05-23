@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="MA cad/cam Service UG">
+                            
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-15" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="INFO">Centro fresaggio: Inviata presentazione aziendale. Usano già Pritidenta, Sirona e Upcera</chiamata>
+                        
+
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-22" durata="0" messaggio="false" newInterest="RICHIAMARE" number="2" operatore="SANTOLO" previousInterest="INFO">Hanno ricevuto la presentazione e la stanno verificando. Daranno un riscontro appena possibile.</chiamata>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-16" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="SANTOLO" previousInterest="INFO">Al momento hanno già buoni fornitori di zirconia.</chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2025-03-05" durata="0" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="NULLO">Anger impegnato, la segretaria mi ha detto di mandare la mail, non sa se andranno all'IDS, forse si.</chiamata>
+</companyNotes>

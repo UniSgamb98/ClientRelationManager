@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Millhouse GmbH">
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-04" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="INFO">inviata presentazione + invito Linkedin Frau Elizabeth Apel</chiamata>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-08" durata="0" messaggio="false" newInterest="INFO" number="2" operatore="SANTOLO" previousInterest="INFO">Inviata presentazione alla Direzione</chiamata>
+                                
+
+
+
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-03" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="INFO">Riprovare lunedì, inoltrare  mail ad office@  e chiedere di Frau Apel</chiamata>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-17" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="SANTOLO" previousInterest="INFO">Purtroppo non rispondono, inviato sollecito per mail.</chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-31" durata="0" messaggio="false" newInterest="NULLO" number="5" operatore="SANTOLO" previousInterest="INFO">Parlato con Frau Apel, finalmente, non è interessata.
+Ha già dei fornitori affidabili</chiamata>
+</companyNotes>

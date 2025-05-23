@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Zahnlevin ">
+                            
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-10" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Inviare mail Lunedì di presentazione, hanno un laboratorio dove fresano.  Sono anche centro dentistico.</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-13" durata="0" messaggio="false" newInterest="INFO" number="2" operatore="SANTOLO" previousInterest="INFO">Non riesco a parlare con il loro laboratorio, la segretaria mi reindirizza alla loro mail.</chiamata>
+                    
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-30" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="INFO"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-31" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="SANTOLO" previousInterest="INFO">Richiamare martedì per parlare con la collega responsabile dei materiali.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-04" durata="0" messaggio="false" newInterest="NULLO" number="5" operatore="SANTOLO" previousInterest="INFO">Hanno parlato internamente, purtroppo non interessati.</chiamata>
+    
+</companyNotes>

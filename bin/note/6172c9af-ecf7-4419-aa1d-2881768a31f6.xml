@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="dpi">
+                        
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-22" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK">Dice che è possibile chiamarli solo dalla Germania, riproverò lunedì altrimenti manderò una mail.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-25" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="NON_TROVATO">non riesco a contattarli tramite telefono (il service prende chiamata solo della Germania), mandata mail.</chiamata>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-02" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="NON_TROVATO">Mandata mail di sollecito.</chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-09" durata="0" messaggio="false" newInterest="NULLO" number="4" operatore="TERESA" previousInterest="NON_TROVATO"/>
+</companyNotes>

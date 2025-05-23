@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Admdent">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2025-01-27" durata="10" messaggio="false" newInterest="LISTINO" number="1" operatore="VICTORIA" previousInterest="CLIENTE">Ho parlato con Signor Valentin, responsabile laboratorio.
+Dice che sono un millin center, ma anche distribuiscono. Interessato a ricevere un'offerta per un consumo superiore a 100 pz.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-31" durata="5" messaggio="false" newInterest="LISTINO" number="2" operatore="VICTORIA" previousInterest="CLIENTE">HO PARLATO CON SIGNOR VALENTIN, DICE DI NON AVER RICEVUTO LA MAIL, MI HA FORNITO LA SUA PERSONALE. INVIATO IL LISTINO AL 60% PE QUANTITATIVI SUPERIORI A 100PZ.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-07" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="VICTORIA" previousInterest="LISTINO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-03-04" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="VICTORIA" previousInterest="LISTINO"/>
+</companyNotes>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Microdental ">
+            
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-24" durata="1" messaggio="false" newInterest="LISTINO" number="1" operatore="HUGO" previousInterest="BLANK">nessuna risposta invio mail con listino 40%</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-24" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="HUGO" previousInterest="BLANK"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-29" durata="1" messaggio="false" newInterest="NON_INERENTE" number="3" operatore="HUGO" previousInterest="NON_INERENTE">SBAGLIATO E' UNA CLINICA</chiamata>
+</companyNotes>

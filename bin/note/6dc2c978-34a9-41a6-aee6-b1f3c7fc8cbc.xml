@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="AHRtec Service GmbH">
+                                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-11" durata="8" messaggio="false" newInterest="CAMPIONE" number="1" operatore="SANTOLO" previousInterest="CAMPIONE">Parlato con il titolare Jens Werner,
+attesa conferma campione EOS</chiamata>
+                                                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-12" durata="2" messaggio="false" newInterest="CAMPIONE" number="2" operatore="SANTOLO" previousInterest="CAMPIONE">Chianato Werner per conferma campione e partita Iva</chiamata>
+                                                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-12" durata="0" messaggio="false" newInterest="CAMPIONE" number="3" operatore="SANTOLO" previousInterest="CAMPIONE">Inivato campione oggi 12/04</chiamata>
+                                                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-15" durata="2" messaggio="false" newInterest="CAMPIONE" number="4" operatore="SANTOLO" previousInterest="CAMPIONE">Invio campione in realtà 15-04, allego offerta completa al Signor Werner</chiamata>
+                                                                            
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-23" durata="3" messaggio="false" newInterest="CAMPIONE" number="5" operatore="SANTOLO" previousInterest="CAMPIONE">Parlato con il Signor Werner, conferma ricezione campione (EOS 14 A3,5)  e lista prezzi (interessanti)
+Ci sentiamo dopo prova del disco fra due settimane.</chiamata>
+                                                                    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-13" durata="0" messaggio="false" newInterest="CLIENTE" number="6" operatore="SANTOLO" previousInterest="CAMPIONE">Ho parlato con Jens Werner, titolare,
+ringrazia per i campioni e conferma la bontà del prodotto EOS.
+Effettuerà un primo ordine appena possibile.  
+Al momento ha ordinato 100 dischi da Dental Direct ma ha anche Katana (che valuta l'unico superiore a noi).</chiamata>
+                                                            
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="2" data="2024-05-27" durata="0" messaggio="false" newInterest="CAMPIONE" number="7" operatore="SANTOLO" previousInterest="CAMPIONE">Reminder per primo ordine con 60%, attendo feedback Jens Werner.</chiamata>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-03" durata="0" messaggio="false" newInterest="RICHIAMARE" number="8" operatore="SANTOLO" previousInterest="CAMPIONE">Richiamare nel pomeriggio per parlare con Jens</chiamata>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-05" durata="0" messaggio="false" newInterest="RICHIAMARE" number="9" operatore="SANTOLO" previousInterest="CAMPIONE">Richiamare nel pomeriggio per richiesta incontro lunedì pomeriggio o martedì mattina a Colonia. IN FERIE DA SABATO purtroppo.
+Farà un ordine al suo rientro.</chiamata>
+                                        
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-02" durata="0" messaggio="false" newInterest="NON_TROVATO" number="10" operatore="SANTOLO" previousInterest="CAMPIONE">Jens ritorna venerdì dalle ferie, richiamare durante la prossima settimana.</chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-09" durata="0" messaggio="false" newInterest="NON_TROVATO" number="11" operatore="SANTOLO" previousInterest="CAMPIONE">Jens è ancora in ferie, riprovare dal 15 Luglio in poi.</chiamata>
+                            
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-18" durata="0" messaggio="false" newInterest="NON_TROVATO" number="12" operatore="SANTOLO" previousInterest="CAMPIONE">Richiamare verso le ore 14, il Signor Werner è fuori presso i clienti.</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-18" durata="0" messaggio="false" newInterest="BLANK" number="13" operatore="SANTOLO" previousInterest="CAMPIONE">Parlato con Jens, al momento ha ancora giacenza di dischi ma appena ha necessità farà un primo ordine con noi. Sarà nuovamente in ferie ad Agosto, da ricontattare a Settembre.
+</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-25" durata="0" messaggio="false" newInterest="BLANK" number="14" operatore="SANTOLO" previousInterest="CAMPIONE">Parlato con il Signor Jens, comunicato che in futuro per eventuali necessità può scrivere direttamente al nostro indirizzo mail Sales.
+</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-11" durata="1" messaggio="false" newInterest="NON_TROVATO" number="15" operatore="TERESA" previousInterest="CAMPIONE">Jens sarà in ufficio o oggi dalle 16.00 o domani dalle 9.00. Richiamaerò per sapere se hanno testato il prodotto e se accettano l'offerta al 60%.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-16" durata="0" messaggio="false" newInterest="BLANK" number="16" operatore="TERESA" previousInterest="CAMPIONE">Non disponibile, richiamare</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-17" durata="0" messaggio="false" newInterest="BLANK" number="17" operatore="TERESA" previousInterest="CAMPIONE">Herr Wemer non trovato telefonicamente, sempre occupato. mandata mail di sollecito per sapere se ha testato il disco e se accetta l'offerta.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-25" durata="2" messaggio="false" newInterest="NULLO" number="18" operatore="TERESA" previousInterest="CAMPIONE">Parlato con Herr Roberto Cortese, Herr Wemer non era disponibie. Mi ha detto che abbiamo chiamato abbastanza spesso, che hanno preso conoscenza dei nostri prodotti, ma al momento non vogliono cambiare zirconia.</chiamata>
+</companyNotes>

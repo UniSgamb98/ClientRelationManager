@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentic">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-03" durata="2" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="INFO">invio catalogo e chiedo se può interessare un listino , mi dice che appena da un occhio al catalogo mi farà sapere. -</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-22" durata="2" messaggio="false" newInterest="BLANK" number="2" operatore="HUGO" previousInterest="INFO">Parlo con la segretaria e avviso che invio nuovamente il cartalogo in attesa di un feedback per eventuale offerta e invio campione. </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-24" durata="2" messaggio="false" newInterest="BLANK" number="3" operatore="HUGO" previousInterest="INFO">Chidono di richiamare in settembre </chiamata>
+</companyNotes>

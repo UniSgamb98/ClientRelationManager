@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Odontra">
+                                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-11" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK">Linea occupata</chiamata>
+                                                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-12" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="NON_TROVATO"/>
+                                                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-13" durata="4" messaggio="false" newInterest="LISTINO" number="3" operatore="TERESA" previousInterest="NON_TROVATO">Parlato con Herr Weber Robert, consuma dai 20 ai 40 dischi annui. Mandato listino al 35% + spese di spedizione gratuite tramite sito web. </chiamata>
+                                                                                
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-19" durata="1" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="LISTINO">Herr Weber è impegnato, richiamo a mezzogiorno.</chiamata>
+                                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-19" durata="15" messaggio="false" newInterest="BLANK" number="5" operatore="TERESA" previousInterest="RICHIAMARE">Parlato con Herr Weber. La mail era negli spam. Il 7.10 sarà al lago di garda per un matrimonio, se è interessato, ho proposto un incontro oppure una video call. Abbiamo parlato dei materiali e sinterizzazione, sembra molto interessato. COntento delle diverse altezze che abbiamo. Proposto un disco prova. Controlla le sue giacenze in magazzano e si farà sentire lui. Altrimenti siamo rimasti che lo chiamerò tra due settimane.</chiamata>
+                                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-02" durata="1" messaggio="false" newInterest="BLANK" number="6" operatore="TERESA" previousInterest="RICHIAMARE">Parlato con Herr Weber, è in malattia questa settimana e domani parte per Pisa. Ci risentiremo lunedì.</chiamata>
+                                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-07" durata="0" messaggio="false" newInterest="BLANK" number="7" operatore="TERESA" previousInterest="RICHIAMARE">Sta trattando un paziente difficile, mi ha chiesto di richiamare domani.</chiamata>
+                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="2" data="2024-10-11" durata="7" messaggio="false" newInterest="CAMPIONE" number="8" operatore="TERESA" previousInterest="RICHIAMARE">Mandato disco prova Thor con programmi sinterizzazione!
+Inoltre, la sua P.IVA non è abilitata, consigliato di abilitarla per non pagare iva 4%.</chiamata>
+                                                        
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-28" durata="2" messaggio="false" newInterest="RICHIAMARE" number="9" operatore="TERESA" previousInterest="CAMPIONE">Weber non sa se il disco è arrivato in clinica, siamo rimasti che lo richiamo domani così si informa.</chiamata>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-29" durata="5" messaggio="false" newInterest="BLANK" number="10" operatore="TERESA" previousInterest="CAMPIONE">Stamattina l'ho chiamato, non hanno ancora trovato il disco, mi ha detto che lo ricerca e gli ho mandato la mail con lo screen che il pacco è stato consegnato. L'ho chiamato pomeriggio ma non ha risposto. Riprovo domani.</chiamata>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-30" durata="1" messaggio="false" newInterest="RICHIAMARE" number="11" operatore="TERESA" previousInterest="CAMPIONE">Hanno trovato il disco, ci aggiorniamo tra 2 settimane. Settimana prossima sarà a Budapest.</chiamata>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-15" durata="2" messaggio="false" newInterest="BLANK" number="12" operatore="TERESA" previousInterest="CAMPIONE">Ha detto che è un periodo un pò caotico per fresare e testare, soprattutto dicembre, perchè deve cambiare i programmi di sinterizzazione. Siamo rimasti che ci sentiremo a gennaio così avrà sicuramente fresato e testato.</chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-15" durata="2" messaggio="false" newInterest="BLANK" number="13" operatore="TERESA" previousInterest="CAMPIONE">Robert ha detto che sta andando a Budapest, di chiamarlo martedì prossimo. Lo troverò tutto il giorno a lavoro.</chiamata>
+                            
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-21" durata="0" messaggio="false" newInterest="NON_TROVATO" number="14" operatore="TERESA" previousInterest="CAMPIONE"/>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="15" operatore="TERESA" previousInterest="CAMPIONE"/>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-27" durata="2" messaggio="false" newInterest="BLANK" number="16" operatore="TERESA" previousInterest="CAMPIONE">Weber mi ha detto che sta sinterizzando adesso il Thor e gli ho rimandato il nostro manuale. Mi chiedeva se poteva usare quello di Girbach, ma gli ho detto di seguire il nostro. Ci risentiremo per sapere del risultato.
+Ha un centrofresaggio.</chiamata>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-30" durata="0" messaggio="false" newInterest="BLANK" number="17" operatore="TERESA" previousInterest="CAMPIONE">mandata mail per sapere se alla fine lunedì ha sinterizzato e per avere info.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-20" durata="0" messaggio="false" newInterest="NON_TROVATO" number="18" operatore="TERESA" previousInterest="CAMPIONE"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-24" durata="4" messaggio="false" newInterest="BLANK" number="19" operatore="TERESA" previousInterest="CAMPIONE">Robert settimana prossima sarà a Dubai. Ha sinterizzato il disco ma prima di decidere, aspetta il suo paziente che arriverà oggi. Ha forno Girbach e non ha avuto problemi di sinterizzazione, ha due programmi, 1480° e 1540°.
+Ci vedremo all'IDS.</chiamata>
+</companyNotes>

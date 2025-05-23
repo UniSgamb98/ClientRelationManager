@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="bls labor und geraetetechnik">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-25" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-26" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="NON_TROVATO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-27" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="TERESA" previousInterest="NON_TROVATO"/>
+</companyNotes>

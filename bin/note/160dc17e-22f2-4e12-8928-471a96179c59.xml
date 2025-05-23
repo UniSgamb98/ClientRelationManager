@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Saalezahn Dentaltechnik GmbH">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-08" durata="1" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare prossima settimana per parlare con i capi dell'azienda in merito ai materiali</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-13" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Richiamare max. entro le 15</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-14" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con Herr Blockberg, non hanno interesse.</chiamata>
+    
+</companyNotes>

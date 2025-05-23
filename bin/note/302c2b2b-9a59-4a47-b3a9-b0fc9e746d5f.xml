@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Cabinet Dr. Beck">
+        
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-19" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Riprovare domani mattina</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-20" durata="0" messaggio="false" newInterest="NULLO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Al momento non sono interessati, li ho rimandati  al nostro sito web per eventuali informazioni su di noi.</chiamata>
+</companyNotes>

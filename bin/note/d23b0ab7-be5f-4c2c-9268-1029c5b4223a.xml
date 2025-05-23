@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Guglielmo Parziale FABRICATIO RISORUM S.R.L.">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-05" durata="3" messaggio="false" newInterest="BLANK" number="1" operatore="SANTOLO" previousInterest="BLANK">Per mettermi in contatto col responsabile, la segretaria mi ha detto di mandare una mail con l'offerta commerciale. La faremo insieme a Victoria nel pomeriggio.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-06" durata="0" messaggio="false" newInterest="LISTINO" number="2" operatore="SANTOLO" previousInterest="BLANK">Mandata mail presentazione + catalogo</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-13" durata="3" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="LISTINO">Si rifornisce dal nostro distributore Mazza.</chiamata>
+</companyNotes>

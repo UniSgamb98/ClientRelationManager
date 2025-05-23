@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="dentimed">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK"/>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-23" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="NON_TROVATO">non hanno risposto. Dentimed è un'iniziativa che riunisce i dentisti convenzionati del Nord Württemberg. Devo chiedere se si occupano anche di materiali.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-24" durata="0" messaggio="false" newInterest="NON_INERENTE" number="3" operatore="TERESA" previousInterest="NON_TROVATO">mandata mail</chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-03" durata="0" messaggio="false" newInterest="NULLO" number="4" operatore="TERESA" previousInterest="NON_INERENTE"/>
+</companyNotes>

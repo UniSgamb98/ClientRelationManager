@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="MONTESINOS SL FRESADO LAB">
+            
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-31" durata="2" messaggio="false" newInterest="LISTINO" number="1" operatore="HUGO" previousInterest="INFO">ok per listino e 50 % e catalogo</chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-17" durata="1" messaggio="false" newInterest="NULLO" number="2" operatore="HUGO" previousInterest="LISTINO"/>
+</companyNotes>

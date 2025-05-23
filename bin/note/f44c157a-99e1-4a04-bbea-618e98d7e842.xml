@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="ALGORITHM AESTHETICS S.R.L.">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-04" durata="10" messaggio="false" newInterest="BLANK" number="1" operatore="VICTORIA" previousInterest="LISTINO">Ho parlato con il titolare del laboratorio, interessato ad avere un'offerta. Attualmente usa cca. 20-25 dischi al mese, ha sperimentato problemi con le consegne ultimamente.
+Inviata l'offerta al 45%.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-06" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="VICTORIA" previousInterest="LISTINO"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-10" durata="1" messaggio="false" newInterest="BLANK" number="3" operatore="VICTORIA" previousInterest="LISTINO">Signor Razvan non riesce a parlare al telefono e mi dice che mi chiamera lui. </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="2" data="2025-02-19" durata="10" messaggio="false" newInterest="CAMPIONE" number="4" operatore="VICTORIA" previousInterest="LISTINO">Il Cliente chiede il disco prova un Thor/16/a2.</chiamata>
+</companyNotes>

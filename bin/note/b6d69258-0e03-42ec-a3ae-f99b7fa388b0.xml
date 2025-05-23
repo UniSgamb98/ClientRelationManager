@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentasvet ltd">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-31" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="VICTORIA" previousInterest="BLANK"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-07" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="VICTORIA" previousInterest="NON_TROVATO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-07" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="VICTORIA" previousInterest="NON_TROVATO"/>
+</companyNotes>

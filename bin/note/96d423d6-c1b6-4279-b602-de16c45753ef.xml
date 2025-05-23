@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="YTRIO PROACT DENTAL">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-30" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="VICTORIA" previousInterest="BLANK"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-31" durata="3" messaggio="false" newInterest="BLANK" number="2" operatore="VICTORIA" previousInterest="NON_TROVATO">LA RECEPTION MI DICE DI RICHIAMARE LUNEDI ALLE 9.00 PER POTER PARLARE CON IL RESPONSABILE DEL LABORATORIO.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-03" durata="4" messaggio="false" newInterest="INFO" number="3" operatore="VICTORIA" previousInterest="NON_TROVATO">Ho parlato con il responsabile del cf. Mi dice che fanno parte di un grande gruppo Horus e che non ahanno autonomia decisionale. Mi chiede di inviare le info al suo indirizzo mail per poi passarle al gruppo. </chiamata>
+</companyNotes>

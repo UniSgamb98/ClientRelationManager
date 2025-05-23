@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="ARNO MILLING CENTER">
+        
+    <chiamata cancelled="false" checkpoint="1" data="2025-01-15" durata="5" messaggio="false" newInterest="LISTINO" number="1" operatore="VICTORIA" previousInterest="CLIENTE">hO PARLATO CON IL RESPONSABILE CAD CAM, DICE CHE SONO SODDISFATI DEI LORO FORNITORI ATTUALI, MA POSSONO VALUTARE UN'OFFERTA COMMERCIALE.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="VICTORIA" previousInterest="CLIENTE"/>
+</companyNotes>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="MEDICALEXPO">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-24" durata="1" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="BLANK">Grosso distributore ma senza contatti telefonici , invio richiesta come espositore sulla web.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-06" durata="3" messaggio="false" newInterest="NON_INERENTE" number="2" operatore="HUGO" previousInterest="INFO">SOLO RICERCANO CLIENTI POTENZIALI PER I PRODUTTORI. </chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-10" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="HUGO" previousInterest="INFO"/>
+    
+</companyNotes>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="FEDERICO REHBERGER LABORATORIO">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-23" durata="2" messaggio="false" newInterest="LISTINO" number="1" operatore="HUGO" previousInterest="BLANK">EX CLIENTE 2022/2023 NESSUN ORDINE MA 2024 EURO 5.547.50 RIATTIVIAMO CON OFFERTA LISTINO 35% ANZICHE' 30%. FANNO SEMPRE ORDINI WEB</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-05" durata="3" messaggio="false" newInterest="LISTINO" number="2" operatore="HUGO" previousInterest="CLIENTE">approviamo listino 45% in considerazione del fatto che possa aumentare le quantità in relazione agli ultimi ordini . Avvisato anche il padre che gestisce gli acquisti. </chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-11" durata="0" messaggio="true" newInterest="BLANK" number="3" operatore="HUGO" previousInterest="CLIENTE">nuovo ordine 45 %    2.602,04€ 20 dischi  la media era di 10 /12 mensili. </chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="3" data="2024-06-14" durata="1" messaggio="false" newInterest="CLIENTE" number="4" operatore="HUGO" previousInterest="CLIENTE">Ordine di più di 20 dischi </chiamata>
+    
+</companyNotes>

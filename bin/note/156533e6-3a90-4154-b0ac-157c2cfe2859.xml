@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="TRIDENT Zahntechnik GmbH">
+                            
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-07-17" durata="0" messaggio="false" newInterest="LISTINO" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con la Signora Estermeier (molto cordiale), responsabile materiali di questo grande centro fresaggio da 70-100 dischi al mese.
+Sono interessati a ricevere una presentazione e un'offerta.
+Proposta anche una campionatura per vedere il materiale</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-26" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="SANTOLO" previousInterest="LISTINO">Parlato con la Signora Estermeier, non ha avuto ancora tempo di leggere la presentazione e valutare i prezzi.
+Ci scrive lei in risposta alla nostra mail.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-23" durata="1" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="LISTINO">Frau Estermeier è in vacanza e rientra tra 3 settimane.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-15" durata="4" messaggio="false" newInterest="LISTINO" number="4" operatore="TERESA" previousInterest="LISTINO">Frau Estermeier chiede di mandare mail così la valuta con offerta commerciale. Non posso mandare l'offerta perchè non mi ha saputo dire i loro consumi. Mi manderà questa info tramite mail e poi manderò offerta commerciale.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-24" durata="2" messaggio="false" newInterest="BLANK" number="5" operatore="TERESA" previousInterest="LISTINO">Non ha ancora parlato col suo capo, mi farä sapere lei.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-08" durata="2" messaggio="false" newInterest="BLANK" number="6" operatore="TERESA" previousInterest="RICHIAMARE">Frau Esterm. già andata via. La troverò lunedì.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-11" durata="0" messaggio="false" newInterest="NULLO" number="7" operatore="TERESA" previousInterest="RICHIAMARE">non sono interessati a nuova zirocnia</chiamata>
+</companyNotes>

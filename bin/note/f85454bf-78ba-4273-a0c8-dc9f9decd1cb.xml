@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentaltechnik Eric Adam">
+                    
+    
+    
+    
+    <chiamata cancelled="true" checkpoint="0" data="2024-06-17" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare domani.</chiamata>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-17" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Richiamare domani, il titolare è già fuori ufficio.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-18" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">Riprovare oggi dopo le 14.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-19" durata="0" messaggio="false" newInterest="NULLO" number="4" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con il Signor Adam, non sono interessati.</chiamata>
+</companyNotes>

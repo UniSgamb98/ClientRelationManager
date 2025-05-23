@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Tumba Dental">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-28" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK"/>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-12-03" durata="3" messaggio="false" newInterest="LISTINO" number="2" operatore="TERESA" previousInterest="NON_TROVATO">Responsabile Juses in riunione, ho la sua mail e lo contatto tramite mail.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-10" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="LISTINO">Mandato sollecito tramite mail</chiamata>
+        
+    
+    <chiamata cancelled="true" checkpoint="0" data="2024-12-17" durata="0" messaggio="false" newInterest="NULLO" number="4" operatore="TERESA" previousInterest="LISTINO"/>
+    
+</companyNotes>

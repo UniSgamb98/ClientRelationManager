@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentaliving GmbH">
+                                
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-02" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare lunedì e chiedere della Signora Alaband. 
+Fraeszentrum Leiter</chiamata>
+                            
+
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-06" durata="0" messaggio="false" newInterest="LISTINO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con la Signora Alaband,
+inviato listino e presentazione</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-08" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="TOMMASO" previousInterest="LISTINO">Parlato con Frau Alaband, fanno molti dischi.  
+Inviato 55 %</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-14" durata="0" messaggio="false" newInterest="RICHIAMARE" number="4" operatore="SANTOLO" previousInterest="LISTINO">Parlato con la Signora Alaband, non ha ancora visto la presentazione.
+Cercherà di dare un feedback entro fine settimana</chiamata>
+            
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-21" durata="0" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="SANTOLO" previousInterest="LISTINO">Inviata mail di reminder per Frau Alaband  (aveva ricevuto prezzi). </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-29" durata="0" messaggio="false" newInterest="NULLO" number="6" operatore="SANTOLO" previousInterest="LISTINO">Riparlato con la Signora Alaband e non è interessata ai nostri prodotti, non ha spazio per inserire un nuovo fornitore. </chiamata>
+</companyNotes>

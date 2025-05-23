@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="BURGAR DENTAL">
+                            
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-11" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="CLIENTE">Non hanno risposto.
+PVU: Ich habe auf Ihrer Website gesehen, dass Sie dem CAD-CAM viel Aufmerksamkeit widmen. (Marke: katana, ivoclar, sirona)</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-11" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="CLIENTE">Iris mi ha detto che era un nostro cliente, fatto 3 ordini sono nel 2023 e poi basta. Mi chiede se possiamo migliorarle l'offerta perchè vorrebbe acquistare di più da noi.
+Referente Iris, consumo: 2-5 dischi al mese. -&gt; fatto 40% di sconto</chiamata>
+                    
+
+
+    
+    
+    <chiamata cancelled="false" checkpoint="3" data="2025-02-18" durata="0" messaggio="false" newInterest="CLIENTE" number="3" operatore="TERESA" previousInterest="CLIENTE">Effettuato ordine, cliente ripreso! Frau Burgard mi ha detto che vorranno comprare solo da noi.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-19" durata="0" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="CLIENTE">DEVE ANCORA PAGARE</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-27" durata="0" messaggio="false" newInterest="CLIENTE" number="5" operatore="TERESA" previousInterest="CLIENTE">pagato.</chiamata>
+</companyNotes>

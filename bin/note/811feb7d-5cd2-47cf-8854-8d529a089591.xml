@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="3DCAD Fraeszentrum Sudbaden">
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-06-04" durata="0" messaggio="false" newInterest="LISTINO" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con il Signor Dinkel, usano già Katana e Dental Direct.
+Interessato a ricevere presentazione e prezzi,
+chiesto esempio EOS 14mm. 
+Inviato listino 60%</chiamata>
+                                                
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-12" durata="0" messaggio="false" newInterest="NULLO" number="2" operatore="SANTOLO" previousInterest="LISTINO">Purtroppo non interessato</chiamata>
+                                        
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-20" durata="0" messaggio="false" newInterest="LISTINO" number="3" operatore="SANTOLO" previousInterest="NULLO">Parlato con il Signor Dinkel, vorrebbe un materiale simile al Cube 1 di Dental-Direct. 
+Chiederà un campione di EOS (molto probabilmente).</chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-28" durata="0" messaggio="false" newInterest="RICHIAMARE" number="4" operatore="SANTOLO" previousInterest="CAMPIONE">Parlato con il Signor Dinkel dei programmi di sinterizzazione e pulizia forno per ottenere il miglior risultato.
+Ha provato materiale cinese ma non è stato contento.
+Attendiamo feedback del nostro campione.
+Ha contatti in Georgia dove ha amici odontotecnici.</chiamata>
+                            
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-09" durata="0" messaggio="false" newInterest="RICHIAMARE" number="5" operatore="SANTOLO" previousInterest="CAMPIONE">Ha ricevuto il campione ma non lo ha ancora provato, ci risentiamo con calma a Settembre dopo le sue e le nostre ferie.</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-11" durata="4" messaggio="false" newInterest="BLANK" number="6" operatore="TERESA" previousInterest="CAMPIONE">Herr Dinkel non è più il responsabile. L'azienda è stata associata con un'altra (VLA Dental). Non hanno ancora provato il disco e se lo troveranno interessante, allora mi contetterà direttamente il nuovo responsabile.</chiamata>
+                    
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-03" durata="0" messaggio="false" newInterest="NON_TROVATO" number="7" operatore="TERESA" previousInterest="CAMPIONE"/>
+            
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-03" durata="0" messaggio="false" newInterest="BLANK" number="8" operatore="TERESA" previousInterest="CAMPIONE">0049 78213189830 mi ha richiamata il proprietario di 3D-&gt; l'azienda 3D non esiste più. Mi ha detto che non può darmi i contatti della nuova azienda VLH Dental, lui ha già chiesto ma non sono interessati ai nostri prodotti. Provo comunque a contattarli.
+Metto come nullo questo contatto e ne creo uno nuovo con VLH Dental.</chiamata>
+    
+</companyNotes>

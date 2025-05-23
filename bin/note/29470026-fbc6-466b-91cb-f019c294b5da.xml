@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Zahntechnik Kropp">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-11-08" durata="4" messaggio="false" newInterest="LISTINO" number="1" operatore="TERESA" previousInterest="BLANK">Parlato con Herr Kropp. Utilizzano Zirkonzahn, hanno sia 95 che 98. Consumo approssimativo: circa 4-6 dischi al mese. Interessato a ricevere nostra offerta.
+Offerta: 35%, mentre se ordina più di 10 dischi riservo il 40%.</chiamata>
+                
+
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-15" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="LISTINO">Non hanno risposto al telefono, ho mandato mail.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-21" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="LISTINO">richiamare, Herr Kropp non c'è</chiamata>
+</companyNotes>

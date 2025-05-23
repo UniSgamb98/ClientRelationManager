@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentaltechnik Tamaschke">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-11" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare nel pomeriggio o massimo domani mattina per parlare con il signor Gosemann.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-12" durata="0" messaggio="false" newInterest="INFO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con il Signor Gosemann, desidera ricevere una presentazione, valutano poi se provare il nostro materiale.
+Grosso laboratorio con 20 dipendenti.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-23" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="SANTOLO" previousInterest="NULLO">il signor Gosemann ha riferito che ha i miei recapiti e si fa sentire lui in caso di interesse.</chiamata>
+</companyNotes>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Steinhauser Dentaltechnik GmbH">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-09" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con Iris, ci dice di richiamare domani per parlare con il suo capo Rene.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-10" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Richiamare nel primo pomeriggio.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-12" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">il Signor Steinhauser non è in laboratorio, riprovare lunedì.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-15" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="SANTOLO" previousInterest="NON_TROVATO">Richiamare nel pomeriggio, verso le 14.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-16" durata="0" messaggio="false" newInterest="INFO" number="5" operatore="SANTOLO" previousInterest="NON_TROVATO">Numero sempre occupato, inviata una mail di presentazione al Signor Steinhauser.</chiamata>
+</companyNotes>

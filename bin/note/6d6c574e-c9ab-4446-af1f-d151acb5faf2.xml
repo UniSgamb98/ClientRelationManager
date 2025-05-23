@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Cuspidus Zahntechnik GmbH">
+                        
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-18" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Il Signor Marzok è impegnato per un problema tecnico, richiamare domani.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-19" durata="0" messaggio="false" newInterest="INFO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Hanno già molti materiali e desiderano intanto ricevere una presentazione via mail.
+Eseguito</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-21" durata="0" messaggio="false" newInterest="INFO" number="3" operatore="SANTOLO" previousInterest="INFO">Mail non ricevuta, molto probabilmente spam.
+Riparlato con la segretaria e reinviata la presentazione.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-03" durata="0" messaggio="false" newInterest="BLANK" number="4" operatore="SANTOLO" previousInterest="INFO">Richiamare nel pomeriggio, il Signor Marzok molto impegnato.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-08" durata="0" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="SANTOLO" previousInterest="INFO">Richiamare tra due settimane, il Signor Marzok è in ferie ed è lui che decide per campionature e nuovi materiali.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-18" durata="0" messaggio="false" newInterest="BLANK" number="6" operatore="SANTOLO" previousInterest="INFO">il signor Marzok è ancora in ferie, riprovare mercoledì-giovedì della prossima settimana.</chiamata>
+</companyNotes>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="kromer &amp; vorvoorts">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="0" messaggio="false" newInterest="BLANK" number="1" operatore="TERESA" previousInterest="BLANK">ricontattare, ultimo ordine nel 2022. Era stata mandata la mail a dicembre, ma non hanno mai risposto.</chiamata>
+            
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-23" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="BLANK"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-24" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="TERESA" previousInterest="NON_TROVATO"/>
+</companyNotes>

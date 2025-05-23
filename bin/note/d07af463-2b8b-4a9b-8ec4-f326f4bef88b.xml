@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DentNet">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-03" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK">Festa nazionale in Germania</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-04" durata="1" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="NON_TROVATO">La responsabile al momento è impegnata, riprovo</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-04" durata="2" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="NON_TROVATO">La responsabile è già andata via, la trovo fino alle 16.00</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-08" durata="2" messaggio="false" newInterest="NON_INERENTE" number="4" operatore="TERESA" previousInterest="NON_TROVATO">Indento è l'azienda, DentNet invece il sito (tipo ebay). Non comprano zirconia. Mi ha dettp però che l'azienda che acquista è Imex Dental, provo a contattarli.</chiamata>
+</companyNotes>

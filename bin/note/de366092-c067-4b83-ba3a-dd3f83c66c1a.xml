@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentaltechnik Ostertag">
+        
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-09" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Chiamare giovedì mattina per parlare con Georg</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-11" durata="0" messaggio="false" newInterest="NULLO" number="2" operatore="SANTOLO" previousInterest="INFO">Parlato con il Signor Georg, usano già Zirkonzahn e Katana.
+Non interessato a cambiare.
+Lasciato invito a visitare il nostro sito.</chiamata>
+</companyNotes>

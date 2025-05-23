@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="ACUDENT">
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-12" durata="2" feedback="INFO" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="INFO">Risentire per feedback</chiamata>
+                                        
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-15" durata="3" messaggio="false" newInterest="INFO" number="2" operatore="HUGO" previousInterest="INFO">al laboratorio non hanno ricevuto nessun feedback perciò reinvio presentazione orodent. </chiamata>
+                                
+
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-23" durata="4" messaggio="false" newInterest="RICHIAMARE" number="3" operatore="HUGO" previousInterest="INFO">parlo coj la ragzza del centralino ma non riesce a passarmi nessuno del laboratorio perhcè sono occupati . Avvis auna sua collega di farmi sapere se sono interessati e se posso inviare listino .</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-09" durata="3" messaggio="false" newInterest="RICHIAMARE" number="4" operatore="HUGO" previousInterest="INFO">Trovo raquel che mi dice che tutte le mie mail erano finite in spam perciò ottengo mail diretta e invio presentazione. </chiamata>
+                    
+
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-22" durata="3" messaggio="false" newInterest="RICHIAMARE" number="5" operatore="HUGO" previousInterest="INFO">hanno intenzione di dotarsi di macchine fresaggio perciò restiamo daccordo di sentirci per settembre e vedere se avrnno già il macchinario e potergli fare un'offerta. </chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="6" operatore="VICTORIA" previousInterest="INFO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-30" durata="0" messaggio="false" newInterest="BLANK" number="7" operatore="VICTORIA" previousInterest="INFO"/>
+</companyNotes>

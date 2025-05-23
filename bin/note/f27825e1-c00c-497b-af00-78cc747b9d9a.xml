@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Azienda Prova">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-03" durata="3" messaggio="false" newInterest="LISTINO" number="1" operatore="SANTOLO" previousInterest="BLANK">La chiamata è andata bene.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="2" data="2024-09-03" durata="0" messaggio="false" newInterest="CAMPIONE" number="2" operatore="SANTOLO" previousInterest="LISTINO"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-03" durata="0" messaggio="false" newInterest="INFO" number="3" operatore="SANTOLO" previousInterest="CAMPIONE"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-03" durata="0" messaggio="false" newInterest="NULLO" number="4" operatore="SANTOLO" previousInterest="CAMPIONE"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-03" durata="0" messaggio="false" newInterest="BLANK" number="5" operatore="SANTOLO" previousInterest="NULLO"/>
+</companyNotes>

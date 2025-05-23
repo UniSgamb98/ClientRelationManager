@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dental Labor Feldmann GmbH">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-28" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare domani mattina e chiedere del Signor Feldmann.</chiamata>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-29" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">La segretaria suggerisce di scrivere solo una mail.
+Se interessato richiama lui</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-31" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">Inviato mail per parlare con il Signor Feldmann di Zirconia.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-03" durata="0" messaggio="false" newInterest="NULLO" number="4" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con il Sign. Feldmann, non interessato.</chiamata>
+</companyNotes>

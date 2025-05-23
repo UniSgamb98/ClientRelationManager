@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="ZAHNTECHNIK DUEN GMBH">
+                            
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-28" durata="0" messaggio="false" newInterest="BLANK" number="1" operatore="TERESA" previousInterest="BLANK">Utilizzano zirconia, a decidere è il capo Herr Duen. Devo mandare la mail e se poi sono interessati, mi contatteranno.</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-05" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="BLANK">Herr Duen non è in ufficio. Devo riprovare. </chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-06" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="BLANK">non è nel laboratorio, richiamare settimana prossima.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-09" durata="3" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="BLANK">Herr Due non in laboratorio. Prima di Natale è difficile che abbia tempo. Ho rimandato la mail, ma meglio risentirci a gennaio.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-16" durata="0" messaggio="false" newInterest="BLANK" number="5" operatore="TERESA" previousInterest="BLANK">Duen lo trovo domani fino alle 15.30, mentre Pantelmann lo trovo tra poco</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-16" durata="0" messaggio="false" newInterest="BLANK" number="6" operatore="TERESA" previousInterest="BLANK">Niente, mi hanno detto di richiamare domani.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="3" data="2025-01-17" durata="2" messaggio="false" newInterest="CLIENTE" number="7" operatore="TERESA" previousInterest="BLANK">Hanno acquistato tramite distributore DupaDent (che ho preso a dicembre 2024). </chiamata>
+</companyNotes>

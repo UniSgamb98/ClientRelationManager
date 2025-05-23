@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="B &amp; B Dentalservice / M + C Dental">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-25" durata="1" messaggio="false" newInterest="BLANK" number="1" operatore="TERESA" previousInterest="BLANK">acquistano zirconia. Trovo responsabile acquisti, Herr Wilke, prossima settimana.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-02" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="BLANK">Sono in pausa pranzo, richiamare dopo.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-02" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="TERESA" previousInterest="NON_TROVATO">Herr Wilke dice che utlizzano Vita ed è molto difficile cambiare prodotto. Non interessati.</chiamata>
+</companyNotes>

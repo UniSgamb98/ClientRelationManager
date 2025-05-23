@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="SMART MICROPARTS GMBH">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-28" durata="1" messaggio="false" newInterest="BLANK" number="1" operatore="TERESA" previousInterest="BLANK">Chiamare più tardi per parlare col responsabile Herr Schulz.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-28" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="BLANK"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-12-03" durata="2" messaggio="false" newInterest="LISTINO" number="3" operatore="TERESA" previousInterest="NON_TROVATO">Schulz dice che hanno due fornitori di zirconia e si trovano bene. Legge il nostro catalogo che gli ho mandato tramite mail e ci risentiremo settimana prossima.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-10" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="TERESA" previousInterest="LISTINO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-11" durata="0" messaggio="false" newInterest="NULLO" number="5" operatore="TERESA" previousInterest="LISTINO">Schutz ha detto che non sono interessati.</chiamata>
+</companyNotes>

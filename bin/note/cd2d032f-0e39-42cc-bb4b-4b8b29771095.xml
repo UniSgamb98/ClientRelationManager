@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="My Dental Family Service GmbH">
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-18" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="NON_TROVATO">Richiamare Lunedì per parlare con Frau Stahl, responsabile materiali.</chiamata>
+                                    
+
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-23" durata="0" messaggio="false" newInterest="INFO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con la Signora Stahl,  presentazione inoltrata al Signor Schneider  (responsabile Acquisti). 
+Richiamare prossima settimana</chiamata>
+                            
+
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-17" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="INFO">Signor Schneider non è in ufficio, riprovare.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-27" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="SANTOLO" previousInterest="INFO">La segretaria mi suggerisce di reinviare presentazione ad una nuova mail. Provvede ad inoltrarla lei.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-04" durata="0" messaggio="false" newInterest="INFO" number="5" operatore="SANTOLO" previousInterest="INFO">La Signora Stahl riferisce che parla con il signor Schneider e ci da un feedback prossima settimana, quando lui rientra in ufficio.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-10" durata="0" messaggio="false" newInterest="BLANK" number="6" operatore="SANTOLO" previousInterest="INFO">Richiamare nel primo pomeriggio Frau Stahl</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-10" durata="0" messaggio="false" newInterest="BLANK" number="7" operatore="SANTOLO" previousInterest="INFO">Non ha ancora parlato con il Signor Schneider, lo farà domani.
+Richiamarla venerdì.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-12" durata="0" messaggio="false" newInterest="NULLO" number="8" operatore="SANTOLO" previousInterest="INFO">L'Ufficio Acquisti non è interessato ad inserire un'ulteriore marca.
+Conoscono comunque il nostro brand.</chiamata>
+</companyNotes>

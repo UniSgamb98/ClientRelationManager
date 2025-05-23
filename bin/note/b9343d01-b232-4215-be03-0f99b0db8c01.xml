@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="GM TEHNICAL DENT">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-16" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="VICTORIA" previousInterest="BLANK"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="VICTORIA" previousInterest="NON_TROVATO"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="1" data="2025-01-24" durata="12" messaggio="false" newInterest="LISTINO" number="3" operatore="VICTORIA" previousInterest="NON_TROVATO">Ho parlato con uno dei soci Signor Marius Dina Marius, usano Ivoclar e Katana. Interessato a ricevere un'offerta. Concordato una call per il feedback 31.01.2025</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-31" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="VICTORIA" previousInterest="LISTINO"/>
+</companyNotes>

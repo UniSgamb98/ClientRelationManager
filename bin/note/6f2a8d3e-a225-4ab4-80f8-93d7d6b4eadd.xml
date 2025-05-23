@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="BIO DENTAL S.R.L.">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-10" durata="2" messaggio="false" newInterest="LISTINO" number="1" operatore="SANTOLO" previousInterest="BLANK">La segretaria mi comunica di mandare una mail al responsabile. Mandato catalogo + mail conoscitiva.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-17" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="LISTINO"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-17" durata="2" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="LISTINO">Sig. Baresco fuori laboratorio. Rientrerà dopo le 16.30. Mi è stato detto che se lui è interessato, si fa sentire.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-18" durata="2" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="RICHIAMARE">Baresco in riunione, la segretaria ha preso i miei recapiti e si farà sentire lui.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-03" durata="1" messaggio="false" newInterest="NULLO" number="5" operatore="TERESA" previousInterest="RICHIAMARE">Se Baresco è interessato, si farà sentire lui.</chiamata>
+</companyNotes>

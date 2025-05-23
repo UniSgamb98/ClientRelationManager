@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Gelencsér Dental Zahnklink und Dentallabor">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-19" durata="2" messaggio="false" newInterest="LISTINO" number="1" operatore="TERESA" previousInterest="BLANK">Prima di parlare col responsabile, devo mandare la mail. Mandata mail di presentazione + catalogo. </chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-26" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="LISTINO">Riaprono lunedì</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-30" durata="2" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="LISTINO">E' il dottore della clinica a gestire gli ordini ed è molto impegnato con le operazioni. Mi ha detto che la mia mail è stata inoltrata ed oggi la segretaria gli dirà di darci riscontro tramite mail. Il dottore è in clinica, ho chiesto il numero, ma preferiscono gestire tutto tramite mail. </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-07" durata="0" messaggio="false" newInterest="NULLO" number="4" operatore="TERESA" previousInterest="RICHIAMARE">La segretaria mi ha risposto tramite mail inoltrandomi la mail del dottore e non sono interessati a cambiare marchio.</chiamata>
+</companyNotes>

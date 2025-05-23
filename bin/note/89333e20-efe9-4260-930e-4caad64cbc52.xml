@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Agenzia Bonaparte">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-10-11" durata="5" messaggio="false" newInterest="LISTINO" number="1" operatore="TERESA" previousInterest="LISTINO">Ci ha contattati lui telefonicamente, sembra interessato. Ho mandato listino rivenditori 55% + ha chiesto su whatsapp listino PMMA. Da risentire tra due settimane</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-24" durata="3" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="LISTINO">Bonaparte ha parlato con i suoi clienti ed usano 88dent, non sa se vogliono cambiare. Ci risentiremo più avanti. Nel frattempo, da capire anche cosa vorrà fare il rivenditore Russo Dental che opera a Napoli (contatto preso in fiera)</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-07" durata="8" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="LISTINO">opera Salerno e provincia + campania tranne Napoli città e nord.
+Siamo rimasti che se sarà davvero interessato, ci ricontatterà lui.
+Vorrebbe dei contatti di clienti a Salerno/Campania, ma in accordo con Victoria, non glieli forniamo (è un gran chiacchierone :) ).</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-03" durata="0" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="NULLO">Ha detto che vuole effettuare un ordine, in attesa dei vari dati + messo in chiaro tramite mail di rispettare gli altri rivenditori.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="3" data="2024-12-04" durata="0" messaggio="false" newInterest="CLIENTE" number="5" operatore="TERESA" previousInterest="INFO"/>
+</companyNotes>

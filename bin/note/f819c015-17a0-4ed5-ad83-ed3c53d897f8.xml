@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DIT Dental-Instrumente Mirko Rost">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-07" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-08" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="NON_TROVATO">chiusi</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-11" durata="1" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="NON_TROVATO">Come riferitomi al telefono, ho mandato mail.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-19" durata="0" messaggio="false" newInterest="NON_INERENTE" number="4" operatore="TERESA" previousInterest="NON_TROVATO">Non trattano zirconia</chiamata>
+</companyNotes>

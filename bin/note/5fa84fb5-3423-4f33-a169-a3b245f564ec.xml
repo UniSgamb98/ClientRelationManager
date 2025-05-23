@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Artident Zahntechnik GmbH">
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-15" durata="2" messaggio="false" newInterest="RICHIAMARE" number="1" operatore="SANTOLO" previousInterest="RICHIAMARE">Parlare con Frau Siegel, da giovedì 19-04.</chiamata>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-19" durata="0" messaggio="false" newInterest="RICHIAMARE" number="2" operatore="SANTOLO" previousInterest="RICHIAMARE">Riprovare a chiamare sempre di giovedì</chiamata>
+                                
+
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-02" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="SANTOLO" previousInterest="RICHIAMARE">Parlato con Frau Siegel, ha appena cambiato fornitore di zirconia. </chiamata>
+                        
+
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-25" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="TERESA" previousInterest="NULLO"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-26" durata="0" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="TERESA" previousInterest="NULLO"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-27" durata="0" messaggio="false" newInterest="NON_TROVATO" number="6" operatore="TERESA" previousInterest="NULLO">Mandata mail</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-05" durata="0" messaggio="false" newInterest="NULLO" number="7" operatore="TERESA" previousInterest="NULLO">Frau Siegel non lavora più li, ma comunque mi hanno comunicato che non sono interessati.</chiamata>
+</companyNotes>

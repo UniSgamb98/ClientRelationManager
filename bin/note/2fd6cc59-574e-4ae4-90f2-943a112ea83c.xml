@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dick Dentaltechnik GmbH">
+                                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-09" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare domani</chiamata>
+                                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-10" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Il Signor Grob non è in ufficio, richiamare Lunedì.</chiamata>
+                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-13" durata="0" messaggio="false" newInterest="INFO" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con il Signor Grob, capo laboratorio: mi ha rimandato al Signor Riedl, responsabile acquisti di materiali.
+Inviato presentazione</chiamata>
+                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-17" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="SANTOLO" previousInterest="INFO">Riprovare martedì per parlare con Herr Riedl.</chiamata>
+                                                    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-21" durata="0" messaggio="false" newInterest="LISTINO" number="5" operatore="SANTOLO" previousInterest="INFO">Parlato con il Signor Riedl, molto gentile, consumano circa 100 dischi al mese.  Quasi tutto Aidite.
+Nelle prossime settimane/mesi non vedono possibilità di inserimento ma non escludono cambiamenti sulla zirconia.
+Inviato listino 55%</chiamata>
+                                            
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-20" durata="0" messaggio="false" newInterest="NON_TROVATO" number="6" operatore="SANTOLO" previousInterest="LISTINO">il Signor Riedl non è in casa,
+richiamare domani mattina per proporre il 60%.</chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="7" operatore="SANTOLO" previousInterest="LISTINO">Riprovare nel primo pomeriggio per parlare con lui.</chiamata>
+                            
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-28" durata="0" messaggio="false" newInterest="NON_TROVATO" number="8" operatore="SANTOLO" previousInterest="LISTINO">Riprovare Lunedì per parlare con Riedl ed offrirgli il 60% per vedere una sua reazione.
+Lui è comunque legato ad Aidite.</chiamata>
+                        
+
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-02" durata="0" messaggio="false" newInterest="NON_TROVATO" number="9" operatore="SANTOLO" previousInterest="LISTINO">Richiamarlo dopo le ferie: metà Luglio.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-23" durata="0" messaggio="false" newInterest="NON_TROVATO" number="10" operatore="SANTOLO" previousInterest="LISTINO">Richiamare il signor Riedl verso le 14:00</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-23" durata="0" messaggio="false" newInterest="BLANK" number="11" operatore="SANTOLO" previousInterest="LISTINO">Al momento molto impegnato, lascio numero di cellulare: richiama lui appena possibile.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-24" durata="0" messaggio="false" newInterest="NULLO" number="12" operatore="SANTOLO" previousInterest="LISTINO">Al momento è contento di Aidite e non ha interesse a cambiare. Ci ricontatta lui se ci sono cambiamenti.</chiamata>
+    
+</companyNotes>

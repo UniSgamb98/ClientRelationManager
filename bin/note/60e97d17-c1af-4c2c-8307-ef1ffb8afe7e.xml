@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DuPa Dent">
+                                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-12-03" durata="11" messaggio="false" newInterest="LISTINO" number="1" operatore="TERESA" previousInterest="BLANK">Mi ha chiamato Herr Duen. Era stato contattato dalla Geocom ed adesso è interessato ai nostri multilayer. Ho mandato il listino al 55%. Utilizzano Ivoclar attualmente. Per i quantitativi, mi ha detto 200 al mese ma è un dato molto incerto in quanto la persona reponsabile degli acquisti non era in ufficio, mi parlava anche di 1.000 pezzi. 
+Se trovano i nostri prezzi attrattivi, allora vorranno far conoscere il prodotto.
+Ci risentiremo per capire come valuta l'offerta.</chiamata>
+                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-06" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="LISTINO">Duen non ha ancora letto la mail, l'ho inoltrata al suo indirizzo personale. Mi ha chiesto noi possiamo spedire direttamente ai loro clienti ed ho detto di si. Ci aggiorniamo settimana prossima.</chiamata>
+                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="3" data="2024-12-06" durata="0" messaggio="false" newInterest="CLIENTE" number="3" operatore="TERESA" previousInterest="LISTINO">Fatto primo ordine da 30 dischi! Se gli piaceranno i dischi, ci inseriranno nel loro database e gli ordini saranno automatici.</chiamata>
+                                                    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-10" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="TERESA" previousInterest="CLIENTE">Loewe non ha risposto al telefono, riprovo</chiamata>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-10" durata="0" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="TERESA" previousInterest="CLIENTE"/>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-11" durata="0" messaggio="false" newInterest="NON_TROVATO" number="6" operatore="TERESA" previousInterest="CLIENTE">Non ha risposto al telefono, mandata mail di sollecito.</chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-11" durata="0" messaggio="false" newInterest="CLIENTE" number="7" operatore="TERESA" previousInterest="CLIENTE">Pagamento ricevuto: sconto 55% (rivenditore.)</chiamata>
+                            
+
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-14" durata="3" messaggio="false" newInterest="BLANK" number="8" operatore="TERESA" previousInterest="CLIENTE">Philipp mi chiamerà settimana prossima tra martedì e mercoledì e ci aggiorneremo. Mi ha detto che deve prima parlare con Duen che è malato (non lavorerà forse per un anno) per capire come procederanno con gli ordini. Forse faranno un grosso ordine. Con i dischi che hanno ordinato si stanno trovando bene.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-17" durata="0" messaggio="false" newInterest="BLANK" number="9" operatore="TERESA" previousInterest="CLIENTE">Chiedere se col lab. ZAHNTECHNIK DUEN c'è lo stesso capo.</chiamata>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="0" messaggio="false" newInterest="NON_TROVATO" number="10" operatore="TERESA" previousInterest="CLIENTE"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-23" durata="0" messaggio="false" newInterest="CLIENTE" number="11" operatore="TERESA" previousInterest="CLIENTE">Loewe mi ha scritto che si sono sentiti con Duen e che da fine marzo/aprile vorranno solo vendere la nostra zirconia, al momento hanno ancora diversi dischi Ivoclar da smaltire. Mi ha detto che mi contatterà ad inizio marzo per gestire al meglio l'inizio e per discutere il loro marketing sui nostri prodotti. Vogliono inserire anche i nostri dischi nel loro online shop.
+Mi comunica che si vorrà concentrare SOLO sulla nostra zirconia e non comprarne altre.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-03-03" durata="0" messaggio="false" newInterest="BLANK" number="12" operatore="TERESA" previousInterest="CLIENTE">non hanno ancora risposto per l'appuntamento in fiera. Lo chiamerò settimana prossima.</chiamata>
+</companyNotes>

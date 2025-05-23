@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Microdent">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="5" messaggio="false" newInterest="INFO" number="1" operatore="VICTORIA" previousInterest="BLANK">HO PARLATO CON LA RECEPTION. MI DICE CHE LA TITOLARE è IN TRASFERTA, MI DA IL SUO CONTATTO E ANCHE IL NOME: MS. CHARCHA. RIENTRA LA PROSSIMA SETTIMANA.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-27" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="VICTORIA" previousInterest="INFO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-27" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="VICTORIA" previousInterest="INFO"/>
+</companyNotes>

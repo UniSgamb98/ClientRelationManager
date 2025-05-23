@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Bund Zahntechnik GmbH">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-22" durata="0" messaggio="false" newInterest="RICHIAMARE" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare domani mattina presto e chiedere di Frau Plein.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-23" durata="0" messaggio="false" newInterest="NULLO" number="2" operatore="SANTOLO" previousInterest="RICHIAMARE">Parlato con la signora Plein, appena cambiato fornitore (tedesco) e non è interessata.</chiamata>
+    
+</companyNotes>

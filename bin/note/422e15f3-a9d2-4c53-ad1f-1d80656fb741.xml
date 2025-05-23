@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Heimerle-Meule">
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-09" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="INFO">Inviata mail al Responsabile reparto dentale Sign. Mattiszik</chiamata>
+                                    
+
+
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-17" durata="0" messaggio="false" newInterest="INFO" number="2" operatore="SANTOLO" previousInterest="INFO">Parlato con il signor Mattiszik, invio presentazione e catalogo.  Hanno già Pritidenta.</chiamata>
+                        
+
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-30" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="INFO">Richiamare giovedì per parlare con il Signor Mattiszik.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-02" durata="0" messaggio="false" newInterest="LISTINO" number="4" operatore="SANTOLO" previousInterest="INFO">Parlato con il Signor Mattiszik, chiede invio listino.
+Ci darà un feedback ed eventuale richiesta campionature</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-14" durata="0" messaggio="false" newInterest="NULLO" number="5" operatore="SANTOLO" previousInterest="INFO">Non intende cambiare Pritidenta, purtroppo. No questione prezzo</chiamata>
+        
+
+</companyNotes>

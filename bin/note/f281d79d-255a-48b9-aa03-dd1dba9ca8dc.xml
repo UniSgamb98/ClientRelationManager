@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentalidea">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-06" durata="2" messaggio="false" newInterest="LISTINO" number="1" operatore="SANTOLO" previousInterest="BLANK">Mandata mail conoscitiva + catalogo.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-13" durata="5" messaggio="false" newInterest="LISTINO" number="2" operatore="TERESA" previousInterest="INFO">Parlato col sig. Flavio Gallastroni. Mi ha comunicato che utilizzano Upcera e Amman ed hanno degli sconti in base al consumo. Sembra interessato.
+Mandata offerta:
+40%	per 10 dischi al mese
+45%	fino a 20 dischi al mese
+50%	fino a 30 dischi al mese
+</chiamata>
+            
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-20" durata="1" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="LISTINO">Mi hanno comunicato di richiamare lunedì mattina verso le ore 9.30.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-23" durata="0" messaggio="false" newInterest="NULLO" number="4" operatore="TERESA" previousInterest="LISTINO">Hanno contratto annuale, al momento non cambiano.</chiamata>
+</companyNotes>

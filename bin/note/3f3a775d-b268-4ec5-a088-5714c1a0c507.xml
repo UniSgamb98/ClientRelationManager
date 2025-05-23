@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="MALIDENTE ">
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-05" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="INFO">MI DANNO IL CONTATTO DIRETTO MAIL DELLA REFERENTE ARICELI REPARTO ACQUISTI E COMMERCIALE. </chiamata>
+                                
+
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-10" durata="5" messaggio="false" newInterest="INFO" number="2" operatore="HUGO" previousInterest="INFO">riesco a parlar con la responsabile Araceli  che mi chiede reinviare la presentazione e poi  mi farà sapere. ottengo tutti i suoi contatti diretti.</chiamata>
+                        
+
+
+
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-17" durata="2" messaggio="false" newInterest="LISTINO" number="3" operatore="HUGO" previousInterest="INFO">contatto via wasap chiede listino per circa 50 dischi mensili , invio listino 50%. </chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-27" durata="2" messaggio="false" newInterest="NULLO" number="4" operatore="HUGO" previousInterest="LISTINO">Per ora no vogliono aggiungere altri porodotti ma terranno il ns contatto.</chiamata>
+</companyNotes>

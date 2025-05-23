@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Laboratorio Dental A. Ortiz Soluciones Digitales">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-07-03" durata="2" messaggio="false" newInterest="LISTINO" number="1" operatore="HUGO" previousInterest="LISTINO">Parlo col titolare e mi approva invio catalogo e listino</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-22" durata="2" messaggio="false" newInterest="BLANK" number="2" operatore="HUGO" previousInterest="LISTINO">Parlo con Anselmo , ha avuto molto da fare ma adesso ci darà un occhio ... risponde via wasap</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-22" durata="0" messaggio="true" newInterest="BLANK" number="3" operatore="HUGO" previousInterest="LISTINO">LISTINO 50 %</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="3" data="2024-10-21" durata="0" messaggio="false" newInterest="CLIENTE" number="4" operatore="TERESA" previousInterest="LISTINO">Il cliente ha effettuato un ordine da 20 dischi. 
+Promo fatta: + di 30 dischi: 50% + extra 10%; - di 30 dischi, abbiamo lasciato il 50% fatto in precedenza.</chiamata>
+</companyNotes>

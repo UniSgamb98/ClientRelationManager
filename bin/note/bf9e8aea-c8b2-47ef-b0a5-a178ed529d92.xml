@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Laboratorio Dental Carlos Fernández">
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-09" durata="2" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="BLANK">PARLO CON CARLOS CHE VUOLE VEDERE QUALI PRODOTTO TRATTIAMO INVIO PRESENTAZIONE AZIENDALE. </chiamata>
+                                    
+
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-15" durata="3" messaggio="false" newInterest="RICHIAMARE" number="2" operatore="HUGO" previousInterest="INFO">NON HA RICEVUTO MAIL RIMANDO DIRETTAMENTE A LUI </chiamata>
+                            
+
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-24" durata="1" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="HUGO" previousInterest="INFO">non mi risponde invio wasap . </chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-29" durata="2" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="HUGO" previousInterest="INFO">non riesco  più a contattare Carlos ma aproftitto prer inviare via mail offerta 60% in attesa di un suo riscontro...</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-10" durata="1" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="HUGO" previousInterest="INFO">faccio vocale al suo wasap in attesa di riscontri per il listino 60%</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-01" durata="0" messaggio="true" newInterest="BLANK" number="6" operatore="HUGO" previousInterest="INFO">scritto wasap perchè al cell non risponde. </chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-23" durata="1" messaggio="false" newInterest="NON_TROVATO" number="7" operatore="HUGO" previousInterest="INFO">scrivo mail per avere notizie. </chiamata>
+    
+</companyNotes>

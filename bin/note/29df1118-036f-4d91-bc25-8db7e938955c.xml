@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="IVODENT UNGHERIA KFT">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="VICTORIA" previousInterest="BLANK"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="4" messaggio="false" newInterest="INFO" number="2" operatore="VICTORIA" previousInterest="NON_TROVATO">HO PARLATO CON LA RECEPTION. IL TITOLARE LAVORA IN HOMME OFFICE. MI HANNO FORNITO I DATI: SZABOLCS FODOR. 0036 203181838</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="8" messaggio="false" newInterest="NULLO" number="3" operatore="VICTORIA" previousInterest="INFO">HO PARLATO CON IL TITOLARE, SONO DISTRIBUTORI DI IVOCLAR, COME FASCIA ECONOMICA USANO UPCERA. NON INTENDONO AMPLIARE IL PORTFOLIO. INTERESSATO A RICEVETE INFO SUL FORNO. </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="VICTORIA" previousInterest="INFO"/>
+</companyNotes>

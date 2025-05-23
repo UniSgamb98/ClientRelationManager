@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="W.B. Zahntechnik am Campus GmbH">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-21" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare più tardi per parlare con il Signor Borghorst, lui è responsabile materili.</chiamata>
+            
+    
+    
+    <chiamata cancelled="true" checkpoint="0" data="2024-05-21" durata="0" messaggio="false" newInterest="NULLO" number="2" operatore="SANTOLO" previousInterest="NULLO">Parlato con il signor Borhorst, si trova bene e non valuto altri fornitori.</chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-21" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="SANTOLO" previousInterest="NULLO">Parlato con il Signor Borghorst, non valuta altri fornitori.</chiamata>
+</companyNotes>

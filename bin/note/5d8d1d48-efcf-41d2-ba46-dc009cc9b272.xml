@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Andreas Piorreck Zahntechnik">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-16" durata="0" messaggio="false" newInterest="RICHIAMARE" number="1" operatore="SANTOLO" previousInterest="BLANK">Ho parlato con la Signora Goldermehr, loro hanno già un fornitore storico di zirconia.
+Si è segnata comunque nome azienda e dettagli (Tosoh, offerta prezzi e campioni), riferisce al suo capo.
+Richiamare durante la prossima settimana.</chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-22" durata="0" messaggio="false" newInterest="NULLO" number="2" operatore="SANTOLO" previousInterest="RICHIAMARE">il signor Piorreck non è interessato ad un nuovo fornitore di zirconia.</chiamata>
+</companyNotes>

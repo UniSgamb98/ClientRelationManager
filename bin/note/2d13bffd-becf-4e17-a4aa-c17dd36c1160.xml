@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="LABORATORIO MORETTI">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-06" durata="0" messaggio="false" newInterest="BLANK" number="1" operatore="SANTOLO" previousInterest="BLANK">Non hanno risposto, da richiamare</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-06" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="BLANK"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-09" durata="3" messaggio="false" newInterest="BLANK" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">l responsabile rientra lunedì 16/09, da richiamare
+consumo: 2 cialde al mese circa </chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-16" durata="4" messaggio="false" newInterest="LISTINO" number="4" operatore="TERESA" previousInterest="RICHIAMARE">Parlato con la sig.ra Rita. Non mi sa dire un loro potenziale consumo, potrà dirlo a fine anno, varia però circa dai 3 ai 10 dischi al mese. Hanno un grande magazzino e quando manca un colore, lo ordinano. 
+Mando offerta al 40%, non hanno mai utilizzato Orodent.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-23" durata="2" messaggio="false" newInterest="NULLO" number="5" operatore="TERESA" previousInterest="LISTINO">Hanno valutato la nostra proposta e la nostra offerta,  ma non cambiano perchè i tempi per i cambiamenti sono lunghi ed appunto non vogliono cambiare.</chiamata>
+</companyNotes>

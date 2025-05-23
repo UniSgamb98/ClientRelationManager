@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Q3 DENTALLABOR">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-24" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con la Signora Ptaszynka, richiede presentazione via mail.
+Sono un piccolo laboratorio di 5-10 dischi al mese.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-02" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="INFO">Richiamare nel pomeriggio, la Signora Ptaszynka non è in ufficio.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-03" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="SANTOLO" previousInterest="INFO">Al momento non intendono cambiare.</chiamata>
+</companyNotes>

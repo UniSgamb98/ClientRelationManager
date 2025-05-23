@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DSLAB">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-31" durata="1" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="HUGO" previousInterest="LISTINO">INVIO UGUALMENTE LISTINO 50.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-07" durata="2" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="HUGO" previousInterest="LISTINO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-01" durata="1" messaggio="false" newInterest="BLANK" number="3" operatore="HUGO" previousInterest="LISTINO">invio nuovamente mail</chiamata>
+</companyNotes>

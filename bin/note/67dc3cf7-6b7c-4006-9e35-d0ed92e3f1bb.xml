@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Ylabdental">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-14" durata="2" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="INFO">trovo uno dei responsabili che mi accorda invio info in attesa di inviare poi listino.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-18" durata="1" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="HUGO" previousInterest="INFO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-22" durata="1" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="HUGO" previousInterest="INFO"/>
+</companyNotes>

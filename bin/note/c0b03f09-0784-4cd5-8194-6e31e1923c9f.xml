@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Zahnfabrik Berlin">
+                        
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-11" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiedono una presentazione scritta che verrà inoltrata ai responsabili,
+in caso di interesse ci ricontatteranno loro.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-19" durata="0" messaggio="false" newInterest="NULLO" number="2" operatore="SANTOLO" previousInterest="INFO">La presentazione è stata inoltrata però il titolare non è interessato a nuova zirconia.
+Conserva i contatti in caso di cambiamenti.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-02" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="NULLO">trovato il contatto su internet e visto che è gia stato contattao a luglio. Dato che è ancora passato poco tempo, richiamo tra qualche settimana.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-08" durata="1" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="RICHIAMARE">richiamare lunedì per parlare col respnsabile</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-11" durata="1" messaggio="false" newInterest="NULLO" number="5" operatore="TERESA" previousInterest="RICHIAMARE">non sono interessati a cambiare</chiamata>
+    
+</companyNotes>

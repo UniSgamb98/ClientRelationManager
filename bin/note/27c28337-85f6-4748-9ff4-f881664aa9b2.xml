@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dyck Dental-Technik GmbH">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-08" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">il responsabile materiali è già andato via, riprovare domani mattina.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-09" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Sono molto impegnati, riprovare venerdì mattina per parlare con un responsabile.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-12" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con il responsabile laboratorio, hanno un partner principale sulla zirconia con il quale son molto contenti.
+Hanno provato e testato molte marche e non hanno interesse a provarne altre.</chiamata>
+</companyNotes>

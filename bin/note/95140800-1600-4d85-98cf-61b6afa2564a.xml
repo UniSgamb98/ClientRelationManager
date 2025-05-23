@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Zirkon.de">
+            
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-18" durata="4" messaggio="false" newInterest="LISTINO" number="1" operatore="TERESA" previousInterest="BLANK">Mi hanno comunicato che hanno i loro fornitori, ma che analizzeranno comunque il nostro catalogo. Al momento non vogliono un´ offerta commerciale.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-30" durata="1" messaggio="false" newInterest="NULLO" number="2" operatore="TERESA" previousInterest="LISTINO">Al momento non hanno interesse, e mi ha comunicato di richiamare tra tra qualche mese.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-12" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="TERESA" previousInterest="NULLO">non vogliono cambiare.</chiamata>
+</companyNotes>

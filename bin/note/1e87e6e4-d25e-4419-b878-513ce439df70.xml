@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Zahnwerk Frästechnik">
+                        
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-12" durata="2" messaggio="false" newInterest="LISTINO" number="1" operatore="TERESA" previousInterest="BLANK">Hanno cambiato da poco fornitore di zirconia. Ho chiesto comunque di parlare con il responsabile, ma è fuori sede fino alla prossima settimana. Mi ha lasciato l'indirizzo mail-&gt; mando mail presentazione + catalogo. Se sono interessati, discuteremo dei prezzi.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-25" durata="2" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="LISTINO">La mail è stata inoltrata ad Herr Savic, il quale rientrarà in ufficio prossima settimana. Ritento, ma se è interessato mi contetterò direttamente lui. E' difficile parlarci al telefono perchè non è sempre in ufficio.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-03" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="RICHIAMARE">Festa dell'unità nazionale, non rispondono riprovo domani.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-04" durata="0" messaggio="false" newInterest="NULLO" number="4" operatore="TERESA" previousInterest="RICHIAMARE">Non sono interessati, hanno già i loro fornitori. Ho comunque detto della nuova certificazione MDR</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-03-05" durata="0" messaggio="false" newInterest="BLANK" number="5" operatore="TERESA" previousInterest="NULLO">Savic era in riunione ma mi hanno detto di mandare mail anche con info microonde. Invitati al nostro stand IDS.</chiamata>
+    
+</companyNotes>

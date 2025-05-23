@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="dental2000">
+                            
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-25" durata="2" messaggio="false" newInterest="BLANK" number="1" operatore="TERESA" previousInterest="BLANK">La segretaria non sapeva molto, mi ha detto di chiamare domani per parlare con gli acquisti oppure di mandare la mail a kontakt@dental2000.net e poi la inoltreranno a chi di dovere.</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-27" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="BLANK">A febbraio è stata contattata  Frau Triegel: dvmail@dental2000.de</chiamata>
+                    
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-30" durata="0" messaggio="false" newInterest="LISTINO" number="3" operatore="TERESA" previousInterest="NON_TROVATO">Parlato con Frau Spath. Ha sentito Orodent, ma non ha mai preso i nostri dischi. E' interessata a ricevere la nostra presentazione che ho già mandato insieme al nostro catalogo, successivamente ci risentiremo.
+Mi ha comunicato che Frau Triegel non lavora lì.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-07" durata="3" messaggio="false" newInterest="NULLO" number="4" operatore="TERESA" previousInterest="LISTINO">Frau Spath (conversazione molto carina) mi ha comunicato che si è confrontata internamente: al momento hanno molte aziende e non possono prenderne un'altra. Anche se mando proposto commerciale invitatante, non riescono in questo momento.
+Se dovessero avere bisogno, ci contatteranno loro.
+Ritento a fine anno.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-16" durata="0" messaggio="false" newInterest="BLANK" number="5" operatore="TERESA" previousInterest="NULLO">Da sentire col nuovo anno.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-21" durata="0" messaggio="false" newInterest="NULLO" number="6" operatore="TERESA" previousInterest="NULLO">parlato con Frau Spath, ma continuano a non essere interessati. Hanno diversi fornitore e non vogliono introdurne uno nuovo, neanche noi che abbiamo MDR.</chiamata>
+</companyNotes>

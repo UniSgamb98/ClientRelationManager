@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Engels Dental-Technik">
+                            
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-23" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK"/>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="NON_TROVATO"/>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-25" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="TERESA" previousInterest="NON_TROVATO">Riprovare domani e cercare altri contatti telefonici/mail</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-27" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="TERESA" previousInterest="NON_TROVATO"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-30" durata="0" messaggio="false" newInterest="BLANK" number="5" operatore="TERESA" previousInterest="NON_TROVATO">Non sono riusicta a contattarli telefonicamente, parte la segreteria: si deve lasciare un messaggio e poi loro richiamano. Ho mandato la mail di presentazione + catalogo.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-08" durata="0" messaggio="false" newInterest="NON_TROVATO" number="6" operatore="TERESA" previousInterest="RICHIAMARE">Prossima settimana faccio sollecito tramite mail.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-14" durata="0" messaggio="false" newInterest="NULLO" number="7" operatore="TERESA" previousInterest="RICHIAMARE"/>
+</companyNotes>

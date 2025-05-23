@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="J DENTAL CARE SRL - JUST SMILE">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-05" durata="2" messaggio="false" newInterest="BLANK" number="1" operatore="SANTOLO" previousInterest="BLANK">La recption mi comunica di mandare una mail, sembrano interessati.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-06" durata="0" messaggio="false" newInterest="LISTINO" number="2" operatore="SANTOLO" previousInterest="BLANK">Mandata mail presentazione + catalogo</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-13" durata="2" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="LISTINO">Non mi fanno parlare telefonicamente con i responsabili acquisti, il centralino mi ha detto che sollecitano internamente la gestione della mail.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-01" durata="4" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="RICHIAMARE">Il laboratorio non si occupa di acquisti, ma mi hanno dato il contatto del responsaile acquisti, Carmine Giarnieri, il quale al momento è impegnato. Per parlare con lui devo passare da amministrazione, ma la segretaria mi ha comunicato che la mia mail mandata all'indirizzo generico gli è stata girata e gli comunicherà che ho chiamato. Riprovo tra una settimana mandando la mail al suo indirizzo personale.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-08" durata="0" messaggio="false" newInterest="BLANK" number="5" operatore="TERESA" previousInterest="RICHIAMARE">Mandata mail all'indirizzo privato del sig. Giarnieri</chiamata>
+</companyNotes>

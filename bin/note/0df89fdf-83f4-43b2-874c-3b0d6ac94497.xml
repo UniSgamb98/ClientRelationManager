@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Laboratorio Aj Blanco">
+            
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-06-12" durata="2" messaggio="false" newInterest="LISTINO" number="1" operatore="HUGO" previousInterest="LISTINO">Parlo direttamente con un responsabile lab. e mi da la mail del Ceo Jesus Blanco , hanno 20 laboratori disclocati in spagna invio comunque listino 55% e mi tengo un 5% da poter usare se dovessimo essere interessanti ai loro occhi. </chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-17" durata="0" messaggio="true" newInterest="BLANK" number="2" operatore="HUGO" previousInterest="LISTINO">richiamare nel pomeriggio</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-17" durata="3" messaggio="false" newInterest="BLANK" number="3" operatore="HUGO" previousInterest="LISTINO">Parlo con uno dei ragazzi del laboratorio e mi dice che controlla tutto Jesus e che mercoledì dovrebbe darci un occhio quando rientra e che l'hanno avvisato per darci un feedback. </chiamata>
+</companyNotes>

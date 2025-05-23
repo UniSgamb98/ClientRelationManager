@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Laboratorio Tasselli">
+        
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-14" durata="3" messaggio="false" newInterest="BLANK" number="1" operatore="TERESA" previousInterest="BLANK">In attesa dell'ordine. Fatto 35%. Ha detto che lo ha provato ma non si ricorda da chi, probabilmente un disco prova. Vuole ordinare da noi e non tramite sito.
+Min. 10 dischi al mese.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-21" durata="2" messaggio="false" newInterest="NULLO" number="2" operatore="TERESA" previousInterest="BLANK">Mi ha detto che ha comprato noritake e Dentsply. Abbiamo pensato con Victoria di fare upgrade al 40%, ma non sappiamo se lui è in contatto con un nostro distributore tipo Masiero quindi non facciamo nulla.</chiamata>
+</companyNotes>

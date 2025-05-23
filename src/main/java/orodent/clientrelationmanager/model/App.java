@@ -9,15 +9,21 @@ import java.util.Map;
 
 public class App{
     private String operator;
-    private final DBManager dbManager;
+    private DBManager dbManager;
     private Stage primaryStage;
-    private final Map<String, List<String>> configs;
+    private Map<String, List<String>> configs;
     private List<Client> list;
 
 
     public App(){
-        dbManager = new DBManager();
         configs = new HashMap<>();
+    }
+
+    public void start() {
+        this.dbManager = new DBManager();
+    }
+    public void setConfigs(Map<String, List<String>> configs) {
+        this.configs = configs;
     }
     public void setWorkingOperator(String operator) {
         this.operator = operator;

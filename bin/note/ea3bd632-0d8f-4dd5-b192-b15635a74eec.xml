@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="denteris">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK"/>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-23" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="NON_TROVATO">non rispondono al telefono, mando mail.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-03" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="TERESA" previousInterest="NON_TROVATO"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-06" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="TERESA" previousInterest="NON_TROVATO">non hanno rispsoto al telefono, mandata altra mail.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-13" durata="0" messaggio="false" newInterest="NULLO" number="5" operatore="TERESA" previousInterest="NON_TROVATO"/>
+</companyNotes>

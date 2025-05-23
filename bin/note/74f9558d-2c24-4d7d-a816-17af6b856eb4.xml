@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DENTANOR BIOSUMMER">
+                        
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-08" durata="3" messaggio="false" newInterest="RICHIAMARE" number="1" operatore="HUGO" previousInterest="BLANK">HANNO MOLTO DA FARE MA DICONO CHE DARANNO UN OCCHIO ALLA MIA PRESENTAZIONE.  aTTENDO RISPOSTA DA GUILLAUME</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-08" durata="1" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="HUGO" previousInterest="RICHIAMARE"/>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-15" durata="2" messaggio="false" newInterest="RICHIAMARE" number="3" operatore="HUGO" previousInterest="RICHIAMARE">Picca non è disponibile ma chiedo alla sua segretaria se può dargli il mio messaggio ed intanto invio richiesta per listino</chiamata>
+            
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-22" durata="2" messaggio="false" newInterest="RICHIAMARE" number="4" operatore="HUGO" previousInterest="RICHIAMARE">al telefono nessuna risposta lo ricontatto via mail spiegando che sono trascorsi parecchi mesi e gli chiedo gentilmente una risposta anche se fosse negativa per non disturbarlo ulteriormente ed avere un feedback. </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-23" durata="2" messaggio="false" newInterest="NULLO" number="5" operatore="HUGO" previousInterest="RICHIAMARE">Mr Picca risponde solo via mail che al momento no intendono aggiungere alta zirconia al loro portafoglio e se qualcosa cambierà si metteranno loro direttamente in contatto. </chiamata>
+</companyNotes>

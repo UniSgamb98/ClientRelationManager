@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DENTAL INC ">
+                            
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-19" durata="1" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="HUGO" previousInterest="CLIENTE"/>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-15" durata="1" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="HUGO" previousInterest="NON_TROVATO">nessuna risposta </chiamata>
+                    
+
+
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-29" durata="2" messaggio="false" newInterest="NON_INERENTE" number="3" operatore="HUGO" previousInterest="INFO">Non ha nessun interesse </chiamata>
+    
+</companyNotes>

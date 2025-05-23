@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="ATP lab laboratorio odontotecnico">
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-05" durata="3" messaggio="false" newInterest="BLANK" number="1" operatore="SANTOLO" previousInterest="BLANK">Il referente sarà in ufficio domani, il 5/09, quindi dovrò richiamare.</chiamata>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-06" durata="0" messaggio="false" newInterest="LISTINO" number="2" operatore="SANTOLO" previousInterest="BLANK">Mandata proposta commerciale + listino 40%. Consumo: 110 dischi all’anno</chiamata>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-13" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="TERESA" previousInterest="LISTINO">Chiusi, richiamo pomeriggio.</chiamata>
+                                        
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-13" durata="1" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="LISTINO">Il sig. Lino rientrerà in ufficio lunedì mattina.</chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-16" durata="3" messaggio="false" newInterest="BLANK" number="5" operatore="TERESA" previousInterest="RICHIAMARE">Lino deve prima parlare col suo ceramista che rientra oggi, successivamente mi darà un feedback. Non hanno mai provato prodotti Orodent.</chiamata>
+                            
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-20" durata="0" messaggio="false" newInterest="BLANK" number="6" operatore="TERESA" previousInterest="RICHIAMARE">Lino non ha ancora parlato col suo collega perchè è in malattia. Mi ha detto di chiamare martedì e parlare con Gabriele, è lui quello che saprà darmi una risposta.</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-24" durata="10" messaggio="false" newInterest="CAMPIONE" number="7" operatore="TERESA" previousInterest="RICHIAMARE">Parlato con Gabriele, loro utilizzano solo Katana, principalmente html (1200). Se dovessero cambiare, mi dice che deve cambiare tutte le procedure e se cambia, vorrebbe ottimizzare le procedure. 
+E' molto interessato a testare un nostro disco insieme al nostro programma di sinterizzazione.
+Mi ha mandato tramite whatsapp l'indirizzo al quale far arrivare EOS 98, h14, A2. Riguardo i prezzi, mi ha detto che con lo sconto al 40% a lui riservato, siamo allineati con Katana. Abbiamo parlato anche della nostra azienda e spiegato che produciamo direttamente noi i dischi nella nostra fabbrica. 
+Non hanno mai provato Orodent, mi ha chiesto se vendiamo direttamente noi o se nel caso in cui ordinasse, deve appoggiarsi a qualcuno.</chiamata>
+                    
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="2" data="2024-10-07" durata="0" messaggio="false" newInterest="CAMPIONE" number="8" operatore="TERESA" previousInterest="CAMPIONE">24/09 mandato disco prova</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-07" durata="0" messaggio="false" newInterest="NON_TROVATO" number="9" operatore="TERESA" previousInterest="CAMPIONE">Riprovo più tardi, altrimenti mando un messaggio su whatsapp</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-07" durata="2" messaggio="false" newInterest="RICHIAMARE" number="10" operatore="TERESA" previousInterest="CAMPIONE">Parlato con Gabriele, mi ha detto che lo deve ancora provare e se dovesse cambiare se ne parlerò ad inizio anno 2025.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-20" durata="4" messaggio="false" newInterest="NULLO" number="11" operatore="TERESA" previousInterest="CAMPIONE">Gabriele mi ha detto che ha trovato la nostra zirconia meno traslucida rispetto a katana. Non vuole cambiare perchè con Katana si trovano bene, i suoi ragazzi sanno lavorarla e se cambia, deve cambiare tutto il processo e non gli conviene. Mi ha detto che nel futuro magari potrebbe utilizzare qualche volta anche la nostra zirconia</chiamata>
+</companyNotes>

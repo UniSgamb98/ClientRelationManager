@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="H&amp;S Zahntechnik GmbH">
+                            
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-19" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Riprovare lunedì, contattato in precedenza da Carolina.</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-22" durata="0" messaggio="false" newInterest="CLIENTE" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Frank Heider ha già ordinato attraverso il sito. Richiamare inizio prossima settimana per stabilire prezzi-quantità ed eventuale sconto.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-29" durata="0" messaggio="false" newInterest="CLIENTE" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con Heider, conferma 10 dischi al mese.
+Manteniamo sconto 50, cliente online.
+</chiamata>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-13" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="SANTOLO" previousInterest="CLIENTE">Richiamare prossima settimana</chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="3" data="2024-06-21" durata="0" messaggio="false" newInterest="CLIENTE" number="5" operatore="SANTOLO" previousInterest="CLIENTE">Parlato con il Signor Heider, effettua un ordine di 29 dischi e riconfermo il 50% online (più spese gratuite).
+Per il prossimo ordine ci riserviamo di fargli pagare almeno le spese di spedizione e confermare 50%.
+Ci auguriamo che inizi ad ordinare con continuità.</chiamata>
+</companyNotes>

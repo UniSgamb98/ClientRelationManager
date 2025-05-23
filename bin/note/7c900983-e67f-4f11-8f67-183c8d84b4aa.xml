@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentika">
+        
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-07" durata="1" messaggio="false" newInterest="BLANK" number="1" operatore="TERESA" previousInterest="BLANK">la segretaria mi ha detto di chiamare lunedì</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-11" durata="1" messaggio="false" newInterest="NON_INERENTE" number="2" operatore="TERESA" previousInterest="BLANK">Respons. Herr Heloewer. Trattano poche cose per laboratori e non hanno a che fare con zirconia.</chiamata>
+</companyNotes>

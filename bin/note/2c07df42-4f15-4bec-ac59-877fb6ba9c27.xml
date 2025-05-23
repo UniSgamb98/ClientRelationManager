@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="VILEG GMBH">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-28" durata="0" messaggio="false" newInterest="BLANK" number="1" operatore="TERESA" previousInterest="BLANK">da riacquisire, ultimo ordine fatto nel 2019.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-29" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="BLANK"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-02" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="NON_TROVATO">Il n. di telefono non va, mandata mail.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-09" durata="0" messaggio="false" newInterest="NULLO" number="4" operatore="TERESA" previousInterest="NON_TROVATO"/>
+</companyNotes>

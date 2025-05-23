@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="TienDental">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-15" durata="1" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="HUGO" previousInterest="BLANK">NESSUNA RISPPOSTA CONTATTO VIA MAIL IN ATTESA DI UN LORO RISCONTRO. </chiamata>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-20" durata="1" messaggio="false" newInterest="RICHIAMARE" number="2" operatore="HUGO" previousInterest="NON_TROVATO">tutti fuori per lavoro. </chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-28" durata="2" messaggio="false" newInterest="BLANK" number="3" operatore="HUGO" previousInterest="RICHIAMARE"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-18" durata="1" messaggio="false" newInterest="NULLO" number="4" operatore="HUGO" previousInterest="RICHIAMARE"/>
+</companyNotes>

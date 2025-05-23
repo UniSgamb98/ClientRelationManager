@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="CERALAB">
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-24" durata="1" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="INFO">contatto del 4 Aprile 2024</chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-30" durata="3" messaggio="false" newInterest="LISTINO" number="2" operatore="HUGO" previousInterest="INFO">IN ACCORDO  INVIO LISTINO 55% E CATALOGO </chiamata>
+                            
+
+
+
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-06" durata="1" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="HUGO" previousInterest="LISTINO"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-11" durata="1" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="HUGO" previousInterest="LISTINO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-18" durata="1" messaggio="false" newInterest="NULLO" number="5" operatore="HUGO" previousInterest="LISTINO"/>
+</companyNotes>

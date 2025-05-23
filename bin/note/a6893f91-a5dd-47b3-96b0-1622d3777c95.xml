@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Esprohident">
+        
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-12" durata="1" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="INFO">in accordo telefonico invio info Orodent in attesa di riscontro per listino</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-14" durata="1" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="HUGO" previousInterest="INFO"/>
+</companyNotes>

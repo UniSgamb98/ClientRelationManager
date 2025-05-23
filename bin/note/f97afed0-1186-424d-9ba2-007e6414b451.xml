@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="CADCAMCREADENT">
+                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-09" durata="2" messaggio="false" newInterest="LISTINO" number="1" operatore="HUGO" previousInterest="LISTINO">inviato 26 marzo listino 55%, richiamomper avere novità.</chiamata>
+                                                    
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-09" durata="1" messaggio="false" newInterest="RICHIAMARE" number="2" operatore="HUGO" previousInterest="LISTINO">jaume rientra al lavoro lunedì .</chiamata>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-15" durata="0" messaggio="false" newInterest="RICHIAMARE" number="3" operatore="HUGO" previousInterest="LISTINO">JAUME E' IN RIUNIONE SARO RICONTATTATO A BREVE. </chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-15" durata="2" messaggio="false" newInterest="RICHIAMARE" number="4" operatore="HUGO" previousInterest="LISTINO">CHIAMARE ALLE 13 H</chiamata>
+                            
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-16" durata="2" messaggio="false" newInterest="RICHIAMARE" number="5" operatore="HUGO" previousInterest="LISTINO">purtroppo jaume era in riunione devo richiamare ma gli lasciano detto che in caso mi richiama lui. </chiamata>
+                        
+
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-20" durata="1" messaggio="false" newInterest="NON_TROVATO" number="6" operatore="HUGO" previousInterest="LISTINO"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-21" durata="2" messaggio="false" newInterest="NULLO" number="7" operatore="HUGO" previousInterest="LISTINO"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-03" durata="1" messaggio="false" newInterest="NON_TROVATO" number="8" operatore="HUGO" previousInterest="LISTINO">Invio a Jaume listino 55%. </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-04" durata="2" messaggio="false" newInterest="NON_INERENTE" number="9" operatore="HUGO" previousInterest="LISTINO">Nessun interesse nonostante fosse stato ex cliente ha già preso altri marchi.</chiamata>
+</companyNotes>

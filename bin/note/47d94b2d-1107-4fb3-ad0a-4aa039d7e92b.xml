@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentaltechnik Michael Kiefer">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-09" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con il signor Kiefer, richiede una nostra presentazione da valutare.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-16" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="INFO">Non risponde, forse chiuso per ferie. Inviata mail di reminder alla presentazione.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-07-23" durata="0" messaggio="false" newInterest="LISTINO" number="3" operatore="SANTOLO" previousInterest="INFO">Parlato con il signor Kiefer, usa un marchio cinese con prezzo medio 100 euro a disco 18mm. Consuma delle buone quantità di zirconia.
+Proviamo ad inviare listino con invito a provare un nostro prodotto.</chiamata>
+</companyNotes>

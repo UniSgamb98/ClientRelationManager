@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Buildent">
+                                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-23" durata="3" messaggio="false" newInterest="LISTINO" number="1" operatore="TERESA" previousInterest="BLANK">Il potenziale cliente ha già acquistato il disco prova tramite il sito web al 50%. A maggio le era stato detto che avrebbero mandato l'offerta, ma non gli è mai arriva. Oggi ci ha contattati tramite whatsapp.
+L'ho chiamato: consumo 8-9 dischi mensili, lo scorso anno hanno consumato 161 dischi annui. Utilizza Perfit e Ivoclar. Gli è piaciuto il nostro disco prova. Chiede info riguardo pagamenti e spedizione.
+Ho mandato l'offerta commerciale al 40%. </chiamata>
+                                                                
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-30" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="LISTINO">Comunicazione tramite Whatsapp. Ho provato a chiamarlo, ma non ha risposto. Ho mandato un messaggio per sollecitare un feedback riguardo l'offerta che abbiamo mandato, ha già provato i nostri dischi e gli sono piaciuti. </chiamata>
+                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-03" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="TERESA" previousInterest="RICHIAMARE">Non ha risposto</chiamata>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-03" durata="0" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="RICHIAMARE">mi ha detto che visionerà l'offerta sabato e ci sentiremo lunedì.</chiamata>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-07" durata="0" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="TERESA" previousInterest="RICHIAMARE"/>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-07" durata="1" messaggio="false" newInterest="BLANK" number="6" operatore="TERESA" previousInterest="RICHIAMARE">mi richiama tra mezz'ora.</chiamata>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-08" durata="0" messaggio="false" newInterest="NON_TROVATO" number="7" operatore="TERESA" previousInterest="RICHIAMARE"/>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-09" durata="0" messaggio="false" newInterest="NON_TROVATO" number="8" operatore="TERESA" previousInterest="RICHIAMARE">Riprovo più tardi, altrimenti mando un messaggio.</chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-09" durata="0" messaggio="false" newInterest="NON_TROVATO" number="9" operatore="TERESA" previousInterest="RICHIAMARE">Mandato un Whatsapp per feedback</chiamata>
+                            
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="3" data="2024-11-06" durata="6" messaggio="false" newInterest="CLIENTE" number="10" operatore="TERESA" previousInterest="RICHIAMARE">Ci ha contatti dicendoci che vogliono procedere conl primo ordine. Attendo l'ordine che mi manderà tramite WA, deve confrontarsi internamente per scegliere i prodotti.</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-13" durata="0" messaggio="false" newInterest="BLANK" number="11" operatore="TERESA" previousInterest="CLIENTE">Non ha ancora effettuato l'ordine. Da sentire settimana prossima.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-20" durata="0" messaggio="false" newInterest="NON_TROVATO" number="12" operatore="TERESA" previousInterest="RICHIAMARE"/>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-26" durata="0" messaggio="false" newInterest="BLANK" number="13" operatore="TERESA" previousInterest="RICHIAMARE">Non si è più fatto sentire, domani sollecito il pagamento.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-27" durata="0" messaggio="false" newInterest="BLANK" number="14" operatore="TERESA" previousInterest="RICHIAMARE">non ha risposto al teleofno, ho mandato WA.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-02" durata="0" messaggio="false" newInterest="BLANK" number="15" operatore="TERESA" previousInterest="RICHIAMARE">Ha staccato la chiamata. Attendo ancora una settimana, poi annullo l'ordine.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-09" durata="0" messaggio="false" newInterest="BLANK" number="16" operatore="TERESA" previousInterest="RICHIAMARE">Nessuna cominicazione ricevuta. Ordine annullato.</chiamata>
+</companyNotes>

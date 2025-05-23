@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Ilona Tietze Zahntechnisches Labor">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-03" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare prossima settimana, la Signora Tietze (titolare) è in ferie.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-09" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-10" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con la Signora Tietze, infastidita e non interessata.</chiamata>
+</companyNotes>

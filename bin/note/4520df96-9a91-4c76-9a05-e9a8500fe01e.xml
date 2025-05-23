@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="CLEARLABS ">
+                                                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-12" durata="3" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="INFO">Richiamare per feedback </chiamata>
+                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-18" durata="4" messaggio="false" newInterest="INFO" number="2" operatore="HUGO" previousInterest="INFO">parlo con sergio titolare mi chiede invio info aziendali in attesa di un listino.</chiamata>
+                                                                        
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-24" durata="4" messaggio="false" newInterest="LISTINO" number="3" operatore="HUGO" previousInterest="INFO">parlo con la responsabile ma sergio è a casa ammalato perciò decido di chiedere al laboratorio se sanno quanti dischi mensili consumano e siamo sui 40 -50 perciò invio listino 50% . </chiamata>
+                                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-06" durata="3" messaggio="false" newInterest="RICHIAMARE" number="4" operatore="HUGO" previousInterest="LISTINO">IL RESPONSABILE E' A CASA PER ALTRE DUE SETTIMANE. </chiamata>
+                                                            
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-20" durata="0" messaggio="false" newInterest="LISTINO" number="5" operatore="HUGO" previousInterest="LISTINO">reinvio listino 50% perchè sergio era ammalato da alcune settimane ora è operativo e mi chiede nuovamente il listino per darci un occhio.. resto in attesa per feeback ed eventuale campionatura.</chiamata>
+                                    
+
+
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-28" durata="3" messaggio="false" newInterest="LISTINO" number="6" operatore="HUGO" previousInterest="LISTINO">parlo con pedro e comunico nuovo listino 60% per poi attesa campione o ordine</chiamata>
+                        
+
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-04" durata="2" messaggio="false" newInterest="RICHIAMARE" number="7" operatore="HUGO" previousInterest="LISTINO">settimana prossima chiederò per campionatura dischi , intanto chiedo anche per eventuale appuntamento.</chiamata>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-12" durata="2" messaggio="false" newInterest="NON_TROVATO" number="8" operatore="HUGO" previousInterest="LISTINO">Sergio non risponde perciò invio wasap dove a volte li mi risponde... resto in attesa di un feedback</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-01" durata="2" messaggio="false" newInterest="BLANK" number="9" operatore="HUGO" previousInterest="LISTINO">Oggi Pedro non c'è richiamo domani. </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-02" durata="3" messaggio="false" newInterest="LISTINO" number="10" operatore="HUGO" previousInterest="LISTINO">Parlo con Sergio ma non ha ancora visto nulla, approfitto per reinviare la mail con listino 50% in attesa di un suo feedback</chiamata>
+</companyNotes>

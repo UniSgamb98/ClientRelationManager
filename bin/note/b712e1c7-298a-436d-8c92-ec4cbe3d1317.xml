@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Coolabor">
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-06" durata="0" messaggio="false" newInterest="BLANK" number="1" operatore="SANTOLO" previousInterest="BLANK">Non hanno risposto, da richiamare</chiamata>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-06" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="BLANK"/>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-06" durata="4" messaggio="false" newInterest="LISTINO" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">Interessati, al momento hanno una buona offerta con Zirlux. Mandata offerta commerciale al 40%. Utilizzano un multistrato progressivo, 100 dischi all'anno.</chiamata>
+                                
+
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-13" durata="1" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="LISTINO">Richiamare lunedì. Parlare con Luca o con Fulvio.</chiamata>
+                        
+
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-16" durata="1" messaggio="false" newInterest="BLANK" number="5" operatore="TERESA" previousInterest="LISTINO">Luca non è ancora arrivato in ufficio, richiamerò più tardi.</chiamata>
+            
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-16" durata="1" messaggio="false" newInterest="BLANK" number="6" operatore="TERESA" previousInterest="RICHIAMARE">Riprovare, non sono ancora arrivati.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-17" durata="1" messaggio="false" newInterest="NULLO" number="7" operatore="TERESA" previousInterest="RICHIAMARE">Non riesco a parlare con i responsabili, non hanno interesse</chiamata>
+</companyNotes>

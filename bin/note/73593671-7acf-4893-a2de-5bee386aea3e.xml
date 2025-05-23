@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="SWEDEN &amp; MARTINA">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-05" durata="0" messaggio="false" newInterest="BLANK" number="1" operatore="SANTOLO" previousInterest="BLANK">L'azienda mi comunica di mandare la mail per presentarci direttamente al responsabile produzione</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-06" durata="0" messaggio="false" newInterest="LISTINO" number="2" operatore="SANTOLO" previousInterest="BLANK">Mandata mail presentazione + catalogo</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-13" durata="2" messaggio="false" newInterest="NULLO" number="3" operatore="TERESA" previousInterest="LISTINO">Ho parlato col signor Moscon. La mail col catalogo è stata girata al responsabile, se non mi ha contattata è perchè non è di suo interesse.</chiamata>
+</companyNotes>

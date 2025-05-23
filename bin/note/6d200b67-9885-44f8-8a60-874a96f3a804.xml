@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Zukunft Zahn">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-03" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK">Ha risposto la segreteria dicendo che "Herzlich Willkommen bei ACURA". CHiedere se sono sotto loro o se comprarano in modo indipendente.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-04" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="NON_TROVATO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-04" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="NON_TROVATO">Cercare azienda Acura</chiamata>
+</companyNotes>

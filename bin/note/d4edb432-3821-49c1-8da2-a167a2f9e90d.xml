@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Huessen Zahntechnik">
+                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-05" durata="0" messaggio="false" newInterest="CAMPIONE" number="1" operatore="SANTOLO" previousInterest="CAMPIONE">non risponde</chiamata>
+                                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-05" durata="0" messaggio="false" newInterest="CAMPIONE" number="2" operatore="SANTOLO" previousInterest="CAMPIONE">richiamare settimana prossima, rientra in ufficio Marcus Huessen</chiamata>
+                                                                    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-11" durata="10" messaggio="false" newInterest="CAMPIONE" number="3" operatore="SANTOLO" previousInterest="CAMPIONE">Parlato con Markus Huessen,
+reinvio presentazione e catalogo. Attesa scelta campione</chiamata>
+                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-19" durata="0" messaggio="false" newInterest="CAMPIONE" number="4" operatore="SANTOLO" previousInterest="CAMPIONE">Huessen non risponde, riprovare pomeriggio.</chiamata>
+                                                    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-30" durata="0" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="SANTOLO" previousInterest="INFO"/>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-03" durata="0" messaggio="false" newInterest="NON_TROVATO" number="6" operatore="SANTOLO" previousInterest="INFO">Richiamare Lunedì alle 10 per parlare con Marcus Huessen</chiamata>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-06" durata="0" messaggio="false" newInterest="CAMPIONE" number="7" operatore="SANTOLO" previousInterest="INFO">Parlato con il signor Markus Huessen, ha visitato il sito web ed ha scelto un Thor come campionatura.
+Invierà conferma e p.Iva per mail. Sono un centro piccolo (circa 10 dischi al mese)</chiamata>
+                                    
+
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-17" durata="0" messaggio="false" newInterest="RICHIAMARE" number="8" operatore="SANTOLO" previousInterest="INFO">Richiamare Martedì per ricevere conferma campione</chiamata>
+                            
+
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-21" durata="0" messaggio="false" newInterest="LISTINO" number="9" operatore="SANTOLO" previousInterest="CAMPIONE">Non ha ancora inviato p.iva e scelta campione.  Riferito alla segretaria.</chiamata>
+                    
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="10" operatore="SANTOLO" previousInterest="INFO"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-03" durata="0" messaggio="true" newInterest="NULLO" number="11" operatore="SANTOLO" previousInterest="INFO">Potenziale cliente da scartare.
+De facto non ha mostrato interesse concreto a testare o comprare la nostra zirconia.
+Più volte sollecitato per scegliere campione (mail e telefono) non ha risposto.</chiamata>
+        
+
+</companyNotes>

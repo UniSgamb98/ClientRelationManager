@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DENTAL-UNIO Kft.">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-20" durata="3" messaggio="false" newInterest="BLANK" number="1" operatore="VICTORIA" previousInterest="BLANK">HO PARLATO CON LA RECEPTION, HO CONCORDATO DI RICHIAMARE IL 21.01 PER PARLARE CON LA RESPONSABILE NATALIA.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-21" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="VICTORIA" previousInterest="BLANK"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-27" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="VICTORIA" previousInterest="NON_TROVATO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-07" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="VICTORIA" previousInterest="NON_TROVATO"/>
+</companyNotes>

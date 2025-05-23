@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Lexmann Zahntechnik Muenchen">
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-19" durata="0" messaggio="false" newInterest="RICHIAMARE" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con il Signor Hakman, richiamare lunedì per parlare con il capo laboratorio.</chiamata>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-22" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="RICHIAMARE"/>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-29" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="SANTOLO" previousInterest="RICHIAMARE">Richiamare domani mattina</chiamata>
+                            
+
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-27" durata="0" messaggio="false" newInterest="LISTINO" number="4" operatore="SANTOLO" previousInterest="RICHIAMARE">Interessato a ricevere una presentazione e prezzi.</chiamata>
+                    
+
+
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-13" durata="0" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="SANTOLO" previousInterest="LISTINO">Richiamare Lunedì.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-17" durata="0" messaggio="false" newInterest="NULLO" number="6" operatore="SANTOLO" previousInterest="LISTINO">Parlato con il Signor Huber,
+usa Amann Girrbach che è del 20-30% più economico del nostro listino.
+Upcera ha un listino ancora inferiore.
+Preferisce continuare con loro, quindi evita di chiedere campione.</chiamata>
+</companyNotes>

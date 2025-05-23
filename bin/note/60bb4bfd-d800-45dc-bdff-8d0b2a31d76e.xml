@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="NEE ZAHNTECHNIK">
+                            
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-29" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK"/>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-12-02" durata="2" messaggio="false" newInterest="LISTINO" number="2" operatore="TERESA" previousInterest="NON_TROVATO">come richiesto al telefono, mandata mal al sig. Herr Nee</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-09" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="LISTINO">Herr Nee al momento non è in ufficio, ma Herr van Zadel mi ha detto che sono molto incasinati in questo momento e che sarebbe meglio risentirci a gennaio. Mi ha dato la mail diretta di Herr Nee consigliandomi di scrivere direttamente a  lui, ma che probabilmente se ne riparlerà a gennaio.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-16" durata="0" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="LISTINO">per parlare con Nee o responsabile acquisti chiamare domani tra le 8.00-12.00</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-17" durata="16" messaggio="false" newInterest="BLANK" number="5" operatore="TERESA" previousInterest="LISTINO">Parlato con resp. acquisti Gerd V Zadel e mi ha detto che è interessato a ricevere l'offerta sia dei dischi che del microonde. Utilizzano diversi marchi, ma soprattutto dentona. Sono un pò orientati al prezzo, ma mi ha detto che ultimamente hanno avuto diversi casi di rottura quindi anche la qualità è importante. 
+Riguardo il microonde, hanno da poco ricevuto un forno microonde da testare ma non mi ha saputo dire la marca.
+Mi ha detto che vuole valutare i prezzi e se saranno interessanti, allora mi ha chiesto se sarà possibile testare un disco. 
+Potenziale consumo: gennaio-ottobre 2024 circa 113.
+Mando offerta dischi e microonde.
+Prossimo appuntamento: 12 febbraio dalle 15.00.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="2" data="2025-01-20" durata="0" messaggio="false" newInterest="CAMPIONE" number="6" operatore="TERESA" previousInterest="LISTINO">Zadel mi ha scritto tramite mail che vorrebbero testare Thor h14 A3. Attendo dati di spedizione per disco prova. Il nostro prossimo incontro resta il 12/02 e mi darà un feedback sul disco che avrà testato.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-07" durata="0" messaggio="false" newInterest="BLANK" number="7" operatore="TERESA" previousInterest="CAMPIONE">Zadel mi comunica di spostare l'appuntamento telefonico per il feedback il 19.03 perchè vogliono testare per bene.</chiamata>
+</companyNotes>

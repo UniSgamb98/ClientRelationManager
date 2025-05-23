@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentallabor Wohland">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-02" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">La segretaria mi ha invitato a richiamare un tecnico domani, per avere maggiori info sulla loro zirconia.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-03" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Richiamare Lunedì e parlare direttamente con il Signor Wohland.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-06" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con Frau Wohland, comprano già da un loro amico rifornitore.</chiamata>
+    
+</companyNotes>

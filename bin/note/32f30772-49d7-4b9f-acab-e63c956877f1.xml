@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Els Dent Fraeszentrum">
+                        
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-18" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare dopo le 14 per parlare con il titolare. Richiamano loro</chiamata>
+                    
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-19" durata="0" messaggio="false" newInterest="INFO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con il Signor Em-Khati,
+fanno circa 600 dischi all'anno.
+Richiede la nostra presentazione aziendale ed eventualmente possibili campioni.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-21" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="INFO">Richiamare nel pomeriggio e confermare ricezione mail a Em-Khati.
+Ok ricevuta, ci farà sapere.</chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-01" durata="0" messaggio="false" newInterest="BLANK" number="4" operatore="SANTOLO" previousInterest="INFO">Parlato con il Signor em-Khati, si rifa sentire lui ad Agosto, al momento molto impegnato.</chiamata>
+</companyNotes>

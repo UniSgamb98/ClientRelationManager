@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="LABORATORIO ZARANTONELLO DI ZARANTONELLO ANDREA &amp; C S.A.S.">
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-10" durata="2" messaggio="false" newInterest="LISTINO" number="1" operatore="SANTOLO" previousInterest="BLANK">Responsabile Andrea Zarantonello rientra verso la fine di questa settimana. Nel frattempo mando mail conoscitiva + catagolo, richiamerò.</chiamata>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-13" durata="2" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="LISTINO">Zarantonello dovrebbe rientrare nel pomeriggio, richiamo.</chiamata>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-13" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="TERESA" previousInterest="LISTINO"/>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-23" durata="1" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="LISTINO">Sig. Zarantonello deve ancora arrivare, richiamo più tardi.</chiamata>
+                            
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-23" durata="0" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="TERESA" previousInterest="LISTINO"/>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-23" durata="2" messaggio="false" newInterest="BLANK" number="6" operatore="TERESA" previousInterest="LISTINO">Zarant. arriverà in ufficio per le 16. Ho detto di farmi richiamare e se ha interesse possiamo fare offerta commerciale.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-30" durata="2" messaggio="false" newInterest="BLANK" number="7" operatore="TERESA" previousInterest="RICHIAMARE">Sig. Zarantonello è fuori e rientra settimana prossima. La segretaria mi ha detto che inoltra la mia mail mandata il 10/09 così inizia a darci un'occhiata.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-07" durata="1" messaggio="false" newInterest="BLANK" number="8" operatore="TERESA" previousInterest="RICHIAMARE">Zarantonello è fuori ufficio, rientrerà nei prossimi giorni. Mi hanno detto di richiamare</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-11" durata="0" messaggio="false" newInterest="NON_TROVATO" number="9" operatore="TERESA" previousInterest="RICHIAMARE"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-14" durata="0" messaggio="false" newInterest="BLANK" number="10" operatore="TERESA" previousInterest="RICHIAMARE">Non hanno risposto alla chiamata, sollecito tramite mail per capire se hanno interesse</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-24" durata="0" messaggio="false" newInterest="NULLO" number="11" operatore="TERESA" previousInterest="RICHIAMARE"/>
+</companyNotes>

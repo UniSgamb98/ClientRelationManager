@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Eurl ORAL CONCEPT CENTER ">
+                                
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="3" data="2024-05-20" durata="3" messaggio="false" newInterest="CLIENTE" number="1" operatore="HUGO" previousInterest="CAMPIONE">Ordine in attesa di essere pagato con sepa istantaneo ha un milling center ,ma sta attivandosi per diventare distributore. 
+
+•	2 discs 98/14/A1
+•	2 discs 98/18/A1
+•	2 discs 98/14/A2
+•	2 discs 98/18/A2
+•	2 discs 98/16/A3
+</chiamata>
+                            
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-24" durata="1" messaggio="false" newInterest="RICHIAMARE" number="2" operatore="HUGO" previousInterest="CLIENTE">risponde via wasap che appena gli confermano la spedizione dhl fa il pagamento instantaneo. </chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-06" durata="2" messaggio="false" newInterest="BLANK" number="3" operatore="HUGO" previousInterest="CLIENTE">Sparito non risponde più provo messaggio su wasap !!</chiamata>
+                    
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-07" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="HUGO" previousInterest="CLIENTE"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-20" durata="2" messaggio="false" newInterest="CLIENTE" number="5" operatore="HUGO" previousInterest="CLIENTE">fa ordine  su wasap di 12 dischi thor varie altezze simao in attesa di bonifico</chiamata>
+        
+
+</companyNotes>

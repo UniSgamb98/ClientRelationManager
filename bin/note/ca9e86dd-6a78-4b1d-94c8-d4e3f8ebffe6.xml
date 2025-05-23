@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Paal Dental Vertriebs GmbH">
+                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-05" durata="0" messaggio="false" newInterest="CAMPIONE" number="1" operatore="SANTOLO" previousInterest="CAMPIONE">richiamare prossima settimana, già contattato a Febbraio</chiamata>
+                                                        
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-11" durata="15" messaggio="false" newInterest="CAMPIONE" number="2" operatore="SANTOLO" previousInterest="CAMPIONE">Parlato con il signor Dietmar Paal, interessato a provare i dischi presso un amico con laboratorio (ReproDent). </chiamata>
+                                            
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-27" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="INFO">Richiamare nel pomeriggio, ore 16. Non è arrivato in ufficio, richiama lui.</chiamata>
+                                
+
+
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-10" durata="0" messaggio="false" newInterest="NON_INERENTE" number="4" operatore="SANTOLO" previousInterest="INFO">Al momento non vendono dischi di zirconia, Reprodent (laboratorio vicino) non è interessato a testare nuovi materiali.
+In ogni caso ci potremmo incontrare a Colonia per la Fiera Dentale del prossimo anno per vedere se ci possono essere sviluppi a quel punto.
+</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-11" durata="2" messaggio="false" newInterest="BLANK" number="5" operatore="TERESA" previousInterest="NON_INERENTE">Per capire se hanno inserito la zirconia, devo parlare con Herr Paal che però al momento non è disponibile. Riprovare lunedì.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="2" data="2024-10-14" durata="5" messaggio="false" newInterest="CAMPIONE" number="6" operatore="TERESA" previousInterest="NON_INERENTE">Herr Paal non utilizza zirconia, ma ha un laboratorio al quale far testare i dischi. Mi ha chiesto di mandargli due dischi prova, mando una mail nella quale mi faccio dire tutte le info, sia prodotti che indirizzi/partita iva. Lui vuole avere i dischi in casa così da proporli al laboraatorio con cui collabora.</chiamata>
+            
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-29" durata="5" messaggio="false" newInterest="BLANK" number="7" operatore="TERESA" previousInterest="CAMPIONE">parlato con Dietmer Paal. Mi ha detto che Nicolas Paal studia e non hanno visto la mail. Gliela ho inoltrata ed attendono una risposta.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-05" durata="5" messaggio="false" newInterest="NULLO" number="8" operatore="TERESA" previousInterest="CAMPIONE">Dietmar mi ha dato il nome del loro grosso laboratorio: ReproDent. Mi ha detto prima di mandare la mail dicendo che mi ha indirizzata lui, e di chiamare qualche giorno dopo.</chiamata>
+</companyNotes>

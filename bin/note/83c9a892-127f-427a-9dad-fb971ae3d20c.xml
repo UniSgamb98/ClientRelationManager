@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="TopLab s.a.r.l">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-05" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Inizieranno a fresare da Ottobre con strumentazione Cad-Cam di ultima generazione,
+da ricontattare ad Ottobre.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-11" durata="2" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="INFO">Non hanno ancora iniziaro a fresare, gli mancano delle certificazioni. Non hanno ancora fornitori di zirconia, mi ha detto di sentirci tra dicembre e gennaio.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-13" durata="2" messaggio="false" newInterest="NULLO" number="3" operatore="TERESA" previousInterest="INFO">non fresano e forse in futuro inseriranno zirconia, ma al momento non hanno nulla di certo.</chiamata>
+</companyNotes>

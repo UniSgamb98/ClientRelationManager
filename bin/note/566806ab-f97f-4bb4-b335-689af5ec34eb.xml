@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dental Look">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-19" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare e parlare con Mario, hanno avuto dischi prova.
+Consumano quasi 50 dischi al mese ed hanno al momento 1 fornitore (e mezzo).</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-30" durata="0" messaggio="false" newInterest="CAMPIONE" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Mario non è in ufficio, rientra lunedì.
+Attesa feedback campionatura </chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-07" durata="0" messaggio="false" newInterest="CAMPIONE" number="3" operatore="SANTOLO" previousInterest="CAMPIONE">Parlato con Mario Cernuto (responsabile Cad-Cam e Acquisti).
+Lo reinvio sul sito per primo ordine,
+correzione quantità circa 7-10 dischi al mese.</chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-19" durata="0" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="NULLO">Victoria mi comunica che abbiamo un accordo col distributore Meteaux e non possiamo vendere in Svizzera.</chiamata>
+</companyNotes>

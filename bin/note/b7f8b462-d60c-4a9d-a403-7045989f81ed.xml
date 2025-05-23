@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Grau Dentaltechnik GmbH">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-08" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con il Signor Moessle, hanno già Dental Direct ma vorrebbero leggere la nostra presentazione.
+Rimaniamo in contatto se in futuro ci sono opportunità.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-16" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="SANTOLO" previousInterest="INFO">Riparlato con il Signor Moessle, si rifa sentire lui se ci sono opportunità</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-25" durata="6" messaggio="false" newInterest="LISTINO" number="3" operatore="TERESA" previousInterest="INFO">Al momento non avrebbero bisogno di cambiare marchio, ma valutano l'offerta. Consumano circo 10 dischi al mese, è un calco approssimativo perchè il consumo varia molto in base ai mesi. Offerta: più di 10 dischi al mese 45%, meno di 10 dischi 40%.</chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-02" durata="2" messaggio="false" newInterest="NULLO" number="4" operatore="TERESA" previousInterest="LISTINO">Non sono interessati</chiamata>
+</companyNotes>

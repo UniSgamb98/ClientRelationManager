@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Centro 3 laboratorio odontotecnico">
+        
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-05" durata="4" messaggio="false" newInterest="LISTINO" number="1" operatore="SANTOLO" previousInterest="BLANK">Responsabile in ferie, mi hanno detto di mandare una mail. Mail con catalogo mandata.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-13" durata="0" messaggio="false" newInterest="NULLO" number="2" operatore="TERESA" previousInterest="LISTINO">Non trattano zirconia.</chiamata>
+</companyNotes>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dental-Labor Froesch GmbH">
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-04" durata="0" messaggio="false" newInterest="BLANK" number="1" operatore="SANTOLO" previousInterest="BLANK">Capo Laboratorio Sign. Arnold (400 dischi all'anno) inviata presentazione
+</chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-04" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="SANTOLO" previousInterest="BLANK">(400 dischi annui) richiamato ed inviata offerta al sign.Arnold
+</chiamata>
+                            
+
+
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-30" durata="0" messaggio="false" newInterest="LISTINO" number="3" operatore="SANTOLO" previousInterest="BLANK">Signor Arnold non trovato, provare via mail con reminder.</chiamata>
+            
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-27" durata="0" messaggio="false" newInterest="RICHIAMARE" number="4" operatore="SANTOLO" previousInterest="LISTINO">il signor Arnold torna dalle ferie prossima settmana. riprovare.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-03" durata="0" messaggio="false" newInterest="NULLO" number="5" operatore="SANTOLO" previousInterest="LISTINO">Parlato con il Signor Arnold: ha riportato al suo capo ma purtroppo non sono interessati.</chiamata>
+</companyNotes>

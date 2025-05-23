@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="i-ProDens GmbH">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-24" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con la Signora Dukatz, al momento non commercializzano zirconia ma stanno lavorando ad un progetto per l'inserimento. 
+Le invio presentazione aziendale ma mi ha già anticipato che ci sono tempistiche lunghe.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-23" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="INFO">Non ho trovato la signora Dukatz, riprovare nel pomeriggio</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-23" durata="0" messaggio="false" newInterest="INFO" number="3" operatore="SANTOLO" previousInterest="INFO">Parlato con la Signora Dukatz, al momento il team è impegnato con le ferie e l'argomento zirconia verrà trattato più avanti, 
+ci risentiremo volentieri a Settembre.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-19" durata="4" messaggio="false" newInterest="NULLO" number="4" operatore="TERESA" previousInterest="INFO">Hanno scelto un altro marchio</chiamata>
+</companyNotes>

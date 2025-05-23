@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="CAMLOG Vertriebs GmbH">
+        
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-17" durata="0" messaggio="false" newInterest="NULLO" number="1" operatore="SANTOLO" previousInterest="BLANK">Comprano solo attraverso Herny Schein,
+dalla loro sede in Svizzera.
+Preso contatto di un buyer</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-29" durata="0" messaggio="false" newInterest="NULLO" number="2" operatore="SANTOLO" previousInterest="NULLO"/>
+</companyNotes>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Poerschke Zahntechnisches Labor">
+                                
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-04" durata="0" messaggio="false" newInterest="BLANK" number="1" operatore="SANTOLO" previousInterest="BLANK">richiamare
+</chiamata>
+                            
+
+
+
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-27" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="BLANK"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-28" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-17" durata="0" messaggio="false" newInterest="NULLO" number="4" operatore="SANTOLO" previousInterest="NON_TROVATO">Hanno già il loro fonitore fisso e non intendono cambiare.</chiamata>
+</companyNotes>

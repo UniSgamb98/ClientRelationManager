@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="vhf">
+            
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-23" durata="2" messaggio="false" newInterest="LISTINO" number="1" operatore="TERESA" previousInterest="BLANK">come primo contatto vogliono che si mandi una mail, non mi hanno ancora dato un contatto di un referente. Mandata mail conoscitiva+catalogo.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-03" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="LISTINO">Festa dell'unità nazionale, non rispondono riprovo domani.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-04" durata="0" messaggio="false" newInterest="NON_INERENTE" number="3" operatore="TERESA" previousInterest="LISTINO">producono macchina CAM</chiamata>
+</companyNotes>

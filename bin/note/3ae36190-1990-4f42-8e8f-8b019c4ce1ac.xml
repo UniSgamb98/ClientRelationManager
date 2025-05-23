@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Heberle Dental GmbH">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-26" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Riprovare domattina e chiedere del CEO.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-27" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Il signor Heberle è in vacanza, richiamare settimana prossima giovedì.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-04" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con il Signor Heberle, non è interessato, si trova bene con Dental Direct: buone condizioni e buon materiale.</chiamata>
+</companyNotes>

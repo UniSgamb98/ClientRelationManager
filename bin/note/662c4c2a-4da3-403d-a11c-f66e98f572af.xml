@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="NORPRODENT">
+                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-05" durata="0" feedback="" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="INFO">Parlo con un impiegato e mi da il contatto mail dell'ufficio che si occupa dei fornitori, invio presentazione Orodent. </chiamata>
+                                                                        
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-12" durata="2" feedback="" messaggio="false" newInterest="INFO" number="2" operatore="HUGO" previousInterest="INFO">non avevano ricevuto nulla reinvio presentazione orodent</chiamata>
+                                                        
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-19" durata="5" messaggio="false" newInterest="INFO" number="3" operatore="HUGO" previousInterest="INFO">ricontatto ma non trovo nessuno che mi possa dare delle notizie allora mi faccio dare la mail amministrativa che gestisce tutto in attesa di aver eun loro feedback e poter inviare un listino. </chiamata>
+                                                
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-06" durata="5" messaggio="false" newInterest="LISTINO" number="4" operatore="HUGO" previousInterest="INFO">ok usano molti dischi ma non dice quanti  invio list. 55% in attesa per eventuale campionatura.</chiamata>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-15" durata="2" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="HUGO" previousInterest="INFO">trovato un protesista ma gli altri sono di festività , richiamo domani gonzalo. </chiamata>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-16" durata="3" messaggio="false" newInterest="LISTINO" number="6" operatore="HUGO" previousInterest="INFO">Riesco a parlare con Gonzalo inviato listino 55 % sopra i 50 dischi mensili. ci da nuovamente un occhio e restiamo in contatto. </chiamata>
+                                
+
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-22" durata="3" messaggio="false" newInterest="RICHIAMARE" number="7" operatore="HUGO" previousInterest="LISTINO">Gonzalo è euscito lascio anche cell orodent per essere richiamato e avere feedback per lsitino ed eventuale campionatura. </chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-27" durata="2" messaggio="false" newInterest="RICHIAMARE" number="8" operatore="HUGO" previousInterest="LISTINO">non ha avuto tempo richiamo settimana prossima. </chiamata>
+                    
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-04" durata="2" messaggio="false" newInterest="BLANK" number="9" operatore="HUGO" previousInterest="LISTINO">Gonzalo deve ancora dare un occhio al listino che gli ho inviato , lo farà appena possibile entro breve. </chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-13" durata="3" messaggio="false" newInterest="BLANK" number="10" operatore="HUGO" previousInterest="LISTINO">Gonzalo mi dice che appena riesce mi avvisa lui dopo che darà un occhio ai prezzi. </chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="1" data="2024-07-02" durata="3" messaggio="false" newInterest="LISTINO" number="11" operatore="HUGO" previousInterest="LISTINO">Parlo con Gonzalo e mi dice che prenderà tutto in mano verso agosto lo avviso che noi saremo chiusi e lo ricontatterò a fine luglio. Listino 55%. </chiamata>
+</companyNotes>

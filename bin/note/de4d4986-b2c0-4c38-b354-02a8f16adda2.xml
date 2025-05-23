@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="CNC">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-06" durata="3" messaggio="false" newInterest="RICHIAMARE" number="1" operatore="HUGO" previousInterest="INFO">SAUL DEVE ANCORA VEDERE TUTTO DEVO RICHIAMARLO. </chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-15" durata="1" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="HUGO" previousInterest="INFO"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-16" durata="3" messaggio="false" newInterest="LISTINO" number="3" operatore="HUGO" previousInterest="INFO">prendono in considerazione i prossimi acqusiti a dicembre per poi tutto l'anno . invio listino 50% per piu di 50 dischi mensili. </chiamata>
+    
+</companyNotes>

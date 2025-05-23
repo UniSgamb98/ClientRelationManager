@@ -55,6 +55,7 @@ public class ClientAnnotationView extends VBox {
                         // Procedi con l'aggiornamento sul database o altre operazioni.
                         dbManager.updateAnnotation(updatedAnnotation, client.getUuid().toString());
 
+                        //In realtà qua se la updatedAnnotation ha un flag a false ma client ha il flag a true dovrebbe controllare che fosse l'unica, ma pazienza
                         if (updatedAnnotation.getInformation()) client.set(ClientField.INFORMATION, true);
                         if (updatedAnnotation.getCatalog()) client.set(ClientField.CATALOG, true);
                         if (updatedAnnotation.getSample()) client.set(ClientField.SAMPLE, true);

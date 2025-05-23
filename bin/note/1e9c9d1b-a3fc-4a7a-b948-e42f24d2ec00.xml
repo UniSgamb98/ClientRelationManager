@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Hipp Dentaltechnik GmbH">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-10" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare nel primo pomeriggio, il signor Hipp non in ufficio.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-10" durata="0" messaggio="false" newInterest="INFO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Laboratorio di 10 persone e usano già Katana, vogliono comunque ricevere una presentazione e se interessati si rifanno sentire loro.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-17" durata="0" messaggio="false" newInterest="INFO" number="3" operatore="SANTOLO" previousInterest="INFO">Parlato con il Signor Goetsche, al momento non hanno bisogno ma ci tengono considerazione per eventualità future.</chiamata>
+</companyNotes>

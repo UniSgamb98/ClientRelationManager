@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DEPOSITO PRODENTAL">
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-05" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="INFO">Parlato con referente che mi autorizza invio presentazione mail ORODENT. </chiamata>
+                                    
+
+
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-18" durata="3" messaggio="false" newInterest="INFO" number="2" operatore="HUGO" previousInterest="INFO">Parlo con un repsonsabile ma non sa nulla della mial precedente inviata perciò invio nuovamente. Sono rivenditori con deposito e pagina web </chiamata>
+                        
+
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-07" durata="3" messaggio="false" newInterest="LISTINO" number="3" operatore="HUGO" previousInterest="INFO">non aveano ricevuro nulla perchè sul sito mettono gmail ma in realtà quella sicura è yahoo.es </chiamata>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-20" durata="2" messaggio="false" newInterest="RICHIAMARE" number="4" operatore="HUGO" previousInterest="INFO">richiamare &lt;Diego sempre la mattina tipo 9.30</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-22" durata="2" messaggio="false" newInterest="RICHIAMARE" number="5" operatore="HUGO" previousInterest="INFO">DFiego via da burgos fino a venerdì che lo richiamerò , nel frattempo invio mail e chiedo un suo feedback. </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-24" durata="2" messaggio="false" newInterest="NON_INERENTE" number="6" operatore="HUGO" previousInterest="INFO"/>
+</companyNotes>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="C-BITES / CADMILL">
+                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-22" durata="0" messaggio="false" newInterest="RICHIAMARE" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare domani, la segretaria ha scritto nome azienda e cellulare per eventuale richiamata.
+HANNO GIA FATTO UN ORDINE NEL 2020</chiamata>
+                                                                        
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-23" durata="0" messaggio="false" newInterest="RICHIAMARE" number="2" operatore="SANTOLO" previousInterest="RICHIAMARE">Trovato contatto referente materiali, richiamarlo domani.</chiamata>
+                                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="RICHIAMARE">il Signor Canizzaro è in riunione, richiama lui.
+Parlato con un suo collaboratore e riferito del nuovo catalogo e prezzi per ex clienti.</chiamata>
+                                                            
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-28" durata="0" messaggio="false" newInterest="INFO" number="4" operatore="SANTOLO" previousInterest="RICHIAMARE">Parlato con il Signor Soezer, ne parla con Canizzaro.
+Richiamare domani mattina alle 9:30 per discussione catalogo e nuovi prezzi.</chiamata>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="2" data="2024-05-29" durata="0" messaggio="false" newInterest="CAMPIONE" number="5" operatore="SANTOLO" previousInterest="INFO">Parlato con il Signor Soezer, vuole testare un nuovo campione di EOS (18mm). Dopo il suo feedback potremo parlare di prezzi.
+CAMPIONE INVIATO</chiamata>
+                                                
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-05" durata="0" messaggio="false" newInterest="RICHIAMARE" number="6" operatore="SANTOLO" previousInterest="CAMPIONE">Richiesta incontro Lunedì 10.06 a Colonia, per presentazione personale e anche discussione dei nostri nuovi materiali con il Signor Soezer.</chiamata>
+                                
+
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-18" durata="0" messaggio="false" newInterest="RICHIAMARE" number="7" operatore="SANTOLO" previousInterest="CAMPIONE">Non trovando il Signor Soezer ho inviato una mail di reminder per ricevere un feedback.
+Non poteva incontrarmi lunedì 10 giugno poiché molto impegnato.</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="8" operatore="SANTOLO" previousInterest="CAMPIONE">Il Signor Soezer non ha risposto alla mail di sollecito feedback ed è molto impegnato per parlare a telefono.
+Attendo fine settimana per provare a richiamare.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-26" durata="0" messaggio="false" newInterest="NON_TROVATO" number="9" operatore="SANTOLO" previousInterest="CAMPIONE">Lasciato numero di cellulare alla Reception, il signor Soezer è in riunione e richiama lui.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-01" durata="0" messaggio="false" newInterest="RICHIAMARE" number="10" operatore="SANTOLO" previousInterest="CAMPIONE">Purtroppo ci sono molte persone in ferie e qualcuno ammalato, il Signor Soezer appena ha tempo richiamerà per darci un feedback sul campione.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-05" durata="0" messaggio="false" newInterest="RICHIAMARE" number="11" operatore="SANTOLO" previousInterest="CAMPIONE">Non raggiunto a telefono, ho inviato una mail di risposta alla sua del 29 maggio per avere una valutazione del campione.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-09" durata="0" messaggio="false" newInterest="RICHIAMARE" number="12" operatore="SANTOLO" previousInterest="CAMPIONE">Purtroppo non ha avuto proprio tempo di testare il prodotto, ci scrive lui quando avrà un feedback.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-11" durata="4" messaggio="false" newInterest="RICHIAMARE" number="13" operatore="TERESA" previousInterest="CAMPIONE">Parlato con Herr Sözer, se ha interesse ci chiama direttamente lui. Non vuole essere ricontattato.</chiamata>
+</companyNotes>

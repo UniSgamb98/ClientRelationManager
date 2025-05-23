@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Sparpraxis dental">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-05" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK"/>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-06" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="NON_TROVATO"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-07" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="NON_TROVATO">Non rispondono al telefono, mandata mail</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-14" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="TERESA" previousInterest="NON_TROVATO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-15" durata="0" messaggio="false" newInterest="NULLO" number="5" operatore="TERESA" previousInterest="NON_TROVATO"/>
+</companyNotes>

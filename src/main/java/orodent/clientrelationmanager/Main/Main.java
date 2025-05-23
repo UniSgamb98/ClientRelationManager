@@ -16,15 +16,14 @@ public class Main extends Application {
         PrintStream stream = new PrintStream(file);
         System.setOut(stream);
 
-        MainController mainController = new MainController();
-        Map<String, List<String>> config = mainController.getApp().getConfigs();
+        Map<String, List<String>> config = new HashMap<>();
 
         //Lettura file configurazione
         String percorsoFile = "configs/config.txt"; // Cambia percorso
         String sezioneCorrente = null;
 
         // Set delle sezioni richieste
-        Set<String> sezioniRichieste = new HashSet<>(Set.of("operatori femmine", "filtri")); // Aggiungi altre sezioni se vuoi
+        Set<String> sezioniRichieste = new HashSet<>(Set.of("operatori femmine", "filtri", "admin", "database home", "indirizzi ip")); // Aggiungi altre sezioni se vuoi
 
         try (BufferedReader reader = new BufferedReader(new FileReader(percorsoFile))) {
             String linea;
@@ -56,10 +55,12 @@ public class Main extends Application {
         }
 
         if (!mancanti.isEmpty()) {
-            System.err.println("Sezioni mancanti nel file di configurazione: " + mancanti);
+            System.out.println("Sezioni mancanti nel file di configurazione: " + mancanti);
         }
 
-
+        MainController mainController = new MainController();
+        mainController.getApp().setConfigs(config);
+        mainController.getApp().start();
 
         Scene scene = new Scene(mainController.getMainView(), 350, 250);
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/clientdetailview.css")).toExternalForm());

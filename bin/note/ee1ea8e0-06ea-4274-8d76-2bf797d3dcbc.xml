@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="GADETEC">
+                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-09" durata="1" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="HUGO" previousInterest="BLANK"/>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-15" durata="2" messaggio="false" newInterest="INFO" number="2" operatore="HUGO" previousInterest="INFO">vanno un pò di fretta al telefono ma vuole una presentazione aziendale hanno marche ossia Ivoclar, vita, nobel biocare core3d
+
+
+
+
+
+
+
+
+
+</chiamata>
+                                                
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-22" durata="2" messaggio="false" newInterest="RICHIAMARE" number="3" operatore="HUGO" previousInterest="INFO">La titolare si è rotta una gamba perciò devo richiamare tra due settimane. </chiamata>
+                                        
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-06" durata="2" messaggio="false" newInterest="BLANK" number="4" operatore="HUGO" previousInterest="INFO">la titolare ancora in malattia ma un responsabile mi da altra mail dove inviare un listino 55%</chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-14" durata="1" messaggio="true" newInterest="NON_TROVATO" number="5" operatore="HUGO" previousInterest="INFO">ho provato anche oggi a chiamare ma nessuna risposta può essere perchè già fine settimana  </chiamata>
+                            
+
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-06-17" durata="3" messaggio="false" newInterest="LISTINO" number="6" operatore="HUGO" previousInterest="INFO">la Gerente è ancora in malattia ma riesco ad avere mail del responsabile Roberto che legge e si occupa degli acquisti. </chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-01" durata="1" messaggio="false" newInterest="NON_TROVATO" number="7" operatore="HUGO" previousInterest="LISTINO"/>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-02" durata="2" messaggio="false" newInterest="LISTINO" number="8" operatore="HUGO" previousInterest="LISTINO">Parlo con roberto e  mi dice di inviare nuovamente a raquel la mail e attendere una risposta. </chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-22" durata="2" messaggio="false" newInterest="BLANK" number="9" operatore="HUGO" previousInterest="LISTINO">Parlo nuovamente con Roberto che mi dice che avvisa immediatamente Raquel per darmi un feedback. </chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-24" durata="2" messaggio="false" newInterest="NON_INERENTE" number="10" operatore="HUGO" previousInterest="LISTINO"/>
+</companyNotes>

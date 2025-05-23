@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="SCKEL">
+                                
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-15" durata="2" messaggio="false" newInterest="INFO" number="1" operatore="HUGO" previousInterest="BLANK">parlato col referente pedro che dice di inviare immediatamente mail info orodent e dopo listino in base ai suoi consumi. </chiamata>
+                            
+
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-20" durata="3" messaggio="false" newInterest="INFO" number="2" operatore="HUGO" previousInterest="INFO">pedro non ha ricevuto nulla mi da mail personale </chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-28" durata="2" messaggio="false" newInterest="LISTINO" number="3" operatore="HUGO" previousInterest="INFO">parlato con Pedro e accordatogli listino 60% per nuova strategia commerciale Orodent nuovi clienti. </chiamata>
+                
+
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-05" durata="0" messaggio="true" newInterest="BLANK" number="4" operatore="HUGO" previousInterest="LISTINO">OGGI HO CHIAMATO GIà 4 VOLTE LINEE SEMPRE OCCUPATE</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-07" durata="1" messaggio="false" newInterest="NON_INERENTE" number="5" operatore="HUGO" previousInterest="LISTINO">avvisato da pedro su linkedin oogi 7 giugno , nessun interesse.</chiamata>
+</companyNotes>

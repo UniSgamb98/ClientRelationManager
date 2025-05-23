@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dental Weber S.àr.l.">
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-19" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con la Signora Sausy, ha suggerito di richiamare prossima settimana per parlare con suo marito.
+Intanto gli accenna le info sull'azienda.</chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="INFO">Riprovare tra un'oretta, il Signor Sausy è in riunione.
+riprovare meglio domani mattina</chiamata>
+                            
+
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-25" durata="0" messaggio="false" newInterest="INFO" number="3" operatore="SANTOLO" previousInterest="INFO">Parlato con il Signor Sausy, è già ben rifornito ma vuole conoscerci. Guarderà il sito e la nostra presentazione inviata via mail.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-02" durata="0" messaggio="false" newInterest="INFO" number="4" operatore="SANTOLO" previousInterest="INFO">Parlato con il Signor Sausy, molto impegnato e non ha ancora avuto modo di leggere la presentazione, ci fa sapere lui.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-17" durata="0" messaggio="false" newInterest="BLANK" number="5" operatore="SANTOLO" previousInterest="INFO">Al momento ha molti tecnici in ferie, quindi è più ragionevole riparlarne ad inizio Settembre, per poter poi testare con calma e dare la giusta attenzione al prodotto.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-23" durata="1" messaggio="false" newInterest="BLANK" number="6" operatore="TERESA" previousInterest="INFO">Domani dalle 10.00 troverò Herr Sausy</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-24" durata="2" messaggio="false" newInterest="BLANK" number="7" operatore="TERESA" previousInterest="INFO">Herr Sausy arriverà oggi pomeriggio</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-24" durata="0" messaggio="false" newInterest="NULLO" number="8" operatore="TERESA" previousInterest="INFO">Parlato con Herr Sausy, al momento sono contenti con i loro fornitori e non vogliono cambiare. Utilizzano diversi marchi, ma non mi hanno voluto dire quali.</chiamata>
+</companyNotes>

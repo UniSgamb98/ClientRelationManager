@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="O. Sz. L. Zahntechnik GmbH">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-20" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Riprovare domattina per parlare con il responsabile Cad-Cam.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-21" durata="0" messaggio="false" newInterest="INFO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Richiedono presentazione aziendale, inviata mail.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-28" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="SANTOLO" previousInterest="INFO">Parlato con la responsabile degli ordini materiali, non sono interessati.</chiamata>
+</companyNotes>

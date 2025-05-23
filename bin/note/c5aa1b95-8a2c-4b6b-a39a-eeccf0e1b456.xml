@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DENTALTECHNIK BERLIN ">
+        
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-24" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con il signor Schubert, fresano circa 20 dischi al mese.
+Sono attualmente contenti con il loro fornitore tedesco ma valutano una presentazione.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-02" durata="0" messaggio="false" newInterest="NULLO" number="2" operatore="SANTOLO" previousInterest="INFO">Riparlato con il Signor Schubert,
+al momento non hanno bisogno di nulla.</chiamata>
+</companyNotes>

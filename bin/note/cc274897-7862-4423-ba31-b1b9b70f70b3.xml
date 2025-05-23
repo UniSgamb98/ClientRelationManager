@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Final advanced materials">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-12" durata="5" messaggio="false" newInterest="LISTINO" number="1" operatore="TERESA" previousInterest="BLANK">Chiamato l´azienda tedesca, ma per discutere con il responsabile, devo chiamare la sede principale in Francia. Sono dei distributori. 
+Il responsabile non era disponibile per parlare, quindi mando una mail-&gt; presento azienda + mando catalogo.</chiamata>
+            
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-19" durata="2" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="LISTINO">Doct. Stocky è in un metting, ma ha detto alla segretaria che avrebbe risposto alla mia mail oggi.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-25" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="TERESA" previousInterest="LISTINO">Dr. Stocky mi informa che  al momento non utilizzano zirconia.</chiamata>
+</companyNotes>

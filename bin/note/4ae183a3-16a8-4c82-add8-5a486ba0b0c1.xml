@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Verdi Dental">
+                                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Riprovare Lunedì, centro fresaggio che usa già Zirconio.</chiamata>
+                                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-29" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Signor Verdi attualmente in ferie, richiamare prossima settimana.</chiamata>
+                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-06" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">Riprovare lunedì prossimo per parlare con lui</chiamata>
+                                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-13" durata="0" messaggio="false" newInterest="INFO" number="4" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con il Signor Verdi (10 dischi al mese),  
+indirizzato sulla pagina internet.</chiamata>
+                                                    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-31" durata="0" messaggio="false" newInterest="LISTINO" number="5" operatore="SANTOLO" previousInterest="INFO">Parlato con il Signor Verdi  (ha già Dental Direct e Degos).
+Usa un forno Dechema con max. 1500 Gr e ha due fresatrici.
+Interessato a ricevere prezzo, catalogo ed istruzioni.</chiamata>
+                                            
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="2" data="2024-06-03" durata="0" messaggio="false" newInterest="CAMPIONE" number="6" operatore="SANTOLO" previousInterest="CAMPIONE">Per l'ordine invia una mail, attende campione THOR 22mm A3.
+Lavora molto con grandi spessori e anche zirconia da ceramizzare, white matt.
+</chiamata>
+                                    
+
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-11" durata="0" messaggio="false" newInterest="RICHIAMARE" number="7" operatore="SANTOLO" previousInterest="CAMPIONE">Riprovare domani per conferma disco prova.</chiamata>
+                            
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-12" durata="0" messaggio="false" newInterest="RICHIAMARE" number="8" operatore="SANTOLO" previousInterest="CAMPIONE">Campione arrivato, al momento è molto impegnato. Richiamare più avanti</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="true" checkpoint="0" data="2024-06-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="9" operatore="SANTOLO" previousInterest="CAMPIONE">Riprovare nel primo pomeriggio.</chiamata>
+                    
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-24" durata="0" messaggio="false" newInterest="RICHIAMARE" number="10" operatore="SANTOLO" previousInterest="CAMPIONE">Non ha risposto telefonicamente, inviata mail di riscontro per campione THOR.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-02" durata="0" messaggio="false" newInterest="RICHIAMARE" number="11" operatore="SANTOLO" previousInterest="CAMPIONE">Parlato con il Signor Verdi, finora in vacanza.
+Proverà il disco nelle prossime settimane e ci darà un feedback. Ha ricontrollato nostra presentazione e manuale d'uso, ha chiesto conferma per il programma di sinterizzazione (lui lavora manufatti da 12-14 elementi).</chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-16" durata="0" messaggio="false" newInterest="RICHIAMARE" number="12" operatore="SANTOLO" previousInterest="CAMPIONE">Non contento del risultato con il nostro campione,
+colorazione A3 non sufficiente, troppo chiaro. Usato forno Dequema.
+Attendiamo foto del lavoro effettuato di cui non è soddisfatto.</chiamata>
+</companyNotes>

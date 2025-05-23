@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="ASDENT LTD">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-15" durata="3" messaggio="false" newInterest="NON_INERENTE" number="1" operatore="VICTORIA" previousInterest="BLANK">HO PARLATO CON LA SEGRETTARIA, MI CHIEDE DI CHIAMARE DOMANI PER PARLARE CON IL REFERENTE </chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-04" durata="4" messaggio="false" newInterest="INFO" number="2" operatore="VICTORIA" previousInterest="NON_INERENTE">Ho parlato con il referente, che non ha voluto darmi il suo nome, probabilmente per la barriera linguistica. Mi ha chiesto di inviare una mail. </chiamata>
+    
+</companyNotes>

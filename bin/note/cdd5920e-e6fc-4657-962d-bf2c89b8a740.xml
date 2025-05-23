@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="hx hospilux">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-13" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="TERESA" previousInterest="BLANK">quando ho chiamato gli acquisti erano in pausa pranzo così mi hanno dato la mail.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-20" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="INFO">ricevuti i nominativi dei responsabili Olivia and Marchis, ma non la mail perchè la persona con cui ho parlato aveva difficoltà a parlare inglese. Mandata mail di sollecito.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-27" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="TERESA" previousInterest="INFO"/>
+</companyNotes>

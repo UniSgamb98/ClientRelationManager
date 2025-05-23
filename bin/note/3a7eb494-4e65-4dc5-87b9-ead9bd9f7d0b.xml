@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DENTEST">
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-19" durata="1" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="HUGO" previousInterest="NON_TROVATO">C'è UNA SEGRETERIA SONO CHIUSI FINO AD OGGI </chiamata>
+                                            
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-23" durata="1" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="HUGO" previousInterest="NON_TROVATO"/>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-06" durata="2" messaggio="false" newInterest="NULLO" number="3" operatore="HUGO" previousInterest="NON_TROVATO"/>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-15" durata="2" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="HUGO" previousInterest="NON_TROVATO">RICHIAMARE DOMANI MATTINA</chiamata>
+                            
+
+
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-16" durata="1" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="HUGO" previousInterest="NON_TROVATO"/>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-17" durata="1" messaggio="false" newInterest="NON_TROVATO" number="6" operatore="HUGO" previousInterest="NON_TROVATO"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-23" durata="1" messaggio="false" newInterest="NON_TROVATO" number="7" operatore="HUGO" previousInterest="NON_TROVATO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-07" durata="1" messaggio="false" newInterest="NON_INERENTE" number="8" operatore="HUGO" previousInterest="NON_TROVATO"/>
+</companyNotes>

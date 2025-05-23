@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DENTALLABOR BERNACK">
+        
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-30" durata="0" messaggio="false" newInterest="NON_INERENTE" number="1" operatore="SANTOLO" previousInterest="BLANK">Non più attivo</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-10" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="NON_INERENTE"/>
+</companyNotes>

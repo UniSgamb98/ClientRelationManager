@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DAVINCI INTERNATIONAL">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2025-01-15" durata="5" messaggio="false" newInterest="LISTINO" number="1" operatore="VICTORIA" previousInterest="BLANK">UNA RETE DI CLINICHE CON LABORATORIO INTERNO. HO PARLATO CON RESPONSABILE ACQUISTI, INTERESATO A RICEVERE OFFERTA</chiamata>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="4" messaggio="false" newInterest="BLANK" number="2" operatore="VICTORIA" previousInterest="LISTINO">La reception mi dice di che la responsabile Sig.ra Irina non è in ufficio. Ho lasciato il nr. di mobile per essere contattata. Ci siamo accordati che se non mi chiama entro le 15.00 di ricontatarla. </chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="VICTORIA" previousInterest="LISTINO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-03-04" durata="4" messaggio="false" newInterest="BLANK" number="4" operatore="VICTORIA" previousInterest="LISTINO">La reception mi iforma che la Sign.ra Irina è impegnata ed mi richiama lei nel pomeriggio. </chiamata>
+</companyNotes>

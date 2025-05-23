@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="CAD/CAM Dental Esthetic GmbH">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-24" durata="0" messaggio="false" newInterest="RICHIAMARE" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare in mattinata e parlare con Herr Voelg.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-29" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="RICHIAMARE">Difficile entrare perché hanno già molti fornitori, richiamare comunque nel pomeriggio per parlare con il Signor Voelg.</chiamata>
+        
+
+</companyNotes>

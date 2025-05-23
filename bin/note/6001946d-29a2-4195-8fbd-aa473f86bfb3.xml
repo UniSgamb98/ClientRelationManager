@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="FDM Fachverband des Maschinen- und Werkzeug-Großhandels e.V.">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-11" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-12" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="NON_TROVATO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-16" durata="1" messaggio="false" newInterest="NON_INERENTE" number="3" operatore="TERESA" previousInterest="NON_TROVATO">Non utilizzano Zirconia.</chiamata>
+</companyNotes>

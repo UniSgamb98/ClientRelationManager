@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DENTALTECHNIK KLUGE">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-02" durata="0" messaggio="false" newInterest="NULLO" number="1" operatore="SANTOLO" previousInterest="BLANK">Hanno già il loro fornitore di zirconia, per parlare con il Signor Kluge richiamare tra due settimane comunque.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-17" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="NULLO">Il signor Kluge non è in ufficio,
+riprovare domani, dopo aver inviato presentazione.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-18" durata="0" messaggio="false" newInterest="NULLO" number="3" operatore="SANTOLO" previousInterest="NULLO">il signor Kluge ha visto la presentazione ma non è interessato a cambiare prodotto.</chiamata>
+</companyNotes>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="3DENTA SOFT">
+                        
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-15" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="VICTORIA" previousInterest="BLANK"/>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2025-01-21" durata="10" messaggio="false" newInterest="LISTINO" number="2" operatore="VICTORIA" previousInterest="NON_TROVATO">HO PARLATO CON IL TITOLARE SIGNOR MARIO VIEZUIANU. ATTUALMENTE USA 2 MARCHI DI ZIRCONIA DDS E NON VORREBBE CAMBIARE. INTERESSATO COMUNQUE SAPERE L'OFFERTA CHE LE FACCIAMO, MA ANCHE PIù INFO/PREZZI MICROONDE. </chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-27" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="VICTORIA" previousInterest="LISTINO"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-10" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="VICTORIA" previousInterest="LISTINO"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-19" durata="0" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="VICTORIA" previousInterest="LISTINO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-03-04" durata="0" messaggio="false" newInterest="NON_TROVATO" number="6" operatore="VICTORIA" previousInterest="LISTINO"/>
+</companyNotes>

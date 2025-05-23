@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="VOCO">
+            
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-23" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="TERESA" previousInterest="BLANK"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="NON_TROVATO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-25" durata="2" messaggio="false" newInterest="NULLO" number="3" operatore="TERESA" previousInterest="NON_TROVATO">Non hanno zirconia e non vogliono inserirla. Hanno Grand disc, ma non è zirconia-è un composto.</chiamata>
+</companyNotes>

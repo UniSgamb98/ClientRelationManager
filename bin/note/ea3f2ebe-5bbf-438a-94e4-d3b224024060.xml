@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentaltechnik Rudolph GmbH">
+                        
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-09" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK"/>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-13" durata="0" messaggio="false" newInterest="NULLO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Al momento usano Pritidenta e non intendono cambiare,
+provare a chiamare a fine anno.</chiamata>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-06" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="NULLO">richiamare domani, Pierre al momento non poteva</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-11-07" durata="2" messaggio="false" newInterest="LISTINO" number="4" operatore="TERESA" previousInterest="NULLO">Herr Rudolph non era disponibile. Hanno confermato che sono molto contenti di pridenta. Mi ha detto perö che leggono volentieri il nostro catalogo. </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-19" durata="2" messaggio="false" newInterest="NULLO" number="5" operatore="TERESA" previousInterest="LISTINO">parlato con Frau Rudolph. Non vogliano cambiare, si trovano bene con prittidenta.</chiamata>
+</companyNotes>

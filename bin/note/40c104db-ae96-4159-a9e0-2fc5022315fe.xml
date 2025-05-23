@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentallabor Preuß GmbH">
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-30" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK"/>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-02" durata="0" messaggio="false" newInterest="LISTINO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Paralto con il signor Macher, attualmente usano Amann Girrbach e sono interessati a ricevere presentazione e listino.
+Ricontattare dopo le ferie, verso fine Maggio.</chiamata>
+                                    
+
+
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-24" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="SANTOLO" previousInterest="LISTINO">Non ha avuto ancora tempo di leggere la presentazione. 
+Reinoltrata la mail</chiamata>
+                        
+
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-31" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="SANTOLO" previousInterest="LISTINO">Riprovare lunedì, non è in ufficio oggi.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-03" durata="0" messaggio="false" newInterest="BLANK" number="5" operatore="SANTOLO" previousInterest="LISTINO">Parlato con il Signor Macher, è troppo impegnato e non ha tempo di dedicarci tempo. Ha comunque visto presentazione e prezzi, richiamare a Luglio.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-01" durata="0" messaggio="false" newInterest="NON_TROVATO" number="6" operatore="SANTOLO" previousInterest="LISTINO">il Signor Macher è fuori ufficio, riprovare domani.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-02" durata="0" messaggio="false" newInterest="INFO" number="7" operatore="SANTOLO" previousInterest="LISTINO">il suo Capo Laboratorio (Herr Gruenauer) è in ferie, richiamare tra due settimane circa.
+Prende decisioni insieme a lui in merito ai materiali.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-16" durata="0" messaggio="false" newInterest="NULLO" number="8" operatore="SANTOLO" previousInterest="LISTINO">Parlato con il Signor Grunaeuer, ha visto la presentazione ma non è interessato a cambiare.
+Si trova molto bene con i prodotti di Amann Girrbach, in particolare Zolid.</chiamata>
+</companyNotes>

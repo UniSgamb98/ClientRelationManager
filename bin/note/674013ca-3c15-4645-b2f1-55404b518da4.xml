@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Zahntechnik - Kerstin Straßburger  (SOFG)">
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-17" durata="1" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="NON_TROVATO">Richiamare oggi pomeriggio.</chiamata>
+                                    
+
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-14" durata="0" messaggio="false" newInterest="INFO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Buona conversazione con la Signora Kerstin, hanno appena preso un nuovo fornitore cinese ma accetta presentazione.
+Invio mail con possibilità di campionature.</chiamata>
+                            
+
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-30" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="SANTOLO" previousInterest="INFO">Richiamare nel pomeriggio</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-13" durata="0" messaggio="false" newInterest="INFO" number="4" operatore="SANTOLO" previousInterest="INFO">Riparlato con la Signora Strassburger, non ha letto la presentazione.
+Reinviata la mail</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-04" durata="0" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="SANTOLO" previousInterest="INFO">Richiamare domani mattina, la Sign. Strassburger non è in ufficio ora.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-05" durata="0" messaggio="false" newInterest="NON_TROVATO" number="6" operatore="SANTOLO" previousInterest="INFO">Appena uscita dall'ufficio, riprovare nel primo pomeriggio.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-08" durata="0" messaggio="false" newInterest="NON_TROVATO" number="7" operatore="SANTOLO" previousInterest="INFO">Riprovare alle 13, al momento è in pausa pranzo.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-11" durata="0" messaggio="false" newInterest="NULLO" number="8" operatore="SANTOLO" previousInterest="INFO">Riparlato con la signora Strassburger, al momento non ha possibilità di cambiare materiale/fornitore.
+Rimandata al sito per salvarlo come link.</chiamata>
+</companyNotes>

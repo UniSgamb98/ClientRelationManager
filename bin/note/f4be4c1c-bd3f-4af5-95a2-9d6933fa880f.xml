@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="DENTALMANIFAKTUR HAZER">
+        
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-03" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Il Signor Hazer non è in ufficio, riprovare nel pomeriggio o domani</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-03" durata="0" messaggio="false" newInterest="NULLO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">il signor Hazer non è interessato</chiamata>
+</companyNotes>

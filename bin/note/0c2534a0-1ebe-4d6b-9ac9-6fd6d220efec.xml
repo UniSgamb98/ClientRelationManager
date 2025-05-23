@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Vela Dental Cad-Cam">
+            
+    
+    <chiamata cancelled="false" checkpoint="1" data="2025-01-30" durata="9" messaggio="false" newInterest="LISTINO" number="1" operatore="VICTORIA" previousInterest="LISTINO">
+Ho parlato con la Signora veronica Iancu, la titolare.
+Interessata a ricevere un’offerta divisa in base a quantitativi diversi, inquanto non vuole fornirmi info sul suo consumo.
+Inviata l’offerta per diversi quantitativi. Concordato di risentirci la prossima settimana. </chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-06" durata="15" messaggio="false" newInterest="BLANK" number="2" operatore="VICTORIA" previousInterest="LISTINO">Ho parlato con la Signora Veronica, è interessata a testare due dischi: Eos/a1/20 e Gold/20. Atrettanto interessata alla ricezione delle info sul formo a Microonde. </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-13" durata="7" messaggio="false" newInterest="BLANK" number="3" operatore="VICTORIA" previousInterest="CAMPIONE">Ho parlato con la Signora Veronica, mi dice che i dischi sono arrivati. Questa settimana farà i suoi test. Concordato di sentirci la prossima settimana per il feedback.</chiamata>
+</companyNotes>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="AXIS DENT">
+            
+    
+    <chiamata cancelled="true" checkpoint="0" data="2025-01-27" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="VICTORIA" previousInterest="BLANK">Clinica dentale con all'interno un laboratorio. La reception mi comunica che la responsabile non è in ufficio e non vuole passare il contatto. Ha preso il contatto orodent per richiamare. </chiamata>
+        
+
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-27" durata="4" messaggio="false" newInterest="INFO" number="2" operatore="VICTORIA" previousInterest="INFO">Clinica dentale con all'interno un laboratorio. La reception mi comunica che la responsabile non è in ufficio e non vuole passare il contatto. Ha preso il contatto orodent per richiamare. </chiamata>
+</companyNotes>

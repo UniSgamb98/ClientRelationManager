@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentagen">
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-18" durata="1" messaggio="false" newInterest="BLANK" number="1" operatore="TERESA" previousInterest="BLANK">Grosso rivenditore. Responsabile in ferie, rientra settimana prossima. Riprovo.</chiamata>
+                                
+
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-09-24" durata="2" messaggio="false" newInterest="LISTINO" number="2" operatore="TERESA" previousInterest="RICHIAMARE">La segretaria mi comunica che lavorano solo con marchi tedeschi, ma di mandare comunque una mail.</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-08" durata="6" messaggio="false" newInterest="LISTINO" number="3" operatore="TERESA" previousInterest="LISTINO">Parlato con Frau Ludwig-Stute, al momento hanno diversi marchi di zirconia e sono ben forniti. Ho rimandato la mail col catalogo e lei la valuterà internamente. Non mi ha detto il potenziale consumo, deve prima confrontarsi internamente. Mi ha chiesto se abbiamo un prodotto diverso rispetto agli altri in commercio, ho parlato del nostro EOS. Ci risentiamo tra 3 settimane, perchè per due andrà in vacanza.</chiamata>
+                    
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-29" durata="2" messaggio="false" newInterest="BLANK" number="4" operatore="TERESA" previousInterest="LISTINO">Frau Ludwig-Stute impegnata in un meeting, la segreteria ha detto che mi farà richiamare.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-30" durata="2" messaggio="false" newInterest="BLANK" number="5" operatore="TERESA" previousInterest="LISTINO">Frau Ludwig-Stute impegnata in un meeting, mi dovrebbe richiamare</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-10-30" durata="0" messaggio="false" newInterest="NULLO" number="6" operatore="TERESA" previousInterest="LISTINO">Mi hanno richiamata, purtroppo non sono interessati al momento, ne hanno anche parlato col capo.</chiamata>
+    
+</companyNotes>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Kaindl Dentaltechnik GmbH">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-05" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare, laboratorio interessante</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-08" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Suggeriscono di richiamare settimana prossima per trovare il responsabile materiali, nonché titolare.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-17" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">il Signor Kaindl rientra da martedì prossimo in ufficio, parlare con lui soltanto.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-24" durata="0" messaggio="false" newInterest="NULLO" number="4" operatore="SANTOLO" previousInterest="NON_TROVATO">Purtroppo non fresano direttamente</chiamata>
+</companyNotes>

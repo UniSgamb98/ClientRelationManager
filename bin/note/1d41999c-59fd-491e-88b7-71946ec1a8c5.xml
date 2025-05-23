@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="GLS Logistik Dental Handel">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-30" durata="0" messaggio="false" newInterest="NON_INERENTE" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con il Signor Engel, ha consigliato di contattare Dental Bauer.
+</chiamata>
+            
+
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-19" durata="0" messaggio="false" newInterest="BLANK" number="2" operatore="TERESA" previousInterest="NON_INERENTE">GLS Logistik: è un deposito dentale.
+Contatti di Frau Cehe (Einkauf) /Frau Schuch (Buchhaltung) ricevuti tramite Herr Heydorn di Poulson Dental/DC Dental Central che acquistano da GLS.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-11-19" durata="3" messaggio="false" newInterest="NON_INERENTE" number="3" operatore="TERESA" previousInterest="NON_INERENTE">Chiamato Frau Schuch, ma ha risposto Engel degli acquisti. Mi ha detto che loro sono la logistica di Dental Bauer e devo acquistare il nostro prodotto devo contattare Dental bauer.</chiamata>
+</companyNotes>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Bart Enterprises Ltd (Malta)">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-30" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="VICTORIA" previousInterest="BLANK"/>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-31" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="VICTORIA" previousInterest="NON_TROVATO"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2025-02-06" durata="10" messaggio="false" newInterest="LISTINO" number="3" operatore="VICTORIA" previousInterest="NON_TROVATO">Ho parlato con il titolare Signor Barte. 
+Mi dice che Malta è un mercato piccolo, di conseguenza con un giro d’affari non alto. Attualmente Rivende Ivoclae e Sirona.
+Non può promettere nulla. Ma disposto a valutare un’offerta e anche testare i dischi. 
+Accordati una mail di feedback la prossima settimana. 
+</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-19" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="VICTORIA" previousInterest="LISTINO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-03-04" durata="0" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="VICTORIA" previousInterest="LISTINO"/>
+</companyNotes>

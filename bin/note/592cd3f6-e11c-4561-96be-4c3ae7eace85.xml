@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentaltechnik Andreas Huber">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-17" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con il signor Andreas, ha macchinari e zirconia di Zirkonzahn.
+Al momento da un'occhiata al sito poi ne riparliamo se può testare 1 campione 95mm</chiamata>
+                
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-04" durata="0" messaggio="false" newInterest="INFO" number="2" operatore="SANTOLO" previousInterest="INFO">Riparlato con il Signor Andreas, molto simpatico, riguarda il nostro sito ed eventualmente chiederàun disco prova 95mm per fare un confronto con il materiale Zirkonzahn.
+Sono comunque un piccolo laboratorio e bada molto alla qualità</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-17" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="INFO">Richiamare domani tra le 10 e le 12.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-24" durata="0" messaggio="false" newInterest="NULLO" number="4" operatore="SANTOLO" previousInterest="INFO">Riparlato con il Signor Huber, ci ha ripensato e non intende cambiare i dischi Zirkonzahn.
+</chiamata>
+</companyNotes>

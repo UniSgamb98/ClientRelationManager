@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Ortho Focus SRL">
+                        
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-21" durata="5" messaggio="false" newInterest="INFO" number="1" operatore="VICTORIA" previousInterest="BLANK">CONTATTO FORNITO DA SIGNOR MARIO VIEZUIANU (DENTA SOFT).
+
+HO PARLATO CON LA RECEPTION. mI HA FORNITO IL NOME DEL RESPONSABILE LAZAR ANDREA.
+
+LA RESPONSABILE NON ERà IN UFFICIO. HO LASCIATO IL MIO NR PER ESSERE CONTATTATA. </chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-22" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="VICTORIA" previousInterest="INFO"/>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-23" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="VICTORIA" previousInterest="INFO"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-23" durata="3" messaggio="false" newInterest="BLANK" number="4" operatore="VICTORIA" previousInterest="INFO">LA RECEPRION MI DICE CHE LA SIGNORA LAZAR è IN FERIE QUESTI GIORNI.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-30" durata="4" messaggio="false" newInterest="INFO" number="5" operatore="VICTORIA" previousInterest="INFO">Ho parlato con la reception, la responsabile non è in ufficio. Concordato di chiamare in giorno successivo. </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-03" durata="2" messaggio="false" newInterest="NON_TROVATO" number="6" operatore="VICTORIA" previousInterest="INFO"/>
+</companyNotes>

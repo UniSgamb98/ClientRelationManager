@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="ALCADENT">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-17" durata="10" messaggio="false" newInterest="LISTINO" number="1" operatore="VICTORIA" previousInterest="BLANK">HO PARLATO CON LA SIGNORA ROXANA, RSPONSABILE DI LABORATORIO. MI DICE CHE ATTUALMENTE USA NOVAZIR DI NOVADENT. MI CHIEDE DI AVERE INFORMAZIONI SULLA NOSTRA ZIRCONIA E ANCHE IL LISTINO.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="VICTORIA" previousInterest="LISTINO"/>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-01-24" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="VICTORIA" previousInterest="LISTINO"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-03" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="VICTORIA" previousInterest="LISTINO"/>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2025-02-04" durata="5" messaggio="false" newInterest="NULLO" number="5" operatore="VICTORIA" previousInterest="NULLO">La signora Roxana, mi dice di aver analizzato le informazioni ed non sono interessati.</chiamata>
+</companyNotes>

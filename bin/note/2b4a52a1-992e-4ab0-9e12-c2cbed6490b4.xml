@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Dentallabor Gluth GmbH">
+                            
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-14" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Richiamare nei prossimi giorni per parlare con il CEO</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-16" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Richiamare martedì-mercoledì per parlare con Herr Gluth.</chiamata>
+                    
+
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-21" durata="0" messaggio="false" newInterest="INFO" number="3" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con il Signor Gluth, consuma 30 dischi al mese ed acquista grandi quantità per avere il miglior prezzo.
+Interessato a ricevere una presentazione.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-27" durata="0" messaggio="false" newInterest="INFO" number="4" operatore="SANTOLO" previousInterest="INFO">Parlato con il Signor Gluth e parlato di possibile campionatura, non ha ancora letto la presentazione.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-12" durata="0" messaggio="false" newInterest="BLANK" number="5" operatore="SANTOLO" previousInterest="INFO">Periodo abbastanza stressante, richiamare tra un paio di mesi. Ha dato un'occhiata veloce alla presentazione ma preferisce che richiamiamopiù avanti. Anche offerta prezzo da valutare in futuro.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-09-23" durata="0" messaggio="false" newInterest="NULLO" number="6" operatore="TERESA" previousInterest="INFO">Sono contenti con i loro fornitori e non vogliono cambiare. Ho proposto una buona offerta dato il 40esimo anno di attivitä ed un disco prova, ma al momento preferiscono non cambiare</chiamata>
+</companyNotes>

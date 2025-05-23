@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="VIPdent GmbH">
+                
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-05" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">i tecnici non sono in laboratorio, richiamare lunedì.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-08" durata="0" messaggio="false" newInterest="INFO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con Frau Bindrich, richiede presentazione via mail, nel caso si fanno sentire loro se c'è interesse.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-17" durata="0" messaggio="false" newInterest="BLANK" number="3" operatore="SANTOLO" previousInterest="INFO">Non hanno avuto tempo per analizzare in dettaglio la presentazione,
+richiamare prossima settimana per avere qualche info.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-24" durata="0" messaggio="false" newInterest="BLANK" number="4" operatore="SANTOLO" previousInterest="INFO">Parlato con il signor Hoffmann junior, si informa se la presentazione è stata analizzata e ci fa sapere. il Signor Frank Hoffmann non è in ufficio.</chiamata>
+</companyNotes>

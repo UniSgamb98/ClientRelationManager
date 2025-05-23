@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Greven Zahnaestetik">
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-10" durata="0" messaggio="false" newInterest="NON_TROVATO" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con il tecnico che ha suggerito di parlare con il Signor Greven lunedì.</chiamata>
+                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-13" durata="0" messaggio="false" newInterest="INFO" number="2" operatore="SANTOLO" previousInterest="NON_TROVATO">Parlato con Steven Greven, inviata presentazione azienda.
+Al momento hanno già un contratto fisso con un loro fornitore.</chiamata>
+                                            
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-29" durata="0" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="SANTOLO" previousInterest="INFO">Richiamare dopo pranzo</chiamata>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-29" durata="0" messaggio="false" newInterest="LISTINO" number="4" operatore="SANTOLO" previousInterest="INFO">Parlato con il Signor Greven, accetta offerta prezzi.
+Procedo</chiamata>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-12" durata="0" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="SANTOLO" previousInterest="LISTINO">Richiamare domani mattina 8:30 </chiamata>
+                            
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-13" durata="0" messaggio="false" newInterest="INFO" number="6" operatore="SANTOLO" previousInterest="LISTINO">Parlato con il Signor Greven, ha ricevuto presentazione e prezzi ma non ha ancora preso una decisione.
+Nel caso è interessato a scegliere un campione prova ci scrive lui.
+</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-11" durata="0" messaggio="false" newInterest="BLANK" number="7" operatore="SANTOLO" previousInterest="LISTINO">Non è raggiungibile a telefono, lasciato un messaggio alla segretaria.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-17" durata="0" messaggio="false" newInterest="NON_TROVATO" number="8" operatore="SANTOLO" previousInterest="LISTINO">Purtroppo il Signor Greven è spesso fuori ufficio da clienti, riprovare nel tardo pomeriggio.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="2" data="2024-07-17" durata="0" messaggio="false" newInterest="CAMPIONE" number="9" operatore="SANTOLO" previousInterest="LISTINO">Parlato con il Signor Greven, non vuole cambiare l'attuale Katana che utilizza.
+Pensa però di ordinarci un campione, molto probabilmente Thor 1.200. Attendo conferma</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-19" durata="0" messaggio="false" newInterest="BLANK" number="10" operatore="SANTOLO" previousInterest="LISTINO">il Signor Greven è impegnato con un cliente, inviata mail per campionatura di confronto con Katana.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-23" durata="0" messaggio="false" newInterest="NULLO" number="11" operatore="SANTOLO" previousInterest="LISTINO">Per il momento preferisce rimanere con Katana.
+Non ha bisogno di campionature.</chiamata>
+    
+</companyNotes>

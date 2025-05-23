@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="LAB. MAUPRIVEZ">
+                    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-23" durata="1" messaggio="false" newInterest="NULLO" number="1" operatore="HUGO" previousInterest="NULLO"/>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="1" data="2024-05-27" durata="1" messaggio="false" newInterest="LISTINO" number="2" operatore="HUGO" previousInterest="LISTINO">aveva detto di non essere interessato ma sabato ha inviato una mail dove richiede l'ultima fattura di luglio 2023 sicuramente per vedere quanto gli sia conveniente il  nuovo listino , a tal prposito gli accordiamo  non più il 45 ma il 50%</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-11" durata="1" messaggio="false" newInterest="NON_TROVATO" number="3" operatore="HUGO" previousInterest="CLIENTE"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-14" durata="2" messaggio="false" newInterest="LISTINO" number="4" operatore="HUGO" previousInterest="CLIENTE">Faccio offerta a mauprivez del 50% gli invio i novi prezzi in relazione all sua ultima fattura 000944/23 del 30 giugno 2023 facendogli  notare che i prezzi sono stati abbassati del 10 %  e che il nuovo sconto sarebbe anche più alto. Resto in attesa di un suo riscontro per iniziare a fare nuovi ordini. </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-01" durata="2" messaggio="false" newInterest="BLANK" number="5" operatore="HUGO" previousInterest="CLIENTE">richiamato per ricordargli nuovo sconto , ci pensa. </chiamata>
+</companyNotes>

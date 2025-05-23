@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="C.HAFNER GMBH + CO. KG">
+                        
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-04-12" durata="0" messaggio="false" newInterest="NULLO" number="1" operatore="SANTOLO" previousInterest="NULLO">Per la Zirconia strtta collaborazione con Dental Direct</chiamata>
+                    
+
+
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-06" durata="0" messaggio="false" newInterest="NON_TROVATO" number="2" operatore="TERESA" previousInterest="NULLO"/>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-09" durata="2" messaggio="false" newInterest="BLANK" number="3" operatore="TERESA" previousInterest="NULLO">Mi hanno comunicato che la persona di riferimento è Herr Kruse e che Frau Spaar non c'è all'interno dell'azienda. Herr Kruse però oggi non c'è, devo richiamare domani.</chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-12-10" durata="2" messaggio="false" newInterest="NULLO" number="4" operatore="TERESA" previousInterest="NULLO">Herr Kruse mi ha confermato che comprano direttamente da Dental direkt.</chiamata>
+</companyNotes>

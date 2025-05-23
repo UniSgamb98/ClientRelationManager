@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<companyNotes Name="Alexander Kroll Dentaltechnik">
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-07" durata="0" messaggio="false" newInterest="INFO" number="1" operatore="SANTOLO" previousInterest="BLANK">Parlato con la signora Bohmueller,
+non riescono a trovare altro fornitore di zirconia multilayer 95. Riferito che abbiamo giacenze di Thor ed altri ma possiamo programmare produzione.
+Invierà richiesta campione ed eventuali esigenze del suo centro fresaggio!</chiamata>
+                                        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-09" durata="0" messaggio="false" newInterest="INFO" number="2" operatore="SANTOLO" previousInterest="INFO">La Signora Bohmuller risponderà Lunedì in merito ai dischi 95 mm.</chiamata>
+                                    
+    
+    
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-05-16" durata="0" messaggio="false" newInterest="RICHIAMARE" number="3" operatore="SANTOLO" previousInterest="INFO">Richiamare tra un paio di settimane, non ha ancora visto in dettaglio l'offerta.
+Chiedere di Frau Bohmueller</chiamata>
+                                
+
+    
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-03" durata="0" messaggio="false" newInterest="NON_TROVATO" number="4" operatore="SANTOLO" previousInterest="INFO">La Signora Bohmueller non è in ufficio questa settimana,
+richiamare la prossima per avere un feedback</chiamata>
+                        
+    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-12" durata="0" messaggio="false" newInterest="NON_TROVATO" number="5" operatore="SANTOLO" previousInterest="INFO">Riprovare prossima settimana, la Bohmueller è in ferie.</chiamata>
+                    
+    
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-17" durata="0" messaggio="false" newInterest="INFO" number="6" operatore="SANTOLO" previousInterest="INFO">Parlato con la Signora Bohmueller, laboratorio da 20 dischi al mese circa.
+Manda un feedback per testare eventualmente un nostro campione,
+le ho ricordato della possibilità di ordinare liberamente qualsiasi quantità.</chiamata>
+                
+    
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-25" durata="0" messaggio="false" newInterest="NON_TROVATO" number="7" operatore="SANTOLO" previousInterest="INFO">La Signora Bohmueller rientra giovedì.</chiamata>
+            
+    
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-06-27" durata="0" messaggio="false" newInterest="INFO" number="8" operatore="SANTOLO" previousInterest="INFO">Si fa risentire lei quando ha tempo. Ha ricevuto presentazione e catalogo ma è molto impegnata.
+Ricordato che abbiamo giacenza di 95 multilayer, subito disponibili.</chiamata>
+        
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-17" durata="0" messaggio="false" newInterest="BLANK" number="9" operatore="SANTOLO" previousInterest="INFO">La Signora Bohmuller non è in laboratorio, richiamare domani.
+Lasciato indicazioni alla segretaria che si ricorda di noi. </chiamata>
+    
+    <chiamata cancelled="false" checkpoint="0" data="2024-07-18" durata="0" messaggio="false" newInterest="INFO" number="10" operatore="SANTOLO" previousInterest="INFO">Telefonicamente difficile da raggiungere, inviata mail di reminder alla precedente per disponibilità 95mm Multilayers.</chiamata>
+</companyNotes>
