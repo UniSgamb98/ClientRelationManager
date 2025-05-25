@@ -5,6 +5,10 @@ import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.ClientField;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.*;
 import java.sql.Date;
 import java.time.LocalDate;
@@ -320,26 +324,26 @@ public class DBManager implements DBManagerInterface{
     private void setInformation(String clientID) throws SQLException {
         String sql = "UPDATE CUSTOMERS SET INFORMATION = TRUE WHERE ID = ?";
 
-        PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql);
-        stmt.setString(1, clientID);
-
-        stmt.executeUpdate();
+        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
+            stmt.setString(1, clientID);
+            stmt.executeUpdate();
+        }
     }
     private void setCatalog(String clientID) throws SQLException {
         String sql = "UPDATE CUSTOMERS SET CATALOG = TRUE WHERE ID = ?";
 
-        PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql);
-        stmt.setString(1, clientID);
-
-        stmt.executeUpdate();
+        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
+            stmt.setString(1, clientID);
+            stmt.executeUpdate();
+        }
     }
     private void setSample(String clientID) throws SQLException {
         String sql = "UPDATE CUSTOMERS SET SAMPLE = TRUE WHERE ID = ?";
 
-        PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql);
-        stmt.setString(1, clientID);
-
-        stmt.executeUpdate();
+        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
+            stmt.setString(1, clientID);
+            stmt.executeUpdate();
+        }
     }
 
     @Override
@@ -390,5 +394,35 @@ public class DBManager implements DBManagerInterface{
         ret.set(ClientField.SAMPLE, rs.getBoolean("SAMPLE"));
 
         return ret;
+    }
+
+    public void eseguiFileSQL(String filePath) {
+        try (BufferedReader reader = Files.newBufferedReader(Paths.get(filePath))) {
+            StringBuilder queryBuilder = new StringBuilder();
+            String line;
+            try (Statement stmt = connectionManager.getConnection().createStatement()) {
+                while ((line = reader.readLine()) != null) {
+                    line = line.trim();
+                    if (line.isEmpty() || line.startsWith("--")) continue; // ignora righe vuote o commenti
+                    queryBuilder.append(line);
+
+                    if (line.endsWith(";")) {
+                        String sql = queryBuilder.toString();
+                        sql = sql.substring(0, sql.length() - 1); // rimuove il punto e virgola
+                        try {
+                            stmt.executeUpdate(sql);
+                        } catch (SQLException e) {
+                            System.err.println("Errore nell'esecuzione di: " + sql);
+                            printSQLException(e);
+                        }
+                        queryBuilder.setLength(0); // resetta il builder
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        } catch (IOException e) {
+            System.err.println("Errore di IO: " + e);
+        }
     }
 }

@@ -33,7 +33,7 @@
 
 // L'indirizzo della cartella che ospita il Database
 #database home
-- I:/CliZr/Tommaso
+- C:\Users\Tommaso
 
 // Serve per dare il benvenuto correttamente
 #operatori femmine

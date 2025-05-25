@@ -18,6 +18,7 @@ public interface DBManagerInterface {
     void saveClientAfterAnnotationChange(Annotation annotation, String clientID);
     void updateAnnotation(Annotation annotation, String clientID);
     boolean isAlive();
+    void eseguiFileSQL(String filePath);
 
     /**
      * Interroga il database, la tabella CUSTOMERS in base al where passato come parametro

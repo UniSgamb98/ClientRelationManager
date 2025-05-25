@@ -1,44 +1,3 @@
-// Gli indirizzi ip delle macchine che lavorano con il CRM. Se hai creato questo file da questa macchina il tuo indirizzo è 192.168.1.138
-#indirizzi ip
-- 192.168.1.138
-- 192.168.1.136
-- 192.168.1.19
-- 192.168.1.139
-
-// Gli admin vedono funzionalità extra
-#admin
-- Tommaso
-
-// Lista della tipologia dei clienti. ATTENZIONE: aggiungere un valore con nome "Sconosciuto"
-#BUSINESS
-- Rivenditore
-- Laboratorio
-- Centro Fresaggio
-- Sconosciuto
-
-// Filtri disponibili per la ricerca dei clienti nel database. ATTENZIONE: Ogni voce presente in filtro DEVE avere la sua #sezione e questa deve essere nominato come la colonna del database. Filtri possibili: ID, RAGIONE_SOCIALE, PERSONA_RIFERIMENTO, EMAIL_RIFERIMENTO, CELLULARE_RIFERIMENTO, TELEFONO_AZIENDALE, EMAIL_AZIENDALE, PAESE, CITTA, NOME_TITOLARE, CELLULARE_TITOLARE, EMAIL_TITOLARE, SITO_WEB, VOLTE_CONTATTATI, ULTIMA_CHIAMATA, PROSSIMA_CHIAMATA, DATA_ACQUISIZIONE, BUSINESS, OPERATORE_ASSEGNATO, INFORMATION, CATALOG, SAMPLE, PVU
-#filtri
-- OPERATORE_ASSEGNATO
-- PAESE
-- BUSINESS
-
-// Elenco degli operatori abilitati nel sistema.
-#OPERATORE_ASSEGNATO
-- Victoria
-- Teresa
-- Gaetano
-- Tommaso
-- Hugo
-- Santolo
-
-// L'indirizzo della cartella che ospita il Database
-#database home
-- I:/CliZr/Tommaso
-
-// Serve per dare il benvenuto correttamente
-#operatori femmine
-- Victoria
-
 // Paesi disponibili
 #PAESE
 - Albania
@@ -91,4 +50,45 @@
 - Ungheria
 - Vaticano
 - Vietnam
+
+// Serve per dare il benvenuto correttamente
+#operatori femmine
+- Victoria
+
+// L'indirizzo della cartella che ospita il Database
+#database home
+- I:/CliZr/Tommaso
+
+// Elenco degli operatori abilitati nel sistema.
+#OPERATORE_ASSEGNATO
+- Victoria
+- Teresa
+- Gaetano
+- Tommaso
+- Hugo
+- Santolo
+
+// Filtri disponibili per la ricerca dei clienti nel database. ATTENZIONE: Ogni voce presente in filtro DEVE avere la sua #sezione e questa deve essere nominato come la colonna del database. Filtri possibili: ID, RAGIONE_SOCIALE, PERSONA_RIFERIMENTO, EMAIL_RIFERIMENTO, CELLULARE_RIFERIMENTO, TELEFONO_AZIENDALE, EMAIL_AZIENDALE, PAESE, CITTA, NOME_TITOLARE, CELLULARE_TITOLARE, EMAIL_TITOLARE, SITO_WEB, VOLTE_CONTATTATI, ULTIMA_CHIAMATA, PROSSIMA_CHIAMATA, DATA_ACQUISIZIONE, BUSINESS, OPERATORE_ASSEGNATO, INFORMATION, CATALOG, SAMPLE, PVU
+#filtri
+- OPERATORE_ASSEGNATO
+- PAESE
+- BUSINESS
+
+// Lista della tipologia dei clienti. ATTENZIONE: aggiungere un valore con nome "Sconosciuto"
+#BUSINESS
+- Rivenditore
+- Laboratorio
+- Centro Fresaggio
+- Sconosciuto
+
+// Gli admin vedono funzionalità extra. ATTENZIONE il nome deve corrispondere ad un valore presente nella sezione OPERATORE_ASSEGNATO
+#admin
+- Tommaso
+
+// Gli indirizzi ip delle macchine che lavorano con il CRM. Se hai creato questo file da questa macchina il tuo indirizzo è 25.42.238.21
+#indirizzi ip
+- 192.168.1.138
+- 192.168.1.136
+- 192.168.1.19
+- 192.168.1.139
 

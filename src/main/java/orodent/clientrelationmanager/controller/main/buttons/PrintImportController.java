@@ -7,6 +7,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
+import orodent.clientrelationmanager.controller.database.DBManagerInterface;
+import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.todelete.Contatto;
 import orodent.clientrelationmanager.todelete.Operatori;
 import orodent.clientrelationmanager.todelete.TipoCliente;
@@ -41,6 +43,13 @@ public class PrintImportController implements EventHandler<ActionEvent> {
     public void handle(ActionEvent event) {
 
         printImportedClient();
+        transferToDatabase();
+    }
+
+    private void transferToDatabase() {
+        DBManagerInterface dbManagerInterface = new MainController().getApp().getDbManager();
+        dbManagerInterface.eseguiFileSQL("newSchema.sql");
+        dbManagerInterface.eseguiFileSQL("outStream.txt");
     }
 
     private void printImportedClient(){
