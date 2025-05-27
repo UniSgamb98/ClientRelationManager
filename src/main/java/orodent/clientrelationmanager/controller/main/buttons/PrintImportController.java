@@ -41,7 +41,6 @@ public class PrintImportController implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent event) {
-
         printImportedClient();
         transferToDatabase();
     }

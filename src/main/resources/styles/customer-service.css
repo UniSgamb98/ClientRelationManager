@@ -1,0 +1,104 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: white;
+}
+
+.topbar-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+    -fx-padding: 4 5 0 0;
+}
+
+.topbar-date-picker {
+    -fx-pref-width: 160px;
+    -fx-background-radius: 6px;
+}
+
+.topbar-field {
+    -fx-pref-width: 150px;
+    -fx-background-radius: 6px;
+}
+
+.label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #2c3e50;
+}
+
+.section-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+}
+
+.text-field,
+.text-area {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 4 6;
+    -fx-font-size: 12px;
+}
+
+.text-field:focused,
+.text-area:focused {
+    -fx-border-color: #2980b9;
+    -fx-effect: dropshadow(gaussian, rgba(41,128,185,0.2), 4, 0.3, 0, 0);
+}
+
+.grid-pane {
+    -fx-background-color: #ecf0f1;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-hgap: 10;
+    -fx-vgap: 6;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.05), 4, 0.1, 0, 1);
+}
+
+.client-label {
+    -fx-pref-width: 115px;
+    -fx-pref-height: 32px;
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+    -fx-padding: 8 10;
+    -fx-font-weight: bold;
+    -fx-border-radius: 6px 0 0 6px;
+    -fx-background-radius: 6px 0 0 6px;
+    -fx-alignment: center-left;
+}
+
+.client-cell {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-pref-height: 32px;
+    -fx-padding: 6 8;
+    -fx-font-size: 12px;
+}
+
+.client-cell:focused {
+    -fx-border-color: #3498DB;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.3), 4, 0.2, 0, 0);
+}
+
+.text-area {
+    -fx-wrap-text: true;
+}
+
+.note {
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+    -fx-text-fill: #555;
+}
+
+.note > .text {
+    -fx-fill: #555;
+}
+
+.highlight {
+    -fx-text-fill: #e74c3c;
+    -fx-font-weight: bold;
+}

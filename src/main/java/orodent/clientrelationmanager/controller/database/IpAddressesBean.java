@@ -1,14 +1,20 @@
 package orodent.clientrelationmanager.controller.database;
 
+import orodent.clientrelationmanager.controller.main.MainController;
+
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 
 public class  IpAddressesBean {
-    private final ArrayList<String> ipAddresses = new ArrayList<>(Arrays.asList("192.168.1.138", "192.168.1.136", "192.168.1.19", "192.168.1.139"));
-    private static ArrayList<Boolean> ipIsReachable = new ArrayList<>(Arrays.asList(false, false));
+    private final List<String> ipAddresses;
+    private static ArrayList<Boolean> ipIsReachable;
 
-    public void initialize(){
-        ipIsReachable = new ArrayList<>(Arrays.asList(false, false, false, false));
+    public IpAddressesBean(){
+        ipAddresses = new MainController().getApp().getConfigs().get("indirizzi ip");
+        ipIsReachable = new ArrayList<>();
+        for (String ignored : ipAddresses){
+            ipIsReachable.add(false);
+        }
     }
 
     public void setIpIsReachable(int ipPosition) {

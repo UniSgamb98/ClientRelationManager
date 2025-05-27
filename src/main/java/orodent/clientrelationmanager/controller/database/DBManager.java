@@ -3,10 +3,10 @@ package orodent.clientrelationmanager.controller.database;
 import orodent.clientrelationmanager.controller.main.StatusToolTipController;
 import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
+import orodent.clientrelationmanager.model.Disc;
 import orodent.clientrelationmanager.model.enums.ClientField;
 
-import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.*;
@@ -112,9 +112,45 @@ public class DBManager implements DBManagerInterface{
     }
 
     @Override
+    public List<Disc> getDiscWhere (String whereSQL){
+        ArrayList<Disc> result = new ArrayList<>();
+        String sql;
+        if (whereSQL.isEmpty()) sql = "SELECT * FROM DISCHI";
+        else sql = "SELECT * FROM DISCHI WHERE " + whereSQL;
+
+        try (Statement stmt = connectionManager.getConnection().createStatement()) {
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                result.add(mapResultSetToDisc(rs));
+            }
+        } catch (SQLException e){
+            printSQLException(e);
+        }
+        return result;
+    }
+
+    @Override
     public List<String> getAllValuesFromCustomerColumn(String tableColumn){
         List<String> ret = new ArrayList<>();
         String sql = "SELECT DISTINCT " + tableColumn + " FROM CUSTOMERS";
+        try (Statement stmt = connectionManager.getConnection().createStatement()) {
+            ResultSet rs = stmt.executeQuery(sql);
+            while (rs.next()){
+                String ragioneSociale = rs.getString(1);
+                if (ragioneSociale != null)     ret.add(ragioneSociale);
+            }
+            ret.sort(Comparator.naturalOrder());
+
+        } catch (SQLException e){
+            printSQLException(e);
+        }
+        return ret;
+    }
+
+    @Override
+    public List<String> getAllValuesFromDiscColumn(String tableColumn){
+        List<String> ret = new ArrayList<>();
+        String sql = "SELECT DISTINCT " + tableColumn + " FROM DISCHI";
         try (Statement stmt = connectionManager.getConnection().createStatement()) {
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()){
@@ -299,54 +335,6 @@ public class DBManager implements DBManagerInterface{
     }
 
     @Override
-    public void saveClientAfterAnnotationChange(Annotation annotation, String clientID) {
-        String sql = "UPDATE CUSTOMERS SET ULTIMA_CHIAMATA = ?, " + (annotation.getNextCallDate() != null ? "PROSSIMA_CHIAMATA = ?, " : "" ) + "VOLTE_CONTATTATI = VOLTE_CONTATTATI + 1 " +
-                "WHERE ID = '" + clientID + "'";
-
-        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
-            stmt.setDate(1, java.sql.Date.valueOf(annotation.getCallDate()));
-
-            if (annotation.getNextCallDate() != null) {
-                stmt.setDate(2, java.sql.Date.valueOf(annotation.getNextCallDate()));
-            }
-
-            if (annotation.getInformation())    setInformation(clientID);
-            if (annotation.getCatalog()) setCatalog(clientID);
-            if (annotation.getSample()) setSample(clientID);
-
-            stmt.executeUpdate();
-        } catch (SQLException e) {
-            printSQLException(e);
-            statusToolTipController.update("Errore nell'aggiornamento del client: " + e.getMessage());
-        }
-    }
-
-    private void setInformation(String clientID) throws SQLException {
-        String sql = "UPDATE CUSTOMERS SET INFORMATION = TRUE WHERE ID = ?";
-
-        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
-            stmt.setString(1, clientID);
-            stmt.executeUpdate();
-        }
-    }
-    private void setCatalog(String clientID) throws SQLException {
-        String sql = "UPDATE CUSTOMERS SET CATALOG = TRUE WHERE ID = ?";
-
-        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
-            stmt.setString(1, clientID);
-            stmt.executeUpdate();
-        }
-    }
-    private void setSample(String clientID) throws SQLException {
-        String sql = "UPDATE CUSTOMERS SET SAMPLE = TRUE WHERE ID = ?";
-
-        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
-            stmt.setString(1, clientID);
-            stmt.executeUpdate();
-        }
-    }
-
-    @Override
     public boolean isAlive() {
         return connectionManager.findHostIp() != null;
     }
@@ -357,6 +345,19 @@ public class DBManager implements DBManagerInterface{
         } else {
             preparedStatement.setNull(index, java.sql.Types.DATE);
         }
+    }
+
+    private Disc mapResultSetToDisc(ResultSet rs) throws SQLException {
+        Disc ret = new Disc();
+        ret.setDiametro(rs.getString("DIAMETRO"));
+        ret.setMisura(rs.getString("MISURA"));
+        ret.setColore(rs.getString("COLORE"));
+        ret.setTipologia(rs.getString("TIPOLOGIA"));
+        ret.setId(rs.getInt("ID"));
+        ret.setLotto(rs.getString("DIAMETRO"));
+        ret.setProblema(rs.getString("PROBLEMA"));
+
+        return ret;
     }
 
     /**
@@ -423,6 +424,39 @@ public class DBManager implements DBManagerInterface{
             printSQLException(e);
         } catch (IOException e) {
             System.err.println("Errore di IO: " + e);
+        }
+    }
+
+    public void savePhoto(int assistanceId, int discoId, File fileFoto) {
+        if (fileFoto == null || !fileFoto.exists()) {
+            System.out.println("File non valido.");
+            return;
+        }
+
+        String nome = fileFoto.getName();
+
+        String sql = "INSERT INTO PHOTOS (ASSISTANCE_ID, DISCO_ID, NOME, IMMAGINE) VALUES (?, ?, ?, ?)";
+
+        try (
+                PreparedStatement statement = connectionManager.getConnection().prepareStatement(sql);
+                FileInputStream fis = new FileInputStream(fileFoto)
+        ) {
+            statement.setInt(1, assistanceId);
+            statement.setInt(2, discoId);
+            statement.setString(3, nome);
+            statement.setBinaryStream(4, fis, (int) fileFoto.length());
+
+            int rowsInserted = statement.executeUpdate();
+            if (rowsInserted > 0) {
+                System.out.println("Foto '" + nome + "' salvata nel database con successo.");
+            } else {
+                System.out.println("Errore durante l'inserimento della foto.");
+            }
+
+        } catch (SQLException e) {
+            printSQLException(e);
+        } catch (IOException ignored) {
+
         }
     }
 }

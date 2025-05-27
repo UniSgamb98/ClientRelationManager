@@ -1,3 +1,20 @@
+#MISURE
+- 10
+- 12
+- 14
+- 16
+- 18
+- 20
+- 22
+- 25
+
+// Gli indirizzi ip delle macchine che lavorano con il CRM. Se hai creato questo file da questa macchina il tuo indirizzo è 192.168.1.138
+#indirizzi ip
+- 192.168.1.138
+- 192.168.1.136
+- 192.168.1.19
+- 192.168.1.139
+
 // Paesi disponibili
 #PAESE
 - Albania
@@ -51,13 +68,15 @@
 - Vaticano
 - Vietnam
 
-// Serve per dare il benvenuto correttamente
-#operatori femmine
-- Victoria
-
-// L'indirizzo della cartella che ospita il Database
-#database home
-- I:/CliZr/Tommaso
+#TIPOLOGIE
+- Thor
+- Eos
+- Venus
+- Preshaded
+- Bleach
+- High Translucent
+- White Matt
+- gold
 
 // Elenco degli operatori abilitati nel sistema.
 #OPERATORE_ASSEGNATO
@@ -68,11 +87,37 @@
 - Hugo
 - Santolo
 
-// Filtri disponibili per la ricerca dei clienti nel database. ATTENZIONE: Ogni voce presente in filtro DEVE avere la sua #sezione e questa deve essere nominato come la colonna del database. Filtri possibili: ID, RAGIONE_SOCIALE, PERSONA_RIFERIMENTO, EMAIL_RIFERIMENTO, CELLULARE_RIFERIMENTO, TELEFONO_AZIENDALE, EMAIL_AZIENDALE, PAESE, CITTA, NOME_TITOLARE, CELLULARE_TITOLARE, EMAIL_TITOLARE, SITO_WEB, VOLTE_CONTATTATI, ULTIMA_CHIAMATA, PROSSIMA_CHIAMATA, DATA_ACQUISIZIONE, BUSINESS, OPERATORE_ASSEGNATO, INFORMATION, CATALOG, SAMPLE, PVU
-#filtri
-- OPERATORE_ASSEGNATO
-- PAESE
-- BUSINESS
+// L'indirizzo della cartella che ospita il Database
+#database home
+- I:/CliZr/Tommaso
+
+#COLORI
+- a1
+- a2
+- a3
+- a35
+- a4
+- b1
+- b2
+- b3
+- b4
+- c1
+- c2
+- c3
+- d2
+- d3
+
+// Serve per dare il benvenuto correttamente
+#operatori femmine
+- Victoria
+
+#DIAMETRI
+- 98
+- 95
+
+// Gli admin vedono funzionalità extra. ATTENZIONE il nome deve corrispondere ad un valore presente nella sezione OPERATORE_ASSEGNATO
+#admin
+- Tommaso
 
 // Lista della tipologia dei clienti. ATTENZIONE: aggiungere un valore con nome "Sconosciuto"
 #BUSINESS
@@ -81,14 +126,9 @@
 - Centro Fresaggio
 - Sconosciuto
 
-// Gli admin vedono funzionalità extra. ATTENZIONE il nome deve corrispondere ad un valore presente nella sezione OPERATORE_ASSEGNATO
-#admin
-- Tommaso
-
-// Gli indirizzi ip delle macchine che lavorano con il CRM. Se hai creato questo file da questa macchina il tuo indirizzo è 25.42.238.21
-#indirizzi ip
-- 192.168.1.138
-- 192.168.1.136
-- 192.168.1.19
-- 192.168.1.139
+// Filtri disponibili per la ricerca dei clienti nel database. ATTENZIONE: Ogni voce presente in filtro DEVE avere la sua #sezione e questa deve essere nominato come la colonna del database. Filtri possibili: ID, RAGIONE_SOCIALE, PERSONA_RIFERIMENTO, EMAIL_RIFERIMENTO, CELLULARE_RIFERIMENTO, TELEFONO_AZIENDALE, EMAIL_AZIENDALE, PAESE, CITTA, NOME_TITOLARE, CELLULARE_TITOLARE, EMAIL_TITOLARE, SITO_WEB, VOLTE_CONTATTATI, ULTIMA_CHIAMATA, PROSSIMA_CHIAMATA, DATA_ACQUISIZIONE, BUSINESS, OPERATORE_ASSEGNATO, INFORMATION, CATALOG, SAMPLE, PVU
+#filtri
+- OPERATORE_ASSEGNATO
+- PAESE
+- BUSINESS
 

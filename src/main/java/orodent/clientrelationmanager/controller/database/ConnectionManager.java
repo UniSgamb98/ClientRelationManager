@@ -35,7 +35,6 @@ public class ConnectionManager extends Thread {
         String ret = null;
         try {
         IpAddressesBean ipsToScan = new IpAddressesBean();
-        ipsToScan.initialize();
 
         // Avvia thread per testare ogni IP
         for (int i = 0; i < ipsToScan.getIpListSize(); i++) {

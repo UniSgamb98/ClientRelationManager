@@ -10,6 +10,7 @@ import orodent.clientrelationmanager.controller.main.buttons.ClientInfoControlle
 import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.enums.ClientField;
+import orodent.clientrelationmanager.view.customerservice.CustomerServiceView;
 import orodent.clientrelationmanager.view.mainview.AnnotationEditorStage;
 import orodent.clientrelationmanager.view.searchclient.ClientAnnotationView;
 import orodent.clientrelationmanager.view.searchclient.SearchClientView;
@@ -23,7 +24,6 @@ public class ClientDetailView extends BorderPane {
     DBManagerInterface dbManagerInterface;
     ClientInfoView clientInfoView;
     ClientInfoController clientInfoController;
-    Button makeCallButton;
     ClientAnnotationView clientAnnotationView;
 
 
@@ -52,13 +52,17 @@ public class ClientDetailView extends BorderPane {
         backButton.setOnAction(e -> onBack());
         Button saveButton = new Button("SALVA MODIFICHE");
         saveButton.setOnAction(e -> onSave());
-        makeCallButton = new Button("Registra Chiamata");
-        makeCallButton.setOnAction(event -> showNewAnnotationStage());
+        Button customerServiceButton = new Button("Reclamo");
+        customerServiceButton.setOnAction(e -> customerService(client));
+        Button makeCallButton = new Button("Registra Chiamata");
+        makeCallButton.setOnAction(e -> showNewAnnotationStage());
+
         BorderPane bottom = new BorderPane();
-        HBox footer = new HBox(10, backButton, saveButton);
+        HBox footerRight = new HBox(10, backButton, saveButton);
+        HBox footerLeft = new HBox(makeCallButton, customerServiceButton);
         bottom.getStyleClass().add("footer");
-        bottom.setRight(footer);
-        bottom.setLeft(makeCallButton);
+        bottom.setRight(footerRight);
+        bottom.setLeft(footerLeft);
 
         // Configurazione del layout BorderPane
         this.setTop(header);
@@ -104,6 +108,10 @@ public class ClientDetailView extends BorderPane {
         SearchClientView searchClientView = new SearchClientView();
         searchClientView.setResultList(mainController.getListFromFilteredSearch());
         mainController.showView(searchClientView);
+    }
+
+    private void customerService(Client client){
+        mainController.showView(new CustomerServiceView(client));
     }
 
     private void showNewAnnotationStage() {

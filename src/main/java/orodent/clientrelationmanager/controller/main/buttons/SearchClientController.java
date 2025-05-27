@@ -10,6 +10,6 @@ public class SearchClientController implements EventHandler<ActionEvent> {
     public void handle(ActionEvent event) {
         MainController mainController = new MainController();
         mainController.saveListFromFilteredSearch(null);
-        new MainController().showView(new SearchClientView());
+        mainController.showView(new SearchClientView());
     }
 }

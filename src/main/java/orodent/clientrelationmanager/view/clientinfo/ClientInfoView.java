@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-public class ClientInfoView extends VBox {
+public class ClientInfoView extends ScrollPane {
     private final TextField ragioneSociale;
     private final TextField personaRiferimento;
     private final TextField emailRiferimento;
@@ -42,7 +42,10 @@ public class ClientInfoView extends VBox {
     private final TextField uuid;
     private final InformationGroup developerInfos;
 
+    private final VBox body;
+
     public ClientInfoView(Client client) {
+        body = new VBox();
         Map<String, List<String>> config = new MainController().getApp().getConfigs();
         ragioneSociale = new TextField((String) client.get(ClientField.RAGIONE_SOCIALE));
         personaRiferimento = new TextField((String) client.get(ClientField.PERSONA_RIFERIMENTO));
@@ -105,20 +108,20 @@ public class ClientInfoView extends VBox {
         aziendaInfos.add(telefonoAziendale, 0, 2);
         aziendaInfos.add(emailAziendale, 1, 2);
         aziendaInfos.add(sitoWeb, 0, 3, 2, 1);
-        this.getChildren().add(aziendaInfos);
+        body.getChildren().add(aziendaInfos);
 
         InformationGroup personaInfos = new InformationGroup("Referente");
 
         personaInfos.add(personaRiferimento, 0, 0, 2, 1);
         personaInfos.add(cellulareRiferimento, 0, 1);
         personaInfos.add(emailRiferimento, 1,1);
-        this.getChildren().add(personaInfos);
+        body.getChildren().add(personaInfos);
 
         InformationGroup titolareInfos = new InformationGroup("Titolare");
         titolareInfos.add(nomeTitolare, 0, 0, 2, 1);
         titolareInfos.add(cellulareTitolare, 0, 1);
         titolareInfos.add(emailTitolare, 1, 1);
-        this.getChildren().add(titolareInfos);
+        body.getChildren().add(titolareInfos);
 
         InformationGroup contattatiInfos = new InformationGroup("Interazioni");
         contattatiInfos.add(ultimaChiamata, 0, 0);
@@ -131,7 +134,7 @@ public class ClientInfoView extends VBox {
         HBox littleBox = new HBox(tipoCliente, new Label("   Contattati "), volteContattati, new Label(" volte."));
         littleBox.setAlignment(Pos.CENTER_LEFT);
         contattatiInfos.add(littleBox, 0,2, 2,1);
-        this.getChildren().add(contattatiInfos);
+        body.getChildren().add(contattatiInfos);
 
         developerInfos = new InformationGroup("Developer");
         developerInfos.add(new Label("Data Acquisizione"), 1, 0);
@@ -145,7 +148,9 @@ public class ClientInfoView extends VBox {
         countryNames.addAll(config.get("PAESE"));
         new AutoCompletePopup(paese, countryNames);
 
-
+        //ScrollPane
+        this.setContent(body);
+        this.setFitToWidth(true);
         this.getStyleClass().add("client-info-view");
         this.setMinWidth(415);
         aziendaInfos.getStyleClass().add("information-group");
@@ -157,9 +162,9 @@ public class ClientInfoView extends VBox {
 
     public void toggleDeveloperVisibility(boolean hasDeveloperPrivilege) {
         if (hasDeveloperPrivilege) {
-            this.getChildren().add(developerInfos);
+            body.getChildren().add(developerInfos);
         } else{
-            this.getChildren().remove(developerInfos);
+            body.getChildren().remove(developerInfos);
         }
     }
 

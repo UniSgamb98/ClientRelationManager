@@ -5,12 +5,9 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
-import orodent.clientrelationmanager.controller.main.buttons.PrintConfigController;
-import orodent.clientrelationmanager.controller.main.buttons.PrintImportController;
-import orodent.clientrelationmanager.controller.main.buttons.ReportController;
-import orodent.clientrelationmanager.controller.main.buttons.ShowCallsController;
-import orodent.clientrelationmanager.controller.main.buttons.NewClientController;
-import orodent.clientrelationmanager.controller.main.buttons.SearchClientController;
+import orodent.clientrelationmanager.controller.main.MainController;
+import orodent.clientrelationmanager.controller.main.buttons.*;
+import orodent.clientrelationmanager.model.App;
 
 public class HotBarView extends VBox {
 
@@ -19,6 +16,7 @@ public class HotBarView extends VBox {
         Button searchButton = new Button("🔍 Cerca");
         Button reportButton = new Button("📊 Report");
         Button callsButton = new Button("📞 Chiamate");
+        Button customerServiceButton = new Button("Assistenza");
         Button printConfigButton = new Button("Stampa Config");
         Button printImportForDB = new Button("Stampa import.txt");
 
@@ -28,12 +26,15 @@ public class HotBarView extends VBox {
         callsButton.setOnAction(new ShowCallsController());
         printConfigButton.setOnAction(new PrintConfigController());
         printImportForDB.setOnAction(new PrintImportController());
+        customerServiceButton.setOnAction(new CustomerServiceButton());
 
         // Aggiunta dei bottoni alla barra
-        getChildren().addAll(addButton, searchButton, reportButton, callsButton, printConfigButton, printImportForDB);
+        getChildren().addAll(addButton, searchButton, reportButton, callsButton, customerServiceButton);
+        App app = new MainController().getApp();
+        if (app.getConfigs().get("admin").contains(app.getWorkingOperator()))   getChildren().addAll(printConfigButton, printImportForDB);
 
         // Stile dei bottoni
-        for (Button button : new Button[]{addButton, searchButton, reportButton, callsButton, printConfigButton, printImportForDB}) {
+        for (Button button : new Button[]{addButton, searchButton, reportButton, callsButton, printConfigButton, printImportForDB, customerServiceButton}) {
             button.getStyleClass().add("hotbar-button");
         }
 

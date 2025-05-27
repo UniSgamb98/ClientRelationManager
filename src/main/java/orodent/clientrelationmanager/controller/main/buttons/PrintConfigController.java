@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,16 +18,22 @@ public class PrintConfigController implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent event) {
         String percorso = "config_sample.txt";
-        Map<String, List<String>> configurazione = Map.of(
+        Map<String, List<String>> configurazione = new HashMap<>(Map.of(
                 "database home", List.of("I:/CliZr/Tommaso"),
                 "indirizzi ip", List.of("192.168.1.138", "192.168.1.136", "192.168.1.19", "192.168.1.139"),
                 "OPERATORE_ASSEGNATO", List.of("Victoria", "Teresa", "Gaetano", "Tommaso", "Hugo", "Santolo"),
                 "operatori femmine", List.of("Victoria"),
                 "admin", List.of("Tommaso"),
                 "filtri", List.of("OPERATORE_ASSEGNATO", "PAESE", "BUSINESS"),
-                "PAESE", List.of("Albania","Andorra","Armenia","Austria","Azerbaigian","Belgio","Bielorussia","Bosnia ed Erzegovina","Bulgaria","Cipro","Croazia","Danimarca","Estonia","Finlandia","Francia","Georgia","Germania","Grecia","Irlanda","Islanda","Italia","Kosovo","Lettonia","Liechtenstein","Lituania","Lussemburgo","Malta","Moldavia","Monaco","Montenegro","Norvegia","Paesi Bassi","Polonia","Portogallo","Regno Unito","Repubblica Ceca","Romania","Russia","San Marino","Serbia","Slovacchia","Slovenia","Spagna","Svezia","Svizzera","Turchia","Ucraina","Ungheria","Vaticano","Vietnam"),
-                "BUSINESS", List.of("Rivenditore", "Laboratorio", "Centro Fresaggio", "Sconosciuto")
-        );
+                "PAESE", List.of("Albania", "Andorra", "Armenia", "Austria", "Azerbaigian", "Belgio", "Bielorussia", "Bosnia ed Erzegovina", "Bulgaria", "Cipro", "Croazia", "Danimarca", "Estonia", "Finlandia", "Francia", "Georgia", "Germania", "Grecia", "Irlanda", "Islanda", "Italia", "Kosovo", "Lettonia", "Liechtenstein", "Lituania", "Lussemburgo", "Malta", "Moldavia", "Monaco", "Montenegro", "Norvegia", "Paesi Bassi", "Polonia", "Portogallo", "Regno Unito", "Repubblica Ceca", "Romania", "Russia", "San Marino", "Serbia", "Slovacchia", "Slovenia", "Spagna", "Svezia", "Svizzera", "Turchia", "Ucraina", "Ungheria", "Vaticano", "Vietnam"),
+                "BUSINESS", List.of("Rivenditore", "Laboratorio", "Centro Fresaggio", "Sconosciuto"),
+                "DIAMETRI", List.of("98", "95"),
+                "MISURE", List.of("10", "12", "14", "16", "18", "20", "22", "25")
+        ));
+        configurazione.put("COLORI", List.of ("a1", "a2", "a3", "a35", "a4", "b1", "b2", "b3", "b4", "c1", "c2", "c3", "d2", "d3"));
+        configurazione.put("TIPOLOGIE", List.of ("Thor", "Eos", "Venus", "Preshaded", "Bleach", "High Translucent", "White Matt", "gold"));
+
+
         // Commenti esplicativi sopra ogni sezione
         String ip = "[Sconosciuto, qualcosa è andato storto]";
         try {

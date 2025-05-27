@@ -23,7 +23,7 @@ public class Main extends Application {
         String sezioneCorrente = null;
 
         // Set delle sezioni richieste
-        Set<String> sezioniRichieste = new HashSet<>(Set.of("operatori femmine", "filtri", "admin", "database home", "indirizzi ip")); // Aggiungi altre sezioni se vuoi
+        Set<String> sezioniRichieste = new HashSet<>(Set.of("operatori femmine", "filtri", "admin", "database home", "indirizzi ip", "BUSINESS", "DIAMETRI", "MISURE", "COLORI", "TIPOLOGIE")); // Aggiungi altre sezioni se vuoi
 
         try (BufferedReader reader = new BufferedReader(new FileReader(percorsoFile))) {
             String linea;
