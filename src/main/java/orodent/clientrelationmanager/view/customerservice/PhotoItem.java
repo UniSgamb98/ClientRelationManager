@@ -12,8 +12,10 @@ import java.io.File;
 
 public class PhotoItem extends VBox {
     public SimpleBooleanProperty removeMe;
+    public File imageFile;
 
     public PhotoItem(File imageFile){
+        this.imageFile = imageFile;
         removeMe = new SimpleBooleanProperty(false);
         Label removeLabel = new Label("Rimuovi immagine");
         Button removeButton = new Button("❌");
@@ -28,5 +30,9 @@ public class PhotoItem extends VBox {
 
         setSpacing(5);
         getChildren().addAll(imageView, bottom);
+    }
+
+    public File getImageFile(){
+        return imageFile;
     }
 }

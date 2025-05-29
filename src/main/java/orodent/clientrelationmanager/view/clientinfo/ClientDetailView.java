@@ -53,7 +53,7 @@ public class ClientDetailView extends BorderPane {
         Button saveButton = new Button("SALVA MODIFICHE");
         saveButton.setOnAction(e -> onSave());
         Button customerServiceButton = new Button("Reclamo");
-        customerServiceButton.setOnAction(e -> customerService(client));
+        customerServiceButton.setOnAction(e -> customerService());
         Button makeCallButton = new Button("Registra Chiamata");
         makeCallButton.setOnAction(e -> showNewAnnotationStage());
 
@@ -110,15 +110,15 @@ public class ClientDetailView extends BorderPane {
         mainController.showView(searchClientView);
     }
 
-    private void customerService(Client client){
+    private void customerService(){
+        client = clientInfoController.getClient();
+        client.set(ClientField.PVU, clientAnnotationView.getPvuText());
         mainController.showView(new CustomerServiceView(client));
     }
 
     private void showNewAnnotationStage() {
-        client = clientInfoController.getClient();
-        client.set(ClientField.PVU, clientAnnotationView.getPvuText());
         // Supponiamo di avere un oggetto 'annotation' da modificare.
-        AnnotationEditorStage editor = new AnnotationEditorStage(new Annotation(LocalDate.now(), mainController.getApp().getWorkingOperator(), null, null), "Registra Nuova Chiamata");
+        AnnotationEditorStage editor = new AnnotationEditorStage(new Annotation(LocalDate.now(), mainController.getApp().getWorkingOperator(), null, LocalDate.now().plusWeeks(2)), "Registra Nuova Chiamata");
         editor.showAndWait();
 
         if (editor.isSaved()) {

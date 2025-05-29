@@ -65,10 +65,4 @@ public class Disc {
     public String getTipologia() {
         return tipologia;
     }
-
-    @Override
-    public String toString() {
-        return String.format("%s%s%s%s%s}",
-                diametro, misura, tipologia, colore, lotto);
-    }
 }

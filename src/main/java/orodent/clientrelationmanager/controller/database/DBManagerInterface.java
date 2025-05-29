@@ -1,11 +1,14 @@
 package orodent.clientrelationmanager.controller.database;
 
+import javafx.scene.control.TextField;
 import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
 import orodent.clientrelationmanager.model.Disc;
 
 import java.io.File;
+import java.time.LocalDate;
 import java.util.List;
+import java.util.UUID;
 
 public interface DBManagerInterface {
 
@@ -20,8 +23,12 @@ public interface DBManagerInterface {
     void updateAnnotation(Annotation annotation, String clientID);
     boolean isAlive();
     void eseguiFileSQL(String filePath);
+    int getNextAssistanceId ();
 
     void savePhoto(int assistanceId, int discoId, File fileFoto);
+    int saveDisc(Disc disc);
+
+    int saveAssistance(UUID uuid, int discoId, TextField textField, TextField textField1, TextField textField2, TextField textField3, TextField textField4, TextField textField5, TextField textField6, TextField textField7, String text, String text1, File analisi, LocalDate now);
 
     /**
      * Interroga il database, la tabella CUSTOMERS in base al where passato come parametro

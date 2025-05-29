@@ -6,33 +6,39 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import orodent.clientrelationmanager.controller.database.DBManagerInterface;
 import orodent.clientrelationmanager.controller.main.MainController;
 import orodent.clientrelationmanager.model.Client;
-import orodent.clientrelationmanager.model.Disc;
 import orodent.clientrelationmanager.model.enums.ClientField;
 
+import java.io.File;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class CustomerServiceView extends BorderPane {
     private final ScrollPane scrollPane;
     private final Client client;
     private final ArrayList<TextField> rivenditoreInfo;
     private final ArrayList<TextField> laboratorioInfo;
-    private int praticaNumber;
+    private final int praticaNumberProvvisoria;
+    private final MainController mainController;
+    private final Map<DiscView, FlowPhoto> discViewFlowPhotoMap;
+    private TextArea sinteringArea;
+    private TextArea descArea;
+    private AnalisysChooser analisysChooser;
 
     public CustomerServiceView(){
         this(null);
     }
 
     public CustomerServiceView(Client client){
+        mainController = new MainController();
         scrollPane = new ScrollPane();
         this.client = client;
         rivenditoreInfo = new ArrayList<>();
         laboratorioInfo = new ArrayList<>();
-        //TODO praticaNumber = dbInterface getNextPratica Number (il piu alto +1)
+        praticaNumberProvvisoria = mainController.getApp().getDbManager().getNextAssistanceId();
+        discViewFlowPhotoMap = new HashMap<>();
         setUpView();
     }
 
@@ -51,7 +57,7 @@ public class CustomerServiceView extends BorderPane {
         dateLabel.getStyleClass().add("topbar-label");
         datePicker.getStyleClass().add("topbar-date-picker");
 
-        Label praticaLabel = new Label("PRATICA NR. " + praticaNumber);
+        Label praticaLabel = new Label("PRATICA NR. " + praticaNumberProvvisoria);
         praticaLabel.getStyleClass().add("topbar-label");
 
         HBox dateBar = new HBox(10, dateLabel, datePicker);
@@ -89,10 +95,13 @@ public class CustomerServiceView extends BorderPane {
         clientGrid.add(leftTitle, 1, 0);
         clientGrid.add(rightTitle, 2, 0);
 
+        analisysChooser = new AnalisysChooser();
+        HBox infoAndAnalisi = new HBox(200, clientGrid, analisysChooser);
+
         // DESCRIZIONE PROBLEMA
         Label descLabel = new Label("Descrizione del problema:");
         descLabel.setStyle("-fx-font-style: italic;");
-        TextArea descArea = new TextArea();
+        descArea = new TextArea();
         descArea.setPrefRowCount(4);
 
         // INFO DISCO
@@ -100,25 +109,33 @@ public class CustomerServiceView extends BorderPane {
         discoLabel.setStyle("-fx-font-style: italic;");
         DiscSelector discoArea = new DiscSelector();
         FlowPane flowPhotoBox = new FlowPane();
-        //Aggiungo PhotoFlow in base ai dischi di DiscSelector
-        discoArea.discs.addListener((ListChangeListener<DiscView>) change ->{
-            List<Disc> discList = discoArea.getModelliCompilati();
-            int p = 0;
+        //Aggiungo e rimuovo PhotoFlow in base ai dischi di DiscSelector
+        discoArea.discs.addListener((ListChangeListener<DiscView>) change -> {
             while(change.next()){
                 if (change.wasAdded()){
-                    flowPhotoBox.getChildren().add(new FlowPhoto(praticaNumber, discList.get(p).getId(), discList.get(p).toString()));
+                    List<? extends DiscView> addedDiscs = change.getAddedSubList();
+                    for (DiscView i : addedDiscs) {
+                        FlowPhoto flowPhoto = new FlowPhoto(i.toString());
+                        discViewFlowPhotoMap.put(i, flowPhoto);
+                        flowPhotoBox.getChildren().add(flowPhoto);
+                    }
                 }
                 if (change.wasRemoved()){
-
+                    List<? extends DiscView> removedDiscs = change.getRemoved();
+                    for (DiscView i : removedDiscs){
+                        FlowPhoto flowPhoto = discViewFlowPhotoMap.get(i);
+                        flowPhotoBox.getChildren().remove(flowPhoto);
+                        discViewFlowPhotoMap.remove(i);
+                    }
                 }
-                p++;
             }
         } );
+        discoArea.aggiungiRiga();
 
         // PROGRAMMA SINTERIZZAZIONE
         Label sinteringLabel = new Label("Indicare il programma di sinterizzazione con cui è stato sinterizzato.");
         sinteringLabel.setStyle("-fx-font-style: italic;");
-        TextArea sinteringArea = new TextArea();
+        sinteringArea = new TextArea();
         sinteringArea.setPrefRowCount(2);
 
         // FOTO ALLEGATE
@@ -166,7 +183,7 @@ public class CustomerServiceView extends BorderPane {
         // Layout
         mainLayout.getChildren().addAll(
                 headerBox,
-                clientGrid,
+                infoAndAnalisi,
                 descLabel, descArea,
                 discoLabel, discoArea,
                 sinteringLabel, sinteringArea,
@@ -178,10 +195,19 @@ public class CustomerServiceView extends BorderPane {
     }
 
     public void onBack(){
-        new MainController().showClientPage(client);
+        mainController.showClientPage(client);
     }
 
     public void onSave(){
-
+        DBManagerInterface dbManagerInterface = mainController.getApp().getDbManager();
+        for (DiscView i : discViewFlowPhotoMap.keySet()){
+            int discoId = dbManagerInterface.saveDisc(i.toModello());
+            int assistanceId = dbManagerInterface.saveAssistance(client.getUuid(), discoId, rivenditoreInfo.get(0), rivenditoreInfo.get(1), rivenditoreInfo.get(2), rivenditoreInfo.get(3), laboratorioInfo.get(0), laboratorioInfo.get(1), laboratorioInfo.get(2), laboratorioInfo.get(3), descArea.getText(), sinteringArea.getText(), analisysChooser.getSelectedFile(), LocalDate.now());
+            List<File> photos = discViewFlowPhotoMap.get(i).getImageFiles();
+            for (File j : photos) {
+                dbManagerInterface.savePhoto(assistanceId, discoId, j);
+            }
+        }
+        mainController.showClientPage(client);
     }
 }

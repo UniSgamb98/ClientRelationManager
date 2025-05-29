@@ -1,5 +1,6 @@
 package orodent.clientrelationmanager.controller.database;
 
+import javafx.scene.control.TextField;
 import orodent.clientrelationmanager.controller.main.StatusToolTipController;
 import orodent.clientrelationmanager.model.Annotation;
 import orodent.clientrelationmanager.model.Client;
@@ -432,7 +433,6 @@ public class DBManager implements DBManagerInterface{
             System.out.println("File non valido.");
             return;
         }
-
         String nome = fileFoto.getName();
 
         String sql = "INSERT INTO PHOTOS (ASSISTANCE_ID, DISCO_ID, NOME, IMMAGINE) VALUES (?, ?, ?, ?)";
@@ -458,5 +458,117 @@ public class DBManager implements DBManagerInterface{
         } catch (IOException ignored) {
 
         }
+    }
+
+    @Override
+    public int saveDisc(Disc disc) {
+        int ret = -1;
+        String sql = "INSERT INTO DISCHI (DIAMETRO, MISURA, TIPOLOGIA, COLORE, LOTTO, PROBLEMA) VALUES (?, ?, ?, ?, ?, ?)";
+        try (PreparedStatement statement = connectionManager.getConnection().prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+            statement.setString(1, disc.getDiametro());
+            statement.setString(2, disc.getMisura());
+            statement.setString(3, disc.getTipologia());
+            statement.setString(4, disc.getColore());
+            statement.setString(5, disc.getLotto());
+            statement.setString(6, disc.getProblema());
+
+            statement.executeUpdate();
+            try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    ret = generatedKeys.getInt(1);
+                }
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return ret;
+    }
+
+    @Override
+    public int saveAssistance(
+            UUID uuid,
+            int discoId,
+            TextField rivNome,
+            TextField rivRiferimento,
+            TextField rivTelefono,
+            TextField rivEmail,
+            TextField labNome,
+            TextField labRiferimento,
+            TextField labTelefono,
+            TextField labEmail,
+            String descrizione,
+            String sinterizzazione,
+            File analisi,
+            LocalDate now
+    ) {
+        String sql = """
+        INSERT INTO ASSISTANCES (
+            CUSTOMER_ID, DISCO_ID,
+            RIV_NOME, RIV_RIFERIMENTO, RIV_TELEFONO, RIV_EMAIL,
+            LAB_NOME, LAB_RIFERIMENTO, LAB_TELEFONO, LAB_EMAIL,
+            DESCRIZIONE, SINTERIZZAZIONE, ANALISI, DATA
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """;
+        int ret = -1;
+
+        try (PreparedStatement statement = connectionManager.getConnection()
+                .prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+
+            statement.setString(1, uuid.toString());
+            statement.setInt(2, discoId);
+
+            statement.setString(3, rivNome.getText());
+            statement.setString(4, rivRiferimento.getText());
+            statement.setString(5, rivTelefono.getText());
+            statement.setString(6, rivEmail.getText());
+
+            statement.setString(7, labNome.getText());
+            statement.setString(8, labRiferimento.getText());
+            statement.setString(9, labTelefono.getText());
+            statement.setString(10, labEmail.getText());
+
+            statement.setClob(11, new StringReader(descrizione));
+            statement.setClob(12, new StringReader(sinterizzazione));
+
+            // BLOB (file di analisi)
+            if (analisi != null && analisi.exists()) {
+                try (InputStream blobStream = new FileInputStream(analisi)) {
+                    statement.setBlob(13, blobStream);
+                }
+            } else {
+                statement.setNull(13, Types.BLOB);
+            }
+
+            statement.setDate(14, java.sql.Date.valueOf(now));
+
+            statement.executeUpdate();
+
+            try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    ret = generatedKeys.getInt(1); // Restituisce l'ID generato
+                } else {
+                    throw new SQLException("Inserimento fallito, nessun ID generato.");
+                }
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        } catch (IOException ignored) {}
+        return ret;
+    }
+
+
+    @Override
+    public int getNextAssistanceId () {
+        int ret = -1;
+        String sql = "SELECT COALESCE(MAX(ID), 0) + 1 AS NEXT_ID FROM ASSISTANCES";
+        try (Statement stmt = connectionManager.getConnection().createStatement()) {
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.next();
+            ret = rs.getInt("NEXT_ID");
+
+        } catch (SQLException e){
+            printSQLException(e);
+        }
+        return ret;
     }
 }

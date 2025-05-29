@@ -15,7 +15,6 @@ import orodent.clientrelationmanager.model.Disc;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.function.Consumer;
 
 public class DiscView extends HBox {
     private final TextField tipologia;
@@ -27,9 +26,11 @@ public class DiscView extends HBox {
     private final Label indicator;
     public SimpleBooleanProperty completed;
     public SimpleBooleanProperty existsInDatabase;
+    public SimpleBooleanProperty toBeRemoved;
     private final List<Disc> discsInDatabase;
+    private final Map<String, List<String>> config;
 
-    public DiscView(Consumer<DiscView> onRemove) {
+    public DiscView() {
         super(5);
         tipologia = new TextField();
         misura = new TextField();
@@ -46,11 +47,12 @@ public class DiscView extends HBox {
         problema.setPromptText("Problema");
         completed = new SimpleBooleanProperty(false);
         existsInDatabase = new SimpleBooleanProperty(false);
+        toBeRemoved = new SimpleBooleanProperty(false);
         DBManagerInterface dbManagerInterface = new MainController().getApp().getDbManager();
         discsInDatabase = dbManagerInterface.getDiscWhere("");    //TODO Attenzione qua all'inserimento di nuovi disc che potrebbe essere fatto un insert quando serve un update perchè viene inserito lo stesso disco nella stessa pagina
 
         // Autocomplete Popup
-        Map<String, List<String>> config = new MainController().getApp().getConfigs();
+        config = new MainController().getApp().getConfigs();
         ObservableList<String> diametri = FXCollections.observableArrayList();
         ObservableList<String> misure   = FXCollections.observableArrayList();
         ObservableList<String> colori   = FXCollections.observableArrayList();
@@ -74,7 +76,7 @@ public class DiscView extends HBox {
 
         // Rimuovi da DiscSelector
         Button removeButton = new Button("❌");
-        removeButton.setOnAction(e -> onRemove.accept(this));
+        removeButton.setOnAction(e -> toBeRemoved.set(true));
 
         getChildren().addAll(diametro, misura, tipologia, colore, lotto, problema, indicator, removeButton);
 
@@ -90,29 +92,43 @@ public class DiscView extends HBox {
 
     // Cambia l'icona dell'indicatore usato per segnalare all'utente se verrà creato un nuovo disco oppure c'è già in database
     private void changeIndicator(){
-        if (completed.get()){
-            if (discsInDatabase.contains(toModello()))  {
-                indicator.setText("✅");
-                existsInDatabase.set(true);
-            }
-            else    {
-                indicator.setText("new");
+        if (correctlyFormatted()){
+            if (completed.get()) {
+                if (discsInDatabase.contains(toModello())) {
+                    indicator.setText("✅");
+                    existsInDatabase.set(true);
+                } else {
+                    indicator.setText("new");
+                    existsInDatabase.set(false);
+                }
+            } else{
+                indicator.setText("");
                 existsInDatabase.set(false);
             }
         } else {
-            indicator.setText("");
-            existsInDatabase.set(false);
+            indicator.setText("Err");
         }
     }
 
     private void isComplete() {
-        completed.set(!tipologia.getText().isEmpty()
+        if (!tipologia.getText().isEmpty()
                 && !misura.getText().isEmpty()
                 && !lotto.getText().isEmpty()
                 && !diametro.getText().isEmpty()
                 && !colore.getText().isEmpty()
-                && !problema.getText().isEmpty());
-        changeIndicator();
+                && !problema.getText().isEmpty()) {
+            if (correctlyFormatted()) {
+                completed.set(true);
+            }
+            changeIndicator();
+        }
+    }
+
+    private boolean correctlyFormatted() {
+        if (!config.get("DIAMETRI").contains(diametro.getText()))  return false;
+        if (!config.get("MISURE").contains(misura.getText()))    return false;
+        if (!config.get("COLORI").contains(colore.getText()))    return false;
+        return config.get("TIPOLOGIE").contains(tipologia.getText());
     }
 
     public Disc toModello() {
@@ -124,5 +140,11 @@ public class DiscView extends HBox {
                 colore.getText(),
                 problema.getText()
         );
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s%s%s-%s  %s",
+                diametro.getText(), misura.getText(), tipologia.getText(), colore.getText(), lotto.getText());
     }
 }
