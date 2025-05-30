@@ -53,6 +53,11 @@ public class FlowPhoto extends BorderPane {
         Label discLabel = new Label(discCode);
         setAlignment(discLabel, Pos.CENTER);
         this.setTop(discLabel);
+
+        getStyleClass().add("flow-photo");
+        discLabel.getStyleClass().add("flowphoto-label");
+        flowPane.getStyleClass().add("flowphoto-container");
+        allegaFoto.getStyleClass().add("flowphoto-button");
         this.setBottom(allegaFoto);
         this.setCenter(flowPane);
         setAlignment(allegaFoto, Pos.CENTER);

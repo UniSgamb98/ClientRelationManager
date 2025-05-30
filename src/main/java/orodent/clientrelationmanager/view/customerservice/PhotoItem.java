@@ -30,6 +30,13 @@ public class PhotoItem extends VBox {
 
         setSpacing(5);
         getChildren().addAll(imageView, bottom);
+
+
+        this.getStyleClass().add("photo-item");
+        removeLabel.getStyleClass().add("photo-remove-label");
+        removeButton.getStyleClass().add("photo-remove-button");
+        bottom.getStyleClass().add("photo-footer");
+        imageView.getStyleClass().add("photo-image");
     }
 
     public File getImageFile(){

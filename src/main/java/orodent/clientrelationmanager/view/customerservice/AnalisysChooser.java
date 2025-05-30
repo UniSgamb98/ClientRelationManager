@@ -1,6 +1,5 @@
 package orodent.clientrelationmanager.view.customerservice;
 
-import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
@@ -15,12 +14,26 @@ public class AnalisysChooser extends VBox {
     private File selectedFile;
     private final Label fileLabel;
 
-    public AnalisysChooser(){
+    public AnalisysChooser() {
         mainController = new MainController();
+        // root container
+        this.getStyleClass().add("analysis-chooser");
+
+        // titolo
         Label title = new Label("Analisi Tecnica");
+        title.getStyleClass().add("analysis-title");
+
+        // etichetta file
         fileLabel = new Label();
+        fileLabel.getStyleClass().add("analysis-file-label");
+
+        // bottone per allegare/cambiare
         Button allegaAnalisi = new Button("Allega analisi.docx");
+        allegaAnalisi.getStyleClass().add("analysis-button");
+
+        // bottone per rimuovere
         Button removeButton = new Button("❌");
+        removeButton.getStyleClass().add("analysis-remove-button");
         removeButton.setVisible(false);
         removeButton.setOnAction(e -> {
             removeButton.setVisible(false);
@@ -50,9 +63,11 @@ public class AnalisysChooser extends VBox {
             }
         });
 
-        HBox label = new HBox(20, fileLabel, removeButton);
-        this.setAlignment(Pos.CENTER);
-        this.getChildren().addAll(title, label, allegaAnalisi);
+        HBox labelContainer = new HBox(fileLabel, removeButton);
+        labelContainer.getStyleClass().add("analysis-label-container");
+
+        // aggiungo tutti i nodi
+        this.getChildren().addAll(title, labelContainer, allegaAnalisi);
     }
 
     public File getSelectedFile() {

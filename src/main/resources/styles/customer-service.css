@@ -24,6 +24,10 @@
     -fx-text-fill: #2c3e50;
 }
 
+.italic-label {
+    -fx-font-style: italic;
+}
+
 .section-title {
     -fx-font-size: 13px;
     -fx-font-weight: bold;
@@ -101,4 +105,130 @@
 .highlight {
     -fx-text-fill: #e74c3c;
     -fx-font-weight: bold;
+}
+
+/* PhotoItem */
+.photo-item {
+    -fx-padding: 8;
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+
+.photo-image {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0.2, 0, 2);
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1;
+    -fx-border-radius: 4px;
+}
+
+.photo-footer {
+    -fx-alignment: center;
+    -fx-padding: 4 0 0 0;
+}
+
+.photo-remove-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #e74c3c;
+}
+
+.photo-remove-button {
+    -fx-background-radius: 50%;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* DiscView */
+.disc-view {
+    -fx-padding: 6;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+
+.disc-remove-button {
+    -fx-background-radius: 50%;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* DiscSelector */
+.disc-selector {
+    -fx-background-color: #ecf0f1;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+/* FlowPhoto */
+.flow-photo {
+    -fx-padding: 10;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-background-color: #fafafa;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 4, 0.1, 0, 1);
+}
+
+.flowphoto-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+    -fx-padding: 4 0 6 0;
+}
+
+.flowphoto-container {
+    -fx-hgap: 8;
+    -fx-vgap: 8;
+    -fx-padding: 6 0;
+}
+
+.flowphoto-button {
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+    -fx-padding: 6 12;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+/* AnalisysChooser */
+.analysis-chooser {
+    -fx-spacing: 8px;
+    -fx-alignment: center;
+    -fx-padding: 10px;
+    -fx-background-color: #ecf0f1;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.analysis-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+    -fx-padding: 4px 0;
+}
+
+.analysis-label-container {
+    -fx-spacing: 12px;
+    -fx-alignment: center;
+}
+
+.analysis-file-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #555;
+}
+
+.analysis-button {
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+    -fx-padding: 6px 12px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.analysis-remove-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
 }

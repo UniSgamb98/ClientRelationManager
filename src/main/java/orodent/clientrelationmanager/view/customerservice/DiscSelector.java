@@ -12,6 +12,7 @@ public class DiscSelector extends VBox {
         discs = FXCollections.observableArrayList();
         setSpacing(5);
         setPadding(new Insets(10));
+        getStyleClass().add("disc-selector");
     }
 
     // Aggiunge una riga solo quando non ci sono altri disc incompleti e solo quando ne viene completato uno

@@ -27,10 +27,6 @@ public class CustomerServiceView extends BorderPane {
     private TextArea descArea;
     private AnalisysChooser analisysChooser;
 
-    public CustomerServiceView(){
-        this(null);
-    }
-
     public CustomerServiceView(Client client){
         mainController = new MainController();
         scrollPane = new ScrollPane();
@@ -106,7 +102,7 @@ public class CustomerServiceView extends BorderPane {
 
         // INFO DISCO
         Label discoLabel = new Label("Indicare: tipologia di disco / colore / numero lotto");
-        discoLabel.setStyle("-fx-font-style: italic;");
+        discoLabel.getStyleClass().add("italic-label");
         DiscSelector discoArea = new DiscSelector();
         FlowPane flowPhotoBox = new FlowPane();
         //Aggiungo e rimuovo PhotoFlow in base ai dischi di DiscSelector
@@ -134,7 +130,7 @@ public class CustomerServiceView extends BorderPane {
 
         // PROGRAMMA SINTERIZZAZIONE
         Label sinteringLabel = new Label("Indicare il programma di sinterizzazione con cui è stato sinterizzato.");
-        sinteringLabel.setStyle("-fx-font-style: italic;");
+        sinteringLabel.getStyleClass().add("italic-label");
         sinteringArea = new TextArea();
         sinteringArea.setPrefRowCount(2);
 

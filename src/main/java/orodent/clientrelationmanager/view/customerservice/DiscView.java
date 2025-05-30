@@ -88,6 +88,8 @@ public class DiscView extends HBox {
         problema.textProperty().addListener((obs, oldVal, newVal) -> isComplete());
 
         getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/discview.css")).toExternalForm());
+        this.getStyleClass().add("disc-view");
+        removeButton.getStyleClass().add("disc-remove-button");
     }
 
     // Cambia l'icona dell'indicatore usato per segnalare all'utente se verrà creato un nuovo disco oppure c'è già in database
