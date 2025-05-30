@@ -7,6 +7,7 @@ import orodent.clientrelationmanager.model.Disc;
 
 import java.io.File;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -37,6 +38,8 @@ public interface DBManagerInterface {
      * @return a list of Client
     */
     List<Client> getClientWhere(String whereSQL);
+
+    List<Client> getClientWhere(String whereSQL, LocalDate date);
 
     /**
      * Interroga il database, la tabella DISCHI in base al where passato come parametro

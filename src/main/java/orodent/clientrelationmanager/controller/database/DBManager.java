@@ -113,6 +113,23 @@ public class DBManager implements DBManagerInterface{
     }
 
     @Override
+    public List<Client> getClientWhere(String whereSQL, LocalDate date) {
+        ArrayList<Client> result = new ArrayList<>();
+        String sql = "SELECT * FROM CUSTOMERS WHERE " + whereSQL;
+
+        try (PreparedStatement stmt = connectionManager.getConnection().prepareStatement(sql)) {
+            stmt.setDate(1, java.sql.Date.valueOf(date));
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                result.add(mapResultSetToClient(rs));
+            }
+        } catch (SQLException e){
+            printSQLException(e);
+        }
+        return result;
+    }
+
+    @Override
     public List<Disc> getDiscWhere (String whereSQL){
         ArrayList<Disc> result = new ArrayList<>();
         String sql;

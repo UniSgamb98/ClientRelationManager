@@ -38,12 +38,6 @@ public class MainController {
         showView(clientDetailView);
     }
 
-    //Si dovrei sistemare in modo che showClientPage accetti degli UUID ma questo significa che la SearchResultView va cambiata e forse anche DisplayableClient
-    public void showClientPage(String clientUUID) {
-        ClientDetailView clientDetailView = new ClientDetailView(getApp().getDbManager().getClientWhere("ID = '" + clientUUID + "'").getFirst());
-        showView(clientDetailView);
-    }
-
     /**
      * Ridimensiona la finestra principale in modo fluido.
      * @param targetWidth La nuova larghezza.
